@@ -1,0 +1,1808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>CA India – S.K. Mishra & Associates | Chartered Accountants</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet"/>
+<style>
+/* ═══════════════════════════════════════════════════════
+   DESIGN SYSTEM – CA INDIA LIGHT THEME
+   Palette: Crisp White · Deep Navy · Saffron Gold · Sky Teal
+   Fonts: Playfair Display (display) · Plus Jakarta Sans (body)
+═══════════════════════════════════════════════════════ */
+:root{
+  --bg:        #FAFBFE;
+  --white:     #FFFFFF;
+  --navy:      #0D1B2A;
+  --navy2:     #1A2E45;
+  --blue:      #1E4D8C;
+  --teal:      #0E7A6E;
+  --gold:      #D4A017;
+  --gold2:     #F0C040;
+  --saffron:   #E8813A;
+  --green:     #2E7D32;
+  --light:     #F0F4FF;
+  --light2:    #E8F5F3;
+  --border:    rgba(14,122,110,0.14);
+  --border2:   rgba(30,77,140,0.12);
+  --shadow:    0 4px 24px rgba(13,27,42,0.08);
+  --shadow2:   0 16px 56px rgba(13,27,42,0.14);
+  --shadow3:   0 32px 80px rgba(13,27,42,0.18);
+  --r:  10px;
+  --r2: 18px;
+  --r3: 28px;
+  --fd: 'Playfair Display', Georgia, serif;
+  --fb: 'Plus Jakarta Sans', sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);background:var(--bg);color:var(--navy);overflow-x:hidden;cursor:none}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+
+/* ── CUSTOM CURSOR ── */
+#cursor-dot{
+  position:fixed;width:8px;height:8px;border-radius:50%;
+  background:var(--teal);pointer-events:none;z-index:99999;
+  transition:transform .15s ease,opacity .2s;
+  transform:translate(-50%,-50%);
+}
+#cursor-ring{
+  position:fixed;width:38px;height:38px;border-radius:50%;
+  border:2px solid var(--teal);pointer-events:none;z-index:99998;
+  transition:transform .12s ease,width .25s,height .25s,border-color .3s,background .3s;
+  transform:translate(-50%,-50%);
+}
+body.cursor-hover #cursor-ring{
+  width:56px;height:56px;
+  background:rgba(14,122,110,.08);
+  border-color:var(--gold);
+}
+body.cursor-hover #cursor-dot{transform:translate(-50%,-50%) scale(1.6);background:var(--gold)}
+@media(hover:none){#cursor-dot,#cursor-ring{display:none}body{cursor:auto}}
+
+/* ── UTILITIES ── */
+.container{width:100%;max-width:1200px;margin:0 auto;padding:0 28px}
+.section{padding:96px 0}
+.section--light{background:var(--light)}
+.section--light2{background:var(--light2)}
+.section--white{background:var(--white)}
+
+.chip{
+  display:inline-flex;align-items:center;gap:7px;
+  padding:5px 14px;border-radius:50px;
+  font-size:10.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;
+  color:var(--teal);background:rgba(14,122,110,.07);
+  border:1px solid rgba(14,122,110,.18);margin-bottom:14px;
+}
+.chip i{font-size:13px}
+
+.heading{
+  font-family:var(--fd);
+  font-size:clamp(26px,4vw,50px);
+  font-weight:900;line-height:1.12;
+  color:var(--navy);
+}
+.heading em{font-style:italic;color:var(--teal)}
+.heading span{color:var(--blue)}
+
+.subhead{font-family:var(--fd);font-size:clamp(18px,2.5vw,26px);font-weight:700;color:var(--navy)}
+
+.body{font-size:15px;line-height:1.8;color:#4A5568}
+
+.rule{
+  width:48px;height:3px;border-radius:2px;margin:16px 0 28px;
+  background:linear-gradient(90deg,var(--teal),var(--gold));
+}
+
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:13px 30px;border-radius:50px;
+  font-size:13.5px;font-weight:700;letter-spacing:.3px;
+  cursor:none;transition:all .3s ease;border:none;font-family:var(--fb);
+}
+.btn-teal{background:linear-gradient(135deg,var(--teal),#0A9B8C);color:#fff;box-shadow:0 4px 20px rgba(14,122,110,.35)}
+.btn-teal:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 10px 32px rgba(14,122,110,.45)}
+.btn-outline{background:transparent;border:2px solid var(--blue);color:var(--blue)}
+.btn-outline:hover{background:var(--blue);color:#fff;transform:translateY(-2px)}
+.btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--navy);box-shadow:0 4px 20px rgba(212,160,23,.35)}
+.btn-gold:hover{transform:translateY(-3px);box-shadow:0 10px 32px rgba(212,160,23,.45)}
+
+/* ── SCROLL REVEAL ── */
+.sr{opacity:0;transform:translateY(40px);transition:opacity .75s ease,transform .75s ease}
+.sr-l{opacity:0;transform:translateX(-44px);transition:opacity .75s ease,transform .75s ease}
+.sr-r{opacity:0;transform:translateX(44px);transition:opacity .75s ease,transform .75s ease}
+.sr.on,.sr-l.on,.sr-r.on{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.25s}
+.d4{transition-delay:.34s}.d5{transition-delay:.43s}.d6{transition-delay:.52s}
+
+/* ═══════════════════════════════════════════════════════
+   NAV
+═══════════════════════════════════════════════════════ */
+#nav{
+  position:fixed;top:0;left:0;right:0;z-index:900;
+  padding:18px 0;transition:all .4s ease;
+}
+#nav.solid{
+  background:rgba(250,251,254,.94);
+  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+  box-shadow:0 2px 24px rgba(13,27,42,.08);
+  padding:12px 0;
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}
+
+/* brand */
+.nav-brand{display:flex;align-items:center;gap:10px;cursor:none}
+.nav-brand-icon{
+  width:54px;height:45px;
+  display:flex;align-items:center;justify-content:center;
+}
+.nav-brand-text{line-height:1}
+.nav-brand-name{font-family:var(--fd);font-size:19px;font-weight:900;color:var(--navy);letter-spacing:-.3px}
+.nav-brand-sub{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--teal)}
+
+/* links */
+.nav-links{display:flex;align-items:center;gap:4px}
+.nav-links a{
+  position:relative;padding:7px 13px;
+  font-size:13px;font-weight:600;color:var(--navy2);
+  border-radius:8px;transition:all .25s;white-space:nowrap;
+}
+.nav-links a::after{
+  content:'';position:absolute;bottom:4px;left:50%;
+  width:0;height:2px;background:var(--teal);border-radius:2px;
+  transition:width .3s,left .3s;
+}
+.nav-links a:hover{color:var(--teal);background:rgba(14,122,110,.06)}
+.nav-links a:hover::after{width:60%;left:20%}
+
+.nav-cta{display:flex;align-items:center;gap:10px}
+
+/* hamburger */
+.nav-hb{
+  display:none;flex-direction:column;gap:5px;
+  cursor:none;padding:6px;background:none;border:none;
+}
+.nav-hb span{display:block;width:22px;height:2px;background:var(--navy);border-radius:2px;transition:all .3s}
+.nav-hb.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.nav-hb.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.nav-hb.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+
+/* mobile drawer */
+.nav-drawer{
+  position:fixed;top:0;right:-100%;width:min(310px,88vw);height:100vh;
+  background:#fff;z-index:910;
+  transition:right .4s cubic-bezier(.4,0,.2,1);
+  padding:90px 32px 40px;
+  display:flex;flex-direction:column;gap:2px;
+  box-shadow:-4px 0 40px rgba(13,27,42,.14);
+}
+.nav-drawer.open{right:0}
+.nav-drawer a{
+  font-size:15px;font-weight:600;color:var(--navy2);
+  padding:12px 0;border-bottom:1px solid rgba(13,27,42,.06);
+  display:flex;align-items:center;gap:10px;transition:color .25s;
+}
+.nav-drawer a i{color:var(--teal);font-size:16px}
+.nav-drawer a:hover{color:var(--teal)}
+.nav-ovl{
+  position:fixed;inset:0;background:rgba(13,27,42,.38);
+  z-index:905;opacity:0;pointer-events:none;transition:opacity .35s;
+}
+.nav-ovl.open{opacity:1;pointer-events:auto}
+
+/* ═══════════════════════════════════════════════════════
+   HERO
+═══════════════════════════════════════════════════════ */
+#home{
+  min-height:100vh;position:relative;overflow:hidden;
+  display:flex;align-items:center;
+  padding:120px 0 80px;
+  background:var(--white);
+}
+
+/* animated geometric banner */
+#hero-canvas{
+  position:absolute;inset:0;z-index:0;
+  pointer-events:none;overflow:hidden;
+}
+
+/* big decorative ring */
+.hero-ring{
+  position:absolute;
+  border-radius:50%;
+  border:1px solid rgba(14,122,110,.12);
+  animation:ring-spin linear infinite;
+  pointer-events:none;
+}
+.hero-ring:nth-child(1){width:700px;height:700px;top:-150px;right:-180px;animation-duration:60s}
+.hero-ring:nth-child(2){width:500px;height:500px;top:-50px;right:-80px;animation-duration:40s;border-color:rgba(30,77,140,.1)}
+.hero-ring:nth-child(3){width:300px;height:300px;top:50px;right:20px;animation-duration:28s;border-color:rgba(212,160,23,.15)}
+@keyframes ring-spin{to{transform:rotate(360deg)}}
+
+/* floating blobs */
+.hero-blob{
+  position:absolute;border-radius:50%;filter:blur(70px);
+  animation:blob-drift ease-in-out infinite alternate;
+}
+.hero-blob:nth-child(4){width:420px;height:420px;top:-100px;right:5%;background:rgba(30,77,140,.07);animation-duration:12s;animation-delay:0s}
+.hero-blob:nth-child(5){width:300px;height:300px;bottom:0px;right:30%;background:rgba(14,122,110,.06);animation-duration:9s;animation-delay:2s}
+.hero-blob:nth-child(6){width:250px;height:250px;top:30%;left:-60px;background:rgba(212,160,23,.05);animation-duration:11s;animation-delay:1s}
+@keyframes blob-drift{from{transform:scale(1) translateY(0)}to{transform:scale(1.08) translateY(-22px)}}
+
+/* grid overlay */
+.hero-grid-overlay{
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(30,77,140,.04) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(30,77,140,.04) 1px,transparent 1px);
+  background-size:60px 60px;
+}
+/* CA India badge watermark */
+.hero-watermark{
+  position:absolute;right:-40px;top:50%;transform:translateY(-50%);
+  font-family:var(--fd);font-size:clamp(120px,18vw,240px);font-weight:900;
+  color:rgba(30,77,140,.03);line-height:1;pointer-events:none;white-space:nowrap;
+  user-select:none;letter-spacing:-5px;
+}
+
+/* floating shapes */
+.hero-shape{
+  position:absolute;border-radius:var(--r2);
+  animation:shape-float ease-in-out infinite alternate;
+}
+@keyframes shape-float{0%{transform:translateY(0) rotate(0)}100%{transform:translateY(-18px) rotate(4deg)}}
+
+.hs1{width:64px;height:64px;background:linear-gradient(135deg,rgba(14,122,110,.15),rgba(14,122,110,.05));top:18%;right:22%;animation-duration:7s}
+.hs2{width:44px;height:44px;background:linear-gradient(135deg,rgba(212,160,23,.18),rgba(212,160,23,.06));top:62%;right:14%;animation-duration:9s;animation-delay:1s;border-radius:50%}
+.hs3{width:32px;height:32px;background:linear-gradient(135deg,rgba(30,77,140,.14),rgba(30,77,140,.06));bottom:24%;right:38%;animation-duration:6s;animation-delay:2s;border-radius:50%}
+
+/* dots pattern */
+.hero-dots{
+  position:absolute;right:0;top:0;width:50%;height:100%;
+  background-image:radial-gradient(rgba(30,77,140,.08) 1.5px,transparent 1.5px);
+  background-size:28px 28px;
+}
+
+/* pillar strip  */
+.hero-pill-strip{
+  position:absolute;right:60px;bottom:80px;
+  display:flex;flex-direction:column;gap:10px;
+  animation:strip-in .9s 1.2s ease both;
+}
+@keyframes strip-in{from{opacity:0;transform:translateX(30px)}to{opacity:1;transform:none}}
+.hero-pill{
+  display:flex;align-items:center;gap:10px;
+  padding:10px 18px;background:rgba(255,255,255,.85);
+  border:1px solid rgba(14,122,110,.16);
+  border-radius:50px;backdrop-filter:blur(10px);
+  font-size:12px;font-weight:700;color:var(--navy);
+  box-shadow:0 4px 16px rgba(13,27,42,.06);
+}
+.hero-pill i{color:var(--teal);font-size:14px}
+
+/* content */
+.hero-content{position:relative;z-index:2;max-width:640px}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:6px 16px;border-radius:50px;margin-bottom:22px;
+  background:linear-gradient(135deg,rgba(14,122,110,.08),rgba(30,77,140,.06));
+  border:1px solid rgba(14,122,110,.2);
+  font-size:11px;font-weight:700;letter-spacing:2px;
+  text-transform:uppercase;color:var(--teal);
+}
+.hero-eyebrow i{font-size:13px;color:var(--gold)}
+
+.hero-title{
+  font-family:var(--fd);
+  font-size:clamp(40px,6.5vw,82px);
+  font-weight:900;line-height:1.04;
+  color:var(--navy);margin-bottom:8px;
+  letter-spacing:-1.5px;
+}
+.hero-title .ital{font-style:italic;color:var(--blue)}
+.hero-title .gold{color:var(--gold)}
+
+.hero-brand{
+  font-size:clamp(12px,1.5vw,15px);font-weight:500;
+  color:#6B7B8D;margin-bottom:18px;letter-spacing:.3px;
+}
+.hero-quote{
+  font-family:var(--fd);font-style:italic;
+  font-size:clamp(14px,2vw,19px);color:#4A5568;
+  padding-left:14px;border-left:3px solid var(--gold);
+  margin-bottom:34px;line-height:1.6;
+}
+.hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:36px}
+.hero-tag{
+  padding:5px 13px;border-radius:50px;
+  font-size:11.5px;font-weight:600;
+  background:var(--light);border:1px solid var(--border2);
+  color:var(--navy2);
+}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:44px}
+.hero-stats{display:flex;gap:28px;flex-wrap:wrap}
+.hstat{border-left:3px solid var(--teal);padding-left:14px}
+.hstat-num{font-family:var(--fd);font-size:28px;font-weight:900;color:var(--navy);line-height:1}
+.hstat-lbl{font-size:11px;font-weight:600;color:#718096;text-transform:uppercase;letter-spacing:.5px;margin-top:3px}
+
+/* animated underline */
+@keyframes ul-grow{from{width:0}to{width:100%}}
+.ul-anim{position:relative;display:inline-block}
+.ul-anim::after{
+  content:'';position:absolute;bottom:2px;left:0;
+  height:4px;width:0;border-radius:2px;
+  background:linear-gradient(90deg,var(--teal),var(--gold));
+  animation:ul-grow 1.2s 0.8s ease forwards;
+}
+
+/* ═══════════════════════════════════════════════════════
+   ABOUT & WHY US
+═══════════════════════════════════════════════════════ */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.about-img-block{
+  position:relative;
+}
+.about-img-frame{
+  width:100%;aspect-ratio:4/5;border-radius:var(--r3);
+  background:linear-gradient(135deg,var(--light) 0%,var(--light2) 100%);
+  border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  position:relative;
+}
+.about-img-inner{
+  width:100%;height:100%;
+  background:
+    linear-gradient(135deg,rgba(30,77,140,.07) 0%,rgba(14,122,110,.05) 100%);
+  display:flex;align-items:center;justify-content:center;
+  flex-direction:column;gap:8px;
+  position: relative;
+  z-index: 1;
+}
+.about-big-letter{
+  font-family:var(--fd);font-size:160px;font-weight:900;
+  line-height:1;color:rgba(30,77,140,.08);user-select:none;
+}
+.about-float-card{
+  position:absolute;padding:16px 20px;
+  background:#fff;border-radius:var(--r2);
+  box-shadow:var(--shadow2);border:1px solid var(--border2);
+  font-size:13px;font-weight:600;color:var(--navy);
+  display:flex;align-items:center;gap:10px;
+  animation:fc-float 5s ease-in-out infinite alternate;
+  z-index: 10;
+  
+}
+
+@keyframes fc-float{0%{transform:translateY(0)}100%{transform:translateY(-10px)}}
+.about-float-card i{font-size:22px;color:var(--teal)}
+.fc1{bottom:-20px;left:-20px;animation-delay:0s}
+.fc2{top:24px;right:-24px;animation-delay:2.5s}
+.fc3{top:50%;left:-28px;animation-delay:1s;transform:translateY(-50%)}
+
+.about-feats{display:flex;flex-direction:column;gap:12px;margin:24px 0}
+.about-feat{
+  display:flex;align-items:flex-start;gap:13px;
+  padding:14px 16px;border-radius:var(--r);
+  background:var(--white);border:1px solid var(--border2);
+  transition:all .3s;cursor:default;
+}
+.about-feat:hover{
+  transform:translateX(5px);
+  box-shadow:var(--shadow);
+  border-color:rgba(14,122,110,.28);
+}
+.about-feat-icon{
+  width:38px;height:38px;border-radius:var(--r);flex-shrink:0;
+  background:linear-gradient(135deg,rgba(14,122,110,.1),rgba(14,122,110,.04));
+  border:1px solid rgba(14,122,110,.15);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--teal);font-size:17px;
+}
+.about-feat-text h4{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:2px}
+.about-feat-text p{font-size:12.5px;color:#718096;line-height:1.5}
+
+/* WHY US cards */
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.why-card{
+  background:var(--white);border-radius:var(--r2);padding:28px 22px;
+  border:1px solid var(--border2);box-shadow:var(--shadow);
+  transition:all .35s;cursor:default;text-align:center;
+  position:relative;overflow:hidden;
+}
+.why-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--teal),var(--blue));
+  transform:scaleX(0);transform-origin:left;transition:transform .4s;
+}
+.why-card:hover{transform:translateY(-6px);box-shadow:var(--shadow2)}
+.why-card:hover::before{transform:scaleX(1)}
+.why-icon{
+  width:56px;height:56px;border-radius:50%;margin:0 auto 16px;
+  background:linear-gradient(135deg,rgba(14,122,110,.1),rgba(30,77,140,.07));
+  border:1px solid rgba(14,122,110,.2);
+  display:flex;align-items:center;justify-content:center;
+  font-size:24px;color:var(--teal);transition:all .3s;
+}
+.why-card:hover .why-icon{background:var(--teal);color:#fff;box-shadow:0 6px 20px rgba(14,122,110,.35)}
+.why-card h4{font-family:var(--fd);font-size:17px;font-weight:700;color:var(--navy);margin-bottom:8px}
+.why-card p{font-size:12.5px;color:#718096;line-height:1.6}
+
+/* ═══════════════════════════════════════════════════════
+   OUR SERVICES — tabbed
+═══════════════════════════════════════════════════════ */
+.svc-tabs-wrap{
+  display:flex;gap:6px;flex-wrap:wrap;justify-content:center;
+  margin-bottom:44px;
+}
+.svc-tab{
+  padding:9px 20px;border-radius:50px;
+  font-size:12.5px;font-weight:700;cursor:none;
+  border:2px solid var(--border2);color:#718096;
+  background:var(--white);transition:all .3s;white-space:nowrap;
+}
+.svc-tab.active,.svc-tab:hover{
+  background:var(--navy);color:#fff;border-color:var(--navy);
+  box-shadow:0 4px 16px rgba(13,27,42,.18);
+}
+.svc-pnl{display:none}
+.svc-pnl.active{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.svc-card{
+  background:var(--white);border-radius:var(--r2);
+  padding:28px 24px;border:1px solid var(--border2);
+  box-shadow:var(--shadow);transition:all .35s;
+  position:relative;overflow:hidden;
+}
+.svc-card::after{
+  content:'';position:absolute;left:0;bottom:0;
+  width:100%;height:3px;
+  background:linear-gradient(90deg,var(--teal),var(--gold));
+  transform:scaleX(0);transform-origin:left;transition:transform .4s;
+}
+.svc-card:hover{transform:translateY(-5px);box-shadow:var(--shadow2)}
+.svc-card:hover::after{transform:scaleX(1)}
+.svc-ico{
+  width:48px;height:48px;border-radius:var(--r);margin-bottom:16px;
+  background:linear-gradient(135deg,rgba(14,122,110,.09),rgba(30,77,140,.06));
+  border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  font-size:21px;color:var(--teal);transition:all .3s;
+}
+.svc-card:hover .svc-ico{background:var(--teal);color:#fff;border-color:var(--teal)}
+.svc-card h3{font-family:var(--fd);font-size:18px;font-weight:700;color:var(--navy);margin-bottom:13px}
+.svc-list{display:flex;flex-direction:column;gap:6px}
+.svc-list li{
+  display:flex;align-items:flex-start;gap:8px;
+  font-size:13px;color:#4A5568;line-height:1.5;
+}
+.svc-list li i{color:var(--teal);font-size:12px;flex-shrink:0;margin-top:4px}
+
+/* ═══════════════════════════════════════════════════════
+   WHAT WE DO — approach steps
+═══════════════════════════════════════════════════════ */
+.wwd-intro{
+  font-size:16px;line-height:1.85;color:#4A5568;
+  max-width:720px;margin:0 auto 60px;text-align:center;
+}
+.wwd-steps{
+  display:grid;grid-template-columns:repeat(5,1fr);
+  gap:0;position:relative;margin-top:48px;
+}
+.wwd-connector{
+  position:absolute;top:38px;left:calc(10% + 24px);
+  right:calc(10% + 24px);height:2px;
+  background:linear-gradient(90deg,var(--teal),var(--blue),var(--teal));
+  opacity:.2;pointer-events:none;
+}
+.wwd-step{
+  display:flex;flex-direction:column;align-items:center;
+  text-align:center;padding:0 10px;
+}
+.wwd-ico{
+  width:76px;height:76px;border-radius:50%;
+  background:var(--white);border:2px solid rgba(14,122,110,.2);
+  display:flex;align-items:center;justify-content:center;
+  font-size:26px;color:var(--teal);
+  margin-bottom:18px;position:relative;z-index:1;
+  box-shadow:var(--shadow);transition:all .35s;
+}
+.wwd-step:hover .wwd-ico{
+  background:var(--teal);color:#fff;
+  transform:scale(1.1) translateY(-6px);
+  box-shadow:0 12px 32px rgba(14,122,110,.35);
+}
+.wwd-num{
+  position:absolute;top:-5px;right:-5px;
+  width:22px;height:22px;border-radius:50%;
+  background:var(--gold);color:var(--navy);
+  font-size:10px;font-weight:800;
+  display:flex;align-items:center;justify-content:center;
+}
+.wwd-step h4{
+  font-family:var(--fd);font-size:15px;font-weight:700;
+  color:var(--navy);margin-bottom:8px;
+}
+.wwd-step p{font-size:12px;color:#718096;line-height:1.6}
+
+/* CTA banner */
+.cta-banner{
+  margin-top:64px;border-radius:var(--r3);
+  background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 50%,#0A3D62 100%);
+  padding:64px 60px;
+  display:grid;grid-template-columns:1fr auto;
+  gap:32px;align-items:center;
+  position:relative;overflow:hidden;
+}
+.cta-banner::before{
+  content:'';position:absolute;inset:0;
+  background-image:radial-gradient(rgba(255,255,255,.03) 1px,transparent 1px);
+  background-size:28px 28px;
+}
+.cta-banner::after{
+  content:'CA India';
+  position:absolute;right:-20px;bottom:-30px;
+  font-family:var(--fd);font-size:120px;font-weight:900;
+  color:rgba(255,255,255,.03);line-height:1;pointer-events:none;
+}
+.cta-banner h2{font-family:var(--fd);font-size:clamp(22px,3vw,34px);font-weight:900;color:#fff;margin-bottom:12px}
+.cta-banner p{font-size:15px;color:rgba(255,255,255,.65);line-height:1.7;max-width:560px}
+
+/* ═══════════════════════════════════════════════════════
+   ACHIEVEMENTS
+═══════════════════════════════════════════════════════ */
+.ach-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.ach-card{
+  background:var(--white);border-radius:var(--r2);
+  padding:32px 24px;text-align:center;
+  border:1px solid var(--border2);box-shadow:var(--shadow);
+  transition:all .35s;position:relative;overflow:hidden;
+}
+.ach-card::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(14,122,110,.04),rgba(30,77,140,.03));
+  opacity:0;transition:opacity .35s;
+}
+.ach-card:hover{transform:translateY(-8px);box-shadow:var(--shadow3)}
+.ach-card:hover::before{opacity:1}
+.ach-icon{
+  width:52px;height:52px;border-radius:50%;
+  background:linear-gradient(135deg,rgba(14,122,110,.1),rgba(30,77,140,.07));
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 14px;font-size:22px;color:var(--teal);
+}
+.ach-num{font-family:var(--fd);font-size:46px;font-weight:900;color:var(--navy);line-height:1;margin-bottom:6px}
+.ach-num span{font-size:28px;color:var(--teal)}
+.ach-label{font-size:13px;font-weight:600;color:#718096;text-transform:uppercase;letter-spacing:.5px}
+
+/* milestones */
+.milestone-list{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:48px}
+.milestone{
+  display:flex;gap:16px;padding:22px 20px;
+  background:var(--white);border-radius:var(--r2);
+  border:1px solid var(--border2);box-shadow:var(--shadow);
+  transition:all .3s;
+}
+.milestone:hover{transform:translateX(4px);box-shadow:var(--shadow2);border-color:rgba(14,122,110,.25)}
+.milestone-num{
+  width:40px;height:40px;border-radius:50%;flex-shrink:0;
+  background:linear-gradient(135deg,var(--teal),var(--blue));
+  display:flex;align-items:center;justify-content:center;
+  font-size:14px;font-weight:800;color:#fff;
+}
+.milestone h4{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:4px}
+.milestone p{font-size:12.5px;color:#718096;line-height:1.55}
+
+/* ═══════════════════════════════════════════════════════
+   IMPORTANT LINKS
+═══════════════════════════════════════════════════════ */
+.links-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.link-card{
+  display:flex;align-items:center;gap:16px;
+  padding:22px 20px;border-radius:var(--r2);
+  background:var(--white);border:1px solid var(--border2);
+  box-shadow:var(--shadow);transition:all .3s;cursor:none;
+}
+.link-card:hover{
+  transform:translateY(-5px);box-shadow:var(--shadow2);
+  border-color:rgba(14,122,110,.3);
+  background:linear-gradient(135deg,rgba(14,122,110,.03),var(--white));
+}
+.link-ico{
+  width:48px;height:48px;border-radius:var(--r);flex-shrink:0;
+  background:linear-gradient(135deg,rgba(14,122,110,.1),rgba(30,77,140,.07));
+  border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  font-size:20px;color:var(--teal);transition:all .3s;
+}
+.link-card:hover .link-ico{background:var(--teal);color:#fff;border-color:var(--teal)}
+.link-info h4{font-size:13.5px;font-weight:700;color:var(--navy);margin-bottom:2px}
+.link-info span{font-size:11.5px;color:#8A98A8}
+.link-arrow{margin-left:auto;color:var(--teal);font-size:18px;opacity:0;transition:all .3s;transform:translateX(-6px)}
+.link-card:hover .link-arrow{opacity:1;transform:translateX(0)}
+
+/* ═══════════════════════════════════════════════════════
+   CONTACT
+═══════════════════════════════════════════════════════ */
+.contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:start}
+
+/* map placeholder */
+.map-block{
+  border-radius:var(--r2);overflow:hidden;
+  border:1px solid var(--border2);box-shadow:var(--shadow);
+}
+.map-placeholder{
+  width:100%;aspect-ratio:4/3;
+  background:linear-gradient(135deg,var(--light),var(--light2));
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:12px;color:var(--teal);
+}
+.map-placeholder i{font-size:44px;opacity:.5}
+.map-placeholder p{font-size:13px;color:#8A98A8;font-weight:500}
+.map-address{
+  padding:18px 20px;background:#fff;border-top:1px solid var(--border2);
+  font-size:13.5px;color:#4A5568;
+  display:flex;align-items:flex-start;gap:10px;
+}
+.map-address i{color:var(--teal);font-size:18px;flex-shrink:0;margin-top:1px}
+
+.c-items{display:flex;flex-direction:column;gap:14px;margin-bottom:28px}
+.c-item{
+  display:flex;align-items:flex-start;gap:14px;
+  padding:18px 20px;border-radius:var(--r);
+  background:var(--white);border:1px solid var(--border2);
+  box-shadow:var(--shadow);transition:all .3s;
+}
+.c-item:hover{transform:translateX(4px);box-shadow:var(--shadow2);border-color:rgba(14,122,110,.25)}
+.c-icon{
+  width:40px;height:40px;border-radius:var(--r);flex-shrink:0;
+  background:linear-gradient(135deg,rgba(14,122,110,.1),rgba(14,122,110,.04));
+  border:1px solid rgba(14,122,110,.15);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--teal);font-size:17px;
+}
+.c-lbl{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--teal);margin-bottom:3px}
+.c-val{font-size:14px;color:var(--navy);font-weight:500;line-height:1.55}
+
+/* form */
+.form-box{
+  background:var(--white);border-radius:var(--r2);
+  padding:32px 28px;border:1px solid var(--border2);box-shadow:var(--shadow);
+}
+.form-box h3{font-family:var(--fd);font-size:22px;font-weight:700;color:var(--navy);margin-bottom:4px}
+.form-box p{font-size:13px;color:#8A98A8;margin-bottom:22px}
+.f-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.f-group{display:flex;flex-direction:column;gap:5px;margin-bottom:14px}
+.f-label{font-size:10.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#8A98A8}
+.f-ctrl{
+  background:var(--bg);border:1.5px solid rgba(13,27,42,.1);
+  border-radius:var(--r);padding:12px 15px;
+  font-size:13.5px;color:var(--navy);font-family:var(--fb);
+  width:100%;outline:none;transition:all .3s;
+}
+.f-ctrl:focus{border-color:var(--teal);background:#fff;box-shadow:0 0 0 3px rgba(14,122,110,.1)}
+.f-ctrl::placeholder{color:#B0B8C4}
+textarea.f-ctrl{resize:vertical;min-height:105px}
+select.f-ctrl{cursor:none}
+
+/* ═══════════════════════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════════════════════ */
+footer{background:var(--navy);padding:56px 0 28px}
+.footer-grid{
+  display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:44px;
+  padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.07);
+}
+.f-brand-name{font-family:var(--fd);font-size:21px;font-weight:900;color:#fff;margin-bottom:3px}
+.f-brand-sub{font-size:9.5px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--teal);margin-bottom:14px}
+.f-brand-desc{font-size:13px;color:rgba(255,255,255,.42);line-height:1.8;max-width:280px}
+.f-col h5{font-size:10.5px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--teal);margin-bottom:18px}
+.f-col ul{display:flex;flex-direction:column;gap:9px}
+.f-col li a{font-size:13.5px;color:rgba(255,255,255,.44);transition:color .3s}
+.f-col li a:hover{color:var(--gold)}
+.footer-bot{
+  display:flex;justify-content:space-between;align-items:center;
+  padding-top:24px;font-size:12px;color:rgba(255,255,255,.28);flex-wrap:wrap;gap:8px;
+}
+
+/* back to top */
+#btt{
+  position:fixed;bottom:28px;right:28px;
+  width:44px;height:44px;border-radius:50%;
+  background:linear-gradient(135deg,var(--teal),var(--blue));
+  color:#fff;display:flex;align-items:center;justify-content:center;
+  font-size:18px;cursor:none;border:none;
+  box-shadow:0 4px 20px rgba(14,122,110,.4);
+  opacity:0;pointer-events:none;transition:all .3s;z-index:500;
+}
+#btt.show{opacity:1;pointer-events:auto}
+#btt:hover{transform:translateY(-4px);box-shadow:0 8px 28px rgba(14,122,110,.5)}
+
+/* ═══════════════════════════════════════════════════════
+   SCROLLING TICKER
+═══════════════════════════════════════════════════════ */
+.ticker-wrap{
+  background:linear-gradient(90deg,var(--teal),var(--blue));
+  padding:12px 0;overflow:hidden;
+}
+.ticker-inner{
+  display:flex;gap:0;
+  animation:ticker-scroll 30s linear infinite;
+  white-space:nowrap;
+}
+.ticker-inner:hover{animation-play-state:paused}
+.ticker-item{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:0 32px;font-size:12.5px;font-weight:700;
+  color:rgba(255,255,255,.9);letter-spacing:.5px;text-transform:uppercase;
+  white-space:nowrap;flex-shrink:0;
+}
+.ticker-item i{color:rgba(255,255,255,.6);font-size:14px}
+@keyframes ticker-scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ═══════════════════════════════════════════════════════
+   SECTION HEADERS (centered)
+═══════════════════════════════════════════════════════ */
+.sec-hdr{text-align:center;margin-bottom:52px}
+.sec-hdr .rule{margin-left:auto;margin-right:auto}
+.sec-hdr .body{max-width:600px;margin:0 auto}
+
+/* ═══════════════════════════════════════════════════════
+   HOVER GLOW CARDS (microinteraction)
+═══════════════════════════════════════════════════════ */
+.glow-card{
+  position:relative;overflow:hidden;
+}
+.glow-card .glow{
+  position:absolute;width:180px;height:180px;border-radius:50%;
+  background:radial-gradient(circle,rgba(14,122,110,.18) 0%,transparent 70%);
+  pointer-events:none;transform:translate(-50%,-50%);
+  transition:opacity .3s;opacity:0;
+}
+.glow-card:hover .glow{opacity:1}
+
+/* ═══════════════════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════════════════ */
+@media(max-width:1024px){
+  .about-grid{grid-template-columns:1fr;gap:44px}
+  .about-img-block{max-width:480px;margin:0 auto;width:100%}
+  .why-grid{grid-template-columns:1fr 1fr}
+  .ach-grid{grid-template-columns:1fr 1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .wwd-steps{grid-template-columns:repeat(3,1fr);gap:28px}
+  .wwd-connector{display:none}
+  .hero-pill-strip{display:none}
+  .cta-banner{grid-template-columns:1fr;text-align:center}
+  .cta-banner p{margin:0 auto}
+}
+
+@media(max-width:768px){
+  .section{padding:68px 0}
+  .nav-links,.nav-cta{display:none}
+  .nav-hb{display:flex}
+  #home{padding:100px 0 64px}
+  .hero-title{font-size:clamp(34px,9vw,56px)}
+  .hero-btns{flex-direction:column;align-items:flex-start}
+  .hero-stats{gap:18px}
+  .why-grid{grid-template-columns:1fr}
+  .svc-pnl.active{grid-template-columns:1fr}
+  .links-grid{grid-template-columns:1fr 1fr}
+  .milestone-list{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr;gap:28px}
+  .footer-bot{flex-direction:column;text-align:center}
+  .svc-tabs-wrap{justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:4px}
+  .svc-tabs-wrap::-webkit-scrollbar{display:none}
+  .ach-grid{grid-template-columns:1fr 1fr}
+  .wwd-steps{grid-template-columns:1fr 1fr}
+  .f-grid{grid-template-columns:1fr}
+  .cta-banner{padding:36px 24px}
+}
+
+@media(max-width:420px){
+  .container{padding:0 14px}
+  .section{padding:52px 0}
+  .hero-title{font-size:32px;letter-spacing:-.5px}
+  .hero-eyebrow{font-size:9px}
+  .hero-quote{font-size:14px}
+  .hero-tags{gap:6px}
+  .hero-tag{font-size:10.5px;padding:4px 10px}
+  .hero-stats{flex-direction:column;gap:14px}
+  .hstat{border-left:3px solid var(--teal);padding-left:12px}
+  .hstat-num{font-size:24px}
+  .why-grid{grid-template-columns:1fr}
+  .links-grid{grid-template-columns:1fr}
+  .ach-grid{grid-template-columns:1fr}
+  .wwd-steps{grid-template-columns:1fr}
+  .milestone-list{grid-template-columns:1fr}
+  .svc-tab{font-size:11.5px;padding:7px 13px}
+  .form-box{padding:22px 16px}
+  .f-grid{grid-template-columns:1fr}
+  .nav-brand-name{font-size:16px}
+  .cta-banner{padding:28px 16px}
+  .fc1,.fc2,.fc3{display:none}
+  #btt{bottom:14px;right:12px;width:40px;height:40px}
+}
+</style>
+</head>
+<body>
+
+<!-- ══ CUSTOM CURSOR ══ -->
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+
+<!-- ══ NAV ══ -->
+<nav id="nav">
+  <div class="container">
+    <div class="nav-inner">
+
+      <a href="#home" class="nav-brand">
+        <img src="assets\logo.png" alt="CA India Logo" class="nav-brand-icon" />
+        <div class="nav-brand-text">
+          <div class="nav-brand-name">CA India</div>
+          <div class="nav-brand-sub">S.K. Mishra &amp; Associates</div>
+        </div>
+      </a>
+
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About Us &amp; Why Us</a>
+        <a href="#services">Our Services</a>
+        <a href="#whatwedo">What We Do</a>
+        <a href="#achievements">Our Achievements</a>
+        <a href="#links">Important Links</a>
+        <a href="#contact">Contact Us</a>
+      </div>
+
+      <div class="nav-cta">
+        <a href="#contact" class="btn btn-teal" style="padding:10px 22px;font-size:12.5px">
+          <i class="ri-mail-send-line"></i> Get in Touch
+        </a>
+      </div>
+
+      <button class="nav-hb" id="navHb" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="nav-ovl" id="navOvl"></div>
+<div class="nav-drawer" id="navDrw">
+  <a href="#home"         class="dl"><i class="ri-home-4-line"></i>Home</a>
+  <a href="#about"        class="dl"><i class="ri-information-line"></i>About Us &amp; Why Us</a>
+  <a href="#services"     class="dl"><i class="ri-briefcase-line"></i>Our Services</a>
+  <a href="#whatwedo"     class="dl"><i class="ri-settings-3-line"></i>What We Do</a>
+  <a href="#achievements" class="dl"><i class="ri-trophy-line"></i>Our Achievements</a>
+  <a href="#links"        class="dl"><i class="ri-links-line"></i>Important Links</a>
+  <a href="#contact"      class="dl"><i class="ri-phone-line"></i>Contact Us</a>
+</div>
+
+<!-- ══ HERO / HOME ══ -->
+<section id="home">
+  <div id="hero-canvas">
+    <div class="hero-grid-overlay"></div>
+    <div class="hero-ring"></div>
+    <div class="hero-ring"></div>
+    <div class="hero-ring"></div>
+    <div class="hero-blob"></div>
+    <div class="hero-blob"></div>
+    <div class="hero-blob"></div>
+    <div class="hero-dots"></div>
+    <div class="hero-watermark">CA</div>
+    <div class="hero-shape hs1"></div>
+    <div class="hero-shape hs2"></div>
+    <div class="hero-shape hs3"></div>
+  </div>
+
+  <!-- floating pills (right side, desktop) -->
+  <div class="hero-pill-strip">
+    <div class="hero-pill"><i class="ri-shield-check-fill"></i>Assurance &amp; Advisory</div>
+    <div class="hero-pill"><i class="ri-percent-fill"></i>Taxation &amp; GST</div>
+    <div class="hero-pill"><i class="ri-line-chart-fill"></i>GRC &amp; IFC</div>
+    <div class="hero-pill"><i class="ri-user-star-fill"></i>Virtual CFO</div>
+    <div class="hero-pill"><i class="ri-rocket-2-fill"></i>Start-up Advisory</div>
+  </div>
+
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-eyebrow sr d1">
+        <i class="ri-award-fill"></i>
+        Established 1999 · 26+ Years · PAN-India
+      </div>
+      <h1 class="hero-title sr d2">
+        <span class="ul-anim ital">Trusted</span><br/>
+        <span class="gold">Financial</span><br/>
+        Excellence
+      </h1>
+      <p class="hero-brand sr d2">S.K. Mishra &amp; Associates · Chartered Accountants · Jamshedpur</p>
+      <p class="hero-quote sr d3">"Building Trust Through Excellence"</p>
+      <div class="hero-tags sr d3">
+        <span class="hero-tag">Assurance</span>
+        <span class="hero-tag">Taxation</span>
+        <span class="hero-tag">Business Support</span>
+        <span class="hero-tag">GRC</span>
+        <span class="hero-tag">Virtual CFO</span>
+        <span class="hero-tag">Start-up Advisory</span>
+      </div>
+      <div class="hero-btns sr d4">
+        <a href="#contact" class="btn btn-teal">
+          <i class="ri-mail-send-line"></i> Get in Touch
+        </a>
+        <a href="#services" class="btn btn-outline">
+          <i class="ri-briefcase-line"></i> Our Services
+        </a>
+      </div>
+      <div class="hero-stats sr d5">
+        <div class="hstat">
+          <div class="hstat-num count" data-target="26">0</div>
+          <div class="hstat-lbl">Years Est.</div>
+        </div>
+        <div class="hstat">
+          <div class="hstat-num">PAN</div>
+          <div class="hstat-lbl">India Clients</div>
+        </div>
+        <div class="hstat">
+          <div class="hstat-num count" data-target="3">0</div>
+          <div class="hstat-lbl">Expert Partners</div>
+        </div>
+        <div class="hstat">
+          <div class="hstat-num count" data-target="6">0</div>
+          <div class="hstat-lbl">Sector Focus</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="position:absolute;bottom:28px;left:50%;transform:translateX(-50%);z-index:2;text-align:center;color:#9AA5B4;font-size:10px;letter-spacing:2px;text-transform:uppercase;animation:scue 2.2s ease-in-out infinite">
+    <i class="ri-arrow-down-s-line" style="display:block;font-size:20px;margin-bottom:2px;"></i>scroll
+  </div>
+</section>
+
+<!-- ticker -->
+<div class="ticker-wrap">
+  <div class="ticker-inner">
+    <!-- two copies for seamless loop -->
+    <span class="ticker-item"><i class="ri-shield-check-line"></i>Assurance &amp; Attestation</span>
+    <span class="ticker-item"><i class="ri-percent-line"></i>Taxation &amp; Compliance</span>
+    <span class="ticker-item"><i class="ri-line-chart-line"></i>GRC &amp; IFC</span>
+    <span class="ticker-item"><i class="ri-building-2-line"></i>Business Support</span>
+    <span class="ticker-item"><i class="ri-rocket-2-line"></i>Start-up Advisory</span>
+    <span class="ticker-item"><i class="ri-user-star-line"></i>Virtual CFO</span>
+    <span class="ticker-item"><i class="ri-global-line"></i>International Tax</span>
+    <span class="ticker-item"><i class="ri-settings-3-line"></i>Process Outsourcing</span>
+    <span class="ticker-item"><i class="ri-shield-check-line"></i>Assurance &amp; Attestation</span>
+    <span class="ticker-item"><i class="ri-percent-line"></i>Taxation &amp; Compliance</span>
+    <span class="ticker-item"><i class="ri-line-chart-line"></i>GRC &amp; IFC</span>
+    <span class="ticker-item"><i class="ri-building-2-line"></i>Business Support</span>
+    <span class="ticker-item"><i class="ri-rocket-2-line"></i>Start-up Advisory</span>
+    <span class="ticker-item"><i class="ri-user-star-line"></i>Virtual CFO</span>
+    <span class="ticker-item"><i class="ri-global-line"></i>International Tax</span>
+    <span class="ticker-item"><i class="ri-settings-3-line"></i>Process Outsourcing</span>
+  </div>
+</div>
+
+<!-- ══ ABOUT US & WHY US ══ -->
+<section id="about" class="section section--white">
+  <div class="container">
+    <div class="about-grid">
+
+      <!-- image block -->
+      <div class="sr-l">
+        <div class="about-img-block">
+          <div class="about-img-frame">
+            <div class="about-img-inner">
+              <div class="about-big-letter">CA</div>
+              <div style="text-align:center">
+                <div style="font-family:var(--fd);font-size:22px;font-weight:700;color:var(--navy);opacity:.6">Est. 1999</div>
+                <div style="font-size:13px;color:#8A98A8;margin-top:4px">S.K. Mishra &amp; Associates</div>
+              </div>
+            </div>
+            <!-- floating decorative cards -->
+            <div class="about-float-card fc1">
+              <i class="ri-trophy-fill"></i>
+              <div>
+                <div style="font-size:11px;color:#8A98A8;margin-bottom:1px">Experience</div>
+                <div>26+ Years</div>
+              </div>
+            </div>
+            <div class="about-float-card fc2">
+              <i class="ri-global-fill"></i>
+              <div>
+                <div style="font-size:11px;color:#8A98A8;margin-bottom:1px">Reach</div>
+                <div>PAN India</div>
+              </div>
+            </div>
+            <div class="about-float-card fc3">
+              <i class="ri-team-fill"></i>
+              <div>
+                <div style="font-size:11px;color:#8A98A8;margin-bottom:1px">Partners</div>
+                <div>3 Experts</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- text -->
+      <div class="sr-r">
+        <div class="chip"><i class="ri-information-line"></i>Who We Are</div>
+        <h2 class="heading">26+ Years of <em>Proven</em> Chartered Accountancy</h2>
+        <div class="rule"></div>
+        <p class="body" style="margin-bottom:16px">
+          S.K. Mishra &amp; Associates is a full-service Chartered Accountancy firm founded in 1999, with PAN-India clientele and partner-led engagements. We combine deep domain knowledge with a business-centric approach across Chemical, Automobile, Hospitality, Steel, Mining, and Heavy Machinery sectors.
+        </p>
+        <p class="body" style="margin-bottom:24px">
+          Our expertise spans Assurance, Controls, Finance, Direct Tax, GST, EXIM, and Corporate Laws. A technology-driven approach ensures long-term value creation for every client.
+        </p>
+        <div class="about-feats">
+          <div class="about-feat glow-card d1 sr">
+            <div class="glow"></div>
+            <div class="about-feat-icon"><i class="ri-shield-check-line"></i></div>
+            <div class="about-feat-text">
+              <h4>Deep Domain Expertise</h4>
+              <p>Business-centric approach across diverse sectors with partner-level attention</p>
+            </div>
+          </div>
+          <div class="about-feat glow-card d2 sr">
+            <div class="glow"></div>
+            <div class="about-feat-icon"><i class="ri-computer-line"></i></div>
+            <div class="about-feat-text">
+              <h4>Technology-Driven Approach</h4>
+              <p>ERP, MIS, and digital tools ensuring long-term value creation</p>
+            </div>
+          </div>
+          <div class="about-feat glow-card d3 sr">
+            <div class="glow"></div>
+            <div class="about-feat-icon"><i class="ri-user-star-line"></i></div>
+            <div class="about-feat-text">
+              <h4>Partner-Led Engagements</h4>
+              <p>Every client gets direct partner attention — not delegated to juniors</p>
+            </div>
+          </div>
+          <div class="about-feat glow-card d4 sr">
+            <div class="glow"></div>
+            <div class="about-feat-icon"><i class="ri-global-line"></i></div>
+            <div class="about-feat-text">
+              <h4>GST, EXIM &amp; Corporate Laws</h4>
+              <p>Complete coverage from domestic compliance to international tax structuring</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WHY US -->
+    <div style="margin-top:80px">
+      <div class="sec-hdr">
+        <div class="chip" style="justify-content:center"><i class="ri-question-line"></i>Why Choose Us</div>
+        <h2 class="heading sr">The <em>CA India</em> Advantage</h2>
+        <div class="rule"></div>
+        <p class="body sr">What sets us apart in the crowded CA landscape — partner-led, tech-enabled, and client-first.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card sr d1">
+          <div class="why-icon"><i class="ri-bar-chart-2-line"></i></div>
+          <h4>Data-Driven Insights</h4>
+          <p>We leverage analytics and real-time data to deliver financial insights that actually move the needle for your business.</p>
+        </div>
+        <div class="why-card sr d2">
+          <div class="why-icon"><i class="ri-government-line"></i></div>
+          <h4>Proactive Compliance</h4>
+          <p>Stay ahead of regulatory changes with our proactive monitoring across GST, Income Tax, EXIM, and Corporate Laws.</p>
+        </div>
+        <div class="why-card sr d3">
+          <div class="why-icon"><i class="ri-computer-line"></i></div>
+          <h4>Technology-First</h4>
+          <p>ERP implementation, MIS design, and digital accounting — we integrate technology into every engagement.</p>
+        </div>
+        <div class="why-card sr d4">
+          <div class="why-icon"><i class="ri-global-line"></i></div>
+          <h4>Global Expertise</h4>
+          <p>International tax structuring, transfer pricing, and cross-border compliance for your global ambitions.</p>
+        </div>
+        <div class="why-card sr d5">
+          <div class="why-icon"><i class="ri-user-star-line"></i></div>
+          <h4>Dedicated Success</h4>
+          <p>Dedicated partner-led teams for every client. No junior-only engagement — your goals drive our focus.</p>
+        </div>
+        <div class="why-card sr d6">
+          <div class="why-icon"><i class="ri-repeat-2-line"></i></div>
+          <h4>Repeat Engagements</h4>
+          <p>Special audits for large conglomerates with repeat engagements — showcasing trust and client satisfaction.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ OUR SERVICES ══ -->
+<section id="services" class="section section--light">
+  <div class="container">
+    <div class="sec-hdr">
+      <div class="chip" style="justify-content:center"><i class="ri-briefcase-line"></i>What We Offer</div>
+      <h2 class="heading sr">Service Excellence <em>at a Glance</em></h2>
+      <div class="rule"></div>
+      <p class="body sr">A full spectrum of chartered accountancy, advisory, and compliance services — all under one roof.</p>
+    </div>
+
+    <div class="svc-tabs-wrap" role="tablist">
+      <button class="svc-tab active" data-t="ass">Assurance &amp; Audit</button>
+      <button class="svc-tab" data-t="tax">Taxation</button>
+      <button class="svc-tab" data-t="biz">Business Support</button>
+      <button class="svc-tab" data-t="adv">Advisory &amp; BPO</button>
+      <button class="svc-tab" data-t="grc">GRC &amp; Controls</button>
+    </div>
+
+    <div class="svc-pnl active" id="pnl-ass">
+      <div class="svc-card glow-card sr d1">
+        <div class="glow"></div>
+        <div class="svc-ico"><i class="ri-file-check-line"></i></div>
+        <h3>Assurance &amp; Attestation</h3>
+        <ul class="svc-list">
+          <li><i class="ri-arrow-right-s-line"></i>Statutory Audit</li>
+          <li><i class="ri-arrow-right-s-line"></i>Internal Audit</li>
+          <li><i class="ri-arrow-right-s-line"></i>System &amp; Management Audit</li>
+          <li><i class="ri-arrow-right-s-line"></i>Concurrent Audit</li>
+          <li><i class="ri-arrow-right-s-line"></i>Financial Reporting</li>
+          <li><i class="ri-arrow-right-s-line"></i>Fund Utilisation Status / Certification</li>
+          <li><i class="ri-arrow-right-s-line"></i>Due Diligence</li>
+        </ul>
+      </div>
+      <div class="svc-card glow-card sr d2">
+        <div class="glow"></div>
+        <div class="svc-ico"><i class="ri-bar-chart-grouped-line"></i></div>
+        <h3>Specialized Capabilities</h3>
+        <ul class="svc-list">
+          <li><i class="ri-arrow-right-s-line"></i>Risk-based Statutory Audits</li>
+          <li><i class="ri-arrow-right-s-line"></i>Special Audits for Large Conglomerates</li>
+          <li><i class="ri-arrow-right-s-line"></i>GAAP Conversions</li>
+          <li><i class="ri-arrow-right-s-line"></i>Regulatory Certifications</li>
+          <li><i class="ri-arrow-right-s-line"></i>Audit Quality Controls</li>
+          <li><i class="ri-arrow-right-s-line"></i>GAAP Conversions &amp; IFRS Reporting</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="svc-pnl" id="pnl-tax">
+      <div class="svc-card glow-card sr d1">
+        <div class="glow"></div>
+        <div class="svc-ico"><i class="ri-percent-line"></i></div>
+        <h3>Taxation &amp; Compliance</h3>
+        <ul class="svc-list">
+          <li><i class="ri-arrow-right-s-line"></i>Domestic &amp; International Tax</li>
+          <li><i class="ri-arrow-right-s-line"></i>Transfer Pricing</li>
+          <li><i class="ri-arrow-right-s-line"></i>GST Advisory &amp; Litigation</li>
+          <li><i class="ri-arrow-right-s-line"></i>Customs Advisory &amp; Litigation</li>
+          <li><i class="ri-arrow-right-s-line"></i>Representation &amp; Appeals</li>
+          <li><i class="ri-arrow-right-s-line"></i>Tax Health Check Up</li>
+        </ul>
+      </div>
+      <div class="svc-card glow-card sr d2">
+        <div class="glow"></div>
+        <div class="svc-ico"><i class="ri-exchange-line"></i></div>
+        <h3>International &amp; M&amp;A Tax</h3>
+        <ul class="svc-list">
+          <li><i class="ri-arrow-right-s-line"></i>Cross-border Tax Structuring</li>
+          <li><i class="ri-arrow-right-s-line"></i>Transfer Pricing Documentation</li>
+          <li><i class="ri-arrow-right-s-line"></i>Tax Due Diligence</li>
+          <li><i class="ri-arrow-right-s-line"></i>Transaction Structuring</li>
+          <li><i class="ri-arrow-right-s-line"></i>Post-acquisition Integration</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="svc-pnl" id="pnl-biz">
+      <div class="svc-card glow-card sr d1">
+        <div class="glow"></div>
+        <div class="svc-ico"><i class="ri-building-2-line"></i></div>
+        <h3>Business Support</h3>
+        <ul class="svc-list">
+          <li><i class="ri-arrow-right-s-line"></i>Project Finance &amp; Government Subsidies</li>
+          <li><i class="ri-arrow-right-s-line"></i>Debt Restructuring</li>
+          <li><i class="ri-arrow-right-s-line"></i>Start-up Advisory</li>
+          <li><i class="ri-arrow-right-s-line"></i>Regulatory Approvals</li>
+          <li><i class="ri-arrow-right-s-line"></i>Payroll &amp; HR Support</li>
+          <li><i class="ri-arrow-right-s-line"></i>Secretarial Support</li>
+        </ul>
+      </div>
+      <div class="svc-card glow-card sr d2">
+        <div class="glow"></div>
+        <div class="svc-ico"><i class="ri-team-line"></i></div>
+        <h3>Virtual CFO &amp; BPO/KPO</h3>
+        <ul class="svc-list">
+          <li><i class="ri-arrow-right-s-line"></i>Virtual CFO Services</li>
+          <li><i class="ri-arrow-right-s-line"></i>Business Process Outsourcing</li>
+          <li><i class="ri-arrow-right-s-line"></i>Knowledge Process Outsourcing</li>
+          <li><i class="ri-arrow-right-s-line"></i>Compliance Management &amp; Review</li>
+          <li><i class="ri-arrow-right-s-line"></i>Recruitment Process Services</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="svc-pnl" id="pnl-adv">
+      <div class="svc-card glow-card sr d1">
+        <div class="glow"></div>
+        <div class="svc-ico"><i class="ri-settings-3-line"></i></div>
+        <h3>Advisory &amp; Process Outsourcing</h3>
+        <ul class="svc-list">
+          <li><i class="ri-arrow-right-s-line"></i>Business Process Re-engineering</li>
+          <li><i class="ri-arrow-right-s-line"></i>Designing of Accounting Systems</li>
+          <li><i class="ri-arrow-right-s-line"></i>SOP Development</li>
+          <li><i class="ri-arrow-right-s-line"></i>ERP &amp; MIS Implementation</li>
+          <li><i class="ri-arrow-right-s-line"></i>Accounting Outsourcing</li>
+          <li><i class="ri-arrow-right-s-line"></i>Advise on MOU / Shareholder Agreements</li>
+          <li><i class="ri-arrow-right-s-line"></i>Process &amp; MIS Review</li>
+        </ul>
+      </div>
+      <div class="svc-card glow-card sr d2">
+        <div class="glow"></div>
+        <div class="svc-ico"><i class="ri-database-2-line"></i></div>
+        <h3>Technology &amp; Systems</h3>
+        <ul class="svc-list">
+          <li><i class="ri-arrow-right-s-line"></i>ERP Implementation &amp; Advisory</li>
+          <li><i class="ri-arrow-right-s-line"></i>MIS Design &amp; Reporting</li>
+          <li><i class="ri-arrow-right-s-line"></i>Tech-enabled Compliance Tracking</li>
+          <li><i class="ri-arrow-right-s-line"></i>Digital Accounting Transformation</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="svc-pnl" id="pnl-grc">
+      <div class="svc-card glow-card sr d1">
+        <div class="glow"></div>
+        <div class="svc-ico"><i class="ri-shield-star-line"></i></div>
+        <h3>Governance, Risk &amp; Controls</h3>
+        <ul class="svc-list">
+          <li><i class="ri-arrow-right-s-line"></i>Governance Frameworks</li>
+          <li><i class="ri-arrow-right-s-line"></i>Enterprise Risk Management</li>
+          <li><i class="ri-arrow-right-s-line"></i>Internal Controls Review</li>
+          <li><i class="ri-arrow-right-s-line"></i>Process Audits &amp; Gap Analysis</li>
+          <li><i class="ri-arrow-right-s-line"></i>Policy Drafting &amp; Implementation</li>
+          <li><i class="ri-arrow-right-s-line"></i>Fraud Risk Management</li>
+          <li><i class="ri-arrow-right-s-line"></i>Board &amp; Committee Advisory</li>
+          <li><i class="ri-arrow-right-s-line"></i>Training &amp; Awareness</li>
+        </ul>
+      </div>
+      <div class="svc-card glow-card sr d2">
+        <div class="glow"></div>
+        <div class="svc-ico"><i class="ri-article-line"></i></div>
+        <h3>IFC &amp; Compliance</h3>
+        <ul class="svc-list">
+          <li><i class="ri-arrow-right-s-line"></i>IFC Implementation &amp; Testing</li>
+          <li><i class="ri-arrow-right-s-line"></i>Statutory Compliance Oversight</li>
+          <li><i class="ri-arrow-right-s-line"></i>Regulatory Readiness Assessment</li>
+          <li><i class="ri-arrow-right-s-line"></i>Risk-based Audit Planning</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ WHAT WE DO ══ -->
+<section id="whatwedo" class="section section--white">
+  <div class="container">
+    <div class="sec-hdr">
+      <div class="chip" style="justify-content:center"><i class="ri-focus-3-line"></i>What We Do</div>
+      <h2 class="heading sr">Our <em>Integrated</em> Approach</h2>
+      <div class="rule"></div>
+    </div>
+
+    <p class="wwd-intro sr">
+      Our integrated approach combines Process Reviews, SOP Development, IFC, Statutory Audit, and Tax Advisory to deliver comprehensive end-to-end assurance and risk management solutions — creating long-term value for clients.
+    </p>
+
+    <div style="position:relative">
+      <div class="wwd-connector"></div>
+      <div class="wwd-steps">
+        <div class="wwd-step sr d1">
+          <div class="wwd-ico"><i class="ri-search-eye-line"></i><span class="wwd-num">1</span></div>
+          <h4>Risk Identification</h4>
+          <p>Comprehensive risk assessment across all business processes and financial controls</p>
+        </div>
+        <div class="wwd-step sr d2">
+          <div class="wwd-ico"><i class="ri-layout-grid-line"></i><span class="wwd-num">2</span></div>
+          <h4>Control Design</h4>
+          <p>Tailored control frameworks aligned with regulatory requirements and business needs</p>
+        </div>
+        <div class="wwd-step sr d3">
+          <div class="wwd-ico"><i class="ri-test-tube-line"></i><span class="wwd-num">3</span></div>
+          <h4>Testing &amp; Validation</h4>
+          <p>Rigorous testing protocols to ensure control effectiveness and compliance readiness</p>
+        </div>
+        <div class="wwd-step sr d4">
+          <div class="wwd-ico"><i class="ri-pulse-line"></i><span class="wwd-num">4</span></div>
+          <h4>Continuous Monitoring</h4>
+          <p>Real-time dashboards and regular assessments for sustained control effectiveness</p>
+        </div>
+        <div class="wwd-step sr d5">
+          <div class="wwd-ico"><i class="ri-git-merge-line"></i><span class="wwd-num">5</span></div>
+          <h4>Remediation</h4>
+          <p>Structured remediation plans with clear timelines and accountability measures</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA banner -->
+    <div class="cta-banner sr" style="margin-top:64px">
+      <div>
+        <h2>Empowering Business Clarity<br/><em style="font-family:var(--fd);font-style:italic;color:var(--gold2)">Through Financial Intelligence</em></h2>
+        <p>We simplify the complex. By handling the intricacies of finance and compliance, we free you to focus on innovation and leadership.</p>
+      </div>
+      <div style="position:relative;z-index:1;flex-shrink:0">
+        <a href="#contact" class="btn btn-gold">
+          <i class="ri-send-plane-line"></i> Get Started Now
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ACHIEVEMENTS ══ -->
+<section id="achievements" class="section section--light">
+  <div class="container">
+    <div class="sec-hdr">
+      <div class="chip" style="justify-content:center"><i class="ri-trophy-line"></i>Our Achievements</div>
+      <h2 class="heading sr">Milestones That <em>Define Us</em></h2>
+      <div class="rule"></div>
+      <p class="body sr">Numbers that tell the story of decades-long commitment to excellence and client trust.</p>
+    </div>
+
+    <div class="ach-grid">
+      <div class="ach-card sr d1">
+        <div class="ach-icon"><i class="ri-calendar-check-line"></i></div>
+        <div class="ach-num"><span class="count" data-target="26">0</span><span>+</span></div>
+        <div class="ach-label">Years of Practice</div>
+      </div>
+      <div class="ach-card sr d2">
+        <div class="ach-icon"><i class="ri-global-line"></i></div>
+        <div class="ach-num" style="font-size:32px;margin-bottom:6px">PAN</div>
+        <div class="ach-label">India Clientele</div>
+      </div>
+      <div class="ach-card sr d3">
+        <div class="ach-icon"><i class="ri-building-4-line"></i></div>
+        <div class="ach-num"><span class="count" data-target="6">0</span><span>+</span></div>
+        <div class="ach-label">Sector Focus Areas</div>
+      </div>
+      <div class="ach-card sr d4">
+        <div class="ach-icon"><i class="ri-team-line"></i></div>
+        <div class="ach-num"><span class="count" data-target="3">0</span></div>
+        <div class="ach-label">Expert CA Partners</div>
+      </div>
+    </div>
+
+    <div class="milestone-list" style="margin-top:48px">
+      <div class="milestone sr d1">
+        <div class="milestone-num">1</div>
+        <div>
+          <h4>Risk-based Statutory Audits</h4>
+          <p>Proven expertise in risk-based audits for large corporates — repeat engagements validating client trust.</p>
+        </div>
+      </div>
+      <div class="milestone sr d2">
+        <div class="milestone-num">2</div>
+        <div>
+          <h4>Special Audits for Conglomerates</h4>
+          <p>Complex, high-stakes assignments handled with precision and full regulatory compliance.</p>
+        </div>
+      </div>
+      <div class="milestone sr d3">
+        <div class="milestone-num">3</div>
+        <div>
+          <h4>Technology-Driven Compliance</h4>
+          <p>ERP, MIS, and digital tools integrated into every engagement for sustainable long-term value.</p>
+        </div>
+      </div>
+      <div class="milestone sr d4">
+        <div class="milestone-num">4</div>
+        <div>
+          <h4>Partner-Led Excellence</h4>
+          <p>Every client receives direct partner attention from start to finish — a hallmark of our firm.</p>
+        </div>
+      </div>
+      <div class="milestone sr d5">
+        <div class="milestone-num">5</div>
+        <div>
+          <h4>GRC Framework Implementations</h4>
+          <p>Successful governance, risk, and control frameworks for businesses across multiple sectors.</p>
+        </div>
+      </div>
+      <div class="milestone sr d6">
+        <div class="milestone-num">6</div>
+        <div>
+          <h4>26 Years · PAN India Presence</h4>
+          <p>From Jamshedpur to PAN-India — a legacy of trust built one client relationship at a time.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ IMPORTANT LINKS ══ -->
+<section id="links" class="section section--white">
+  <div class="container">
+    <div class="sec-hdr">
+      <div class="chip" style="justify-content:center"><i class="ri-links-line"></i>Important Links</div>
+      <h2 class="heading sr">Key <em>Resources</em> &amp; Portals</h2>
+      <div class="rule"></div>
+      <p class="body sr">Direct access to essential government portals, tax resources, and compliance platforms.</p>
+    </div>
+
+    <div class="links-grid">
+      <a href="https://www.incometax.gov.in" target="_blank" rel="noopener" class="link-card sr d1">
+        <div class="link-ico"><i class="ri-government-line"></i></div>
+        <div class="link-info">
+          <h4>Income Tax Portal</h4>
+          <span>incometax.gov.in</span>
+        </div>
+        <i class="ri-external-link-line link-arrow"></i>
+      </a>
+      <a href="https://www.gst.gov.in" target="_blank" rel="noopener" class="link-card sr d2">
+        <div class="link-ico"><i class="ri-receipt-line"></i></div>
+        <div class="link-info">
+          <h4>GST Portal</h4>
+          <span>gst.gov.in</span>
+        </div>
+        <i class="ri-external-link-line link-arrow"></i>
+      </a>
+      <a href="https://www.mca.gov.in" target="_blank" rel="noopener" class="link-card sr d3">
+        <div class="link-ico"><i class="ri-building-line"></i></div>
+        <div class="link-info">
+          <h4>MCA (ROC)</h4>
+          <span>mca.gov.in</span>
+        </div>
+        <i class="ri-external-link-line link-arrow"></i>
+      </a>
+      <a href="https://www.icai.org" target="_blank" rel="noopener" class="link-card sr d4">
+        <div class="link-ico"><i class="ri-award-line"></i></div>
+        <div class="link-info">
+          <h4>ICAI</h4>
+          <span>icai.org</span>
+        </div>
+        <i class="ri-external-link-line link-arrow"></i>
+      </a>
+      <a href="https://www.epfindia.gov.in" target="_blank" rel="noopener" class="link-card sr d5">
+        <div class="link-ico"><i class="ri-user-heart-line"></i></div>
+        <div class="link-info">
+          <h4>EPFO Portal</h4>
+          <span>epfindia.gov.in</span>
+        </div>
+        <i class="ri-external-link-line link-arrow"></i>
+      </a>
+      <a href="https://www.sebi.gov.in" target="_blank" rel="noopener" class="link-card sr d6">
+        <div class="link-ico"><i class="ri-line-chart-line"></i></div>
+        <div class="link-info">
+          <h4>SEBI</h4>
+          <span>sebi.gov.in</span>
+        </div>
+        <i class="ri-external-link-line link-arrow"></i>
+      </a>
+      <a href="https://www.rbi.org.in" target="_blank" rel="noopener" class="link-card sr d1">
+        <div class="link-ico"><i class="ri-bank-line"></i></div>
+        <div class="link-info">
+          <h4>Reserve Bank of India</h4>
+          <span>rbi.org.in</span>
+        </div>
+        <i class="ri-external-link-line link-arrow"></i>
+      </a>
+      <a href="https://www.esic.gov.in" target="_blank" rel="noopener" class="link-card sr d2">
+        <div class="link-ico"><i class="ri-heart-pulse-line"></i></div>
+        <div class="link-info">
+          <h4>ESIC Portal</h4>
+          <span>esic.gov.in</span>
+        </div>
+        <i class="ri-external-link-line link-arrow"></i>
+      </a>
+      <a href="https://www.ibbi.gov.in" target="_blank" rel="noopener" class="link-card sr d3">
+        <div class="link-ico"><i class="ri-scales-line"></i></div>
+        <div class="link-info">
+          <h4>IBBI (Insolvency)</h4>
+          <span>ibbi.gov.in</span>
+        </div>
+        <i class="ri-external-link-line link-arrow"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONTACT US ══ -->
+<section id="contact" class="section section--light2">
+  <div class="container">
+    <div class="sec-hdr">
+      <div class="chip" style="justify-content:center"><i class="ri-phone-line"></i>Contact Us</div>
+      <h2 class="heading sr">Partner with <em>CA India</em></h2>
+      <div class="rule"></div>
+      <p class="body sr">Ready to strengthen your governance framework? Our team is available to discuss your specific requirements and develop customized solutions.</p>
+    </div>
+
+    <div class="contact-grid">
+      <!-- left: map + info -->
+      <div class="sr-l">
+        <div class="map-block">
+          <div class="map-placeholder">
+            <i class="ri-map-pin-2-fill"></i>
+            <p>Bistupur, Jamshedpur – 831001</p>
+            <a href="https://maps.google.com/?q=Bistupur,Jamshedpur" target="_blank" rel="noopener"
+               class="btn btn-teal" style="padding:9px 20px;font-size:12.5px;cursor:none">
+              <i class="ri-map-2-line"></i> Open in Maps
+            </a>
+          </div>
+          <div class="map-address">
+            <i class="ri-map-pin-line"></i>
+            B-1, B S Apartment, Road No. 4, Bistupur, Jamshedpur – 831001, Jharkhand
+          </div>
+        </div>
+
+        <div class="c-items" style="margin-top:20px">
+          <div class="c-item">
+            <div class="c-icon"><i class="ri-phone-line"></i></div>
+            <div>
+              <div class="c-lbl">Phone</div>
+              <div class="c-val">+91-93347 66898<br/>+91-62000 58498</div>
+            </div>
+          </div>
+          <div class="c-item">
+            <div class="c-icon"><i class="ri-mail-line"></i></div>
+            <div>
+              <div class="c-lbl">Email</div>
+              <div class="c-val">skmassociates011@gmail.com</div>
+            </div>
+          </div>
+          <div class="c-item">
+            <div class="c-icon"><i class="ri-time-line"></i></div>
+            <div>
+              <div class="c-lbl">Working Hours</div>
+              <div class="c-val">Mon – Sat &nbsp;·&nbsp; 9:00 AM – 6:00 PM IST</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- right: form -->
+      <div class="sr-r">
+        <div class="form-box">
+          <h3>Send an Enquiry</h3>
+          <p>We'll get back to you within 24 hours.</p>
+          <form id="contactForm" onsubmit="handleForm(event)" novalidate>
+            <div class="f-grid">
+              <div class="f-group" style="margin-bottom:0">
+                <label class="f-label">First Name</label>
+                <input type="text" class="f-ctrl" placeholder="Rahul" required/>
+              </div>
+              <div class="f-group" style="margin-bottom:0">
+                <label class="f-label">Last Name</label>
+                <input type="text" class="f-ctrl" placeholder="Sharma"/>
+              </div>
+            </div>
+            <div class="f-group">
+              <label class="f-label">Email Address</label>
+              <input type="email" class="f-ctrl" placeholder="rahul@company.com" required/>
+            </div>
+            <div class="f-group">
+              <label class="f-label">Phone Number</label>
+              <input type="tel" class="f-ctrl" placeholder="+91 98765 43210"/>
+            </div>
+            <div class="f-group">
+              <label class="f-label">Service Interest</label>
+              <select class="f-ctrl">
+                <option value="">Select a Service...</option>
+                <option>Assurance &amp; Audit</option>
+                <option>Taxation &amp; Compliance</option>
+                <option>GRC / IFC</option>
+                <option>Business Support / Virtual CFO</option>
+                <option>Advisory &amp; Outsourcing</option>
+                <option>Startup Advisory</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="f-group">
+              <label class="f-label">Message</label>
+              <textarea class="f-ctrl" placeholder="Briefly describe your requirement..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-teal" style="width:100%;justify-content:center">
+              <i class="ri-send-plane-line"></i> Send Enquiry
+            </button>
+          </form>
+          <div id="formOk" style="display:none;text-align:center;padding:36px 20px">
+            <div style="width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--blue));display:flex;align-items:center;justify-content:center;margin:0 auto 14px;box-shadow:0 8px 24px rgba(14,122,110,.3)">
+              <i class="ri-check-line" style="font-size:28px;color:#fff"></i>
+            </div>
+            <div style="font-family:var(--fd);font-size:22px;font-weight:700;color:var(--navy);margin-bottom:6px">Thank You!</div>
+            <div style="font-size:13px;color:#8A98A8">We'll be in touch within 24 hours.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="f-brand-name">CA India</div>
+        <div class="f-brand-sub">S.K. Mishra &amp; Associates · Chartered Accountants</div>
+        <p class="f-brand-desc">Building trust through excellence since 1999. A full-service CA firm with PAN-India presence and partner-led engagements.</p>
+      </div>
+      <div class="f-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us &amp; Why Us</a></li>
+          <li><a href="#services">Our Services</a></li>
+          <li><a href="#whatwedo">What We Do</a></li>
+          <li><a href="#achievements">Our Achievements</a></li>
+          <li><a href="#links">Important Links</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="tel:+919334766898">+91-93347 66898</a></li>
+          <li><a href="tel:+916200058498">+91-62000 58498</a></li>
+          <li><a href="mailto:skmassociates011@gmail.com">skmassociates011@gmail.com</a></li>
+          <li><a href="#contact">Bistupur, Jamshedpur – 831001</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bot">
+      <span>&copy; 2025 CA India · S.K. Mishra &amp; Associates. All rights reserved.</span>
+      <span style="font-family:var(--fd);font-style:italic;color:rgba(212,160,23,.5)">"Building Trust Through Excellence"</span>
+    </div>
+  </div>
+</footer>
+
+<!-- back to top -->
+<button id="btt" aria-label="Back to top"><i class="ri-arrow-up-line"></i></button>
+
+<style>
+@keyframes scue{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(10px)}}
+</style>
+
+<script>
+/* ══════════════════════════════════════
+   CUSTOM CURSOR
+══════════════════════════════════════ */
+const dot  = document.getElementById('cursor-dot');
+const ring = document.getElementById('cursor-ring');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;dot.style.left=mx+'px';dot.style.top=my+'px'});
+(function animRing(){rx+=(mx-rx)*.14;ry+=(my-ry)*.14;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(animRing)})();
+document.querySelectorAll('a,button,.svc-tab,.link-card,.why-card,.about-feat,.milestone,.ach-card,.wwd-step,.c-item,.ticker-item').forEach(el=>{
+  el.addEventListener('mouseenter',()=>document.body.classList.add('cursor-hover'));
+  el.addEventListener('mouseleave',()=>document.body.classList.remove('cursor-hover'));
+});
+
+/* ══════════════════════════════════════
+   NAV
+══════════════════════════════════════ */
+const nav=document.getElementById('nav');
+const btt=document.getElementById('btt');
+window.addEventListener('scroll',()=>{
+  nav.classList.toggle('solid',scrollY>60);
+  btt.classList.toggle('show',scrollY>400);
+},{passive:true});
+
+const hb=document.getElementById('navHb');
+const drw=document.getElementById('navDrw');
+const ovl=document.getElementById('navOvl');
+const openNav=()=>{hb.classList.add('open');drw.classList.add('open');ovl.classList.add('open');document.body.style.overflow='hidden'};
+const closeNav=()=>{hb.classList.remove('open');drw.classList.remove('open');ovl.classList.remove('open');document.body.style.overflow=''};
+hb.addEventListener('click',()=>drw.classList.contains('open')?closeNav():openNav());
+ovl.addEventListener('click',closeNav);
+document.querySelectorAll('.dl').forEach(a=>a.addEventListener('click',closeNav));
+btt.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+/* ══════════════════════════════════════
+   SCROLL REVEAL
+══════════════════════════════════════ */
+const srEls=document.querySelectorAll('.sr,.sr-l,.sr-r');
+const srObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');srObs.unobserve(e.target)}});
+},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+srEls.forEach(el=>srObs.observe(el));
+
+/* ══════════════════════════════════════
+   COUNTERS
+══════════════════════════════════════ */
+document.querySelectorAll('.count').forEach(el=>{
+  const cObs=new IntersectionObserver(([e])=>{
+    if(!e.isIntersecting)return;cObs.disconnect();
+    const target=+el.dataset.target;let n=0;
+    const step=target/40;
+    const t=setInterval(()=>{n+=step;el.textContent=n>=target?target:Math.floor(n);if(n>=target)clearInterval(t)},40);
+  },{threshold:.5});
+  cObs.observe(el);
+});
+
+/* ══════════════════════════════════════
+   SERVICES TABS
+══════════════════════════════════════ */
+const tabMap={ass:'pnl-ass',tax:'pnl-tax',biz:'pnl-biz',adv:'pnl-adv',grc:'pnl-grc'};
+document.querySelectorAll('.svc-tab').forEach(tab=>{
+  tab.addEventListener('click',()=>{
+    document.querySelectorAll('.svc-tab').forEach(t=>t.classList.remove('active'));
+    document.querySelectorAll('.svc-pnl').forEach(p=>p.classList.remove('active'));
+    tab.classList.add('active');
+    const pnl=document.getElementById(tabMap[tab.dataset.t]);
+    if(pnl){
+      pnl.classList.add('active');
+      pnl.querySelectorAll('.sr,.sr-l,.sr-r').forEach(el=>{
+        el.classList.remove('on');
+        requestAnimationFrame(()=>requestAnimationFrame(()=>srObs.observe(el)));
+      });
+    }
+  });
+});
+
+/* ══════════════════════════════════════
+   GLOW CARD MOUSE TRACKING
+══════════════════════════════════════ */
+document.querySelectorAll('.glow-card').forEach(card=>{
+  const glow=card.querySelector('.glow');
+  if(!glow)return;
+  card.addEventListener('mousemove',e=>{
+    const r=card.getBoundingClientRect();
+    glow.style.left=(e.clientX-r.left)+'px';
+    glow.style.top=(e.clientY-r.top)+'px';
+  });
+});
+
+/* ══════════════════════════════════════
+   HERO TEXT STAGGER (load)
+══════════════════════════════════════ */
+window.addEventListener('load',()=>{
+  document.querySelectorAll('#home .sr').forEach((el,i)=>{
+    setTimeout(()=>el.classList.add('on'),i*90+100);
+  });
+});
+
+/* ══════════════════════════════════════
+   FORM
+══════════════════════════════════════ */
+function handleForm(e){
+  e.preventDefault();
+  document.getElementById('contactForm').style.display='none';
+  document.getElementById('formOk').style.display='block';
+}
+
+/* ══════════════════════════════════════
+   HERO CANVAS — animated lines (SVG)
+══════════════════════════════════════ */
+(function(){
+  const canvas=document.getElementById('hero-canvas');
+  const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');
+  svg.setAttribute('style','position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0');
+  svg.setAttribute('xmlns','http://www.w3.org/2000/svg');
+  // draw a few animated accent lines
+  const lines=[
+    {x1:'0%',y1:'35%',x2:'45%',y2:'35%',color:'rgba(14,122,110,0.08)',dur:'4s'},
+    {x1:'55%',y1:'55%',x2:'100%',y2:'55%',color:'rgba(30,77,140,0.07)',dur:'5s'},
+    {x1:'0%',y1:'68%',x2:'35%',y2:'68%',color:'rgba(212,160,23,0.07)',dur:'6s'},
+  ];
+  lines.forEach(l=>{
+    const line=document.createElementNS('http://www.w3.org/2000/svg','line');
+    line.setAttribute('x1',l.x1);line.setAttribute('y1',l.y1);
+    line.setAttribute('x2',l.x2);line.setAttribute('y2',l.y2);
+    line.setAttribute('stroke',l.color);line.setAttribute('stroke-width','1');
+    const anim=document.createElementNS('http://www.w3.org/2000/svg','animate');
+    anim.setAttribute('attributeName','stroke-dashoffset');
+    anim.setAttribute('from','1000');anim.setAttribute('to','0');
+    anim.setAttribute('dur',l.dur);anim.setAttribute('fill','freeze');
+    line.setAttribute('stroke-dasharray','1000');
+    line.setAttribute('stroke-dashoffset','1000');
+    line.appendChild(anim);
+    svg.appendChild(line);
+  });
+  canvas.appendChild(svg);
+})();
+</script>
+</body>
+</html>
