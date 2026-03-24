@@ -14,6 +14,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
       rel="stylesheet"
     />
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+
     <style>
       /* ═══════════════════════════════════════════════════════
    DESIGN SYSTEM – CA INDIA LIGHT THEME
@@ -531,6 +533,16 @@
         }
       }
 
+      .dabba{
+        display: flex;
+      
+      }
+      .dabba-img > img{
+        height: 660px;
+        margin-top: -57px;
+        width: 455px;
+      }
+      
       /* floating blobs */
       .hero-blob {
         position: absolute;
@@ -870,15 +882,18 @@
         align-items: center;
         justify-content: center;
         position: relative;
+          background-image: url('/assets/ca.png');
+      background-size: cover;
+      background-position: center;
+        /* position: relative; */
       }
       .about-img-inner {
         width: 100%;
         height: 100%;
         background: linear-gradient(
-          135deg,
-          rgba(30, 77, 140, 0.07) 0%,
-          rgba(14, 122, 110, 0.05) 100%
+          rgba(11, 67, 43, 0.5)
         );
+        opacity: 30%;;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -887,14 +902,15 @@
         position: relative;
         z-index: 1;
       }
-      .about-big-letter {
+      /* .about-big-letter {
         font-family: var(--fd);
         font-size: 160px;
         font-weight: 900;
         line-height: 1;
-        color: rgba(30, 77, 140, 0.08);
+        color: rgb(231, 237, 237);
+        opacity: 70%;
         user-select: none;
-      }
+      } */
       .about-float-card {
         position: absolute;
         padding: 16px 20px;
@@ -2179,7 +2195,7 @@
         </div>
       </div>
 
-      <div class="container">
+      <div class="container dabba">
         <div class="hero-content">
           <div class="hero-eyebrow sr d1">
             <i class="ri-award-fill"></i>
@@ -2228,7 +2244,15 @@
               <div class="hstat-lbl">Sector Focus</div>
             </div>
           </div>
+          
         </div>
+         <div class="dabba-img">
+          <img
+            src="assets/hero-white.png"
+            alt="Hero Image"
+            />
+        </div>
+       
       </div>
 
       <div
@@ -2312,7 +2336,10 @@
     <!-- ══ ABOUT US & WHY US ══ -->
     <section id="about" class="section section--white">
       <div class="container">
-        <div class="about-grid">
+        <div class="about-grid" data-aos="fade-left"
+   
+     data-aos-offset="500"
+     data-aos-duration="500">
           <!-- image block -->
           <div class="sr-l">
             <div class="about-img-block">
@@ -2329,12 +2356,12 @@
                         opacity: 0.6;
                       "
                     >
-                      Est. 1999
+                      <!-- Est. 1999 -->
                     </div>
                     <div
                       style="font-size: 13px; color: #8a98a8; margin-top: 4px"
                     >
-                      S.K. Mishra &amp; Associates
+                      <!-- S.K. Mishra &amp; Associates -->
                     </div>
                   </div>
                 </div>
@@ -3423,6 +3450,9 @@
     </style>
 
     <script>
+
+      // Smooth Scroll
+      // 
       /* ══════════════════════════════════════
    CUSTOM CURSOR
 ══════════════════════════════════════ */
@@ -3668,6 +3698,7 @@
         });
         canvas.appendChild(svg);
       })();
+     
     </script>
   </body>
 </html>
