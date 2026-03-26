@@ -14,6 +14,9 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
 
     <style>
@@ -43,8 +46,8 @@
         --r: 10px;
         --r2: 18px;
         --r3: 28px;
-        --fd: "Playfair Display", Georgia, serif;
-        --fb: "Plus Jakarta Sans", sans-serif;
+        --fd: "Roboto",sans-serif;
+        --fb: "Roboto", sans-serif;
       }
       *,
       *::before,
@@ -535,13 +538,36 @@
 
       .dabba{
         display: flex;
-      
       }
+
       .dabba-img > img{
         height: 660px;
         margin-top: -57px;
         width: 455px;
       }
+      .dabba-img{
+        position:relative;
+      }
+
+      .dabba-img > .hover-link{
+        color:black;
+        background-color: white;
+        padding:10px;
+        border-radius:10px;
+        text:bold;
+        
+        
+        display:none;
+      }
+      .dabba-img:hover > .hover-link{
+          display:block;
+          position:absolute;
+          top:50%;
+          left:50%;
+          transform: translate(-50%, -50%);
+          display:none;
+      }
+      
 
       @media screen and (min-width: 768px) and (max-width: 1023px){
         .dabba{
@@ -551,7 +577,7 @@
       .dabba-img > img{
         height: 660px;
         margin-top: -57px;
-        width: 100%;
+        width: 660px;
       }
       }
 
@@ -562,7 +588,7 @@
       
       }
       .dabba-img > img{
-        height: 660px;
+        height: 630px;
         margin-top: -57px;
         width: 455px;
       }
@@ -579,6 +605,24 @@
         margin-top: -57px;
         width: 455px;
       }
+      .dabba-img > .hover-link{
+        color:black;
+        background-color: white;
+        padding:10px;
+        border-radius:10px;
+        text:bold;
+        
+        
+        display:block;
+      }
+       .dabba-img:hover > .hover-link{
+          display:block;
+          position:absolute;
+          top:50%;
+          left:50%;
+          transform: translate(-50%, -50%);
+          /* display:none; */
+      }
       }
       @media screen and (max-width: 479px) {
         .dabba{
@@ -587,9 +631,20 @@
       
       }
       .dabba-img > img{
-        height: 660px;
+        height: 550px;
         margin-top: -57px;
         width: 100%;
+      }
+      .dabba-img:hover > .hover-link{
+        display: block;
+      }
+       .dabba-img:hover > .hover-link{
+          display:block;
+          position:absolute;
+          top:50%;
+          left:50%;
+          transform: translate(-50%, -50%);
+          /* display:none; */
       }
       }
       
@@ -2301,6 +2356,9 @@
             src="assets/hero-white.png"
             alt="Hero Image"
             />
+            <div class="hover-link">
+              <a onclick="scrollToSection()">Contact Us ↓</a>
+            </div>
         </div>
        
       </div>
