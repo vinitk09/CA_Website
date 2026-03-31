@@ -369,7 +369,7 @@
         padding: 7px 13px;
         font-size: 13px;
         font-weight: 600;
-        color: var(--navy2);
+        color: #fff;
         border-radius: 8px;
         transition: all 0.25s;
         white-space: nowrap;
@@ -394,6 +394,9 @@
       .nav-links a:hover::after {
         width: 60%;
         left: 20%;
+      }
+      .nav-links a.scrolled {
+        color: var(--teal);
       }
 
       .nav-cta {
@@ -492,14 +495,23 @@
         display: flex;
         align-items: center;
         padding: 120px 0 80px;
-        background: var(--white);
+        background: url("assets/hero-image.png") no-repeat center/cover fixed;
+        background-attachment: fixed;
+      }
+      #home::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(12, 12, 12, 0.6) 0%, rgba(255, 255, 255, 0.08) 100%);
+        z-index: 2;
+        pointer-events: none;
       }
 
       /* animated geometric banner */
       #hero-canvas {
         position: absolute;
         inset: 0;
-        z-index: 0;
+        z-index: 1;
         pointer-events: none;
         overflow: hidden;
       }
@@ -543,6 +555,12 @@
 
       .dabba{
         display: flex;
+        width: 100%;
+        position: relative;
+        z-index: 10;
+      }
+      .container.dabba {
+        z-index: 10;
       }
 
       .dabba-img > img{
@@ -801,7 +819,7 @@
         flex-direction: column;
         gap: 10px;
         animation: strip-in 0.9s 1.2s ease both;
-        z-index: 1000;
+        z-index: 10;
       }
       @keyframes strip-in {
         from {
@@ -837,19 +855,19 @@
         position: absolute;
         top: 120px;
         right: 28px;
-        width: 48px;
-        height: 48px;
+        width: 78px;
+        height: 78px;
         border-radius: 50%;
         background: linear-gradient(135deg, rgba(14, 122, 110, 0.25), rgba(30, 77, 140, 0.15));
         border: 2px solid rgba(14, 122, 110, 0.3);
-        color: var(--teal);
-        font-size: 22px;
+        color: white;
+        font-size: 42px;
         display: flex;
         align-items: center;
         justify-content: center;
         cursor: none;
         transition: all 0.3s ease;
-        z-index: 10;
+        z-index: 100;
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
       }
@@ -1069,8 +1087,9 @@
       /* content */
       .hero-content {
         position: relative;
-        z-index: 2;
+        z-index: 10;
         max-width: 640px;
+       
       }
       .hero-eyebrow {
         display: inline-flex;
@@ -1101,17 +1120,20 @@
         font-size: clamp(40px, 6.5vw, 82px);
         font-weight: 900;
         line-height: 1.04;
-        color: var(--navy);
+        background: linear-gradient(135deg, #ffffff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
         margin-bottom: 8px;
         letter-spacing: -1.5px;
+        transition: opacity 0.2s ease, transform 0.2s ease-out;
+        will-change: opacity, transform;
       }
       .hero-title .ital {
         font-style: italic;
         color: var(--blue);
       }
-      .hero-title .gold {
-        color: var(--gold);
-      }
+      
 
       .hero-brand {
         font-size: clamp(12px, 1.5vw, 15px);
@@ -1124,7 +1146,7 @@
         font-family: var(--fd);
         font-style: italic;
         font-size: clamp(14px, 2vw, 19px);
-        color: #4a5568;
+        color: #e5e8ed;
         padding-left: 14px;
         border-left: 3px solid var(--gold);
         margin-bottom: 34px;
@@ -2825,6 +2847,37 @@
   }
 }
 
+      /* ══ LOCATIONS SECTION ══ */
+      .locations-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 24px;
+        margin-top: 40px;
+      }
+      .location-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 18px 24px;
+        border-radius: 12px;
+        background: var(--light);
+        border: 1px solid var(--border);
+        transition: all 0.3s ease;
+        color: var(--navy);
+        font-weight: 600;
+        font-size: 15px;
+      }
+      .location-item i {
+        font-size: 20px;
+        color: var(--teal);
+        flex-shrink: 0;
+      }
+      .location-item:hover {
+        background: var(--light2);
+        border-color: var(--teal);
+        transform: translateY(-2px);
+      }
+
       @media (max-width: 1100px) {
         .world-clock-wrap {
           grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2848,6 +2901,17 @@
         .second-hand {
           height: 72px;
         }
+      }
+      .hero-content{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+      .hero-title{
+        font-size: 70px;
+        font-weight: 900;
+        color: whitesmoke;
+        text-align: center;
       }
 
     </style>
@@ -2965,27 +3029,27 @@
 
       <div class="container dabba">
         <div class="hero-content">
-          <div class="hero-eyebrow sr d1">
+          <!-- <div class="hero-eyebrow sr d1">
             <i class="ri-award-fill"></i>
             Established 1999 · 27+ Years · PAN-India
-          </div>
-          <h1 class="hero-title sr d2">
-            <span class="ul-anim ital">Trusted</span><br />
-            <span class="gold">Financial</span><br />
-            Excellence
+          </div> -->
+          <h1 class="">
+            <span class="hero-title">Trusted Financial Excellence</span>
+            <!-- <span class="gold"></span> -->
+           
           </h1>
-          <p class="hero-brand sr d2">
+          <!-- <p class="hero-brand sr d2">
             S.K. Mishra &amp; Associates · Chartered Accountants · Jamshedpur
-          </p>
+          </p> -->
           <p class="hero-quote sr d3">"Building Trust Through Excellence"</p>
-          <div class="hero-tags sr d3">
+          <!-- <div class="hero-tags sr d3">
             <span class="hero-tag">Assurance</span>
             <span class="hero-tag">Taxation</span>
             <span class="hero-tag">Business Support</span>
             <span class="hero-tag">GRC</span>
             <span class="hero-tag">Virtual CFO</span>
             <span class="hero-tag">Start-up Advisory</span>
-          </div>
+          </div> -->
           <div class="hero-btns sr d4">
             <a href="#contact" class="btn btn-teal">
               <i class="ri-mail-send-line"></i> Get in Touch
@@ -2994,7 +3058,7 @@
               <i class="ri-briefcase-line"></i> Our Services
             </a>
           </div>
-          <div class="hero-stats sr d5">
+          <!-- <div class="hero-stats sr d5">
             <div class="hstat">
               <div class="hstat-num count" data-target="27">0</div>
               <div class="hstat-lbl">Years Est.</div>
@@ -3011,7 +3075,7 @@
               <div class="hstat-num count" data-target="6">0</div>
               <div class="hstat-lbl">Sector Focus</div>
             </div>
-          </div>
+          </div> -->
           
         </div>
          <div class="dabba-img">
@@ -4129,6 +4193,54 @@
       </div>
     </section>
 
+    <!-- ══ LOCATIONS ══ -->
+    <section class="section section--white">
+      <div class="container">
+        <div class="sec-hdr">
+          <h2 class="heading sr">Our <em>Locations</em></h2>
+          <div class="rule"></div>
+        </div>
+        <div class="locations-grid sr">
+          <div class="location-item">
+            <i class="ri-map-pin-line"></i>
+            <span>Jamshedpur</span>
+          </div>
+          <div class="location-item">
+            <i class="ri-map-pin-line"></i>
+            <span>Ranchi</span>
+          </div>
+          <div class="location-item">
+            <i class="ri-map-pin-line"></i>
+            <span>Mumbai</span>
+          </div>
+          <div class="location-item">
+            <i class="ri-map-pin-line"></i>
+            <span>Bhubaneswar</span>
+          </div>
+          <div class="location-item">
+            <i class="ri-map-pin-line"></i>
+            <span>Patna</span>
+          </div>
+          <div class="location-item">
+            <i class="ri-map-pin-line"></i>
+            <span>NCR-Ghaziabad</span>
+          </div>
+          <div class="location-item">
+            <i class="ri-map-pin-line"></i>
+            <span>Bangaluru</span>
+          </div>
+          <div class="location-item">
+            <i class="ri-map-pin-line"></i>
+            <span>Surat</span>
+          </div>
+          <div class="location-item">
+            <i class="ri-map-pin-line"></i>
+            <span>Satna</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ══ CONTACT US ══ -->
     <section id="contact" class="section section--light2">
       <div class="container">
@@ -4444,15 +4556,42 @@
 ══════════════════════════════════════ */
       const nav = document.getElementById("nav");
       const btt = document.getElementById("btt");
+      const homeSection = document.getElementById("home");
+      const heroTitle = document.querySelector(".hero-title");
+      const navLinks = document.querySelectorAll(".nav-links a");
+      let lastScrollY = 0;
+
       window.addEventListener(
         "scroll",
         () => {
           nav.classList.toggle("solid", scrollY > 60);
           btt.classList.toggle("show", scrollY > 400);
+
+          if (homeSection && heroTitle) {
+            const rect = homeSection.getBoundingClientRect();
+            const fadeDistance = Math.max(rect.height * 0.6, 1);
+            const progress = Math.min(Math.max((0 - rect.top) / fadeDistance, 0), 1);
+            const opacity = 1 - progress;
+            const isScrollingDown = scrollY > lastScrollY;
+            const translateX = isScrollingDown ? progress * -40 : progress * 40;
+
+            heroTitle.style.opacity = opacity.toFixed(3);
+            heroTitle.style.transform = `translateX(${translateX}px)`;
+            lastScrollY = scrollY;
+          }
+
+          // Toggle nav links color based on navbar solid state
+          const navHasSolid = nav.classList.contains("solid");
+          navLinks.forEach((link) => {
+            if (navHasSolid) {
+              link.classList.add("scrolled");
+            } else {
+              link.classList.remove("scrolled");
+            }
+          });
         },
         { passive: true },
       );
-
       const hb = document.getElementById("navHb");
       const drw = document.getElementById("navDrw");
       const ovl = document.getElementById("navOvl");
