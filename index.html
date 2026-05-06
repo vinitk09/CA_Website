@@ -571,9 +571,9 @@
         margin-top: -57px;
         width: 455px;
       }
-      .dabba-img{
+      /* .dabba-img{
         position:relative;
-      }
+      } */
 
       .dabba-img > .hover-link{
         color:black;
@@ -595,84 +595,7 @@
       }
       
 
-      @media screen and (min-width: 768px) and (max-width: 1023px){
-        .dabba{
-        display: flex;
       
-      }
-      .dabba-img > img{
-        height: 660px;
-        margin-top: -57px;
-        width: 660px;
-      }
-      }
-
-      @media screen and (min-width: 640px) and (max-width: 767px) {
-          .dabba{
-        display: flex;
-        flex-direction: column;
-      
-      }
-      .dabba-img > img{
-        height: 630px;
-        margin-top: -57px;
-        width: 455px;
-      }
-      }
-
-      @media screen and (min-width: 480px) and (max-width: 639px) {
-          .dabba{
-        display: flex;
-        flex-direction: column;
-      
-      }
-      .dabba-img > img{
-        height: 660px;
-        margin-top: -57px;
-        width: 455px;
-      }
-      .dabba-img > .hover-link{
-        color:black;
-        background-color: white;
-        padding:10px;
-        border-radius:10px;
-        font-weight: bold;
-        
-        
-        display:block;
-      }
-       .dabba-img:hover > .hover-link{
-          display:block;
-          position:absolute;
-          top:50%;
-          left:50%;
-          transform: translate(-50%, -50%);
-          /* display:none; */
-      }
-      }
-      @media screen and (max-width: 479px) {
-        .dabba{
-        display: flex;
-        flex-direction: column;
-      
-      }
-      .dabba-img > img{
-        height: 550px;
-        margin-top: -57px;
-        width: 100%;
-      }
-      .dabba-img:hover > .hover-link{
-        display: block;
-      }
-       .dabba-img:hover > .hover-link{
-          display:block;
-          position:absolute;
-          top:50%;
-          left:50%;
-          transform: translate(-50%, -50%);
-          /* display:none; */
-      }
-      }
       
       /* floating blobs */
       .hero-blob {
@@ -2370,153 +2293,7 @@
         }
       }
 
-      @media (max-width: 768px) {
-        .section {
-          padding: 68px 0;
-        }
-        .nav-links,
-        .nav-cta {
-          display: none;
-        }
-        .nav-hb {
-          display: flex;
-        }
-        #home {
-          padding: 100px 0 64px;
-        }
-        .hero-title {
-          font-size: clamp(34px, 9vw, 56px);
-        }
-        .hero-btns {
-          flex-direction: column;
-          align-items: flex-start;
-        }
-        .hero-stats {
-          gap: 18px;
-        }
-        .why-grid {
-          grid-template-columns: 1fr;
-        }
-        .svc-pnl.active {
-          grid-template-columns: 1fr;
-        }
-        .links-grid {
-          grid-template-columns: 1fr 1fr;
-        }
-        .milestone-list {
-          grid-template-columns: 1fr;
-        }
-        .footer-grid {
-          grid-template-columns: 1fr;
-          gap: 28px;
-        }
-        .footer-bot {
-          flex-direction: column;
-          text-align: center;
-        }
-        .svc-tabs-wrap {
-          justify-content: flex-start;
-          flex-wrap: nowrap;
-          overflow-x: auto;
-          -webkit-overflow-scrolling: touch;
-          scrollbar-width: none;
-          padding-bottom: 4px;
-        }
-        .svc-tabs-wrap::-webkit-scrollbar {
-          display: none;
-        }
-        .ach-grid {
-          grid-template-columns: 1fr 1fr;
-        }
-        .wwd-steps {
-          grid-template-columns: 1fr 1fr;
-        }
-        .f-grid {
-          grid-template-columns: 1fr;
-        }
-        .cta-banner {
-          padding: 36px 24px;
-        }
-      }
-
-      @media (max-width: 420px) {
-        .container {
-          padding: 0 14px;
-        }
-        .section {
-          padding: 52px 0;
-        }
-        .hero-title {
-          font-size: 32px;
-          letter-spacing: -0.5px;
-        }
-        .hero-eyebrow {
-          font-size: 9px;
-        }
-        .hero-quote {
-          font-size: 14px;
-        }
-        .hero-tags {
-          gap: 6px;
-        }
-        .hero-tag {
-          font-size: 10.5px;
-          padding: 4px 10px;
-        }
-        .hero-stats {
-          flex-direction: column;
-          gap: 14px;
-        }
-        .hstat {
-          border-left: 3px solid var(--teal);
-          padding-left: 12px;
-        }
-        .hstat-num {
-          font-size: 24px;
-        }
-        .why-grid {
-          grid-template-columns: 1fr;
-        }
-        .links-grid {
-          grid-template-columns: 1fr;
-        }
-        .ach-grid {
-          grid-template-columns: 1fr;
-        }
-        .wwd-steps {
-          grid-template-columns: 1fr;
-        }
-        .milestone-list {
-          grid-template-columns: 1fr;
-        }
-        .svc-tab {
-          font-size: 11.5px;
-          padding: 7px 13px;
-        }
-        .form-box {
-          padding: 22px 16px;
-        }
-        .f-grid {
-          grid-template-columns: 1fr;
-        }
-        .nav-brand-name {
-          font-size: 16px;
-        }
-        .cta-banner {
-          padding: 28px 16px;
-        }
-        .fc1,
-        .fc2,
-        .fc3 {
-          display: none;
-        }
-        #btt {
-          bottom: 14px;
-          right: 12px;
-          width: 40px;
-          height: 40px;
-        }
-      }
+     
 
 
       /* Clock Styling */
@@ -2918,6 +2695,154 @@
         text-align: center;
       }
 
+       @media (max-width: 768px) {
+        .section {
+          padding: 68px 0;
+        }
+        .nav-links,
+        .nav-cta {
+          display: none;
+        }
+        .nav-hb {
+          display: flex;
+        }
+        #home {
+          padding: 100px 0 64px;
+        }
+        .hero-title {
+          font-size: clamp(34px, 9vw, 56px);
+        }
+        .hero-btns {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .hero-stats {
+          gap: 18px;
+        }
+        .why-grid {
+          grid-template-columns: 1fr;
+        }
+        .svc-pnl.active {
+          grid-template-columns: 1fr;
+        }
+        .links-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .milestone-list {
+          grid-template-columns: 1fr;
+        }
+        .footer-grid {
+          grid-template-columns: 1fr;
+          gap: 28px;
+        }
+        .footer-bot {
+          flex-direction: column;
+          text-align: center;
+        }
+        .svc-tabs-wrap {
+          justify-content: flex-start;
+          flex-wrap: nowrap;
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+          scrollbar-width: none;
+          padding-bottom: 4px;
+        }
+        .svc-tabs-wrap::-webkit-scrollbar {
+          display: none;
+        }
+        .ach-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .wwd-steps {
+          grid-template-columns: 1fr 1fr;
+        }
+        .f-grid {
+          grid-template-columns: 1fr;
+        }
+        .cta-banner {
+          padding: 36px 24px;
+        }
+      }
+
+      @media (max-width: 420px) {
+        .container {
+          padding: 0 14px;
+        }
+        .section {
+          padding: 52px 0;
+        }
+        .hero-title {
+          font-size: 32px;
+          letter-spacing: -0.5px;
+        }
+        .hero-eyebrow {
+          font-size: 9px;
+        }
+        .hero-quote {
+          font-size: 14px;
+        }
+        .hero-tags {
+          gap: 6px;
+        }
+        .hero-tag {
+          font-size: 10.5px;
+          padding: 4px 10px;
+        }
+        .hero-stats {
+          flex-direction: column;
+          gap: 14px;
+        }
+        .hstat {
+          border-left: 3px solid var(--teal);
+          padding-left: 12px;
+        }
+        .hstat-num {
+          font-size: 24px;
+        }
+        .why-grid {
+          grid-template-columns: 1fr;
+        }
+        .links-grid {
+          grid-template-columns: 1fr;
+        }
+        .ach-grid {
+          grid-template-columns: 1fr;
+        }
+        .wwd-steps {
+          grid-template-columns: 1fr;
+        }
+        .milestone-list {
+          grid-template-columns: 1fr;
+        }
+        .svc-tab {
+          font-size: 11.5px;
+          padding: 7px 13px;
+        }
+        .form-box {
+          padding: 22px 16px;
+        }
+        .f-grid {
+          grid-template-columns: 1fr;
+        }
+        .nav-brand-name {
+          font-size: 16px;
+        }
+        .cta-banner {
+          padding: 28px 16px;
+        }
+        .fc1,
+        .fc2,
+        .fc3 {
+          display: none;
+        }
+        #btt {
+          bottom: 14px;
+          right: 12px;
+          width: 40px;
+          height: 40px;
+        }
+      }
+
     </style>
   </head>
   <body>
@@ -3031,7 +2956,7 @@
         <span class="announcement-badge" id="announcementBadge">0</span>
       </button>
 
-      <div class="container dabba">
+      <div class="container ">
         <div class="hero-content">
           <!-- <div class="hero-eyebrow sr d1">
             <i class="ri-award-fill"></i>
