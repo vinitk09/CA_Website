@@ -2413,15 +2413,53 @@
       }
       @media (max-width: 900px) {
         footer .clock-card {
-          flex-basis: calc(50% - 10px);
+          flex: 0 0 auto;
+          min-width: 140px;
         }
       }
       @media (max-width: 640px) {
         footer .clock-card {
-          flex-basis: 100%;
+          flex: 0 0 auto;
+          min-width: 130px;
+          padding: 10px 8px 8px;
         }
         footer .clock-face {
-          zoom: 0.48;
+          zoom: 0.35;
+        }
+        footer .world-clock-wrap {
+          gap: 8px;
+          flex-wrap: wrap;
+          overflow-x: visible;
+        }
+        footer .clock-city {
+          font-size: 10px;
+          margin-bottom: 4px;
+        }
+        footer .clock-container {
+          height: 100px;
+          overflow: visible;
+        }
+      }
+      @media (max-width: 480px) {
+        footer .clock-card {
+          min-width: 115px;
+          padding: 8px 6px;
+        }
+        footer .clock-face {
+          zoom: 0.3;
+        }
+        footer .world-clock-wrap {
+          flex-wrap: wrap;
+        }
+        footer .clock-city {
+          font-size: 9px;
+        }
+        footer .digital-time {
+          font-size: 9px;
+        }
+        footer .clock-container {
+          height: 90px;
+          overflow: visible;
         }
       }
 
