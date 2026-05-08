@@ -338,10 +338,23 @@
       }
       .nav-brand-icon {
         width: 54px;
-        height: 38px;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
+        gap: 4px;
+      }
+      .nav-brand-icon img {
+        width: 54px;
+        height: 38px;
+        display: block;
+      }
+      .nav-brand-caption {
+        font-size: 11px;
+        color: var(--navy2);
+        font-weight: 600;
+        text-transform: none;
+        line-height: 1;
       }
       .nav-brand-text {
         line-height: 1;
@@ -354,11 +367,12 @@
         letter-spacing: -0.3px;
       }
       .nav-brand-sub {
-        font-size: 19px;
+        font-size: 15px;
         font-weight: 900;
-        letter-spacing: 2px;
-        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-transform: none;
         color: var(--teal);
+        white-space: nowrap;
       }
 
       /* links */
@@ -367,7 +381,8 @@
         align-items: center;
         gap: 4px;
       }
-      .nav-links a {
+      .nav-links a,
+      .nav-dropdown-toggle {
         position: relative;
         padding: 7px 13px;
         font-size: 13px;
@@ -376,8 +391,13 @@
         border-radius: 8px;
         transition: all 0.25s;
         white-space: nowrap;
+        background: transparent;
+        border: none;
+        font-family: inherit;
+        cursor: none;
       }
-      .nav-links a::after {
+      .nav-links a::after,
+      .nav-dropdown-toggle::after {
         content: "";
         position: absolute;
         bottom: 4px;
@@ -390,15 +410,63 @@
           width 0.3s,
           left 0.3s;
       }
-      .nav-links a:hover {
+      .nav-links a:hover,
+      .nav-dropdown:hover .nav-dropdown-toggle {
         color: var(--teal);
         background: rgba(14, 122, 110, 0.06);
       }
-      .nav-links a:hover::after {
+      .nav-links a:hover::after,
+      .nav-dropdown:hover .nav-dropdown-toggle::after {
         width: 60%;
         left: 20%;
       }
       .nav-links a.scrolled {
+        color: var(--teal);
+      }
+
+      .nav-dropdown {
+        position: relative;
+      }
+      .nav-dropdown-toggle {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .nav-dropdown-toggle i {
+        font-size: 12px;
+        transition: transform 0.25s ease;
+      }
+      .nav-dropdown:hover .nav-dropdown-toggle i {
+        transform: rotate(180deg);
+      }
+      .nav-dropdown-menu {
+        position: absolute;
+        top: calc(100% + 6px);
+        left: 0;
+        min-width: 220px;
+        padding: 10px;
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.98);
+        box-shadow: var(--shadow2);
+        border: 1px solid var(--border);
+        display: none;
+        flex-direction: column;
+        gap: 4px;
+        z-index: 1000;
+      }
+      .nav-dropdown:hover .nav-dropdown-menu,
+      .nav-dropdown:focus-within .nav-dropdown-menu {
+        display: flex;
+      }
+      .nav-dropdown-menu a {
+        width: 100%;
+        padding: 10px 12px;
+        border-radius: 10px;
+        color: var(--navy2);
+        background: transparent;
+      }
+      .nav-dropdown-menu a:hover {
+        background: rgba(14, 122, 110, 0.08);
         color: var(--teal);
       }
 
@@ -473,6 +541,10 @@
       }
       .nav-drawer a:hover {
         color: var(--teal);
+      }
+      .nav-drawer .dl-sub {
+        padding-left: 20px;
+        font-size: 14px;
       }
       .nav-ovl {
         position: fixed;
@@ -1158,6 +1230,7 @@
         grid-template-columns: 1fr 1fr;
         gap: 64px;
         align-items: start;
+        margin-top: 20px;
       }
       .about-img-block {
         position: relative;
@@ -1373,6 +1446,183 @@
         font-size: 12.5px;
         color: #718096;
         line-height: 1.6;
+      }
+
+      /* ═══════════════════════════════════════════════════════
+   BOOTSTRAP UTILITY CLASSES
+═══════════════════════════════════════════════════════ */
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -12px;
+        margin-left: -12px;
+      }
+      .col {
+        flex: 1 0 0;
+        padding-right: 12px;
+        padding-left: 12px;
+      }
+      .row-cols-1 > * { flex: 0 0 100%; }
+      @media (min-width: 768px) {
+        .row-cols-md-2 > * { flex: 0 0 50%; }
+      }
+      @media (min-width: 1200px) {
+        .row-cols-xl-3 > * { flex: 0 0 33.333333%; }
+      }
+      .pb-4 { padding-bottom: 24px; }
+      .mb-4 { margin-bottom: 24px; }
+      .mx-auto { margin-left: auto; margin-right: auto; }
+      .text-center { text-align: center; }
+      .justify-content-center { justify-content: center; }
+      .object-fit-cover { object-fit: cover; }
+      .display-5 {
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 1.2;
+        color: var(--navy);
+        margin: 0 0 16px 0;
+      }
+
+      /* ═══════════════════════════════════════════════════════
+   SERVICE CARD HOVER EFFECTS (Layla)
+═══════════════════════════════════════════════════════ */
+      figure.effect-layla {
+        position: relative;
+        overflow: hidden;
+        margin: 0;
+        cursor: pointer;
+        border-radius: 12px;
+        height: 280px;
+      }
+      figure.effect-layla img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: opacity 0.35s, transform 0.35s;
+        backface-visibility: hidden;
+      }
+      figure.effect-layla figcaption {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.3);
+        color: #fff;
+        opacity: 1;
+        transition: opacity 0.35s, transform 0.35s, background 0.35s;
+        z-index: 2;
+      }
+      figure.effect-layla h2 {
+        font-size: 24px;
+        font-weight: 700;
+        margin: 0;
+        text-align: center;
+        transform: scale(1);
+        transition: transform 0.35s;
+      }
+      figure.effect-layla:hover img {
+        opacity: 0.4;
+        transform: scale(1.05);
+      }
+      figure.effect-layla:hover figcaption {
+        background: rgba(0, 0, 0, 0.65);
+      }
+      figure.effect-layla:hover h2 {
+        transform: scale(1.15);
+      }
+
+      /* ═══════════════════════════════════════════════════════
+   TEAM SLIDER
+═══════════════════════════════════════════════════════ */
+      .team-slider {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: 22px;
+      }
+      .team-nav {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+      .team-prev, .team-next {
+        background: linear-gradient(135deg, var(--teal), var(--blue));
+        color: #fff;
+        border: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        cursor: none;
+      }
+      .team-track {
+        overflow: hidden;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        flex: 1 1 auto;
+      }
+      .team-track::-webkit-scrollbar { height: 8px; }
+      .team-track::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.12); border-radius: 8px; }
+      .team-track-inner {
+        display: flex;
+        gap: 14px;
+        padding: 8px 4px;
+        align-items: stretch;
+        width: 100%;
+      }
+      .team-card {
+        flex: 0 0 300px;
+        width: 300px;
+        border-radius: 14px;
+        overflow: hidden;
+        position: relative;
+        background: #fff;
+        box-shadow: 0 10px 30px rgba(13,27,42,0.10);
+        transition: transform 0.35s ease;
+      }
+      .team-card figure { margin: 0; position: relative; height: 320px; overflow: hidden; }
+      .team-card img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.35s ease; }
+      .team-overlay {
+        position: absolute;
+        left: 0; right: 0; bottom: 0;
+        height: 56px;
+        padding: 10px 12px;
+        background: rgba(0,0,0,0.45);
+        color: #fff;
+        transition: height 0.35s ease, background 0.35s ease;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+      .team-name { font-weight: 800; font-size: 15px; line-height: 1; }
+      .team-role { font-size: 12px; opacity: 0.92; }
+      .team-overlay .team-desc {
+        display: none;
+        font-size: 13px;
+        margin-top: 8px;
+        color: rgba(255,255,255,0.95);
+      }
+      .team-card:hover img { transform: translateY(-8px) scale(1.03); }
+      .team-card:hover .team-overlay { height: 100%; background: rgba(0,0,0,0.72); }
+      .team-card:hover { transform: translateY(-6px); }
+      .team-card:hover .team-overlay .team-desc { display: block; }
+      @media (max-width: 900px) {
+        .team-card { flex: 0 0 180px; width: 180px; }
+      }
+      @media (max-width: 640px) {
+        .team-card { flex: 0 0 220px; width: 220px; }
+      }
+      @media (min-width: 1100px) {
+        .team-card { flex: 0 0 calc((100% - 36px) / 3); width: calc((100% - 36px) / 3); }
+        .team-track-inner { gap: 18px; }
       }
 
       /* ═══════════════════════════════════════════════════════
@@ -2125,6 +2375,55 @@
         flex-wrap: wrap;
         gap: 8px;
       }
+      .footer-clocks {
+        margin-top: 18px;
+      }
+      footer .world-clock-wrap {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 10px;
+        align-items: stretch;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+      footer .clock-card {
+        flex: 1 1 144px;
+        min-width: 126px;
+        padding: 12px 10px 10px;
+        border-radius: 14px;
+        /* background: rgba(255, 255, 255, 0.03); */
+        /* border: 1px solid rgba(255, 255, 255, 0.06); */
+      }
+      footer .clock-city {
+        font-size: 11px;
+        margin-bottom: 6px;
+      }
+      footer .clock-container {
+        height: 92px;
+        overflow: hidden;
+      }
+      footer .clock-face {
+        width: 200px;
+        height: 200px;
+        zoom: 0.44;
+      }
+      footer .digital-time {
+        margin-top: 4px;
+        font-size: 10px;
+      }
+      @media (max-width: 900px) {
+        footer .clock-card {
+          flex-basis: calc(50% - 10px);
+        }
+      }
+      @media (max-width: 640px) {
+        footer .clock-card {
+          flex-basis: 100%;
+        }
+        footer .clock-face {
+          zoom: 0.48;
+        }
+      }
 
       /* back to top */
       #btt {
@@ -2249,6 +2548,7 @@
         .about-grid {
           grid-template-columns: 1fr;
           gap: 44px;
+          margin-top: 20px;
         }
         .about-img-block {
           max-width: 480px;
@@ -2308,8 +2608,8 @@
       }
 
       .clock-card {
-        background:black;
-        border: 1px solid rgba(13, 27, 42, 0.06);
+        /* background:black; */
+        /* border: 1px solid rgba(13, 27, 42, 0.06); */
         border-radius: 18px;
         padding: 18px 10px 14px;
         display: flex;
@@ -2764,6 +3064,35 @@
         }
       }
 
+      @media (max-width: 768px) {
+        .row-cols-md-2 > * { flex: 0 0 100%; }
+        .display-5 {
+          font-size: 36px;
+        }
+        figure.effect-layla h2 {
+          font-size: 20px;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .row {
+          margin-right: -8px;
+          margin-left: -8px;
+        }
+        .col {
+          padding-right: 8px;
+          padding-left: 8px;
+        }
+        .row-cols-xl-3 > * { flex: 0 0 100%; }
+        .display-5 {
+          font-size: 28px;
+          margin-bottom: 12px;
+        }
+        figure.effect-layla h2 {
+          font-size: 18px;
+        }
+      }
+
       @media (max-width: 420px) {
         .container {
           padding: 0 14px;
@@ -2855,20 +3184,27 @@
       <div class="container">
         <div class="nav-inner">
           <a href="#home" class="nav-brand">
-            <img
-              src="assets\logo.png"
-              alt="CA India Logo"
-              class="nav-brand-icon"
-            />
+            <div class="nav-brand-icon">
+              <img src="assets/logo.png" alt="CA India Logo" />
+              <div class="nav-brand-caption">Chartered Accountant</div>
+            </div>
+
             <div class="nav-brand-text">
-              <!-- <div class="nav-brand-name">CA India</div> -->
               <div class="nav-brand-sub">S.K. Mishra &amp; Associates</div>
             </div>
           </a>
 
           <div class="nav-links">
             <a href="#home">Home</a>
-            <a href="#about">About Us </a>
+            <div class="nav-dropdown">
+              <button class="nav-dropdown-toggle" type="button">
+                About <i class="ri-arrow-down-s-line"></i>
+              </button>
+              <div class="nav-dropdown-menu">
+                <a href="#about">About Us</a>
+                <a href="teams.html">Our Team</a>
+              </div>
+            </div>
             <a href="#services">Our Services</a>
             <a href="#whatwedo">What We Do</a>
             <a href="#achievements">Our Achievements</a>
@@ -2899,6 +3235,7 @@
       <a href="#about" class="dl"
         ><i class="ri-information-line"></i>About Us </a
       >
+      <a href="teams.html" class="dl dl-sub"><i class="ri-group-line"></i>Our Team</a>
       <a href="#services" class="dl"
         ><i class="ri-briefcase-line"></i>Our Services</a
       >
@@ -2913,6 +3250,171 @@
       >
       <!-- <a href="#contact" class="dl"><i class="ri-phone-line"></i>Contact Us</a> -->
     </div>
+  <!-- ══ ABOUT US & WHY US ══ -->
+    <section id="about" class="section section--white">
+      <div class="container">
+        <div class="about-grid" data-aos="fade-left"
+   
+     data-aos-offset="500"
+     data-aos-duration="500">
+          <!-- image block -->
+          <div class="sr-l">
+            <div class="about-img-block">
+              <div class="about-img-frame">
+                <div class="about-img-inner">
+                  <div class="about-big-letter">CA</div>
+                  <div style="text-align: center">
+                    <div
+                      style="
+                        font-family: var(--fd);
+                        font-size: 22px;
+                        font-weight: 700;
+                        color: var(--navy);
+                        opacity: 0.6;
+                      "
+                    >
+                      <!-- Est. 1999 -->
+                    </div>
+                    <div
+                      style="font-size: 13px; color: #8a98a8; margin-top: 4px"
+                    >
+                      <!-- S.K. Mishra &amp; Associates -->
+                    </div>
+                  </div>
+                </div>
+                <!-- floating decorative cards -->
+                <div class="about-float-card fc1">
+                  <i class="ri-trophy-fill"></i>
+                  <div>
+                    <div
+                      style="
+                        font-size: 11px;
+                        color: #8a98a8;
+                        margin-bottom: 1px;
+                      "
+                    >
+                      Experience
+                    </div>
+                    <div>27+ Years</div>
+                  </div>
+                </div>
+                <div class="about-float-card fc2">
+                  <i class="ri-global-fill"></i>
+                  <div>
+                    <div
+                      style="
+                        font-size: 11px;
+                        color: #8a98a8;
+                        margin-bottom: 1px;
+                      "
+                    >
+                      Reach
+                    </div>
+                    <div>PAN India</div>
+                  </div>
+                </div>
+                <div class="about-float-card fc3">
+                  <i class="ri-team-fill"></i>
+                  <div>
+                    <div
+                      style="
+                        font-size: 11px;
+                        color: #8a98a8;
+                        margin-bottom: 1px;
+                      "
+                    >
+                      Partners
+                    </div>
+                    <div>9 Experts</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- text -->
+          <div class="sr-r">
+            <div class="chip">
+              <i class="ri-information-line"></i>Who We Are
+            </div>
+            <h2 class="heading">
+              27+ Years of <em>Proven</em> Chartered Accountancy
+            </h2>
+            <div class="rule"></div>
+            <p class="body" style="margin-bottom: 16px">
+              S.K. Mishra &amp; Associates is a full-service Chartered
+              Accountancy firm founded in 1999, with PAN-India clientele and
+              partner-led engagements. We combine deep domain knowledge with a
+              business-centric approach across Chemical, Automobile,
+              Hospitality, Education, Steel, Mining, and Heavy Machinery sectors.
+            </p>
+            <p class="body" style="margin-bottom: 24px">
+              Our expertise spans Assurance, Controls, Finance, Direct Tax, GST,
+              EXIM, and Corporate Laws. A technology-driven approach ensures
+              long-term value creation for every client.
+            </p>
+            <div class="about-feats">
+              <div class="about-feat glow-card d1 sr">
+                <div class="glow"></div>
+                <div class="about-feat-icon">
+                  <i class="ri-shield-check-line"></i>
+                </div>
+                <div class="about-feat-text">
+                  <h4>Deep Domain Expertise</h4>
+                  <p>
+                    Business-centric approach across diverse sectors with
+                    partner-level attention
+                  </p>
+                </div>
+              </div>
+              <div class="about-feat glow-card d2 sr">
+                <div class="glow"></div>
+                <div class="about-feat-icon">
+                  <i class="ri-computer-line"></i>
+                </div>
+                <div class="about-feat-text">
+                  <h4>Technology-Driven Approach</h4>
+                  <p>
+                    ERP, MIS, and digital tools ensuring long-term value
+                    creation
+                  </p>
+                </div>
+              </div>
+              <div class="about-feat glow-card d3 sr">
+                <div class="glow"></div>
+                <div class="about-feat-icon">
+                  <i class="ri-user-star-line"></i>
+                </div>
+                <div class="about-feat-text">
+                  <h4>Partner-Led Engagements</h4>
+                  <p>
+                    Every client gets direct partner attention — not delegated
+                    to juniors
+                  </p>
+                </div>
+              </div>
+              <div class="about-feat glow-card d4 sr">
+                <div class="glow"></div>
+                <div class="about-feat-icon">
+                  <i class="ri-global-line"></i>
+                </div>
+                <div class="about-feat-text">
+                  <h4>GST, EXIM &amp; Corporate Laws</h4>
+                  <p>
+                    Complete coverage from domestic compliance to international
+                    tax structuring
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+       
+      </div>
+    </section>
+
+
 
     <!-- ══ HERO / HOME ══ -->
     <section id="home">
@@ -3097,173 +3599,18 @@
       </div>
     </div>
 
-    <!-- ══ ABOUT US & WHY US ══ -->
+    
+
+
+     <!-- WHY US -->
     <section id="about" class="section section--white">
       <div class="container">
-        <div class="about-grid" data-aos="fade-left"
-   
-     data-aos-offset="500"
-     data-aos-duration="500">
-          <!-- image block -->
-          <div class="sr-l">
-            <div class="about-img-block">
-              <div class="about-img-frame">
-                <div class="about-img-inner">
-                  <div class="about-big-letter">CA</div>
-                  <div style="text-align: center">
-                    <div
-                      style="
-                        font-family: var(--fd);
-                        font-size: 22px;
-                        font-weight: 700;
-                        color: var(--navy);
-                        opacity: 0.6;
-                      "
-                    >
-                      <!-- Est. 1999 -->
-                    </div>
-                    <div
-                      style="font-size: 13px; color: #8a98a8; margin-top: 4px"
-                    >
-                      <!-- S.K. Mishra &amp; Associates -->
-                    </div>
-                  </div>
-                </div>
-                <!-- floating decorative cards -->
-                <div class="about-float-card fc1">
-                  <i class="ri-trophy-fill"></i>
-                  <div>
-                    <div
-                      style="
-                        font-size: 11px;
-                        color: #8a98a8;
-                        margin-bottom: 1px;
-                      "
-                    >
-                      Experience
-                    </div>
-                    <div>27+ Years</div>
-                  </div>
-                </div>
-                <div class="about-float-card fc2">
-                  <i class="ri-global-fill"></i>
-                  <div>
-                    <div
-                      style="
-                        font-size: 11px;
-                        color: #8a98a8;
-                        margin-bottom: 1px;
-                      "
-                    >
-                      Reach
-                    </div>
-                    <div>PAN India</div>
-                  </div>
-                </div>
-                <div class="about-float-card fc3">
-                  <i class="ri-team-fill"></i>
-                  <div>
-                    <div
-                      style="
-                        font-size: 11px;
-                        color: #8a98a8;
-                        margin-bottom: 1px;
-                      "
-                    >
-                      Partners
-                    </div>
-                    <div>9 Experts</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- text -->
-          <div class="sr-r">
-            <div class="chip">
-              <i class="ri-information-line"></i>Who We Are
-            </div>
-            <h2 class="heading">
-              27+ Years of <em>Proven</em> Chartered Accountancy
-            </h2>
-            <div class="rule"></div>
-            <p class="body" style="margin-bottom: 16px">
-              S.K. Mishra &amp; Associates is a full-service Chartered
-              Accountancy firm founded in 1999, with PAN-India clientele and
-              partner-led engagements. We combine deep domain knowledge with a
-              business-centric approach across Chemical, Automobile,
-              Hospitality, Education, Steel, Mining, and Heavy Machinery sectors.
-            </p>
-            <p class="body" style="margin-bottom: 24px">
-              Our expertise spans Assurance, Controls, Finance, Direct Tax, GST,
-              EXIM, and Corporate Laws. A technology-driven approach ensures
-              long-term value creation for every client.
-            </p>
-            <div class="about-feats">
-              <div class="about-feat glow-card d1 sr">
-                <div class="glow"></div>
-                <div class="about-feat-icon">
-                  <i class="ri-shield-check-line"></i>
-                </div>
-                <div class="about-feat-text">
-                  <h4>Deep Domain Expertise</h4>
-                  <p>
-                    Business-centric approach across diverse sectors with
-                    partner-level attention
-                  </p>
-                </div>
-              </div>
-              <div class="about-feat glow-card d2 sr">
-                <div class="glow"></div>
-                <div class="about-feat-icon">
-                  <i class="ri-computer-line"></i>
-                </div>
-                <div class="about-feat-text">
-                  <h4>Technology-Driven Approach</h4>
-                  <p>
-                    ERP, MIS, and digital tools ensuring long-term value
-                    creation
-                  </p>
-                </div>
-              </div>
-              <div class="about-feat glow-card d3 sr">
-                <div class="glow"></div>
-                <div class="about-feat-icon">
-                  <i class="ri-user-star-line"></i>
-                </div>
-                <div class="about-feat-text">
-                  <h4>Partner-Led Engagements</h4>
-                  <p>
-                    Every client gets direct partner attention — not delegated
-                    to juniors
-                  </p>
-                </div>
-              </div>
-              <div class="about-feat glow-card d4 sr">
-                <div class="glow"></div>
-                <div class="about-feat-icon">
-                  <i class="ri-global-line"></i>
-                </div>
-                <div class="about-feat-text">
-                  <h4>GST, EXIM &amp; Corporate Laws</h4>
-                  <p>
-                    Complete coverage from domestic compliance to international
-                    tax structuring
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- WHY US -->
-        <div style="margin-top: 80px">
+            <div style="margin-top: 80px">
           <div class="sec-hdr">
             <div class="chip" style="justify-content: center">
               <i class="ri-question-line"></i>Why Choose Us
             </div>
-            <h2 class="heading sr">The <em>CA India</em> Advantage</h2>
+            <h2 class="heading sr">The <em>S.K. Mishra & Associates</em> Advantage</h2>
             <div class="rule"></div>
             <p class="body sr">
               What sets us apart in the crowded CA landscape — partner-led,
@@ -3324,286 +3671,106 @@
       </div>
     </section>
 
+    
+
+  
+
     <!-- ══ OUR SERVICES ══ -->
     <section id="services" class="section section--light">
       <div class="container">
-        <div class="sec-hdr">
-          <div class="chip" style="justify-content: center">
-            <i class="ri-briefcase-line"></i>What We Offer
-          </div>
-          <h2 class="heading sr">Service Excellence <em>at a Glance</em></h2>
-          <div class="rule"></div>
-          <p class="body sr">
-            A full spectrum of chartered accountancy, advisory, and compliance
-            services — all under one roof.
-          </p>
+        <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px; visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+          <h1 class="display-5 mb-4">Services</h1>
         </div>
-
-        <div class="svc-tabs-wrap" role="tablist">
-          <button class="svc-tab active" data-t="ass">
-            Assurance &amp; Audit
-          </button>
-          <button class="svc-tab" data-t="tax">Taxation</button>
-          <button class="svc-tab" data-t="biz">Business Support</button>
-          <button class="svc-tab" data-t="adv">Advisory &amp; BPO</button>
-          <button class="svc-tab" data-t="grc">GRC &amp; Controls</button>
-        </div>
-
-        <div class="svc-pnl active" id="pnl-ass">
-          <div class="svc-card glow-card sr d1">
-            <div class="glow"></div>
-            <div class="svc-ico"><i class="ri-file-check-line"></i></div>
-            <h3>Assurance &amp; Attestation</h3>
-            <ul class="svc-list">
-              <li><i class="ri-arrow-right-s-line"></i>Statutory Audit</li>
-              <li><i class="ri-arrow-right-s-line"></i>Internal Audit</li>
-              <li>
-                <i class="ri-arrow-right-s-line"></i>System &amp; Management
-                Audit
-              </li>
-              <li><i class="ri-arrow-right-s-line"></i>Concurrent Audit</li>
-              <li><i class="ri-arrow-right-s-line"></i>Financial Reporting</li>
-              <li>
-                <i class="ri-arrow-right-s-line"></i>Fund Utilisation Status /
-                Certification
-              </li>
-              <li><i class="ri-arrow-right-s-line"></i>Due Diligence</li>
-            </ul>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 justify-content-center wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+          <div class="col pb-4">
+            <a href="https://www.ca-spark.com/spark-service/assurance" title="Assurance" target="_blank">
+              <figure class="effect-layla">
+                <img src="https://www.ca-spark.com/public/caspark/images/services/assurance.png" alt="Assurance" width="100%" height="auto" class="object-fit-cover">
+                <figcaption>
+                  <h2>Assurance</h2>
+                </figcaption>
+              </figure>
+            </a>
           </div>
-          <div class="svc-card glow-card sr d2">
-            <div class="glow"></div>
-            <div class="svc-ico"><i class="ri-bar-chart-grouped-line"></i></div>
-            <h3>Specialized Capabilities</h3>
-            <ul class="svc-list">
-              <li>
-                <i class="ri-arrow-right-s-line"></i>Risk-based Statutory Audits
-              </li>
-              <li>
-                <i class="ri-arrow-right-s-line"></i>Special Audits for Large
-                Conglomerates
-              </li>
-              <li><i class="ri-arrow-right-s-line"></i>GAAP Conversions</li>
-              <li>
-                <i class="ri-arrow-right-s-line"></i>Regulatory Certifications
-              </li>
-              <li>
-                <i class="ri-arrow-right-s-line"></i>Audit Quality Controls
-              </li>
-              <li>
-                <i class="ri-arrow-right-s-line"></i>GAAP Conversions &amp; IFRS
-                Reporting
-              </li>
-            </ul>
+          <div class="col pb-4">
+            <a href="https://www.ca-spark.com/spark-service/taxation" title="Taxation" target="_blank">
+              <figure class="effect-layla">
+                <img src="https://www.ca-spark.com/public/caspark/images/services/taxation.png" alt="Taxation" width="100%" height="auto" class="object-fit-cover">
+                <figcaption>
+                  <h2>Taxation</h2>
+                </figcaption>
+              </figure>
+            </a>
           </div>
-        </div>
-
-        <div class="svc-pnl" id="pnl-tax">
-          <div class="svc-card glow-card sr d1">
-            <div class="glow"></div>
-            <div class="svc-ico"><i class="ri-percent-line"></i></div>
-            <h3>Taxation &amp; Compliance</h3>
-            <ul class="svc-list">
-              <li>
-                <i class="ri-arrow-right-s-line"></i>Domestic &amp;
-                International Tax
-              </li>
-              <li><i class="ri-arrow-right-s-line"></i>Transfer Pricing</li>
-              <li>
-                <i class="ri-arrow-right-s-line"></i>GST Advisory &amp;
-                Litigation
-              </li>
-              <li>
-                <i class="ri-arrow-right-s-line"></i>Customs Advisory &amp;
-                Litigation
-              </li>
-              <li>
-                <i class="ri-arrow-right-s-line"></i>Representation &amp;
-                Appeals
-              </li>
-              <li><i class="ri-arrow-right-s-line"></i>Tax Health Check Up</li>
-            </ul>
+          <div class="col pb-4">
+            <a href="https://www.ca-spark.com/spark-service/advisory" title="Advisory" target="_blank">
+              <figure class="effect-layla">
+                <img src="https://www.ca-spark.com/public/caspark/images/services/advisory.jpg" alt="Advisory" width="100%" height="auto" class="object-fit-cover">
+                <figcaption>
+                  <h2>Advisory</h2>
+                </figcaption>
+              </figure>
+            </a>
           </div>
-          <div class="svc-card glow-card sr d2">
-            <div class="glow"></div>
-            <div class="svc-ico"><i class="ri-exchange-line"></i></div>
-            <h3>International &amp; M&amp;A Tax</h3>
-            <ul class="svc-list">
-              <li>
-                <i class="ri-arrow-right-s-line"></i>Cross-border Tax
-                Structuring
-              </li>
-              <li>
-                <i class="ri-arrow-right-s-line"></i>Transfer Pricing
-                Documentation
-              </li>
-              <li><i class="ri-arrow-right-s-line"></i>Tax Due Diligence</li>
-              <li>
-                <i class="ri-arrow-right-s-line"></i>Transaction Structuring
-              </li>
-              <li>
-                <i class="ri-arrow-right-s-line"></i>Post-acquisition
-                Integration
-              </li>
-            </ul>
+          <div class="col pb-4">
+            <a href="https://www.ca-spark.com/spark-service/startup-consulting" title="Startup Consulting" target="_blank">
+              <figure class="effect-layla">
+                <img src="https://www.ca-spark.com/public/caspark/images/services/consulting.jpg" alt="Startup Consulting" width="100%" height="auto" class="object-fit-cover">
+                <figcaption>
+                  <h2>Startup Consulting</h2>
+                </figcaption>
+              </figure>
+            </a>
           </div>
-        </div>
-
-        <div class="svc-pnl" id="pnl-biz">
-          <div class="svc-card glow-card sr d1">
-            <div class="glow"></div>
-            <div class="svc-ico"><i class="ri-building-2-line"></i></div>
-            <h3>Business Support</h3>
-            <ul class="svc-list">
-              <li>
-                <i class="ri-arrow-right-s-line"></i>Project Finance &amp;
-                Government Subsidies
-              </li>
-              <li><i class="ri-arrow-right-s-line"></i>Debt Restructuring</li>
-              <li><i class="ri-arrow-right-s-line"></i>Start-up Advisory</li>
-              <li><i class="ri-arrow-right-s-line"></i>Regulatory Approvals</li>
-              <li>
-                <i class="ri-arrow-right-s-line"></i>Payroll &amp; HR Support
-              </li>
-              <li><i class="ri-arrow-right-s-line"></i>Secretarial Support</li>
-            </ul>
+          <div class="col pb-4">
+            <a href="https://www.ca-spark.com/spark-service/outsourcing-services" title="Outsourcing Services" target="_blank">
+              <figure class="effect-layla">
+                <img src="https://www.ca-spark.com/public/caspark/images/services/services.jpg" alt="Outsourcing Services" width="100%" height="auto" class="object-fit-cover">
+                <figcaption>
+                  <h2>Outsourcing Services</h2>
+                </figcaption>
+              </figure>
+            </a>
           </div>
-          <div class="svc-card glow-card sr d2">
-            <div class="glow"></div>
-            <div class="svc-ico"><i class="ri-team-line"></i></div>
-            <h3>Virtual CFO &amp; BPO/KPO</h3>
-            <ul class="svc-list">
-              <li><i class="ri-arrow-right-s-line"></i>Virtual CFO Services</li>
-              <li>
-                <i class="ri-arrow-right-s-line"></i>Business Process
-                Outsourcing
-              </li>
-              <li>
-                <i class="ri-arrow-right-s-line"></i>Knowledge Process
-                Outsourcing
-              </li>
-              <li>
-                <i class="ri-arrow-right-s-line"></i>Compliance Management &amp;
-                Review
-              </li>
-              <li>
-                <i class="ri-arrow-right-s-line"></i>Recruitment Process
-                Services
-              </li>
-            </ul>
+          <div class="col pb-4">
+            <a href="https://www.ca-spark.com/spark-service/insolvency-professional" title="Insolvency Professional" target="_blank">
+              <figure class="effect-layla">
+                <img src="https://www.ca-spark.com/public/caspark/images/services/Insolvency.png" alt="Insolvency Professional" width="100%" height="auto" class="object-fit-cover">
+                <figcaption>
+                  <h2>Insolvency Professional</h2>
+                </figcaption>
+              </figure>
+            </a>
           </div>
-        </div>
-
-        <div class="svc-pnl" id="pnl-adv">
-          <div class="svc-card glow-card sr d1">
-            <div class="glow"></div>
-            <div class="svc-ico"><i class="ri-settings-3-line"></i></div>
-            <h3>Advisory &amp; Process Outsourcing</h3>
-            <ul class="svc-list">
-              <li>
-                <i class="ri-arrow-right-s-line"></i>Business Process
-                Re-engineering
-              </li>
-              <li>
-                <i class="ri-arrow-right-s-line"></i>Designing of Accounting
-                Systems
-              </li>
-              <li><i class="ri-arrow-right-s-line"></i>SOP Development</li>
-              <li>
-                <i class="ri-arrow-right-s-line"></i>ERP &amp; MIS
-                Implementation
-              </li>
-              <li>
-                <i class="ri-arrow-right-s-line"></i>Accounting Outsourcing
-              </li>
-              <li>
-                <i class="ri-arrow-right-s-line"></i>Advise on MOU / Shareholder
-                Agreements
-              </li>
-              <li>
-                <i class="ri-arrow-right-s-line"></i>Process &amp; MIS Review
-              </li>
-            </ul>
+          <div class="col pb-4">
+            <a href="https://www.ca-spark.com/spark-service/research" title="Research" target="_blank">
+              <figure class="effect-layla">
+                <img src="https://www.ca-spark.com/public/caspark/images/services/research.png" alt="Research" width="100%" height="auto" class="object-fit-cover">
+                <figcaption>
+                  <h2>Research</h2>
+                </figcaption>
+              </figure>
+            </a>
           </div>
-          <div class="svc-card glow-card sr d2">
-            <div class="glow"></div>
-            <div class="svc-ico"><i class="ri-database-2-line"></i></div>
-            <h3>Technology &amp; Systems</h3>
-            <ul class="svc-list">
-              <li>
-                <i class="ri-arrow-right-s-line"></i>ERP Implementation &amp;
-                Advisory
-              </li>
-              <li>
-                <i class="ri-arrow-right-s-line"></i>MIS Design &amp; Reporting
-              </li>
-              <li>
-                <i class="ri-arrow-right-s-line"></i>Tech-enabled Compliance
-                Tracking
-              </li>
-              <li>
-                <i class="ri-arrow-right-s-line"></i>Digital Accounting
-                Transformation
-              </li>
-            </ul>
+          <div class="col pb-4">
+            <a href="https://www.ca-spark.com/spark-service/valuation" title="Valuation" target="_blank">
+              <figure class="effect-layla">
+                <img src="https://www.ca-spark.com/public/caspark/images/services/valuation.png" alt="Valuation" width="100%" height="auto" class="object-fit-cover">
+                <figcaption>
+                  <h2>Valuation</h2>
+                </figcaption>
+              </figure>
+            </a>
           </div>
-        </div>
-
-        <div class="svc-pnl" id="pnl-grc">
-          <div class="svc-card glow-card sr d1">
-            <div class="glow"></div>
-            <div class="svc-ico"><i class="ri-shield-star-line"></i></div>
-            <h3>Governance, Risk &amp; Controls</h3>
-            <ul class="svc-list">
-              <li>
-                <i class="ri-arrow-right-s-line"></i>Governance Frameworks
-              </li>
-              <li>
-                <i class="ri-arrow-right-s-line"></i>Enterprise Risk Management
-              </li>
-              <li>
-                <i class="ri-arrow-right-s-line"></i>Internal Controls Review
-              </li>
-              <li>
-                <i class="ri-arrow-right-s-line"></i>Process Audits &amp; Gap
-                Analysis
-              </li>
-              <li>
-                <i class="ri-arrow-right-s-line"></i>Policy Drafting &amp;
-                Implementation
-              </li>
-              <li>
-                <i class="ri-arrow-right-s-line"></i>Fraud Risk Management
-              </li>
-              <li>
-                <i class="ri-arrow-right-s-line"></i>Board &amp; Committee
-                Advisory
-              </li>
-              <li>
-                <i class="ri-arrow-right-s-line"></i>Training &amp; Awareness
-              </li>
-            </ul>
-          </div>
-          <div class="svc-card glow-card sr d2">
-            <div class="glow"></div>
-            <div class="svc-ico"><i class="ri-article-line"></i></div>
-            <h3>IFC &amp; Compliance</h3>
-            <ul class="svc-list">
-              <li>
-                <i class="ri-arrow-right-s-line"></i>IFC Implementation &amp;
-                Testing
-              </li>
-              <li>
-                <i class="ri-arrow-right-s-line"></i>Statutory Compliance
-                Oversight
-              </li>
-              <li>
-                <i class="ri-arrow-right-s-line"></i>Regulatory Readiness
-                Assessment
-              </li>
-              <li>
-                <i class="ri-arrow-right-s-line"></i>Risk-based Audit Planning
-              </li>
-            </ul>
+          <div class="col pb-4">
+            <a href="https://www.ca-spark.com/spark-service/corporate-compliance" title="Corporate Compliance" target="_blank">
+              <figure class="effect-layla">
+                <img src="https://www.ca-spark.com/public/caspark/images/services/compliance.jpg" alt="Corporate Compliance" width="100%" height="auto" class="object-fit-cover">
+                <figcaption>
+                  <h2>Corporate Compliance</h2>
+                </figcaption>
+              </figure>
+            </a>
           </div>
         </div>
       </div>
@@ -3959,168 +4126,7 @@
       </div>
     </section>
 
-
-    <section class="section world-clock-section">
-      <div class="container">
-        <div class="sec-hdr">
-          <div class="chip" style="justify-content: center">
-            <i class="ri-time-line"></i>Global Time Zones
-          </div>
-          <h2 class="heading sr" style="color:white">Current Time Across <em>Our Key Cities</em></h2>
-          <div class="rule"></div>
-        </div>
-
-        <div class="world-clock-wrap">
-          <div class="clock-card sr d1">
-            <div class="clock-city">Sydney</div>
-            <div class="clock-container">
-              <div class="clock-face">
-                <div class="marker marker-1"><div class="marker-dot"></div></div>
-                <div class="marker marker-2"><div class="marker-dot"></div></div>
-                <div class="marker marker-3"><div class="marker-dot"></div></div>
-                <div class="marker marker-4"><div class="marker-dot"></div></div>
-                <div class="marker marker-5"><div class="marker-dot"></div></div>
-                <div class="marker marker-6"><div class="marker-dot"></div></div>
-                <div class="marker marker-7"><div class="marker-dot"></div></div>
-                <div class="marker marker-8"><div class="marker-dot"></div></div>
-                <div class="marker marker-9"><div class="marker-dot"></div></div>
-                <div class="marker marker-10"><div class="marker-dot"></div></div>
-                <div class="marker marker-11"><div class="marker-dot"></div></div>
-                <div class="marker marker-12"><div class="marker-dot"></div></div>
-                <div class="number number-1"><span class="number-1-text">1</span></div>
-                <div class="number number-2"><span class="number-2-text">2</span></div>
-                <div class="number number-3"><span class="number-3-text">3</span></div>
-                <div class="number number-4"><span class="number-4-text">4</span></div>
-                <div class="number number-5"><span class="number-5-text">5</span></div>
-                <div class="number number-6"><span class="number-6-text">6</span></div>
-                <div class="number number-7"><span class="number-7-text">7</span></div>
-                <div class="number number-8"><span class="number-8-text">8</span></div>
-                <div class="number number-9"><span class="number-9-text">9</span></div>
-                <div class="number number-10"><span class="number-10-text">10</span></div>
-                <div class="number number-11"><span class="number-11-text">11</span></div>
-                <div class="number number-12"><span class="number-12-text">12</span></div>
-                <div class="hand hour-hand" id="sydney-hour"></div>
-                <div class="hand minute-hand" id="sydney-minute"></div>
-                <div class="hand second-hand" id="sydney-second"></div>
-                <div class="center-pin"></div>
-              </div>
-            </div>
-            <div class="digital-time" id="sydney-time">--:--:--</div>
-          </div>
-
-          <div class="clock-card sr d2">
-            <div class="clock-city">London</div>
-            <div class="clock-container">
-              <div class="clock-face">
-                <div class="marker marker-1"><div class="marker-dot"></div></div>
-                <div class="marker marker-2"><div class="marker-dot"></div></div>
-                <div class="marker marker-3"><div class="marker-dot"></div></div>
-                <div class="marker marker-4"><div class="marker-dot"></div></div>
-                <div class="marker marker-5"><div class="marker-dot"></div></div>
-                <div class="marker marker-6"><div class="marker-dot"></div></div>
-                <div class="marker marker-7"><div class="marker-dot"></div></div>
-                <div class="marker marker-8"><div class="marker-dot"></div></div>
-                <div class="marker marker-9"><div class="marker-dot"></div></div>
-                <div class="marker marker-10"><div class="marker-dot"></div></div>
-                <div class="marker marker-11"><div class="marker-dot"></div></div>
-                <div class="marker marker-12"><div class="marker-dot"></div></div>
-                <div class="number number-1"><span class="number-1-text">1</span></div>
-                <div class="number number-2"><span class="number-2-text">2</span></div>
-                <div class="number number-3"><span class="number-3-text">3</span></div>
-                <div class="number number-4"><span class="number-4-text">4</span></div>
-                <div class="number number-5"><span class="number-5-text">5</span></div>
-                <div class="number number-6"><span class="number-6-text">6</span></div>
-                <div class="number number-7"><span class="number-7-text">7</span></div>
-                <div class="number number-8"><span class="number-8-text">8</span></div>
-                <div class="number number-9"><span class="number-9-text">9</span></div>
-                <div class="number number-10"><span class="number-10-text">10</span></div>
-                <div class="number number-11"><span class="number-11-text">11</span></div>
-                <div class="number number-12"><span class="number-12-text">12</span></div>
-                <div class="hand hour-hand" id="london-hour"></div>
-                <div class="hand minute-hand" id="london-minute"></div>
-                <div class="hand second-hand" id="london-second"></div>
-                <div class="center-pin"></div>
-              </div>
-            </div>
-            <div class="digital-time" id="london-time">--:--:--</div>
-          </div>
-
-          <div class="clock-card sr d3">
-            <div class="clock-city">New York</div>
-            <div class="clock-container">
-              <div class="clock-face">
-                <div class="marker marker-1"><div class="marker-dot"></div></div>
-                <div class="marker marker-2"><div class="marker-dot"></div></div>
-                <div class="marker marker-3"><div class="marker-dot"></div></div>
-                <div class="marker marker-4"><div class="marker-dot"></div></div>
-                <div class="marker marker-5"><div class="marker-dot"></div></div>
-                <div class="marker marker-6"><div class="marker-dot"></div></div>
-                <div class="marker marker-7"><div class="marker-dot"></div></div>
-                <div class="marker marker-8"><div class="marker-dot"></div></div>
-                <div class="marker marker-9"><div class="marker-dot"></div></div>
-                <div class="marker marker-10"><div class="marker-dot"></div></div>
-                <div class="marker marker-11"><div class="marker-dot"></div></div>
-                <div class="marker marker-12"><div class="marker-dot"></div></div>
-                <div class="number number-1"><span class="number-1-text">1</span></div>
-                <div class="number number-2"><span class="number-2-text">2</span></div>
-                <div class="number number-3"><span class="number-3-text">3</span></div>
-                <div class="number number-4"><span class="number-4-text">4</span></div>
-                <div class="number number-5"><span class="number-5-text">5</span></div>
-                <div class="number number-6"><span class="number-6-text">6</span></div>
-                <div class="number number-7"><span class="number-7-text">7</span></div>
-                <div class="number number-8"><span class="number-8-text">8</span></div>
-                <div class="number number-9"><span class="number-9-text">9</span></div>
-                <div class="number number-10"><span class="number-10-text">10</span></div>
-                <div class="number number-11"><span class="number-11-text">11</span></div>
-                <div class="number number-12"><span class="number-12-text">12</span></div>
-                <div class="hand hour-hand" id="newyork-hour"></div>
-                <div class="hand minute-hand" id="newyork-minute"></div>
-                <div class="hand second-hand" id="newyork-second"></div>
-                <div class="center-pin"></div>
-              </div>
-            </div>
-            <div class="digital-time" id="newyork-time">--:--:--</div>
-          </div>
-
-          <div class="clock-card sr d4">
-            <div class="clock-city">Jamshedpur</div>
-            <div class="clock-container">
-              <div class="clock-face">
-                <div class="marker marker-1"><div class="marker-dot"></div></div>
-                <div class="marker marker-2"><div class="marker-dot"></div></div>
-                <div class="marker marker-3"><div class="marker-dot"></div></div>
-                <div class="marker marker-4"><div class="marker-dot"></div></div>
-                <div class="marker marker-5"><div class="marker-dot"></div></div>
-                <div class="marker marker-6"><div class="marker-dot"></div></div>
-                <div class="marker marker-7"><div class="marker-dot"></div></div>
-                <div class="marker marker-8"><div class="marker-dot"></div></div>
-                <div class="marker marker-9"><div class="marker-dot"></div></div>
-                <div class="marker marker-10"><div class="marker-dot"></div></div>
-                <div class="marker marker-11"><div class="marker-dot"></div></div>
-                <div class="marker marker-12"><div class="marker-dot"></div></div>
-                <div class="number number-1"><span class="number-1-text">1</span></div>
-                <div class="number number-2"><span class="number-2-text">2</span></div>
-                <div class="number number-3"><span class="number-3-text">3</span></div>
-                <div class="number number-4"><span class="number-4-text">4</span></div>
-                <div class="number number-5"><span class="number-5-text">5</span></div>
-                <div class="number number-6"><span class="number-6-text">6</span></div>
-                <div class="number number-7"><span class="number-7-text">7</span></div>
-                <div class="number number-8"><span class="number-8-text">8</span></div>
-                <div class="number number-9"><span class="number-9-text">9</span></div>
-                <div class="number number-10"><span class="number-10-text">10</span></div>
-                <div class="number number-11"><span class="number-11-text">11</span></div>
-                <div class="number number-12"><span class="number-12-text">12</span></div>
-                <div class="hand hour-hand" id="jamshedpur-hour"></div>
-                <div class="hand minute-hand" id="jamshedpur-minute"></div>
-                <div class="hand second-hand" id="jamshedpur-second"></div>
-                <div class="center-pin"></div>
-              </div>
-            </div>
-            <div class="digital-time" id="jamshedpur-time">--:--:--</div>
-          </div>
-        </div>
-      </div>
-    </section>
+    
 
     <!-- ══ LOCATIONS ══ -->
     <section class="section section--white">
@@ -4144,12 +4150,12 @@
           </div>
           <div class="location-item">
             <i class="ri-map-pin-line"></i>
-            <span>Bhubaneswar</span>
+            <span>Kolkata</span>
           </div>
-          <div class="location-item">
+          <!-- <div class="location-item">
             <i class="ri-map-pin-line"></i>
             <span>Patna</span>
-          </div>
+          </div> -->
           <div class="location-item">
             <i class="ri-map-pin-line"></i>
             <span>NCR-Ghaziabad</span>
@@ -4162,10 +4168,10 @@
             <i class="ri-map-pin-line"></i>
             <span>Surat</span>
           </div>
-          <div class="location-item">
+          <!-- <div class="location-item">
             <i class="ri-map-pin-line"></i>
             <span>Satna</span>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
@@ -4177,7 +4183,7 @@
           <div class="chip" style="justify-content: center">
             <i class="ri-phone-line"></i>Contact Us
           </div>
-          <h2 class="heading sr">Partner with <em>CA India</em></h2>
+          <h2 class="heading sr">Partner with <em>S.K. Mishra & Associates</em></h2>
           <div class="rule"></div>
           <p class="body sr">
             Ready to strengthen your governance framework? Our team is available
@@ -4362,6 +4368,157 @@
               Building trust through excellence since 1999. A full-service CA
               firm with PAN-India presence and partner-led engagements.
             </p>
+            <div class="footer-clocks">
+              <div class="world-clock-wrap">
+                <div class="clock-card sr d1">
+                  <div class="clock-city">Sydney</div>
+                  <div class="clock-container">
+                    <div class="clock-face">
+                      <div class="marker marker-1"><div class="marker-dot"></div></div>
+                      <div class="marker marker-2"><div class="marker-dot"></div></div>
+                      <div class="marker marker-3"><div class="marker-dot"></div></div>
+                      <div class="marker marker-4"><div class="marker-dot"></div></div>
+                      <div class="marker marker-5"><div class="marker-dot"></div></div>
+                      <div class="marker marker-6"><div class="marker-dot"></div></div>
+                      <div class="marker marker-7"><div class="marker-dot"></div></div>
+                      <div class="marker marker-8"><div class="marker-dot"></div></div>
+                      <div class="marker marker-9"><div class="marker-dot"></div></div>
+                      <div class="marker marker-10"><div class="marker-dot"></div></div>
+                      <div class="marker marker-11"><div class="marker-dot"></div></div>
+                      <div class="marker marker-12"><div class="marker-dot"></div></div>
+                      <div class="number number-1"><span class="number-1-text">1</span></div>
+                      <div class="number number-2"><span class="number-2-text">2</span></div>
+                      <div class="number number-3"><span class="number-3-text">3</span></div>
+                      <div class="number number-4"><span class="number-4-text">4</span></div>
+                      <div class="number number-5"><span class="number-5-text">5</span></div>
+                      <div class="number number-6"><span class="number-6-text">6</span></div>
+                      <div class="number number-7"><span class="number-7-text">7</span></div>
+                      <div class="number number-8"><span class="number-8-text">8</span></div>
+                      <div class="number number-9"><span class="number-9-text">9</span></div>
+                      <div class="number number-10"><span class="number-10-text">10</span></div>
+                      <div class="number number-11"><span class="number-11-text">11</span></div>
+                      <div class="number number-12"><span class="number-12-text">12</span></div>
+                      <div class="hand hour-hand" id="sydney-hour"></div>
+                      <div class="hand minute-hand" id="sydney-minute"></div>
+                      <div class="hand second-hand" id="sydney-second"></div>
+                      <div class="center-pin"></div>
+                    </div>
+                  </div>
+                  <div class="digital-time" id="sydney-time">--:--:--</div>
+                </div>
+
+                <div class="clock-card sr d2">
+                  <div class="clock-city">London</div>
+                  <div class="clock-container">
+                    <div class="clock-face">
+                      <div class="marker marker-1"><div class="marker-dot"></div></div>
+                      <div class="marker marker-2"><div class="marker-dot"></div></div>
+                      <div class="marker marker-3"><div class="marker-dot"></div></div>
+                      <div class="marker marker-4"><div class="marker-dot"></div></div>
+                      <div class="marker marker-5"><div class="marker-dot"></div></div>
+                      <div class="marker marker-6"><div class="marker-dot"></div></div>
+                      <div class="marker marker-7"><div class="marker-dot"></div></div>
+                      <div class="marker marker-8"><div class="marker-dot"></div></div>
+                      <div class="marker marker-9"><div class="marker-dot"></div></div>
+                      <div class="marker marker-10"><div class="marker-dot"></div></div>
+                      <div class="marker marker-11"><div class="marker-dot"></div></div>
+                      <div class="marker marker-12"><div class="marker-dot"></div></div>
+                      <div class="number number-1"><span class="number-1-text">1</span></div>
+                      <div class="number number-2"><span class="number-2-text">2</span></div>
+                      <div class="number number-3"><span class="number-3-text">3</span></div>
+                      <div class="number number-4"><span class="number-4-text">4</span></div>
+                      <div class="number number-5"><span class="number-5-text">5</span></div>
+                      <div class="number number-6"><span class="number-6-text">6</span></div>
+                      <div class="number number-7"><span class="number-7-text">7</span></div>
+                      <div class="number number-8"><span class="number-8-text">8</span></div>
+                      <div class="number number-9"><span class="number-9-text">9</span></div>
+                      <div class="number number-10"><span class="number-10-text">10</span></div>
+                      <div class="number number-11"><span class="number-11-text">11</span></div>
+                      <div class="number number-12"><span class="number-12-text">12</span></div>
+                      <div class="hand hour-hand" id="london-hour"></div>
+                      <div class="hand minute-hand" id="london-minute"></div>
+                      <div class="hand second-hand" id="london-second"></div>
+                      <div class="center-pin"></div>
+                    </div>
+                  </div>
+                  <div class="digital-time" id="london-time">--:--:--</div>
+                </div>
+
+                <div class="clock-card sr d3">
+                  <div class="clock-city">New York</div>
+                  <div class="clock-container">
+                    <div class="clock-face">
+                      <div class="marker marker-1"><div class="marker-dot"></div></div>
+                      <div class="marker marker-2"><div class="marker-dot"></div></div>
+                      <div class="marker marker-3"><div class="marker-dot"></div></div>
+                      <div class="marker marker-4"><div class="marker-dot"></div></div>
+                      <div class="marker marker-5"><div class="marker-dot"></div></div>
+                      <div class="marker marker-6"><div class="marker-dot"></div></div>
+                      <div class="marker marker-7"><div class="marker-dot"></div></div>
+                      <div class="marker marker-8"><div class="marker-dot"></div></div>
+                      <div class="marker marker-9"><div class="marker-dot"></div></div>
+                      <div class="marker marker-10"><div class="marker-dot"></div></div>
+                      <div class="marker marker-11"><div class="marker-dot"></div></div>
+                      <div class="marker marker-12"><div class="marker-dot"></div></div>
+                      <div class="number number-1"><span class="number-1-text">1</span></div>
+                      <div class="number number-2"><span class="number-2-text">2</span></div>
+                      <div class="number number-3"><span class="number-3-text">3</span></div>
+                      <div class="number number-4"><span class="number-4-text">4</span></div>
+                      <div class="number number-5"><span class="number-5-text">5</span></div>
+                      <div class="number number-6"><span class="number-6-text">6</span></div>
+                      <div class="number number-7"><span class="number-7-text">7</span></div>
+                      <div class="number number-8"><span class="number-8-text">8</span></div>
+                      <div class="number number-9"><span class="number-9-text">9</span></div>
+                      <div class="number number-10"><span class="number-10-text">10</span></div>
+                      <div class="number number-11"><span class="number-11-text">11</span></div>
+                      <div class="number number-12"><span class="number-12-text">12</span></div>
+                      <div class="hand hour-hand" id="newyork-hour"></div>
+                      <div class="hand minute-hand" id="newyork-minute"></div>
+                      <div class="hand second-hand" id="newyork-second"></div>
+                      <div class="center-pin"></div>
+                    </div>
+                  </div>
+                  <div class="digital-time" id="newyork-time">--:--:--</div>
+                </div>
+
+                <div class="clock-card sr d4">
+                  <div class="clock-city">Jamshedpur</div>
+                  <div class="clock-container">
+                    <div class="clock-face">
+                      <div class="marker marker-1"><div class="marker-dot"></div></div>
+                      <div class="marker marker-2"><div class="marker-dot"></div></div>
+                      <div class="marker marker-3"><div class="marker-dot"></div></div>
+                      <div class="marker marker-4"><div class="marker-dot"></div></div>
+                      <div class="marker marker-5"><div class="marker-dot"></div></div>
+                      <div class="marker marker-6"><div class="marker-dot"></div></div>
+                      <div class="marker marker-7"><div class="marker-dot"></div></div>
+                      <div class="marker marker-8"><div class="marker-dot"></div></div>
+                      <div class="marker marker-9"><div class="marker-dot"></div></div>
+                      <div class="marker marker-10"><div class="marker-dot"></div></div>
+                      <div class="marker marker-11"><div class="marker-dot"></div></div>
+                      <div class="marker marker-12"><div class="marker-dot"></div></div>
+                      <div class="number number-1"><span class="number-1-text">1</span></div>
+                      <div class="number number-2"><span class="number-2-text">2</span></div>
+                      <div class="number number-3"><span class="number-3-text">3</span></div>
+                      <div class="number number-4"><span class="number-4-text">4</span></div>
+                      <div class="number number-5"><span class="number-5-text">5</span></div>
+                      <div class="number number-6"><span class="number-6-text">6</span></div>
+                      <div class="number number-7"><span class="number-7-text">7</span></div>
+                      <div class="number number-8"><span class="number-8-text">8</span></div>
+                      <div class="number number-9"><span class="number-9-text">9</span></div>
+                      <div class="number number-10"><span class="number-10-text">10</span></div>
+                      <div class="number number-11"><span class="number-11-text">11</span></div>
+                      <div class="number number-12"><span class="number-12-text">12</span></div>
+                      <div class="hand hour-hand" id="jamshedpur-hour"></div>
+                      <div class="hand minute-hand" id="jamshedpur-minute"></div>
+                      <div class="hand second-hand" id="jamshedpur-second"></div>
+                      <div class="center-pin"></div>
+                    </div>
+                  </div>
+                  <div class="digital-time" id="jamshedpur-time">--:--:--</div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="f-col">
             <h5>Quick Links</h5>

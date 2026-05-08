@@ -1,0 +1,946 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Our Team – S.K. Mishra & Associates | Chartered Accountants</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <style>
+      /* ═══════════════════════════════════════════════════════
+   DESIGN SYSTEM – CA INDIA LIGHT THEME
+═══════════════════════════════════════════════════════ */
+      :root {
+        --bg: #fafbfe;
+        --white: #ffffff;
+        --navy: #0d1b2a;
+        --navy2: #1a2e45;
+        --blue: #1e4d8c;
+        --teal: #482a7a;
+        --gold: #d4a017;
+        --gold2: #f0c040;
+        --saffron: #e8813a;
+        --green: #482a7a;
+        --light: #f0f4ff;
+        --light2: #e8f5f3;
+        --border: rgba(82, 16, 139, 0.14);
+        --border2: rgba(106, 29, 194, 0.12);
+        --shadow: 0 4px 24px rgba(13, 27, 42, 0.08);
+        --shadow2: 0 16px 56px rgba(13, 27, 42, 0.14);
+        --shadow3: 0 32px 80px rgba(13, 27, 42, 0.18);
+        --r: 10px;
+        --r2: 18px;
+        --r3: 28px;
+        --fd: "Montserrat",sans-serif;
+        --fb: "Montserrat", sans-serif;
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+      }
+      body {
+        font-family: var(--fb);
+        background: var(--bg);
+        color: var(--navy);
+        overflow-x: hidden;
+        cursor: none;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      ul {
+        list-style: none;
+      }
+
+      /* ── CUSTOM CURSOR ── */
+      #cursor-dot {
+        position: fixed;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--teal);
+        pointer-events: none;
+        z-index: 99999;
+        transition:
+          transform 0.15s ease,
+          opacity 0.2s;
+        transform: translate(-50%, -50%);
+      }
+      #cursor-ring {
+        position: fixed;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        border: 2px solid var(--teal);
+        pointer-events: none;
+        z-index: 99998;
+        transition:
+          transform 0.12s ease,
+          width 0.25s,
+          height 0.25s,
+          border-color 0.3s,
+          background 0.3s;
+        transform: translate(-50%, -50%);
+      }
+      body.cursor-hover #cursor-ring {
+        width: 56px;
+        height: 56px;
+        background: rgba(14, 122, 110, 0.08);
+        border-color: var(--gold);
+      }
+      body.cursor-hover #cursor-dot {
+        transform: translate(-50%, -50%) scale(1.6);
+        background: var(--gold);
+      }
+      @media (hover: none) {
+        #cursor-dot,
+        #cursor-ring {
+          display: none;
+        }
+        body {
+          cursor: auto;
+        }
+      }
+
+      /* ── UTILITIES ── */
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 28px;
+      }
+      .section {
+        padding: 96px 0;
+      }
+      .section--light {
+        background: var(--light);
+      }
+      .section--white {
+        background: var(--white);
+      }
+
+      .chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        padding: 5px 14px;
+        border-radius: 50px;
+        font-size: 10.5px;
+        font-weight: 700;
+        letter-spacing: 2.5px;
+        text-transform: uppercase;
+        color: var(--teal);
+        background: rgba(14, 122, 110, 0.07);
+        border: 1px solid rgba(14, 122, 110, 0.18);
+        margin-bottom: 14px;
+      }
+
+      .heading {
+        font-family: var(--fd);
+        font-size: clamp(26px, 4vw, 50px);
+        font-weight: 900;
+        line-height: 1.12;
+        color: var(--navy);
+      }
+      .heading em {
+        font-style: italic;
+        color: var(--teal);
+      }
+
+      .body {
+        font-size: 15px;
+        line-height: 1.8;
+        color: #4a5568;
+      }
+
+      .rule {
+        width: 48px;
+        height: 3px;
+        border-radius: 2px;
+        margin: 16px 0 28px;
+        background: linear-gradient(90deg, var(--teal), var(--gold));
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 13px 30px;
+        border-radius: 50px;
+        font-size: 13.5px;
+        font-weight: 700;
+        letter-spacing: 0.3px;
+        cursor: none;
+        transition: all 0.3s ease;
+        border: none;
+        font-family: var(--fb);
+      }
+      .btn-teal {
+        background: linear-gradient(135deg, #48208a, #964bd5);
+        color: #fff;
+        box-shadow: 0 4px 20px rgba(14, 122, 110, 0.35);
+      }
+      .btn-teal:hover {
+        transform: translateY(-3px) scale(1.02);
+        box-shadow: 0 10px 32px rgba(14, 122, 110, 0.45);
+      }
+
+      /* ── SCROLL REVEAL ── */
+      .sr {
+        opacity: 0;
+        transform: translateY(40px);
+        transition:
+          opacity 0.75s ease,
+          transform 0.75s ease;
+      }
+      .sr.on {
+        opacity: 1;
+        transform: none;
+      }
+      .d1 { transition-delay: 0.08s; }
+      .d2 { transition-delay: 0.16s; }
+      .d3 { transition-delay: 0.25s; }
+      .d4 { transition-delay: 0.34s; }
+      .d5 { transition-delay: 0.43s; }
+      .d6 { transition-delay: 0.52s; }
+      .d7 { transition-delay: 0.61s; }
+      .d8 { transition-delay: 0.70s; }
+
+      /* ═══════════════════════════════════════════════════════
+   NAV
+═══════════════════════════════════════════════════════ */
+      #nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 900;
+        padding: 18px 0;
+        transition: all 0.4s ease;
+        background: #ffffff;
+        box-shadow: 0 2px 12px rgba(13, 27, 42, 0.06);
+      }
+      #nav.solid {
+        background: rgba(250, 251, 254, 0.94);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+        box-shadow: 0 2px 24px rgba(13, 27, 42, 0.08);
+        padding: 12px 0;
+      }
+      .nav-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      .nav-brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: none;
+      }
+      .nav-brand-icon {
+        width: 54px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+      }
+      .nav-brand-icon img {
+        width: 54px;
+        height: 38px;
+        display: block;
+      }
+      .nav-brand-caption {
+        font-size: 11px;
+        color: var(--navy2);
+        font-weight: 600;
+        text-transform: none;
+        line-height: 1;
+      }
+      .nav-brand-text {
+        line-height: 1;
+      }
+      .nav-brand-name {
+        font-family: var(--fd);
+        font-size: 19px;
+        font-weight: 900;
+        color: var(--navy);
+        letter-spacing: -0.3px;
+      }
+      .nav-brand-sub {
+        font-size: 15px;
+        font-weight: 900;
+        letter-spacing: 1px;
+        text-transform: none;
+        color: var(--teal);
+        white-space: nowrap;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+      .nav-links a,
+      .nav-dropdown-toggle {
+        position: relative;
+        padding: 7px 13px;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--teal);
+        border-radius: 8px;
+        transition: all 0.25s;
+        white-space: nowrap;
+        background: transparent;
+        border: none;
+        font-family: inherit;
+        cursor: none;
+      }
+      .nav-links a::after,
+      .nav-dropdown-toggle::after {
+        content: "";
+        position: absolute;
+        bottom: 4px;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background: var(--teal);
+        border-radius: 2px;
+        transition:
+          width 0.3s,
+          left 0.3s;
+      }
+      .nav-links a:hover,
+      .nav-dropdown:hover .nav-dropdown-toggle {
+        color: var(--teal);
+        background: rgba(14, 122, 110, 0.06);
+      }
+      .nav-links a:hover::after,
+      .nav-dropdown:hover .nav-dropdown-toggle::after {
+        width: 60%;
+        left: 20%;
+      }
+      .nav-links a.scrolled {
+        color: var(--teal);
+      }
+
+      .nav-dropdown {
+        position: relative;
+      }
+      .nav-dropdown-toggle {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .nav-dropdown-toggle i {
+        font-size: 12px;
+        transition: transform 0.25s ease;
+      }
+      .nav-dropdown:hover .nav-dropdown-toggle i {
+        transform: rotate(180deg);
+      }
+      .nav-dropdown-menu {
+        position: absolute;
+        top: calc(100% + 6px);
+        left: 0;
+        min-width: 220px;
+        padding: 10px;
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.98);
+        box-shadow: var(--shadow2);
+        border: 1px solid var(--border);
+        display: none;
+        flex-direction: column;
+        gap: 4px;
+        z-index: 1000;
+      }
+      .nav-dropdown:hover .nav-dropdown-menu,
+      .nav-dropdown:focus-within .nav-dropdown-menu {
+        display: flex;
+      }
+      .nav-dropdown-menu a {
+        width: 100%;
+        padding: 10px 12px;
+        border-radius: 10px;
+        color: var(--navy2);
+        background: transparent;
+      }
+      .nav-dropdown-menu a:hover {
+        background: rgba(14, 122, 110, 0.08);
+        color: var(--teal);
+      }
+
+      .nav-cta {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .nav-hb {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: none;
+        padding: 6px;
+        background: none;
+        border: none;
+      }
+      .nav-hb span {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background: var(--navy);
+        border-radius: 2px;
+        transition: all 0.3s;
+      }
+      .nav-hb.open span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+      .nav-hb.open span:nth-child(2) {
+        opacity: 0;
+        transform: scaleX(0);
+      }
+      .nav-hb.open span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+      }
+
+      .nav-drawer {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: min(310px, 88vw);
+        height: 100vh;
+        background: #fff;
+        z-index: 910;
+        transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        padding: 90px 32px 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        box-shadow: -4px 0 40px rgba(13, 27, 42, 0.14);
+      }
+      .nav-drawer.open {
+        right: 0;
+      }
+      .nav-drawer a {
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--navy2);
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(13, 27, 42, 0.06);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        transition: color 0.25s;
+      }
+      .nav-drawer a i {
+        color: var(--teal);
+        font-size: 16px;
+      }
+      .nav-drawer a:hover {
+        color: var(--teal);
+      }
+      .nav-drawer .dl-sub {
+        padding-left: 20px;
+        font-size: 14px;
+      }
+
+      .nav-ovl {
+        position: fixed;
+        inset: 0;
+        background: rgba(13, 27, 42, 0.38);
+        z-index: 905;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.35s;
+      }
+      .nav-ovl.open {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      /* ═══════════════════════════════════════════════════════
+   TEAM GRID – 4×2 CARD LAYOUT WITH HOVER
+═══════════════════════════════════════════════════════ */
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+        margin-top: 48px;
+      }
+      .team-card {
+        border-radius: 14px;
+        overflow: hidden;
+        position: relative;
+        background: #fff;
+        box-shadow: 0 10px 30px rgba(13, 27, 42, 0.1);
+        transition: transform 0.35s ease;
+        cursor: default;
+      }
+      .team-card figure {
+        margin: 0;
+        position: relative;
+        height: 340px;
+        overflow: hidden;
+      }
+      .team-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.35s ease;
+      }
+      .team-overlay {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 64px;
+        padding: 12px 14px;
+        background: rgba(0, 0, 0, 0.45);
+        color: #fff;
+        transition: height 0.35s ease, background 0.35s ease;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+      .team-name {
+        font-weight: 800;
+        font-size: 16px;
+        line-height: 1;
+      }
+      .team-role {
+        font-size: 12px;
+        opacity: 0.92;
+        margin-top: 2px;
+      }
+      .team-overlay .team-desc {
+        display: none;
+        font-size: 13px;
+        margin-top: 10px;
+        color: rgba(255, 255, 255, 0.95);
+        line-height: 1.5;
+      }
+      .team-card:hover img {
+        transform: translateY(-8px) scale(1.03);
+      }
+      .team-card:hover .team-overlay {
+        height: 100%;
+        background: rgba(0, 0, 0, 0.72);
+      }
+      .team-card:hover {
+        transform: translateY(-6px);
+      }
+      .team-card:hover .team-overlay .team-desc {
+        display: block;
+      }
+
+      @media (max-width: 1200px) {
+        .team-grid {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 20px;
+        }
+      }
+      @media (max-width: 768px) {
+        .team-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 16px;
+        }
+      }
+      @media (max-width: 640px) {
+        .team-grid {
+          grid-template-columns: 1fr;
+          gap: 14px;
+        }
+      }
+
+      .sec-hdr {
+        text-align: center;
+      }
+
+      /* ═══════════════════════════════════════════════════════
+   PAGE HEADER
+═══════════════════════════════════════════════════════ */
+      .page-header {
+        min-height: 380px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, rgba(14, 122, 110, 0.08), rgba(30, 77, 140, 0.08));
+        margin-top: 80px;
+      }
+      .page-header-content {
+        text-align: center;
+      }
+      .page-header-content .heading {
+        margin-bottom: 16px;
+      }
+      .page-header-content .body {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      /* Back to top button */
+      #backToTop {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--teal), var(--blue));
+        color: #fff;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        cursor: none;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s, transform 0.3s;
+        z-index: 100;
+      }
+      #backToTop:hover {
+        transform: translateY(-4px);
+      }
+      #backToTop.show {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      /* Mobile nav adjustments */
+      @media (max-width: 900px) {
+        .nav-links {
+          display: none;
+        }
+        .nav-hb {
+          display: flex;
+        }
+      }
+
+      /* Responsive padding */
+      @media (max-width: 768px) {
+        .container {
+          padding: 0 20px;
+        }
+        .section {
+          padding: 60px 0;
+        }
+        .page-header {
+          min-height: 300px;
+          margin-top: 70px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
+
+    <!-- ══ NAVIGATION ══ -->
+    <nav id="nav">
+      <div class="container">
+        <div class="nav-inner">
+          <a href="index.html" class="nav-brand">
+            <div class="nav-brand-icon">
+              <img src="assets/logo.png" alt="CA India Logo">
+              <div class="nav-brand-caption">Chartered Accountant</div>
+            </div>
+            <div class="nav-brand-text">
+              <div class="nav-brand-sub">S.K. Mishra &amp; Associates</div>
+            </div>
+          </a>
+
+          <div class="nav-links">
+            <a href="index.html#home">Home</a>
+            <div class="nav-dropdown">
+              <button class="nav-dropdown-toggle" type="button">
+                About <i class="ri-arrow-down-s-line"></i>
+              </button>
+              <div class="nav-dropdown-menu">
+                <a href="index.html#about">About Us</a>
+                <a href="teams.html">Our Team</a>
+              </div>
+            </div>
+            <a href="index.html#services">Our Services</a>
+            <a href="index.html#whatwedo">What We Do</a>
+            <a href="index.html#achievements">Our Achievements</a>
+            <a href="index.html#links">Important Links</a>
+          </div>
+
+          <div class="nav-cta">
+            <a
+              href="index.html#contact"
+              class="btn btn-teal"
+              style="padding: 10px 22px; font-size: 12.5px; width: 152px;"
+            >
+              <i class="ri-mail-send-line"></i> Get in Touch
+            </a>
+          </div>
+
+          <button class="nav-hb" id="navHb" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="nav-ovl" id="navOvl"></div>
+    <div class="nav-drawer" id="navDrw">
+      <a href="index.html#home" class="dl"><i class="ri-home-4-line"></i>Home</a>
+      <a href="index.html#about" class="dl"><i class="ri-information-line"></i>About Us</a>
+      <a href="teams.html" class="dl dl-sub"><i class="ri-group-line"></i>Our Team</a>
+      <a href="index.html#services" class="dl"><i class="ri-briefcase-line"></i>Our Services</a>
+      <a href="index.html#whatwedo" class="dl"><i class="ri-settings-3-line"></i>What We Do</a>
+      <a href="index.html#achievements" class="dl"><i class="ri-trophy-line"></i>Our Achievements</a>
+      <a href="index.html#links" class="dl"><i class="ri-links-line"></i>Important Links</a>
+    </div>
+
+    <!-- ══ PAGE HEADER ══ -->
+    <section class="page-header">
+      <div class="container">
+        <div class="page-header-content">
+          <div class="chip" style="justify-content: center; margin-bottom: 24px">
+            <i class="ri-group-line"></i>Our Team
+          </div>
+          <h1 class="heading">Meet Our <em>Expert Team</em></h1>
+          <p class="body" style="margin-top: 16px">
+            Partner-led engagements and a pan-India team delivering client-first outcomes.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ TEAM GRID SECTION ══ -->
+    <section class="section section--white">
+      <div class="container">
+        <div class="team-grid">
+          <!-- Card 1 -->
+          <div class="team-card sr d1">
+            <figure>
+              <img src="https://i.pravatar.cc/400?img=12" alt="Shishir">
+              <div class="team-overlay">
+                <div class="team-name">Shishir</div>
+                <div class="team-role">Partner</div>
+                <div class="team-desc">Experienced partner with expertise in audits and advisory.</div>
+              </div>
+            </figure>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="team-card sr d2">
+            <figure>
+              <img src="https://i.pravatar.cc/400?img=22" alt="Yogesh">
+              <div class="team-overlay">
+                <div class="team-name">Yogesh</div>
+                <div class="team-role">Lead – Tax</div>
+                <div class="team-desc">Tax specialist handling corporate and international tax matters.</div>
+              </div>
+            </figure>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="team-card sr d3">
+            <figure>
+              <img src="https://i.pravatar.cc/400?img=32" alt="Bipin">
+              <div class="team-overlay">
+                <div class="team-name">Bipin</div>
+                <div class="team-role">Advisory</div>
+                <div class="team-desc">Advisory lead focusing on process and financial transformation.</div>
+              </div>
+            </figure>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="team-card sr d4">
+            <figure>
+              <img src="https://i.pravatar.cc/400?img=42" alt="Amrit">
+              <div class="team-overlay">
+                <div class="team-name">Amrit</div>
+                <div class="team-role">GRC</div>
+                <div class="team-desc">Governance and controls specialist.</div>
+              </div>
+            </figure>
+          </div>
+
+          <!-- Card 5 (Row 2) -->
+          <div class="team-card sr d5">
+            <figure>
+              <img src="https://i.pravatar.cc/400?img=52" alt="Manav">
+              <div class="team-overlay">
+                <div class="team-name">Manav</div>
+                <div class="team-role">Valuations</div>
+                <div class="team-desc">Valuation and financial modelling expert.</div>
+              </div>
+            </figure>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="team-card sr d6">
+            <figure>
+              <img src="https://i.pravatar.cc/400?img=62" alt="Kshama">
+              <div class="team-overlay">
+                <div class="team-name">Kshama</div>
+                <div class="team-role">Compliance</div>
+                <div class="team-desc">Compliance and regulatory oversight specialist.</div>
+              </div>
+            </figure>
+          </div>
+
+          <!-- Card 7 -->
+          <div class="team-card sr d7">
+            <figure>
+              <img src="https://i.pravatar.cc/400?img=72" alt="Vandana">
+              <div class="team-overlay">
+                <div class="team-name">Vandana</div>
+                <div class="team-role">Operations</div>
+                <div class="team-desc">Operations lead coordinating engagements across offices.</div>
+              </div>
+            </figure>
+          </div>
+
+          <!-- Card 8 -->
+          <div class="team-card sr d8">
+            <figure>
+              <img src="https://i.pravatar.cc/400?img=82" alt="Ritik">
+              <div class="team-overlay">
+                <div class="team-name">Ritik</div>
+                <div class="team-role">Associate</div>
+                <div class="team-desc">Associate supporting audits and tax filings.</div>
+              </div>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <button id="backToTop" aria-label="Back to top"><i class="ri-arrow-up-s-line"></i></button>
+
+    <script>
+      /* ══════════════════════════════════════
+   CUSTOM CURSOR
+══════════════════════════════════════ */
+      const dot = document.getElementById('cursor-dot');
+      const ring = document.getElementById('cursor-ring');
+      let mouseX = 0, mouseY = 0;
+      document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        dot.style.left = mouseX + 'px';
+        dot.style.top = mouseY + 'px';
+        ring.style.left = mouseX + 'px';
+        ring.style.top = mouseY + 'px';
+      });
+
+      document.addEventListener('mouseover', (e) => {
+        if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON' || e.target.classList.contains('cursor-hover')) {
+          document.body.classList.add('cursor-hover');
+        }
+      });
+      document.addEventListener('mouseout', (e) => {
+        if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON' || e.target.classList.contains('cursor-hover')) {
+          document.body.classList.remove('cursor-hover');
+        }
+      });
+
+      /* ══════════════════════════════════════
+   NAVIGATION
+══════════════════════════════════════ */
+      const nav = document.getElementById('nav');
+      const hb = document.getElementById('navHb');
+      const drw = document.getElementById('navDrw');
+      const ovl = document.getElementById('navOvl');
+
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+          nav.classList.add('solid');
+        } else {
+          nav.classList.remove('solid');
+        }
+      }, { passive: true });
+
+      const openNav = () => {
+        hb.classList.add('open');
+        drw.classList.add('open');
+        ovl.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      };
+      const closeNav = () => {
+        hb.classList.remove('open');
+        drw.classList.remove('open');
+        ovl.classList.remove('open');
+        document.body.style.overflow = '';
+      };
+
+      hb.addEventListener('click', () =>
+        drw.classList.contains('open') ? closeNav() : openNav()
+      );
+      ovl.addEventListener('click', closeNav);
+      document.querySelectorAll('.dl').forEach((a) => a.addEventListener('click', closeNav));
+
+      /* ══════════════════════════════════════
+   SCROLL REVEAL
+══════════════════════════════════════ */
+      const srEls = document.querySelectorAll('.sr');
+      const srObs = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add('on');
+              srObs.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+      );
+      srEls.forEach((el) => srObs.observe(el));
+
+      /* ══════════════════════════════════════
+   BACK TO TOP
+══════════════════════════════════════ */
+      const btt = document.getElementById('backToTop');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+          btt.classList.add('show');
+        } else {
+          btt.classList.remove('show');
+        }
+      }, { passive: true });
+      btt.addEventListener('click', () =>
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+      );
+    </script>
+  </body>
+</html>
