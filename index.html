@@ -14,14 +14,20 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
     <style>
       /* ═══════════════════════════════════════════════════════
@@ -50,7 +56,7 @@
         --r: 10px;
         --r2: 18px;
         --r3: 28px;
-        --fd: "Montserrat",sans-serif;
+        --fd: "Montserrat", sans-serif;
         /* --fb: "Roboto", sans-serif; */
         --fb: "Montserrat", sans-serif;
       }
@@ -239,10 +245,10 @@
         color: white;
       }
       .btn-outline:hover {
-        background: linear-gradient(135deg, #48208a, #964bd5);;
+        background: linear-gradient(135deg, #48208a, #964bd5);
         color: #fff;
         transform: translateY(-2px);
-        border:2px solid purple;
+        border: 2px solid purple;
       }
       .btn-gold {
         background: linear-gradient(135deg, var(--gold), var(--gold2));
@@ -355,6 +361,7 @@
         font-weight: 600;
         text-transform: none;
         line-height: 1;
+        text-align-last: end;
       }
       .nav-brand-text {
         line-height: 1;
@@ -382,6 +389,7 @@
         gap: 4px;
       }
       .nav-links a,
+      .nav-links button,
       .nav-dropdown-toggle {
         position: relative;
         padding: 7px 13px;
@@ -397,6 +405,7 @@
         cursor: none;
       }
       .nav-links a::after,
+      .nav-links button::after,
       .nav-dropdown-toggle::after {
         content: "";
         position: absolute;
@@ -411,16 +420,19 @@
           left 0.3s;
       }
       .nav-links a:hover,
+      .nav-links button:hover,
       .nav-dropdown:hover .nav-dropdown-toggle {
         color: var(--teal);
         background: rgba(14, 122, 110, 0.06);
       }
       .nav-links a:hover::after,
+      .nav-links button:hover::after,
       .nav-dropdown:hover .nav-dropdown-toggle::after {
         width: 60%;
         left: 20%;
       }
-      .nav-links a.scrolled {
+      .nav-links a.scrolled,
+      .nav-links button.scrolled {
         color: var(--teal);
       }
 
@@ -454,7 +466,9 @@
         flex-direction: column;
         gap: 4px;
         z-index: 2000;
-        transition: opacity 0.18s ease, transform 0.18s ease;
+        transition:
+          opacity 0.18s ease,
+          transform 0.18s ease;
         transform: translateY(2px);
         opacity: 0;
       }
@@ -583,7 +597,11 @@
         content: "";
         position: absolute;
         inset: 0;
-        background: linear-gradient(135deg, rgba(12, 12, 12, 0.6) 0%, rgba(255, 255, 255, 0.08) 100%);
+        background: linear-gradient(
+          135deg,
+          rgba(12, 12, 12, 0.6) 0%,
+          rgba(255, 255, 255, 0.08) 100%
+        );
         z-index: 2;
         pointer-events: none;
       }
@@ -634,7 +652,7 @@
         }
       }
 
-      .dabba{
+      .dabba {
         display: flex;
         width: 100%;
         position: relative;
@@ -644,7 +662,7 @@
         z-index: 10;
       }
 
-      .dabba-img > img{
+      .dabba-img > img {
         height: 660px;
         margin-top: -57px;
         width: 455px;
@@ -653,28 +671,24 @@
         position:relative;
       } */
 
-      .dabba-img > .hover-link{
-        color:black;
+      .dabba-img > .hover-link {
+        color: black;
         background-color: white;
-        padding:10px;
-        border-radius:10px;
+        padding: 10px;
+        border-radius: 10px;
         font-weight: bold;
-        
-        
-        display:none;
-      }
-      .dabba-img:hover > .hover-link{
-          display:block;
-          position:absolute;
-          top:50%;
-          left:50%;
-          transform: translate(-50%, -50%);
-          display:none;
-      }
-      
 
-      
-      
+        display: none;
+      }
+      .dabba-img:hover > .hover-link {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: none;
+      }
+
       /* floating blobs */
       .hero-blob {
         position: absolute;
@@ -862,7 +876,11 @@
         width: 78px;
         height: 78px;
         border-radius: 50%;
-        background: linear-gradient(135deg, rgba(14, 122, 110, 0.25), rgba(30, 77, 140, 0.15));
+        background: linear-gradient(
+          135deg,
+          rgba(14, 122, 110, 0.25),
+          rgba(30, 77, 140, 0.15)
+        );
         border: 2px solid rgba(14, 122, 110, 0.3);
         color: white;
         font-size: 42px;
@@ -876,7 +894,11 @@
         -webkit-backdrop-filter: blur(10px);
       }
       .announcement-icon:hover {
-        background: linear-gradient(135deg, rgba(14, 122, 110, 0.35), rgba(30, 77, 140, 0.25));
+        background: linear-gradient(
+          135deg,
+          rgba(14, 122, 110, 0.35),
+          rgba(30, 77, 140, 0.25)
+        );
         border-color: rgba(14, 122, 110, 0.5);
         transform: translateY(-3px);
         box-shadow: 0 8px 24px rgba(14, 122, 110, 0.2);
@@ -944,7 +966,11 @@
         align-items: center;
         justify-content: space-between;
         gap: 16px;
-        background: linear-gradient(135deg, rgba(14, 122, 110, 0.03), rgba(30, 77, 140, 0.03));
+        background: linear-gradient(
+          135deg,
+          rgba(14, 122, 110, 0.03),
+          rgba(30, 77, 140, 0.03)
+        );
       }
       .announcements-header h2 {
         font-family: var(--fd);
@@ -1021,13 +1047,21 @@
         }
       }
       .announcement-item:hover {
-        background: linear-gradient(135deg, var(--light), rgba(14, 122, 110, 0.05));
+        background: linear-gradient(
+          135deg,
+          var(--light),
+          rgba(14, 122, 110, 0.05)
+        );
         transform: translateX(6px);
         box-shadow: var(--shadow);
       }
       .announcement-item.active {
         border-left-color: var(--gold);
-        background: linear-gradient(135deg, rgba(212, 160, 23, 0.08), var(--light));
+        background: linear-gradient(
+          135deg,
+          rgba(212, 160, 23, 0.08),
+          var(--light)
+        );
       }
 
       .announcement-date {
@@ -1093,7 +1127,6 @@
         position: relative;
         z-index: 10;
         max-width: 640px;
-       
       }
       .hero-eyebrow {
         display: inline-flex;
@@ -1130,14 +1163,15 @@
         background-clip: text;
         margin-bottom: 8px;
         letter-spacing: -1.5px;
-        transition: opacity 0.2s ease, transform 0.2s ease-out;
+        transition:
+          opacity 0.2s ease,
+          transform 0.2s ease-out;
         will-change: opacity, transform;
       }
       .hero-title .ital {
         font-style: italic;
         color: var(--blue);
       }
-      
 
       .hero-brand {
         font-size: clamp(12px, 1.5vw, 15px);
@@ -1255,18 +1289,16 @@
         align-items: center;
         justify-content: center;
         position: relative;
-          background-image: url('/assets/ca.png');
-      background-size: cover;
-      background-position: center;
+        background-image: url("/assets/ca.png");
+        background-size: cover;
+        background-position: center;
         /* position: relative; */
       }
       .about-img-inner {
         width: 100%;
-        height:848px;
-        background: linear-gradient(
-          rgba(11, 67, 43, 0.5)
-        );
-        opacity: 30%;;
+        height: 848px;
+        background: linear-gradient(rgba(11, 67, 43, 0.5));
+        opacity: 30%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1468,19 +1500,38 @@
         padding-right: 12px;
         padding-left: 12px;
       }
-      .row-cols-1 > * { flex: 0 0 100%; }
+      .row-cols-1 > * {
+        flex: 0 0 100%;
+      }
       @media (min-width: 768px) {
-        .row-cols-md-2 > * { flex: 0 0 50%; }
+        .row-cols-md-2 > * {
+          flex: 0 0 50%;
+        }
       }
       @media (min-width: 1200px) {
-        .row-cols-xl-3 > * { flex: 0 0 33.333333%; }
+        .row-cols-xl-3 > * {
+          flex: 0 0 33.333333%;
+        }
       }
-      .pb-4 { padding-bottom: 24px; }
-      .mb-4 { margin-bottom: 24px; }
-      .mx-auto { margin-left: auto; margin-right: auto; }
-      .text-center { text-align: center; }
-      .justify-content-center { justify-content: center; }
-      .object-fit-cover { object-fit: cover; }
+      .pb-4 {
+        padding-bottom: 24px;
+      }
+      .mb-4 {
+        margin-bottom: 24px;
+      }
+      .mx-auto {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .text-center {
+        text-align: center;
+      }
+      .justify-content-center {
+        justify-content: center;
+      }
+      .object-fit-cover {
+        object-fit: cover;
+      }
       .display-5 {
         font-size: 48px;
         font-weight: 700;
@@ -1505,7 +1556,9 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        transition: opacity 0.35s, transform 0.35s;
+        transition:
+          opacity 0.35s,
+          transform 0.35s;
         backface-visibility: hidden;
       }
       figure.effect-layla figcaption {
@@ -1515,12 +1568,18 @@
         width: 100%;
         height: 100%;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
+        gap: 10px;
+        padding: 18px;
         background: rgba(0, 0, 0, 0.3);
         color: #fff;
         opacity: 1;
-        transition: opacity 0.35s, transform 0.35s, background 0.35s;
+        transition:
+          opacity 0.35s,
+          transform 0.35s,
+          background 0.35s;
         z-index: 2;
       }
       figure.effect-layla h2 {
@@ -1531,6 +1590,89 @@
         transform: scale(1);
         transition: transform 0.35s;
       }
+      .svc-mini-loader {
+        width: 52px;
+        height: 52px;
+        position: relative;
+        opacity: 0;
+        transform: translateY(10px);
+        transition:
+          opacity 0.35s,
+          transform 0.35s;
+      }
+      .svc-mini-loader span {
+        position: absolute;
+        background: #fff;
+        opacity: 0.92;
+      }
+      .svc-mini-loader .svc-line-top,
+      .svc-mini-loader .svc-line-bottom {
+        width: 24px;
+        height: 2px;
+        left: 14px;
+      }
+      .svc-mini-loader .svc-line-top {
+        top: 8px;
+        animation: svcMoveRight 1.8s ease-in-out infinite;
+      }
+      .svc-mini-loader .svc-line-bottom {
+        top: 42px;
+        animation: svcMoveLeft 1.8s ease-in-out infinite;
+      }
+      .svc-mini-loader .svc-line-left,
+      .svc-mini-loader .svc-line-right {
+        width: 2px;
+        height: 24px;
+        top: 14px;
+      }
+      .svc-mini-loader .svc-line-left {
+        left: 8px;
+        animation: svcMoveUp 1.8s ease-in-out infinite;
+      }
+      .svc-mini-loader .svc-line-right {
+        left: 42px;
+        animation: svcMoveDown 1.8s ease-in-out infinite;
+      }
+      @keyframes svcMoveRight {
+        0% { transform: translate(0, 0); }
+        25% { transform: translate(12px, 0); }
+        50% { transform: translate(12px, 12px); }
+        75% { transform: translate(0, 12px); }
+        100% { transform: translate(0, 0); }
+      }
+      @keyframes svcMoveLeft {
+        0% { transform: translate(0, 0); }
+        25% { transform: translate(-12px, 0); }
+        50% { transform: translate(-12px, -12px); }
+        75% { transform: translate(0, -12px); }
+        100% { transform: translate(0, 0); }
+      }
+      @keyframes svcMoveUp {
+        0% { transform: translate(0, 0); }
+        25% { transform: translate(0, -12px); }
+        50% { transform: translate(12px, -12px); }
+        75% { transform: translate(12px, 0); }
+        100% { transform: translate(0, 0); }
+      }
+      @keyframes svcMoveDown {
+        0% { transform: translate(0, 0); }
+        25% { transform: translate(0, 12px); }
+        50% { transform: translate(-12px, 12px); }
+        75% { transform: translate(-12px, 0); }
+        100% { transform: translate(0, 0); }
+      }
+      figure.effect-layla p {
+        margin: 0;
+        max-width: 280px;
+        text-align: center;
+        font-size: 13px;
+        line-height: 1.6;
+        opacity: 0;
+        transform: translateY(10px);
+        transition:
+          opacity 0.35s,
+          transform 0.35s;
+      }
       figure.effect-layla:hover img {
         opacity: 0.4;
         transform: scale(1.05);
@@ -1539,7 +1681,15 @@
         background: rgba(0, 0, 0, 0.65);
       }
       figure.effect-layla:hover h2 {
-        transform: scale(1.15);
+        transform: scale(1.08);
+      }
+      figure.effect-layla:hover .svc-mini-loader {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      figure.effect-layla:hover p {
+        opacity: 1;
+        transform: translateY(0);
       }
 
       /* ═══════════════════════════════════════════════════════
@@ -1556,7 +1706,8 @@
         gap: 10px;
         align-items: center;
       }
-      .team-prev, .team-next {
+      .team-prev,
+      .team-next {
         background: linear-gradient(135deg, var(--teal), var(--blue));
         color: #fff;
         border: none;
@@ -1574,8 +1725,13 @@
         -webkit-overflow-scrolling: touch;
         flex: 1 1 auto;
       }
-      .team-track::-webkit-scrollbar { height: 8px; }
-      .team-track::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.12); border-radius: 8px; }
+      .team-track::-webkit-scrollbar {
+        height: 8px;
+      }
+      .team-track::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 0, 0.12);
+        border-radius: 8px;
+      }
       .team-track-inner {
         display: flex;
         gap: 14px;
@@ -1590,45 +1746,87 @@
         overflow: hidden;
         position: relative;
         background: #fff;
-        box-shadow: 0 10px 30px rgba(13,27,42,0.10);
+        box-shadow: 0 10px 30px rgba(13, 27, 42, 0.1);
         transition: transform 0.35s ease;
       }
-      .team-card figure { margin: 0; position: relative; height: 320px; overflow: hidden; }
-      .team-card img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.35s ease; }
+      .team-card figure {
+        margin: 0;
+        position: relative;
+        height: 320px;
+        overflow: hidden;
+      }
+      .team-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.35s ease;
+      }
       .team-overlay {
         position: absolute;
-        left: 0; right: 0; bottom: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
         height: 56px;
         padding: 10px 12px;
-        background: rgba(0,0,0,0.45);
+        background: rgba(0, 0, 0, 0.45);
         color: #fff;
-        transition: height 0.35s ease, background 0.35s ease;
+        transition:
+          height 0.35s ease,
+          background 0.35s ease;
         overflow: hidden;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
       }
-      .team-name { font-weight: 800; font-size: 15px; line-height: 1; }
-      .team-role { font-size: 12px; opacity: 0.92; }
+      .team-name {
+        font-weight: 800;
+        font-size: 15px;
+        line-height: 1;
+      }
+      .team-role {
+        font-size: 12px;
+        opacity: 0.92;
+      }
       .team-overlay .team-desc {
         display: none;
         font-size: 13px;
         margin-top: 8px;
-        color: rgba(255,255,255,0.95);
+        color: rgba(255, 255, 255, 0.95);
       }
-      .team-card:hover img { transform: translateY(-8px) scale(1.03); }
-      .team-card:hover .team-overlay { height: 100%; background: rgba(0,0,0,0.72); }
-      .team-card:hover { transform: translateY(-6px); }
-      .team-card:hover .team-overlay .team-desc { display: block; }
+      .team-card:hover img {
+        transform: translateY(-8px) scale(1.03);
+      }
+      .team-card:hover .team-overlay {
+        height: 100%;
+        background: rgba(0, 0, 0, 0.72);
+      }
+      .team-card:hover {
+        transform: translateY(-6px);
+      }
+      .team-card:hover .team-overlay .team-desc {
+        display: block;
+      }
       @media (max-width: 900px) {
-        .team-card { flex: 0 0 180px; width: 180px; }
+        .team-card {
+          flex: 0 0 180px;
+          width: 180px;
+        }
       }
       @media (max-width: 640px) {
-        .team-card { flex: 0 0 220px; width: 220px; }
+        .team-card {
+          flex: 0 0 220px;
+          width: 220px;
+        }
       }
       @media (min-width: 1100px) {
-        .team-card { flex: 0 0 calc((100% - 36px) / 3); width: calc((100% - 36px) / 3); }
-        .team-track-inner { gap: 18px; }
+        .team-card {
+          flex: 0 0 calc((100% - 36px) / 3);
+          width: calc((100% - 36px) / 3);
+        }
+        .team-track-inner {
+          gap: 18px;
+        }
       }
 
       /* ═══════════════════════════════════════════════════════
@@ -1796,6 +1994,189 @@
         font-size: 12px;
         flex-shrink: 0;
         margin-top: 4px;
+      }
+      #services .services-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+      }
+      #services .svc-card {
+        height: 220px;
+      }
+      #services .svc-card-front,
+      #services .svc-card-body {
+        position: relative;
+        z-index: 1;
+      }
+      #services .svc-card-front {
+        display: flex;
+        align-items: flex-end;
+        min-height: 100%;
+      }
+      #services .svc-card-front h3 {
+        margin: 0;
+      }
+      #services .svc-card-body {
+        position: absolute;
+        inset: 26px 24px 22px;
+        display: flex;
+        align-items: center;
+        opacity: 0;
+        transform: translateY(10px);
+        transition:
+          opacity 0.35s ease,
+          transform 0.35s ease;
+        pointer-events: none;
+      }
+      #services .svc-card-body p {
+        font-size: 13px;
+        line-height: 1.65;
+        color: var(--navy);
+        background: #fff;
+        border-radius: var(--r);
+        border: 1px solid rgba(14, 122, 110, 0.12);
+        padding: 14px 15px;
+        box-shadow: 0 10px 24px rgba(13, 27, 42, 0.08);
+        margin: 0;
+      }
+      #services .svc-card:hover .svc-card-front {
+        opacity: 0.06;
+      }
+      #services .svc-card:hover .svc-card-body {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* ═══════════════════════════════════════════════════════
+    CORE VALUES
+  ═══════════════════════════════════════════════════════ */
+      /* Core Values section background (distinct from other sections) */
+      #core-values {
+        background: linear-gradient(135deg, #f0fbf9 0%, #eef3ff 100%);
+      }
+      .core-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 20px;
+      }
+      .core-card {
+        position: relative;
+        height: 248px;
+        padding: 28px 24px 22px;
+        background: var(--white);
+        border-radius: var(--r2);
+        border: 1px solid var(--border2);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+        transition:
+          height 0.35s ease,
+          transform 0.35s ease,
+          box-shadow 0.35s ease,
+          border-color 0.35s ease;
+      }
+      .core-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(14, 122, 110, 0.05), rgba(30, 77, 140, 0.04));
+        opacity: 0;
+        transition: opacity 0.35s ease;
+      }
+      .core-card:hover {
+        height: 390px;
+        transform: translateY(-6px);
+        box-shadow: var(--shadow2);
+        border-color: rgba(14, 122, 110, 0.25);
+      }
+      .core-card:hover::before {
+        opacity: 1;
+      }
+      .core-card-front,
+      .core-card-body {
+        position: relative;
+        z-index: 1;
+      }
+      .core-card-front {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        height: 100%;
+      }
+      .core-index {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, var(--teal), var(--blue));
+        color: #fff;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.5px;
+      }
+      .core-card-front h3 {
+        font-family: var(--fd);
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--navy);
+        line-height: 1.35;
+        margin-top: auto;
+      }
+      .core-card-teaser {
+        font-size: 12.5px;
+        color: #718096;
+        line-height: 1.55;
+      }
+      .core-card-body {
+        position: absolute;
+        inset: 84px 24px 20px 24px;
+        display: flex;
+        align-items: flex-start;
+        opacity: 0;
+        transform: translateY(10px);
+        transition:
+          opacity 0.35s ease,
+          transform 0.35s ease;
+      }
+      .core-card-body p {
+        font-size: 12.5px;
+        color: var(--navy);
+        line-height: 1.65;
+        background: #fff;
+        border-radius: var(--r);
+        padding: 16px 16px 18px;
+        border: 1px solid rgba(14, 122, 110, 0.12);
+        box-shadow: 0 10px 24px rgba(13, 27, 42, 0.08);
+        max-height: none;
+        overflow: visible;
+      }
+      .core-card:hover .core-card-front {
+        opacity: 0.08;
+      }
+      .core-card:hover .core-card-body {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .core-card:hover {
+        height: 390px;
+      }
+      .core-card.sr.on {
+        animation: core-card-pop 0.8s cubic-bezier(0.2, 0.9, 0.2, 1) both;
+      }
+      @keyframes core-card-pop {
+        0% {
+          opacity: 0;
+          transform: translateY(34px) scale(0.96);
+        }
+        70% {
+          opacity: 1;
+          transform: translateY(-4px) scale(1.01);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
       }
 
       /* ═══════════════════════════════════════════════════════
@@ -2139,6 +2520,80 @@
         opacity: 1;
         transform: translateX(0);
       }
+      .links-wrap {
+        max-width: 920px;
+        margin: 0 auto;
+      }
+      .links-toggle-btn {
+        width: 100%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 14px 18px;
+        border-radius: var(--r2);
+        border: 1px solid rgba(30, 77, 140, 0.2);
+        background: linear-gradient(135deg, #12457a 0%, #0e7a6e 100%);
+        color: #fff;
+        font-size: 15px;
+        font-weight: 700;
+        transition: all 0.3s ease;
+      }
+      .links-toggle-btn:hover {
+        transform: translateY(-2px);
+        border-color: rgba(255, 255, 255, 0.5);
+        box-shadow: 0 12px 30px rgba(14, 122, 110, 0.28);
+      }
+      .links-panel {
+        margin-top: 18px;
+        border-radius: var(--r2);
+        border: 1px solid rgba(13, 27, 42, 0.08);
+        background: #fff;
+        box-shadow: 0 10px 28px rgba(13, 27, 42, 0.08);
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        padding: 0 22px;
+        transition:
+          max-height 0.35s ease,
+          opacity 0.3s ease,
+          padding 0.35s ease;
+      }
+      .links-panel.open {
+        max-height: 760px;
+        opacity: 1;
+        padding: 18px 22px 20px;
+      }
+      .quick-links-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px 26px;
+      }
+      .quick-links-list li a {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: #314154;
+        font-size: 14px;
+        line-height: 1.6;
+        transition:
+          color 0.25s ease,
+          transform 0.25s ease;
+      }
+      .quick-links-list li a::before {
+        content: "\2192";
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--teal);
+        flex-shrink: 0;
+      }
+      .quick-links-list li a:hover {
+        color: var(--teal);
+        transform: translateX(6px);
+      }
 
       /* ═══════════════════════════════════════════════════════
    CONTACT
@@ -2324,7 +2779,7 @@
       }
       .footer-grid {
         display: grid;
-        grid-template-columns: 1.6fr 1fr 1fr;
+        grid-template-columns: 1.3fr 0.9fr 1.9fr;
         gap: 44px;
         padding-bottom: 40px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.07);
@@ -2382,60 +2837,111 @@
         gap: 8px;
       }
       .footer-clocks {
-        margin-top: 18px;
+        margin-top: 14px;
+      }
+      .footer-clock-tagline {
+        font-family: var(--fd);
+        font-size: 19px;
+        font-weight: 800;
+        color: #fff;
+        margin-bottom: 12px;
+        text-align: center;
+      }
+      .footer-clock-col {
+        text-align: center;
+      }
+      .footer-clock-contact {
+        margin-top: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .footer-clock-contact a {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.82);
+        transition: color 0.25s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .footer-clock-contact a i {
+        font-size: 15px;
+        color: var(--teal);
+      }
+      .footer-clock-contact .sep {
+        color: rgba(255, 255, 255, 0.45);
+        font-size: 13px;
+      }
+      .footer-clock-contact a:hover {
+        color: var(--gold);
+      }
+      .footer-clock-contact a:hover i {
+        color: var(--gold);
       }
       footer .world-clock-wrap {
         display: flex;
         flex-wrap: nowrap;
-        gap: 10px;
+        gap: 18px;
         align-items: stretch;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
       }
       footer .clock-card {
-        flex: 1 1 144px;
-        min-width: 126px;
-        padding: 12px 10px 10px;
-        border-radius: 14px;
-        /* background: rgba(255, 255, 255, 0.03); */
-        /* border: 1px solid rgba(255, 255, 255, 0.06); */
+        flex: 1 1 150px;
+        min-width: 144px;
+        padding: 0;
+        border-radius: 0;
+        background: transparent;
+        border: none;
+        box-shadow: none;
       }
       footer .clock-city {
-        font-size: 11px;
-        margin-bottom: 6px;
+        font-size: 12.5px;
+        margin-bottom: 8px;
       }
       footer .clock-container {
-        height: 92px;
+        height: 128px;
         overflow: hidden;
       }
       footer .clock-face {
         width: 200px;
         height: 200px;
-        zoom: 0.44;
+        zoom: 0.58;
       }
       footer .digital-time {
-        margin-top: 4px;
-        font-size: 10px;
+        margin-top: 6px;
+        font-size: 11px;
       }
       @media (max-width: 900px) {
+        .footer-grid {
+          grid-template-columns: 1fr;
+          gap: 28px;
+        }
         footer .clock-card {
           flex: 0 0 auto;
-          min-width: 140px;
+          min-width: 150px;
         }
       }
       @media (max-width: 640px) {
         footer .clock-card {
           flex: 0 0 auto;
-          min-width: 130px;
-          padding: 10px 8px 8px;
+          min-width: 132px;
         }
         footer .clock-face {
-          zoom: 0.35;
+          zoom: 0.46;
         }
         footer .world-clock-wrap {
-          gap: 8px;
+          gap: 12px;
           flex-wrap: wrap;
           overflow-x: visible;
+        }
+        .footer-clock-contact {
+          gap: 8px;
+        }
+        .footer-clock-contact .sep {
+          display: none;
         }
         footer .clock-city {
           font-size: 10px;
@@ -2448,11 +2954,10 @@
       }
       @media (max-width: 480px) {
         footer .clock-card {
-          min-width: 115px;
-          padding: 8px 6px;
+          min-width: 118px;
         }
         footer .clock-face {
-          zoom: 0.3;
+          zoom: 0.4;
         }
         footer .world-clock-wrap {
           flex-wrap: wrap;
@@ -2602,6 +3107,9 @@
         .why-grid {
           grid-template-columns: 1fr 1fr;
         }
+        .core-grid {
+          grid-template-columns: 1fr 1fr;
+        }
         .ach-grid {
           grid-template-columns: 1fr 1fr;
         }
@@ -2628,17 +3136,14 @@
         .cta-banner p {
           margin: 0 auto;
         }
-         .nav-links,
+        .nav-links,
         .nav-cta {
           display: none;
         }
-         .nav-hb {
+        .nav-hb {
           display: flex;
         }
       }
-
-     
-
 
       /* Clock Styling */
       .world-clock-section {
@@ -2670,314 +3175,329 @@
         letter-spacing: 0.4px;
       }
 
-.clock-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+      .clock-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-.clock-face {
-  width: 200px;
-  height: 200px;
-  background-color: #e0e5ec;
-  border-radius: 50%;
-  /* box-shadow:
+      .clock-face {
+        width: 200px;
+        height: 200px;
+        background-color: #e0e5ec;
+        border-radius: 50%;
+        /* box-shadow:
     12px 12px 24px #a3b1c6,
     -12px -12px 24px #ffffff; */
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-.clock-face::before {
-  content: "";
-  position: absolute;
-  width: 92%;
-  height: 92%;
-  background-color: transparent;
-  border-radius: 50%;
-  box-shadow:
-    inset 8px 8px 16px #a3b1c6,
-    inset -8px -8px 16px #ffffff;
-}
+      .clock-face::before {
+        content: "";
+        position: absolute;
+        width: 92%;
+        height: 92%;
+        background-color: transparent;
+        border-radius: 50%;
+        box-shadow:
+          inset 8px 8px 16px #a3b1c6,
+          inset -8px -8px 16px #ffffff;
+      }
 
-.marker {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
+      .marker {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+      }
 
-.marker-dot {
-  position: absolute;
-  top: 11px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: #e0e5ec;
-  box-shadow:
-    inset 1px 1px 2px #a3b1c6,
-    inset -1px -1px 2px #ffffff;
-}
+      .marker-dot {
+        position: absolute;
+        top: 11px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: #e0e5ec;
+        box-shadow:
+          inset 1px 1px 2px #a3b1c6,
+          inset -1px -1px 2px #ffffff;
+      }
 
-.marker-1 {
-  transform: rotate(30deg);
-}
-.marker-2 {
-  transform: rotate(60deg);
-}
-.marker-3 {
-  transform: rotate(90deg);
-}
-.marker-3 .marker-dot {
-  width: 8px;
-  height: 8px;
-}
-.marker-4 {
-  transform: rotate(120deg);
-}
-.marker-5 {
-  transform: rotate(150deg);
-}
-.marker-6 {
-  transform: rotate(180deg);
-}
-.marker-6 .marker-dot {
-  width: 8px;
-  height: 8px;
-}
-.marker-7 {
-  transform: rotate(210deg);
-}
-.marker-8 {
-  transform: rotate(240deg);
-}
-.marker-9 {
-  transform: rotate(270deg);
-}
-.marker-9 .marker-dot {
-  width: 8px;
-  height: 8px;
-}
-.marker-10 {
-  transform: rotate(300deg);
-}
-.marker-11 {
-  transform: rotate(330deg);
-}
-.marker-12 {
-  transform: rotate(360deg);
-}
-.marker-12 .marker-dot {
-  width: 8px;
-  height: 8px;
-}
+      .marker-1 {
+        transform: rotate(30deg);
+      }
+      .marker-2 {
+        transform: rotate(60deg);
+      }
+      .marker-3 {
+        transform: rotate(90deg);
+      }
+      .marker-3 .marker-dot {
+        width: 8px;
+        height: 8px;
+      }
+      .marker-4 {
+        transform: rotate(120deg);
+      }
+      .marker-5 {
+        transform: rotate(150deg);
+      }
+      .marker-6 {
+        transform: rotate(180deg);
+      }
+      .marker-6 .marker-dot {
+        width: 8px;
+        height: 8px;
+      }
+      .marker-7 {
+        transform: rotate(210deg);
+      }
+      .marker-8 {
+        transform: rotate(240deg);
+      }
+      .marker-9 {
+        transform: rotate(270deg);
+      }
+      .marker-9 .marker-dot {
+        width: 8px;
+        height: 8px;
+      }
+      .marker-10 {
+        transform: rotate(300deg);
+      }
+      .marker-11 {
+        transform: rotate(330deg);
+      }
+      .marker-12 {
+        transform: rotate(360deg);
+      }
+      .marker-12 .marker-dot {
+        width: 8px;
+        height: 8px;
+      }
 
-.number {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  font-size: 17px;
-  font-weight: 600;
-  color: #b8c1d1;
-  text-shadow:
-    1px 1px 1px #ffffff,
-    -1px -1px 1px #a3b1c6;
-  z-index: 2;
-}
+      .number {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        font-size: 17px;
+        font-weight: 600;
+        color: #b8c1d1;
+        text-shadow:
+          1px 1px 1px #ffffff,
+          -1px -1px 1px #a3b1c6;
+        z-index: 2;
+      }
 
-.number-1 {
-  transform: rotate(30deg);
-}
-.number-1-text {
-  display: inline-block;
-  transform: translateY(24px) rotate(-30deg);
-}
-.number-2 {
-  transform: rotate(60deg);
-}
-.number-2-text {
-  display: inline-block;
-  transform: translateY(24px) rotate(-60deg);
-}
-.number-3 {
-  transform: rotate(90deg);
-}
-.number-3-text {
-  display: inline-block;
-  transform: translateY(24px) rotate(-90deg);
-}
-.number-4 {
-  transform: rotate(120deg);
-}
-.number-4-text {
-  display: inline-block;
-  transform: translateY(24px) rotate(-120deg);
-}
-.number-5 {
-  transform: rotate(150deg);
-}
-.number-5-text {
-  display: inline-block;
-  transform: translateY(24px) rotate(-150deg);
-}
-.number-6 {
-  transform: rotate(180deg);
-}
-.number-6-text {
-  display: inline-block;
-  transform: translateY(24px) rotate(-180deg);
-}
-.number-7 {
-  transform: rotate(210deg);
-}
-.number-7-text {
-  display: inline-block;
-  transform: translateY(24px) rotate(-210deg);
-}
-.number-8 {
-  transform: rotate(240deg);
-}
-.number-8-text {
-  display: inline-block;
-  transform: translateY(24px) rotate(-240deg);
-}
-.number-9 {
-  transform: rotate(270deg);
-}
-.number-9-text {
-  display: inline-block;
-  transform: translateY(24px) rotate(-270deg);
-}
-.number-10 {
-  transform: rotate(300deg);
-}
-.number-10-text {
-  display: inline-block;
-  transform: translateY(24px) rotate(-300deg);
-}
-.number-11 {
-  transform: rotate(330deg);
-}
-.number-11-text {
-  display: inline-block;
-  transform: translateY(24px) rotate(-330deg);
-}
-.number-12 {
-  transform: rotate(360deg);
-}
-.number-12-text {
-  display: inline-block;
-  transform: translateY(24px) rotate(-360deg);
-}
+      .number-1 {
+        transform: rotate(30deg);
+      }
+      .number-1-text {
+        display: inline-block;
+        transform: translateY(24px) rotate(-30deg);
+      }
+      .number-2 {
+        transform: rotate(60deg);
+      }
+      .number-2-text {
+        display: inline-block;
+        transform: translateY(24px) rotate(-60deg);
+      }
+      .number-3 {
+        transform: rotate(90deg);
+      }
+      .number-3-text {
+        display: inline-block;
+        transform: translateY(24px) rotate(-90deg);
+      }
+      .number-4 {
+        transform: rotate(120deg);
+      }
+      .number-4-text {
+        display: inline-block;
+        transform: translateY(24px) rotate(-120deg);
+      }
+      .number-5 {
+        transform: rotate(150deg);
+      }
+      .number-5-text {
+        display: inline-block;
+        transform: translateY(24px) rotate(-150deg);
+      }
+      .number-6 {
+        transform: rotate(180deg);
+      }
+      .number-6-text {
+        display: inline-block;
+        transform: translateY(24px) rotate(-180deg);
+      }
+      .number-7 {
+        transform: rotate(210deg);
+      }
+      .number-7-text {
+        display: inline-block;
+        transform: translateY(24px) rotate(-210deg);
+      }
+      .number-8 {
+        transform: rotate(240deg);
+      }
+      .number-8-text {
+        display: inline-block;
+        transform: translateY(24px) rotate(-240deg);
+      }
+      .number-9 {
+        transform: rotate(270deg);
+      }
+      .number-9-text {
+        display: inline-block;
+        transform: translateY(24px) rotate(-270deg);
+      }
+      .number-10 {
+        transform: rotate(300deg);
+      }
+      .number-10-text {
+        display: inline-block;
+        transform: translateY(24px) rotate(-300deg);
+      }
+      .number-11 {
+        transform: rotate(330deg);
+      }
+      .number-11-text {
+        display: inline-block;
+        transform: translateY(24px) rotate(-330deg);
+      }
+      .number-12 {
+        transform: rotate(360deg);
+      }
+      .number-12-text {
+        display: inline-block;
+        transform: translateY(24px) rotate(-360deg);
+      }
 
-.hand {
-  position: absolute;
-  bottom: 50%;
-  left: 50%;
-  transform-origin: bottom center;
-  border-radius: 10px 10px 0 0;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
-}
+      .hand {
+        position: absolute;
+        bottom: 50%;
+        left: 50%;
+        transform-origin: bottom center;
+        border-radius: 10px 10px 0 0;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+      }
 
-.hour-hand {
-  width: 6px;
-  height: 34px;
-  background: #4a5463;
-  transform: translateX(-50%) rotate(0deg);
-  transition: transform 0.2s linear;
-  z-index: 5;
-}
+      .hour-hand {
+        width: 6px;
+        height: 34px;
+        background: #4a5463;
+        transform: translateX(-50%) rotate(0deg);
+        transition: transform 0.2s linear;
+        z-index: 5;
+      }
 
-.minute-hand {
-  width: 4px;
-  height: 52px;
-  background: #7a8a9e;
-  transform: translateX(-50%) rotate(0deg);
-  transition: transform 0.2s linear;
-  z-index: 6;
-}
+      .minute-hand {
+        width: 4px;
+        height: 52px;
+        background: #7a8a9e;
+        transform: translateX(-50%) rotate(0deg);
+        transition: transform 0.2s linear;
+        z-index: 6;
+      }
 
-.second-hand {
-  width: 2px;
-  height: 64px;
-  background: #e65e5e;
-  transform: translateX(-50%) rotate(0deg);
-  transition: transform 0.08s linear;
-  z-index: 7;
-}
+      .second-hand {
+        width: 2px;
+        height: 64px;
+        background: #e65e5e;
+        transform: translateX(-50%) rotate(0deg);
+        transition: transform 0.08s linear;
+        z-index: 7;
+      }
 
-.digital-time {
-  margin-top: 10px;
-  font-size: 12px;
-  font-weight: 600;
-  color: white;
-  letter-spacing: 0.3px;
-  text-align: center;
-}
+      .digital-time {
+        margin-top: 10px;
+        font-size: 12px;
+        font-weight: 600;
+        color: white;
+        letter-spacing: 0.3px;
+        text-align: center;
+      }
 
-.center-pin {
-  width: 20px;
-  height: 20px;
-  background: #e0e5ec;
-  border-radius: 50%;
-  position: absolute;
-  z-index: 10;
-  box-shadow:
-    inset 3px 3px 6px #a3b1c6,
-    inset -3px -3px 6px #ffffff;
-}
+      .center-pin {
+        width: 20px;
+        height: 20px;
+        background: #e0e5ec;
+        border-radius: 50%;
+        position: absolute;
+        z-index: 10;
+        box-shadow:
+          inset 3px 3px 6px #a3b1c6,
+          inset -3px -3px 6px #ffffff;
+      }
 
-.center-pin::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 6px;
-  height: 6px;
-  background: #4a5463;
-  border-radius: 50%;
-}
+      .center-pin::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 6px;
+        height: 6px;
+        background: #4a5463;
+        border-radius: 50%;
+      }
 
-@keyframes rotate-seconds {
-  from {
-    transform: translateX(-50%) rotate(0deg);
-  }
-  to {
-    transform: translateX(-50%) rotate(360deg);
-  }
-}
+      @keyframes rotate-seconds {
+        from {
+          transform: translateX(-50%) rotate(0deg);
+        }
+        to {
+          transform: translateX(-50%) rotate(360deg);
+        }
+      }
 
-@keyframes rotate-minutes {
-  from {
-    transform: translateX(-50%) rotate(186deg);
-  }
-  to {
-    transform: translateX(-50%) rotate(546deg);
-  }
-}
+      @keyframes rotate-minutes {
+        from {
+          transform: translateX(-50%) rotate(186deg);
+        }
+        to {
+          transform: translateX(-50%) rotate(546deg);
+        }
+      }
 
-@keyframes rotate-hours {
-  from {
-    transform: translateX(-50%) rotate(105.5deg);
-  }
-  to {
-    transform: translateX(-50%) rotate(465.5deg);
-  }
-}
+      @keyframes rotate-hours {
+        from {
+          transform: translateX(-50%) rotate(105.5deg);
+        }
+        to {
+          transform: translateX(-50%) rotate(465.5deg);
+        }
+      }
 
       /* ══ LOCATIONS SECTION ══ */
       .locations-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: 24px;
         margin-top: 40px;
+      }
+      @media (max-width: 1024px) {
+        .locations-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+      }
+      @media (max-width: 768px) {
+        .locations-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+      @media (max-width: 560px) {
+        .locations-grid {
+          grid-template-columns: 1fr;
+        }
       }
       .location-item {
         display: flex;
@@ -3027,19 +3547,19 @@
           height: 72px;
         }
       }
-      .hero-content{
+      .hero-content {
         display: flex;
         flex-direction: column;
         gap: 24px;
       }
-      .hero-title{
+      .hero-title {
         font-size: 70px;
         font-weight: 900;
         color: whitesmoke;
         text-align: center;
       }
 
-       @media (max-width: 768px) {
+      @media (max-width: 768px) {
         .section {
           padding: 68px 0;
         }
@@ -3065,6 +3585,12 @@
         }
         .why-grid {
           grid-template-columns: 1fr;
+        }
+        .core-grid {
+          grid-template-columns: 1fr;
+        }
+        #services .services-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
         }
         .svc-pnl.active {
           grid-template-columns: 1fr;
@@ -3109,7 +3635,9 @@
       }
 
       @media (max-width: 768px) {
-        .row-cols-md-2 > * { flex: 0 0 100%; }
+        .row-cols-md-2 > * {
+          flex: 0 0 100%;
+        }
         .display-5 {
           font-size: 36px;
         }
@@ -3127,7 +3655,15 @@
           padding-right: 8px;
           padding-left: 8px;
         }
-        .row-cols-xl-3 > * { flex: 0 0 100%; }
+        .row-cols-xl-3 > * {
+          flex: 0 0 100%;
+        }
+        #services .services-grid {
+          grid-template-columns: 1fr;
+        }
+        #services .svc-card {
+          height: 236px;
+        }
         .display-5 {
           font-size: 28px;
           margin-bottom: 12px;
@@ -3175,7 +3711,10 @@
         .why-grid {
           grid-template-columns: 1fr;
         }
-        .links-grid {
+        .core-grid {
+          grid-template-columns: 1fr;
+        }
+        .quick-links-list {
           grid-template-columns: 1fr;
         }
         .ach-grid {
@@ -3217,84 +3756,189 @@
       }
 
       /* ── PAGE LOADER ── */
-      #site-loader {
+      .loader {
         position: fixed;
-        inset: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(250,250,252,0.98));
+        background-color: #ffffff;
         z-index: 999999;
-        transition: opacity 0.6s cubic-bezier(.2,.9,.2,1);
-      }
-      #site-loader .loader-inner {
-        text-align: center;
-      }
-      .loader-mark {
-        font-family: var(--fd);
-        font-weight: 900;
-        font-size: 22px;
-        color: var(--navy);
-        display: inline-flex;
-        align-items: center;
-        gap: 12px;
-        letter-spacing: 0.6px;
-      }
-      .loader-mark .logo-circle {
-        width: 56px;
-        height: 56px;
-        border-radius: 50%;
-        background: linear-gradient(135deg, var(--teal), var(--gold));
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        top: 0;
+        left: 0;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        color: #fff;
-        font-weight: 900;
-        font-size: 18px;
+        transition: opacity 0.6s cubic-bezier(0.2, 0.9, 0.2, 1);
       }
-      .loader-spinner {
-        margin: 18px auto 0;
-        width: 56px;
-        height: 56px;
-        border-radius: 50%;
-        border: 5px solid rgba(13,27,42,0.06);
-        border-top-color: var(--teal);
-        animation: loader-spin 1s linear infinite;
+      .spinner {
+        position: relative;
+        width: 100%;
+        height: 100%;
       }
-      @keyframes loader-spin { to { transform: rotate(360deg); } }
-      #site-loader.hide { opacity: 0; pointer-events: none; }
-      body.loading #cursor-dot, body.loading #cursor-ring { display: none !important; }
-
+      svg:not(:root) {
+        overflow: hidden;
+      }
+      svg {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+      .line-top {
+        animation: moveRight 2s ease-in-out forwards;
+      }
+      .line-bottom {
+        animation: moveLeft 2s ease-in-out forwards;
+      }
+      .line-left {
+        animation: moveUp 2s ease-in-out forwards;
+      }
+      .line-right {
+        animation: moveDown 2s ease-in-out forwards;
+      }
+      @keyframes moveRight {
+        0% {
+          transform: translateX(0) translateY(0);
+          opacity: 1;
+        }
+        25% {
+          transform: translateX(150px) translateY(0);
+          opacity: 1;
+        }
+        50% {
+          transform: translateX(150px) translateY(150px);
+          opacity: 1;
+        }
+        75% {
+          transform: translateX(0) translateY(150px);
+          opacity: 1;
+        }
+        100% {
+          transform: translateX(0) translateY(0);
+          opacity: 1;
+        }
+      }
+      @keyframes moveLeft {
+        0% {
+          transform: translateX(0) translateY(0);
+          opacity: 1;
+        }
+        25% {
+          transform: translateX(-150px) translateY(0);
+          opacity: 1;
+        }
+        50% {
+          transform: translateX(-150px) translateY(-150px);
+          opacity: 1;
+        }
+        75% {
+          transform: translateX(0) translateY(-150px);
+          opacity: 1;
+        }
+        100% {
+          transform: translateX(0) translateY(0);
+          opacity: 1;
+        }
+      }
+      @keyframes moveUp {
+        0% {
+          transform: translateX(0) translateY(0);
+          opacity: 1;
+        }
+        25% {
+          transform: translateX(0) translateY(-150px);
+          opacity: 1;
+        }
+        50% {
+          transform: translateX(150px) translateY(-150px);
+          opacity: 1;
+        }
+        75% {
+          transform: translateX(150px) translateY(0);
+          opacity: 1;
+        }
+        100% {
+          transform: translateX(0) translateY(0);
+          opacity: 1;
+        }
+      }
+      @keyframes moveDown {
+        0% {
+          transform: translateX(0) translateY(0);
+          opacity: 1;
+        }
+        25% {
+          transform: translateX(0) translateY(150px);
+          opacity: 1;
+        }
+        50% {
+          transform: translateX(-150px) translateY(150px);
+          opacity: 1;
+        }
+        75% {
+          transform: translateX(-150px) translateY(0);
+          opacity: 1;
+        }
+        100% {
+          transform: translateX(0) translateY(0);
+          opacity: 1;
+        }
+      }
+      .loader-text {
+        position: absolute;
+        bottom: 100px;
+        text-align: center;
+        font-size: 24px;
+        font-weight: 700;
+        color: var(--navy);
+        letter-spacing: 2px;
+        text-transform: capitalize;
+      }
+      #site-loader.hide {
+        opacity: 0;
+        pointer-events: none;
+      }
+      body.loading #cursor-dot,
+      body.loading #cursor-ring {
+        display: none !important;
+      }
     </style>
     <style>
       /* Section-specific professional backgrounds */
       #links {
-        background: linear-gradient(180deg, #eef3f8 0%, #e3ebf3 100%);
-        border-top: 1px solid rgba(13, 27, 42, 0.04);
-        border-bottom: 1px solid rgba(13, 27, 42, 0.04);
+        background: linear-gradient(180deg, #edf8f2 0%, #deefe6 100%);
+        border-top: 1px solid rgba(14, 122, 110, 0.12);
+        border-bottom: 1px solid rgba(14, 122, 110, 0.1);
       }
-      #links .links-grid {
-        gap: 18px;
+      #links .links-panel {
+        background: rgba(255, 255, 255, 0.97);
       }
-      #links .link-card {
-        background: #fff;
-        border: 1px solid rgba(13,27,42,0.04);
-        box-shadow: 0 6px 18px rgba(13,27,42,0.04);
-        transition: transform 0.28s ease, box-shadow 0.28s ease;
-      }
-      #links .link-card:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(13,27,42,0.07); }
 
       #locations {
         background: linear-gradient(180deg, #fbf3e8 0%, #f6ead8 100%);
         border-top: 1px solid rgba(212, 160, 23, 0.06);
         border-bottom: 1px solid rgba(212, 160, 23, 0.05);
       }
-      .location-item { background: rgba(255, 255, 255, 0.92); }
-      .location-item { background: rgba(255, 255, 255, 0.92); }
-      .location-item:hover { background: #fff7eb; border-color: rgba(212, 160, 23, 0.14); }
+      .location-item {
+        background: rgba(255, 255, 255, 0.92);
+      }
+      .location-item {
+        background: rgba(255, 255, 255, 0.92);
+      }
+      .location-item:hover {
+        background: #fff7eb;
+        border-color: rgba(212, 160, 23, 0.14);
+      }
 
       #why-choose-us {
-        background: linear-gradient(180deg, #eef4fb 0%, #e9f0f8 100%) !important;
+        background: linear-gradient(
+          180deg,
+          #eef4fb 0%,
+          #e9f0f8 100%
+        ) !important;
         border-top: 1px solid rgba(30, 77, 140, 0.05);
         border-bottom: 1px solid rgba(13, 27, 42, 0.03);
       }
@@ -3304,18 +3948,53 @@
     </style>
   </head>
   <body>
-    <!-- ══ PAGE LOADER (shows for 2s) ══ -->
-    <div id="site-loader" aria-hidden="false">
-      <div class="loader-inner">
-        <div class="loader-mark">
-          <div class="logo-circle">CA</div>
-          <div style="text-align:left">
-            <div style="font-size:14px;color:var(--teal);font-weight:700">S.K. Mishra &amp; Associates</div>
-            <div style="font-size:12px;color:var(--navy);font-weight:800">Chartered Accountants</div>
-          </div>
-        </div>
-        <div class="loader-spinner" role="status" aria-label="Loading"></div>
+    <!-- ══ PAGE LOADER (shows for 3s) ══ -->
+    <div class="loader" id="site-loader" aria-hidden="false">
+      <div class="spinner">
+        <svg width="400" height="400" viewBox="0 0 400 400">
+          <!-- Top line -->
+          <line
+            x1="100"
+            y1="50"
+            x2="300"
+            y2="50"
+            stroke="var(--navy)"
+            stroke-width="4"
+            class="line-top"
+          />
+          <!-- Bottom line -->
+          <line
+            x1="100"
+            y1="350"
+            x2="300"
+            y2="350"
+            stroke="var(--teal)"
+            stroke-width="4"
+            class="line-bottom"
+          />
+          <!-- Left line -->
+          <line
+            x1="50"
+            y1="100"
+            x2="50"
+            y2="300"
+            stroke="var(--gold)"
+            stroke-width="4"
+            class="line-left"
+          />
+          <!-- Right line -->
+          <line
+            x1="350"
+            y1="100"
+            x2="350"
+            y2="300"
+            stroke="var(--saffron)"
+            stroke-width="4"
+            class="line-right"
+          />
+        </svg>
       </div>
+      <div class="loader-text">Integrity, Insight, Impact</div>
     </div>
 
     <!-- ══ CUSTOM CURSOR ══ -->
@@ -3329,17 +4008,18 @@
           <a href="#home" class="nav-brand">
             <div class="nav-brand-icon">
               <img src="assets/logo.png" alt="CA India Logo" />
-             
             </div>
 
             <div class="nav-brand-text">
               <div class="nav-brand-sub">S.K. Mishra &amp; Associates</div>
-               <div class="nav-brand-caption">Chartered Accountant</div>
+              <div class="nav-brand-caption">Chartered Accountant</div>
             </div>
           </a>
 
           <div class="nav-links">
             <a href="#about">Home</a>
+            <a href="#core-values">Core Values</a>
+            <a href="#services">Our Services</a>
             <div class="nav-dropdown">
               <button class="nav-dropdown-toggle" type="button">
                 About <i class="ri-arrow-down-s-line"></i>
@@ -3349,18 +4029,18 @@
                 <a href="teams.html">Our Team</a>
               </div>
             </div>
-            <a href="#services">Our Services</a>
+            
             <a href="#whatwedo">What We Do</a>
-            <a href="#achievements">Our Achievements</a>
-            <a href="#links">Important Links</a>
+            <!-- <a href="#achievements">Our Achievements</a> -->
+            <button type="button" data-open-links="true">Important Links</button>
             <!-- <a href="#contact">Contact Us</a> -->
           </div>
 
           <div class="nav-cta">
             <a
               href="#contact"
-              class="btn btn-teal "
-              style="padding: 10px 22px; font-size: 12.5px;width: 152px;"
+              class="btn btn-teal"
+              style="padding: 10px 22px; font-size: 12.5px; width: 152px"
             >
               <i class="ri-mail-send-line"></i> Get in Touch
             </a>
@@ -3377,9 +4057,11 @@
     <div class="nav-drawer" id="navDrw">
       <a href="#home" class="dl"><i class="ri-home-4-line"></i>Home</a>
       <a href="#about" class="dl"
-        ><i class="ri-information-line"></i>About Us </a
+        ><i class="ri-information-line"></i>About Us
+      </a>
+      <a href="teams.html" class="dl dl-sub"
+        ><i class="ri-group-line"></i>Our Team</a
       >
-      <a href="teams.html" class="dl dl-sub"><i class="ri-group-line"></i>Our Team</a>
       <a href="#services" class="dl"
         ><i class="ri-briefcase-line"></i>Our Services</a
       >
@@ -3389,18 +4071,20 @@
       <a href="#achievements" class="dl"
         ><i class="ri-trophy-line"></i>Our Achievements</a
       >
-      <a href="#links" class="dl"
+      <a href="#links" class="dl" data-open-links="true"
         ><i class="ri-links-line"></i>Important Links</a
       >
       <!-- <a href="#contact" class="dl"><i class="ri-phone-line"></i>Contact Us</a> -->
     </div>
-  <!-- ══ ABOUT US & WHY US ══ -->
+    <!-- ══ ABOUT US & WHY US ══ -->
     <section id="about" class="section section--white">
       <div class="container">
-        <div class="about-grid" data-aos="fade-left"
-   
-     data-aos-offset="500"
-     data-aos-duration="500">
+        <div
+          class="about-grid"
+          data-aos="fade-left"
+          data-aos-offset="500"
+          data-aos-duration="500"
+        >
           <!-- image block -->
           <div class="sr-l">
             <div class="about-img-block">
@@ -3490,7 +4174,8 @@
               Accountancy firm founded in 1999, with PAN-India clientele and
               partner-led engagements. We combine deep domain knowledge with a
               business-centric approach across Chemical, Automobile,
-              Hospitality, Education, Steel, Mining, and Heavy Machinery sectors.
+              Hospitality, Education, Steel, Mining, and Heavy Machinery
+              sectors.
             </p>
             <p class="body" style="margin-bottom: 24px">
               Our expertise spans Assurance, Controls, Finance, Direct Tax, GST,
@@ -3553,12 +4238,8 @@
             </div>
           </div>
         </div>
-
-       
       </div>
     </section>
-
-
 
     <!-- ══ HERO / HOME ══ -->
     <section id="home">
@@ -3580,29 +4261,66 @@
       <!-- floating pills (right side, desktop) -->
       <div class="hero-pill-strip">
         <div class="hero-pill">
-          <i class="ri-shield-check-fill"></i>Assurance &amp; Advisory
+          <i class="ri-shield-check-fill"></i> Assurance & Audit
         </div>
+
         <div class="hero-pill">
-          <i class="ri-percent-fill"></i>Taxation &amp; GST
+          <i class="ri-file-search-fill"></i> Internal Audit & Risk
         </div>
+
         <div class="hero-pill">
-          <i class="ri-line-chart-fill"></i>GRC &amp; IFC
+          <i class="ri-line-chart-fill"></i> IFC / ICFR
         </div>
+
         <div class="hero-pill">
-          <i class="ri-user-star-fill"></i>Virtual CFO
+          <i class="ri-file-paper-2-fill"></i> Tax & Litigation
         </div>
+
         <div class="hero-pill">
-          <i class="ri-rocket-2-fill"></i>Start-up Advisory
+          <i class="ri-government-fill"></i> Company Law
+        </div>
+
+        <div class="hero-pill">
+          <i class="ri-global-fill"></i> Transfer Pricing
+        </div>
+
+        <div class="hero-pill">
+          <i class="ri-briefcase-fill"></i> Virtual CFO
+        </div>
+
+        <div class="hero-pill">
+          <i class="ri-funds-fill"></i> Project Finance
+        </div>
+
+        <div class="hero-pill">
+          <i class="ri-scales-3-fill"></i> Valuation & M&A
+        </div>
+
+        <div class="hero-pill">
+          <i class="ri-community-fill"></i> RERA Compliance
+        </div>
+
+        <div class="hero-pill">
+          <i class="ri-rocket-2-fill"></i> Start-up Setup
+        </div>
+
+        <div class="hero-pill">
+          <i class="ri-earth-fill"></i> Foreign Branch Setup
         </div>
       </div>
 
       <!-- Announcement Icon (Top-Right) -->
-      <button id="announcementBtn" class="announcement-icon" aria-label="View announcements" title="View announcements">
+      <button
+        id="announcementBtn"
+        class="announcement-icon"
+        aria-label="View announcements"
+        title="View announcements"
+      >
         <i class="ri-newspaper-line"></i>
         <span class="announcement-badge" id="announcementBadge">0</span>
       </button>
 
-      <div class="container ">
+      <div class="container">
         <div class="hero-content">
           <!-- <div class="hero-eyebrow sr d1">
             <i class="ri-award-fill"></i>
@@ -3611,7 +4329,6 @@
           <h1 class="">
             <span class="hero-title">Trusted Financial Excellence</span>
             <!-- <span class="gold"></span> -->
-           
           </h1>
           <!-- <p class="hero-brand sr d2">
             S.K. Mishra &amp; Associates · Chartered Accountants · Jamshedpur
@@ -3651,18 +4368,16 @@
               <div class="hstat-lbl">Sector Focus</div>
             </div>
           </div> -->
-          
         </div>
-         <div class="dabba-img">
+        <div class="dabba-img">
           <!-- <img
             src="assets/hero-white.png"
             alt="Hero Image"
             /> -->
-            <div class="hover-link">
-              <!-- <a onclick="scrollToSection()">Contact Us ↓</a> -->
-            </div>
+          <div class="hover-link">
+            <!-- <a onclick="scrollToSection()">Contact Us ↓</a> -->
+          </div>
         </div>
-       
       </div>
 
       <div
@@ -3743,18 +4458,123 @@
       </div>
     </div>
 
-    
+    <!-- ══ CORE VALUES ══ -->
+    <section id="core-values" class="section section--white">
+      <div class="container">
+        <div class="sec-hdr">
+          <div class="chip" style="justify-content: center">
+            <i class="ri-shield-star-line"></i>Core Values
+          </div>
+          <h2 class="heading sr">The Principles That <em>Guide Us</em></h2>
+          <div class="rule"></div>
+          <p class="body sr">
+            These values shape how we think, how we work, and how we create long-term impact for clients, teams, and society.
+          </p>
+        </div>
 
+        <div class="core-grid">
+          <div class="core-card sr d1">
+            <div class="core-card-front">
+              <div class="core-index">01</div>
+              <h3>Integrity Without Exception</h3>
+              <p class="core-card-teaser">Independence, ethics, confidentiality, and professional conduct.</p>
+            </div>
+            <div class="core-card-body">
+              <p>We uphold the highest standards of independence, ethics, confidentiality, and professional conduct. Trust is earned through consistent actions, objective judgment, and accountability in every engagement.</p>
+            </div>
+          </div>
+
+          <div class="core-card sr d2">
+            <div class="core-card-front">
+              <div class="core-index">02</div>
+              <h3>Excellence in Every Detail</h3>
+              <p class="core-card-teaser">Precision, depth, and quality from advisory to assurance.</p>
+            </div>
+            <div class="core-card-body">
+              <p>We pursue precision, depth, and quality in everything we deliver. From advisory to assurance, we combine technical expertise with disciplined execution to create outcomes that stand above industry standards.</p>
+            </div>
+          </div>
+
+          <div class="core-card sr d3">
+            <div class="core-card-front">
+              <div class="core-index">03</div>
+              <h3>Client Success First</h3>
+              <p class="core-card-teaser">Long-term value built beyond numbers.</p>
+            </div>
+            <div class="core-card-body">
+              <p>We measure our success by the long-term value we create for our clients. By understanding businesses beyond numbers, we deliver practical, strategic, and forward-looking solutions that enable sustainable growth.</p>
+            </div>
+          </div>
+
+          <div class="core-card sr d4">
+            <div class="core-card-front">
+              <div class="core-index">04</div>
+              <h3>Innovation with Purpose</h3>
+              <p class="core-card-teaser">Technology and modern thinking used with intent.</p>
+            </div>
+            <div class="core-card-body">
+              <p>We embrace technology, data, and modern thinking to redefine professional services. Innovation for us is not about trends, but about creating smarter, faster, and more meaningful client outcomes.</p>
+            </div>
+          </div>
+
+          <div class="core-card sr d5">
+            <div class="core-card-front">
+              <div class="core-index">05</div>
+              <h3>Ownership Mindset</h3>
+              <p class="core-card-teaser">Accountability beyond assigned roles.</p>
+            </div>
+            <div class="core-card-body">
+              <p>We take responsibility beyond assigned roles. Every team member is expected to think like a leader, act with accountability, and take ownership of commitments, timelines, and impact.</p>
+            </div>
+          </div>
+
+          <div class="core-card sr d6">
+            <div class="core-card-front">
+              <div class="core-index">06</div>
+              <h3>People &amp; Culture</h3>
+              <p class="core-card-teaser">Merit, respect, mentorship, and continuous growth.</p>
+            </div>
+            <div class="core-card-body">
+              <p>We invest in exceptional people, collaborative learning, and leadership development. We foster a culture of merit, respect, mentorship, and continuous growth where individuals and teams thrive together.</p>
+            </div>
+          </div>
+
+          <div class="core-card sr d1">
+            <div class="core-card-front">
+              <div class="core-index">07</div>
+              <h3>Agility &amp; Adaptability</h3>
+              <p class="core-card-teaser">Responsive to change, proactive in uncertainty.</p>
+            </div>
+            <div class="core-card-body">
+              <p>In a rapidly changing regulatory and business environment, we remain agile, proactive, and solution-oriented. We evolve continuously to stay ahead of complexity and create future-ready practices.</p>
+            </div>
+          </div>
+
+          <div class="core-card sr d2">
+            <div class="core-card-front">
+              <div class="core-index">08</div>
+              <h3>Purpose Beyond Profession</h3>
+              <p class="core-card-teaser">Professional excellence that contributes to society.</p>
+            </div>
+            <div class="core-card-body">
+              <p>We believe professional excellence must contribute to stronger businesses, better governance, financial transparency, and meaningful economic progress for society at large.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- WHY US -->
-      <section id="why-choose-us" class="section">
+    <section id="why-choose-us" class="section">
       <div class="container">
-            <div style="margin-top: 80px">
+        <div style="margin-top: 80px">
           <div class="sec-hdr">
             <div class="chip" style="justify-content: center">
               <i class="ri-question-line"></i>Why Choose Us
             </div>
-            <h2 class="heading sr">The <em>S.K. Mishra & Associates</em> Advantage</h2>
+            <h2 class="heading sr">
+              The <em>S.K. Mishra & Associates</em> Advantage
+            </h2>
             <div class="rule"></div>
             <p class="body sr">
               What sets us apart in the crowded CA landscape — partner-led,
@@ -3815,106 +4635,137 @@
       </div>
     </section>
 
-    
-
-  
-
     <!-- ══ OUR SERVICES ══ -->
     <section id="services" class="section section--light">
       <div class="container">
-        <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px; visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+        <div
+          class="text-center mx-auto wow fadeInUp"
+          data-wow-delay="0.1s"
+          style="
+            max-width: 600px;
+            visibility: visible;
+            animation-delay: 0.1s;
+            animation-name: fadeInUp;
+          "
+        >
           <h1 class="display-5 mb-4">Services</h1>
         </div>
-        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 justify-content-center wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-          <div class="col pb-4">
-            <a href="https://www.ca-spark.com/spark-service/assurance" title="Assurance" target="_blank">
-              <figure class="effect-layla">
-                <img src="https://www.ca-spark.com/public/caspark/images/services/assurance.png" alt="Assurance" width="100%" height="auto" class="object-fit-cover">
-                <figcaption>
-                  <h2>Assurance</h2>
-                </figcaption>
-              </figure>
-            </a>
+        <div
+          class="row row-cols-1 row-cols-md-2 row-cols-xl-3 justify-content-center wow fadeInUp"
+          data-wow-delay="0.1s"
+          style="
+            visibility: visible;
+            animation-delay: 0.1s;
+            animation-name: fadeInUp;
+          "
+        >
+          <div class="col pb-4 sr">
+            <figure class="effect-layla">
+              <img src="https://www.ca-spark.com/public/caspark/images/services/assurance.png" alt="Assurance &amp; Audit" width="100%" height="auto" class="object-fit-cover" />
+              <figcaption>
+                <h2>Assurance &amp; Audit</h2>
+                <p>Independent assurance and audit support for reliable financial reporting.</p>
+              </figcaption>
+            </figure>
           </div>
-          <div class="col pb-4">
-            <a href="https://www.ca-spark.com/spark-service/taxation" title="Taxation" target="_blank">
-              <figure class="effect-layla">
-                <img src="https://www.ca-spark.com/public/caspark/images/services/taxation.png" alt="Taxation" width="100%" height="auto" class="object-fit-cover">
-                <figcaption>
-                  <h2>Taxation</h2>
-                </figcaption>
-              </figure>
-            </a>
+          <div class="col pb-4 sr">
+            <figure class="effect-layla">
+              <img src="https://www.ca-spark.com/public/caspark/images/services/research.png" alt="Internal Audit &amp; Risk" width="100%" height="auto" class="object-fit-cover" />
+              <figcaption>
+                <h2>Internal Audit &amp; Risk</h2>
+                <p>Risk-based internal audit to improve controls and governance outcomes.</p>
+              </figcaption>
+            </figure>
           </div>
-          <div class="col pb-4">
-            <a href="https://www.ca-spark.com/spark-service/advisory" title="Advisory" target="_blank">
-              <figure class="effect-layla">
-                <img src="https://www.ca-spark.com/public/caspark/images/services/advisory.jpg" alt="Advisory" width="100%" height="auto" class="object-fit-cover">
-                <figcaption>
-                  <h2>Advisory</h2>
-                </figcaption>
-              </figure>
-            </a>
+          <div class="col pb-4 sr">
+            <figure class="effect-layla">
+              <img src="https://www.ca-spark.com/public/caspark/images/services/compliance.jpg" alt="IFC / ICFR" width="100%" height="auto" class="object-fit-cover" />
+              <figcaption>
+                <h2>IFC / ICFR</h2>
+                <p>Design and testing of internal financial controls for compliance readiness.</p>
+              </figcaption>
+            </figure>
           </div>
-          <div class="col pb-4">
-            <a href="https://www.ca-spark.com/spark-service/startup-consulting" title="Startup Consulting" target="_blank">
-              <figure class="effect-layla">
-                <img src="https://www.ca-spark.com/public/caspark/images/services/consulting.jpg" alt="Startup Consulting" width="100%" height="auto" class="object-fit-cover">
-                <figcaption>
-                  <h2>Startup Consulting</h2>
-                </figcaption>
-              </figure>
-            </a>
+          <div class="col pb-4 sr">
+            <figure class="effect-layla">
+              <img src="https://www.ca-spark.com/public/caspark/images/services/taxation.png" alt="Tax &amp; Litigation" width="100%" height="auto" class="object-fit-cover" />
+              <figcaption>
+                <h2>Tax &amp; Litigation</h2>
+                <p>Tax advisory, assessments, and litigation support across direct and indirect tax.</p>
+              </figcaption>
+            </figure>
           </div>
-          <div class="col pb-4">
-            <a href="https://www.ca-spark.com/spark-service/outsourcing-services" title="Outsourcing Services" target="_blank">
-              <figure class="effect-layla">
-                <img src="https://www.ca-spark.com/public/caspark/images/services/services.jpg" alt="Outsourcing Services" width="100%" height="auto" class="object-fit-cover">
-                <figcaption>
-                  <h2>Outsourcing Services</h2>
-                </figcaption>
-              </figure>
-            </a>
+          <div class="col pb-4 sr">
+            <figure class="effect-layla">
+              <img src="https://www.ca-spark.com/public/caspark/images/services/compliance.jpg" alt="Company Law" width="100%" height="auto" class="object-fit-cover" />
+              <figcaption>
+                <h2>Company Law</h2>
+                <p>Company law compliance, secretarial support, and governance advisory.</p>
+              </figcaption>
+            </figure>
           </div>
-          <div class="col pb-4">
-            <a href="https://www.ca-spark.com/spark-service/insolvency-professional" title="Insolvency Professional" target="_blank">
-              <figure class="effect-layla">
-                <img src="https://www.ca-spark.com/public/caspark/images/services/Insolvency.png" alt="Insolvency Professional" width="100%" height="auto" class="object-fit-cover">
-                <figcaption>
-                  <h2>Insolvency Professional</h2>
-                </figcaption>
-              </figure>
-            </a>
+          <div class="col pb-4 sr">
+            <figure class="effect-layla">
+              <img src="https://www.ca-spark.com/public/caspark/images/services/advisory.jpg" alt="Transfer Pricing" width="100%" height="auto" class="object-fit-cover" />
+              <figcaption>
+                <h2>Transfer Pricing</h2>
+                <p>Transfer pricing planning, documentation, and benchmarking support.</p>
+              </figcaption>
+            </figure>
           </div>
-          <div class="col pb-4">
-            <a href="https://www.ca-spark.com/spark-service/research" title="Research" target="_blank">
-              <figure class="effect-layla">
-                <img src="https://www.ca-spark.com/public/caspark/images/services/research.png" alt="Research" width="100%" height="auto" class="object-fit-cover">
-                <figcaption>
-                  <h2>Research</h2>
-                </figcaption>
-              </figure>
-            </a>
+          <div class="col pb-4 sr">
+            <figure class="effect-layla">
+              <img src="https://www.ca-spark.com/public/caspark/images/services/services.jpg" alt="Virtual CFO" width="100%" height="auto" class="object-fit-cover" />
+              <figcaption>
+                <h2>Virtual CFO</h2>
+                <p>Strategic finance leadership for budgeting, MIS, and growth decisions.</p>
+              </figcaption>
+            </figure>
           </div>
-          <div class="col pb-4">
-            <a href="https://www.ca-spark.com/spark-service/valuation" title="Valuation" target="_blank">
-              <figure class="effect-layla">
-                <img src="https://www.ca-spark.com/public/caspark/images/services/valuation.png" alt="Valuation" width="100%" height="auto" class="object-fit-cover">
-                <figcaption>
-                  <h2>Valuation</h2>
-                </figcaption>
-              </figure>
-            </a>
+          <div class="col pb-4 sr">
+            <figure class="effect-layla">
+              <img src="https://www.ca-spark.com/public/caspark/images/services/valuation.png" alt="Project Finance" width="100%" height="auto" class="object-fit-cover" />
+              <figcaption>
+                <h2>Project Finance</h2>
+                <p>Financial modeling and funding support for project execution.</p>
+              </figcaption>
+            </figure>
           </div>
-          <div class="col pb-4">
-            <a href="https://www.ca-spark.com/spark-service/corporate-compliance" title="Corporate Compliance" target="_blank">
-              <figure class="effect-layla">
-                <img src="https://www.ca-spark.com/public/caspark/images/services/compliance.jpg" alt="Corporate Compliance" width="100%" height="auto" class="object-fit-cover">
-                <figcaption>
-                  <h2>Corporate Compliance</h2>
-                </figcaption>
-              </figure>
-            </a>
+          <div class="col pb-4 sr">
+            <figure class="effect-layla">
+              <img src="https://www.ca-spark.com/public/caspark/images/services/valuation.png" alt="Valuation &amp; M&amp;A" width="100%" height="auto" class="object-fit-cover" />
+              <figcaption>
+                <h2>Valuation &amp; M&amp;A</h2>
+                <p>Business valuation and transaction advisory for strategic deals.</p>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="col pb-4 sr">
+            <figure class="effect-layla">
+              <img src="https://www.ca-spark.com/public/caspark/images/services/services.jpg" alt="RERA Compliance" width="100%" height="auto" class="object-fit-cover" />
+              <figcaption>
+                <h2>RERA Compliance</h2>
+                <p>RERA reporting and compliance support for real estate businesses.</p>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="col pb-4 sr">
+            <figure class="effect-layla">
+              <img src="https://www.ca-spark.com/public/caspark/images/services/consulting.jpg" alt="Start-up Setup" width="100%" height="auto" class="object-fit-cover" />
+              <figcaption>
+                <h2>Start-up Setup</h2>
+                <p>Entity setup and early-stage compliance for startup growth.</p>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="col pb-4 sr">
+            <figure class="effect-layla">
+              <img src="https://www.ca-spark.com/public/caspark/images/services/Insolvency.png" alt="Foreign Branch Setup" width="100%" height="auto" class="object-fit-cover" />
+              <figcaption>
+                <h2>Foreign Branch Setup</h2>
+                <p>Cross-border branch establishment and regulatory support.</p>
+              </figcaption>
+            </figure>
           </div>
         </div>
       </div>
@@ -4148,129 +4999,32 @@
           </p>
         </div>
 
-        <div class="links-grid">
-          <a
-            href="https://www.incometax.gov.in"
-            target="_blank"
-            rel="noopener"
-            class="link-card sr d1"
+        <div class="links-wrap">
+          <button
+            id="linksToggleBtn"
+            class="links-toggle-btn sr"
+            type="button"
+            aria-expanded="false"
+            aria-controls="importantLinksPanel"
           >
-            <div class="link-ico"><i class="ri-government-line"></i></div>
-            <div class="link-info">
-              <h4>Income Tax Portal</h4>
-              <span>incometax.gov.in</span>
-            </div>
-            <i class="ri-external-link-line link-arrow"></i>
-          </a>
-          <a
-            href="https://www.gst.gov.in"
-            target="_blank"
-            rel="noopener"
-            class="link-card sr d2"
-          >
-            <div class="link-ico"><i class="ri-receipt-line"></i></div>
-            <div class="link-info">
-              <h4>GST Portal</h4>
-              <span>gst.gov.in</span>
-            </div>
-            <i class="ri-external-link-line link-arrow"></i>
-          </a>
-          <a
-            href="https://www.mca.gov.in"
-            target="_blank"
-            rel="noopener"
-            class="link-card sr d3"
-          >
-            <div class="link-ico"><i class="ri-building-line"></i></div>
-            <div class="link-info">
-              <h4>MCA (ROC)</h4>
-              <span>mca.gov.in</span>
-            </div>
-            <i class="ri-external-link-line link-arrow"></i>
-          </a>
-          <a
-            href="https://www.icai.org"
-            target="_blank"
-            rel="noopener"
-            class="link-card sr d4"
-          >
-            <div class="link-ico"><i class="ri-award-line"></i></div>
-            <div class="link-info">
-              <h4>ICAI</h4>
-              <span>icai.org</span>
-            </div>
-            <i class="ri-external-link-line link-arrow"></i>
-          </a>
-          <a
-            href="https://www.epfindia.gov.in"
-            target="_blank"
-            rel="noopener"
-            class="link-card sr d5"
-          >
-            <div class="link-ico"><i class="ri-user-heart-line"></i></div>
-            <div class="link-info">
-              <h4>EPFO Portal</h4>
-              <span>epfindia.gov.in</span>
-            </div>
-            <i class="ri-external-link-line link-arrow"></i>
-          </a>
-          <a
-            href="https://www.sebi.gov.in"
-            target="_blank"
-            rel="noopener"
-            class="link-card sr d6"
-          >
-            <div class="link-ico"><i class="ri-line-chart-line"></i></div>
-            <div class="link-info">
-              <h4>SEBI</h4>
-              <span>sebi.gov.in</span>
-            </div>
-            <i class="ri-external-link-line link-arrow"></i>
-          </a>
-          <a
-            href="https://www.rbi.org.in"
-            target="_blank"
-            rel="noopener"
-            class="link-card sr d1"
-          >
-            <div class="link-ico"><i class="ri-bank-line"></i></div>
-            <div class="link-info">
-              <h4>Reserve Bank of India</h4>
-              <span>rbi.org.in</span>
-            </div>
-            <i class="ri-external-link-line link-arrow"></i>
-          </a>
-          <a
-            href="https://www.esic.gov.in"
-            target="_blank"
-            rel="noopener"
-            class="link-card sr d2"
-          >
-            <div class="link-ico"><i class="ri-heart-pulse-line"></i></div>
-            <div class="link-info">
-              <h4>ESIC Portal</h4>
-              <span>esic.gov.in</span>
-            </div>
-            <i class="ri-external-link-line link-arrow"></i>
-          </a>
-          <a
-            href="https://www.ibbi.gov.in"
-            target="_blank"
-            rel="noopener"
-            class="link-card sr d3"
-          >
-            <div class="link-ico"><i class="ri-scales-line"></i></div>
-            <div class="link-info">
-              <h4>IBBI (Insolvency)</h4>
-              <span>ibbi.gov.in</span>
-            </div>
-            <i class="ri-external-link-line link-arrow"></i>
-          </a>
+            <i class="ri-links-line"></i> Important Links
+          </button>
+          <div id="importantLinksPanel" class="links-panel" hidden>
+            <ul class="quick-links-list">
+              <li><a href="https://www.incometax.gov.in" target="_blank" rel="noopener">Income Tax Portal - incometax.gov.in</a></li>
+              <li><a href="https://www.gst.gov.in" target="_blank" rel="noopener">GST Portal - gst.gov.in</a></li>
+              <li><a href="https://www.mca.gov.in" target="_blank" rel="noopener">MCA (ROC) - mca.gov.in</a></li>
+              <!-- <li><a href="https://www.icai.org" target="_blank" rel="noopener">ICAI - icai.org</a></li> -->
+              <!-- <li><a href="https://www.epfindia.gov.in" target="_blank" rel="noopener">EPFO Portal - epfindia.gov.in</a></li> -->
+              <li><a href="https://www.sebi.gov.in" target="_blank" rel="noopener">SEBI - sebi.gov.in</a></li>
+              <li><a href="https://www.rbi.org.in" target="_blank" rel="noopener">Reserve Bank of India - rbi.org.in</a></li>
+              <li><a href="https://www.esic.gov.in" target="_blank" rel="noopener">ESIC Portal - esic.gov.in</a></li>
+              <li><a href="https://www.ibbi.gov.in" target="_blank" rel="noopener">IBBI (Insolvency) - ibbi.gov.in</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
-
-    
 
     <!-- ══ LOCATIONS ══ -->
     <section id="locations" class="section section--white">
@@ -4327,7 +5081,9 @@
           <div class="chip" style="justify-content: center">
             <i class="ri-phone-line"></i>Contact Us
           </div>
-          <h2 class="heading sr">Partner with <em>S.K. Mishra & Associates</em></h2>
+          <h2 class="heading sr">
+            Partner with <em>S.K. Mishra & Associates</em>
+          </h2>
           <div class="rule"></div>
           <p class="body sr">
             Ready to strengthen your governance framework? Our team is available
@@ -4355,7 +5111,8 @@
               </div>
               <div class="map-address">
                 <i class="ri-map-pin-line"></i>
-              28, Rd Number 4, Contractors Area, Bistupur, Jamshedpur-831001, Jharkhand.
+                28, Rd Number 4, Contractors Area, Bistupur, Jamshedpur-831001,
+                Jharkhand.
               </div>
             </div>
 
@@ -4371,7 +5128,7 @@
                 <div class="c-icon"><i class="ri-mail-line"></i></div>
                 <div>
                   <div class="c-lbl">Email</div>
-                  <div class="c-val">info@cskma.com</div>
+                  <div class="c-val">info@caskma.com</div>
                 </div>
               </div>
               <div class="c-item">
@@ -4503,7 +5260,7 @@
     <footer>
       <div class="container">
         <div class="footer-grid">
-          <div>
+          <div class="footer-brand-col">
             <div class="f-brand-name">CA India</div>
             <div class="f-brand-sub">
               S.K. Mishra &amp; Associates · Chartered Accountants
@@ -4518,30 +5275,78 @@
                   <div class="clock-city">Sydney</div>
                   <div class="clock-container">
                     <div class="clock-face">
-                      <div class="marker marker-1"><div class="marker-dot"></div></div>
-                      <div class="marker marker-2"><div class="marker-dot"></div></div>
-                      <div class="marker marker-3"><div class="marker-dot"></div></div>
-                      <div class="marker marker-4"><div class="marker-dot"></div></div>
-                      <div class="marker marker-5"><div class="marker-dot"></div></div>
-                      <div class="marker marker-6"><div class="marker-dot"></div></div>
-                      <div class="marker marker-7"><div class="marker-dot"></div></div>
-                      <div class="marker marker-8"><div class="marker-dot"></div></div>
-                      <div class="marker marker-9"><div class="marker-dot"></div></div>
-                      <div class="marker marker-10"><div class="marker-dot"></div></div>
-                      <div class="marker marker-11"><div class="marker-dot"></div></div>
-                      <div class="marker marker-12"><div class="marker-dot"></div></div>
-                      <div class="number number-1"><span class="number-1-text">1</span></div>
-                      <div class="number number-2"><span class="number-2-text">2</span></div>
-                      <div class="number number-3"><span class="number-3-text">3</span></div>
-                      <div class="number number-4"><span class="number-4-text">4</span></div>
-                      <div class="number number-5"><span class="number-5-text">5</span></div>
-                      <div class="number number-6"><span class="number-6-text">6</span></div>
-                      <div class="number number-7"><span class="number-7-text">7</span></div>
-                      <div class="number number-8"><span class="number-8-text">8</span></div>
-                      <div class="number number-9"><span class="number-9-text">9</span></div>
-                      <div class="number number-10"><span class="number-10-text">10</span></div>
-                      <div class="number number-11"><span class="number-11-text">11</span></div>
-                      <div class="number number-12"><span class="number-12-text">12</span></div>
+                      <div class="marker marker-1">
+                        <div class="marker-dot"></div>
+                      </div>
+                      <div class="marker marker-2">
+                        <div class="marker-dot"></div>
+                      </div>
+                      <div class="marker marker-3">
+                        <div class="marker-dot"></div>
+                      </div>
+                      <div class="marker marker-4">
+                        <div class="marker-dot"></div>
+                      </div>
+                      <div class="marker marker-5">
+                        <div class="marker-dot"></div>
+                      </div>
+                      <div class="marker marker-6">
+                        <div class="marker-dot"></div>
+                      </div>
+                      <div class="marker marker-7">
+                        <div class="marker-dot"></div>
+                      </div>
+                      <div class="marker marker-8">
+                        <div class="marker-dot"></div>
+                      </div>
+                      <div class="marker marker-9">
+                        <div class="marker-dot"></div>
+                      </div>
+                      <div class="marker marker-10">
+                        <div class="marker-dot"></div>
+                      </div>
+                      <div class="marker marker-11">
+                        <div class="marker-dot"></div>
+                      </div>
+                      <div class="marker marker-12">
+                        <div class="marker-dot"></div>
+                      </div>
+                      <div class="number number-1">
+                        <span class="number-1-text">1</span>
+                      </div>
+                      <div class="number number-2">
+                        <span class="number-2-text">2</span>
+                      </div>
+                      <div class="number number-3">
+                        <span class="number-3-text">3</span>
+                      </div>
+                      <div class="number number-4">
+                        <span class="number-4-text">4</span>
+                      </div>
+                      <div class="number number-5">
+                        <span class="number-5-text">5</span>
+                      </div>
+                      <div class="number number-6">
+                        <span class="number-6-text">6</span>
+                      </div>
+                      <div class="number number-7">
+                        <span class="number-7-text">7</span>
+                      </div>
+                      <div class="number number-8">
+                        <span class="number-8-text">8</span>
+                      </div>
+                      <div class="number number-9">
+                        <span class="number-9-text">9</span>
+                      </div>
+                      <div class="number number-10">
+                        <span class="number-10-text">10</span>
+                      </div>
+                      <div class="number number-11">
+                        <span class="number-11-text">11</span>
+                      </div>
+                      <div class="number number-12">
+                        <span class="number-12-text">12</span>
+                      </div>
                       <div class="hand hour-hand" id="sydney-hour"></div>
                       <div class="hand minute-hand" id="sydney-minute"></div>
                       <div class="hand second-hand" id="sydney-second"></div>
@@ -4555,30 +5360,78 @@
                   <div class="clock-city">London</div>
                   <div class="clock-container">
                     <div class="clock-face">
-                      <div class="marker marker-1"><div class="marker-dot"></div></div>
-                      <div class="marker marker-2"><div class="marker-dot"></div></div>
-                      <div class="marker marker-3"><div class="marker-dot"></div></div>
-                      <div class="marker marker-4"><div class="marker-dot"></div></div>
-                      <div class="marker marker-5"><div class="marker-dot"></div></div>
-                      <div class="marker marker-6"><div class="marker-dot"></div></div>
-                      <div class="marker marker-7"><div class="marker-dot"></div></div>
-                      <div class="marker marker-8"><div class="marker-dot"></div></div>
-                      <div class="marker marker-9"><div class="marker-dot"></div></div>
-                      <div class="marker marker-10"><div class="marker-dot"></div></div>
-                      <div class="marker marker-11"><div class="marker-dot"></div></div>
-                      <div class="marker marker-12"><div class="marker-dot"></div></div>
-                      <div class="number number-1"><span class="number-1-text">1</span></div>
-                      <div class="number number-2"><span class="number-2-text">2</span></div>
-                      <div class="number number-3"><span class="number-3-text">3</span></div>
-                      <div class="number number-4"><span class="number-4-text">4</span></div>
-                      <div class="number number-5"><span class="number-5-text">5</span></div>
-                      <div class="number number-6"><span class="number-6-text">6</span></div>
-                      <div class="number number-7"><span class="number-7-text">7</span></div>
-                      <div class="number number-8"><span class="number-8-text">8</span></div>
-                      <div class="number number-9"><span class="number-9-text">9</span></div>
-                      <div class="number number-10"><span class="number-10-text">10</span></div>
-                      <div class="number number-11"><span class="number-11-text">11</span></div>
-                      <div class="number number-12"><span class="number-12-text">12</span></div>
+                      <div class="marker marker-1">
+                        <div class="marker-dot"></div>
+                      </div>
+                      <div class="marker marker-2">
+                        <div class="marker-dot"></div>
+                      </div>
+                      <div class="marker marker-3">
+                        <div class="marker-dot"></div>
+                      </div>
+                      <div class="marker marker-4">
+                        <div class="marker-dot"></div>
+                      </div>
+                      <div class="marker marker-5">
+                        <div class="marker-dot"></div>
+                      </div>
+                      <div class="marker marker-6">
+                        <div class="marker-dot"></div>
+                      </div>
+                      <div class="marker marker-7">
+                        <div class="marker-dot"></div>
+                      </div>
+                      <div class="marker marker-8">
+                        <div class="marker-dot"></div>
+                      </div>
+                      <div class="marker marker-9">
+                        <div class="marker-dot"></div>
+                      </div>
+                      <div class="marker marker-10">
+                        <div class="marker-dot"></div>
+                      </div>
+                      <div class="marker marker-11">
+                        <div class="marker-dot"></div>
+                      </div>
+                      <div class="marker marker-12">
+                        <div class="marker-dot"></div>
+                      </div>
+                      <div class="number number-1">
+                        <span class="number-1-text">1</span>
+                      </div>
+                      <div class="number number-2">
+                        <span class="number-2-text">2</span>
+                      </div>
+                      <div class="number number-3">
+                        <span class="number-3-text">3</span>
+                      </div>
+                      <div class="number number-4">
+                        <span class="number-4-text">4</span>
+                      </div>
+                      <div class="number number-5">
+                        <span class="number-5-text">5</span>
+                      </div>
+                      <div class="number number-6">
+                        <span class="number-6-text">6</span>
+                      </div>
+                      <div class="number number-7">
+                        <span class="number-7-text">7</span>
+                      </div>
+                      <div class="number number-8">
+                        <span class="number-8-text">8</span>
+                      </div>
+                      <div class="number number-9">
+                        <span class="number-9-text">9</span>
+                      </div>
+                      <div class="number number-10">
+                        <span class="number-10-text">10</span>
+                      </div>
+                      <div class="number number-11">
+                        <span class="number-11-text">11</span>
+                      </div>
+                      <div class="number number-12">
+                        <span class="number-12-text">12</span>
+                      </div>
                       <div class="hand hour-hand" id="london-hour"></div>
                       <div class="hand minute-hand" id="london-minute"></div>
                       <div class="hand second-hand" id="london-second"></div>
@@ -4592,30 +5445,78 @@
                   <div class="clock-city">New York</div>
                   <div class="clock-container">
                     <div class="clock-face">
-                      <div class="marker marker-1"><div class="marker-dot"></div></div>
-                      <div class="marker marker-2"><div class="marker-dot"></div></div>
-                      <div class="marker marker-3"><div class="marker-dot"></div></div>
-                      <div class="marker marker-4"><div class="marker-dot"></div></div>
-                      <div class="marker marker-5"><div class="marker-dot"></div></div>
-                      <div class="marker marker-6"><div class="marker-dot"></div></div>
-                      <div class="marker marker-7"><div class="marker-dot"></div></div>
-                      <div class="marker marker-8"><div class="marker-dot"></div></div>
-                      <div class="marker marker-9"><div class="marker-dot"></div></div>
-                      <div class="marker marker-10"><div class="marker-dot"></div></div>
-                      <div class="marker marker-11"><div class="marker-dot"></div></div>
-                      <div class="marker marker-12"><div class="marker-dot"></div></div>
-                      <div class="number number-1"><span class="number-1-text">1</span></div>
-                      <div class="number number-2"><span class="number-2-text">2</span></div>
-                      <div class="number number-3"><span class="number-3-text">3</span></div>
-                      <div class="number number-4"><span class="number-4-text">4</span></div>
-                      <div class="number number-5"><span class="number-5-text">5</span></div>
-                      <div class="number number-6"><span class="number-6-text">6</span></div>
-                      <div class="number number-7"><span class="number-7-text">7</span></div>
-                      <div class="number number-8"><span class="number-8-text">8</span></div>
-                      <div class="number number-9"><span class="number-9-text">9</span></div>
-                      <div class="number number-10"><span class="number-10-text">10</span></div>
-                      <div class="number number-11"><span class="number-11-text">11</span></div>
-                      <div class="number number-12"><span class="number-12-text">12</span></div>
+                      <div class="marker marker-1">
+                        <div class="marker-dot"></div>
+                      </div>
+                      <div class="marker marker-2">
+                        <div class="marker-dot"></div>
+                      </div>
+                      <div class="marker marker-3">
+                        <div class="marker-dot"></div>
+                      </div>
+                      <div class="marker marker-4">
+                        <div class="marker-dot"></div>
+                      </div>
+                      <div class="marker marker-5">
+                        <div class="marker-dot"></div>
+                      </div>
+                      <div class="marker marker-6">
+                        <div class="marker-dot"></div>
+                      </div>
+                      <div class="marker marker-7">
+                        <div class="marker-dot"></div>
+                      </div>
+                      <div class="marker marker-8">
+                        <div class="marker-dot"></div>
+                      </div>
+                      <div class="marker marker-9">
+                        <div class="marker-dot"></div>
+                      </div>
+                      <div class="marker marker-10">
+                        <div class="marker-dot"></div>
+                      </div>
+                      <div class="marker marker-11">
+                        <div class="marker-dot"></div>
+                      </div>
+                      <div class="marker marker-12">
+                        <div class="marker-dot"></div>
+                      </div>
+                      <div class="number number-1">
+                        <span class="number-1-text">1</span>
+                      </div>
+                      <div class="number number-2">
+                        <span class="number-2-text">2</span>
+                      </div>
+                      <div class="number number-3">
+                        <span class="number-3-text">3</span>
+                      </div>
+                      <div class="number number-4">
+                        <span class="number-4-text">4</span>
+                      </div>
+                      <div class="number number-5">
+                        <span class="number-5-text">5</span>
+                      </div>
+                      <div class="number number-6">
+                        <span class="number-6-text">6</span>
+                      </div>
+                      <div class="number number-7">
+                        <span class="number-7-text">7</span>
+                      </div>
+                      <div class="number number-8">
+                        <span class="number-8-text">8</span>
+                      </div>
+                      <div class="number number-9">
+                        <span class="number-9-text">9</span>
+                      </div>
+                      <div class="number number-10">
+                        <span class="number-10-text">10</span>
+                      </div>
+                      <div class="number number-11">
+                        <span class="number-11-text">11</span>
+                      </div>
+                      <div class="number number-12">
+                        <span class="number-12-text">12</span>
+                      </div>
                       <div class="hand hour-hand" id="newyork-hour"></div>
                       <div class="hand minute-hand" id="newyork-minute"></div>
                       <div class="hand second-hand" id="newyork-second"></div>
@@ -4629,33 +5530,87 @@
                   <div class="clock-city">Jamshedpur</div>
                   <div class="clock-container">
                     <div class="clock-face">
-                      <div class="marker marker-1"><div class="marker-dot"></div></div>
-                      <div class="marker marker-2"><div class="marker-dot"></div></div>
-                      <div class="marker marker-3"><div class="marker-dot"></div></div>
-                      <div class="marker marker-4"><div class="marker-dot"></div></div>
-                      <div class="marker marker-5"><div class="marker-dot"></div></div>
-                      <div class="marker marker-6"><div class="marker-dot"></div></div>
-                      <div class="marker marker-7"><div class="marker-dot"></div></div>
-                      <div class="marker marker-8"><div class="marker-dot"></div></div>
-                      <div class="marker marker-9"><div class="marker-dot"></div></div>
-                      <div class="marker marker-10"><div class="marker-dot"></div></div>
-                      <div class="marker marker-11"><div class="marker-dot"></div></div>
-                      <div class="marker marker-12"><div class="marker-dot"></div></div>
-                      <div class="number number-1"><span class="number-1-text">1</span></div>
-                      <div class="number number-2"><span class="number-2-text">2</span></div>
-                      <div class="number number-3"><span class="number-3-text">3</span></div>
-                      <div class="number number-4"><span class="number-4-text">4</span></div>
-                      <div class="number number-5"><span class="number-5-text">5</span></div>
-                      <div class="number number-6"><span class="number-6-text">6</span></div>
-                      <div class="number number-7"><span class="number-7-text">7</span></div>
-                      <div class="number number-8"><span class="number-8-text">8</span></div>
-                      <div class="number number-9"><span class="number-9-text">9</span></div>
-                      <div class="number number-10"><span class="number-10-text">10</span></div>
-                      <div class="number number-11"><span class="number-11-text">11</span></div>
-                      <div class="number number-12"><span class="number-12-text">12</span></div>
+                      <div class="marker marker-1">
+                        <div class="marker-dot"></div>
+                      </div>
+                      <div class="marker marker-2">
+                        <div class="marker-dot"></div>
+                      </div>
+                      <div class="marker marker-3">
+                        <div class="marker-dot"></div>
+                      </div>
+                      <div class="marker marker-4">
+                        <div class="marker-dot"></div>
+                      </div>
+                      <div class="marker marker-5">
+                        <div class="marker-dot"></div>
+                      </div>
+                      <div class="marker marker-6">
+                        <div class="marker-dot"></div>
+                      </div>
+                      <div class="marker marker-7">
+                        <div class="marker-dot"></div>
+                      </div>
+                      <div class="marker marker-8">
+                        <div class="marker-dot"></div>
+                      </div>
+                      <div class="marker marker-9">
+                        <div class="marker-dot"></div>
+                      </div>
+                      <div class="marker marker-10">
+                        <div class="marker-dot"></div>
+                      </div>
+                      <div class="marker marker-11">
+                        <div class="marker-dot"></div>
+                      </div>
+                      <div class="marker marker-12">
+                        <div class="marker-dot"></div>
+                      </div>
+                      <div class="number number-1">
+                        <span class="number-1-text">1</span>
+                      </div>
+                      <div class="number number-2">
+                        <span class="number-2-text">2</span>
+                      </div>
+                      <div class="number number-3">
+                        <span class="number-3-text">3</span>
+                      </div>
+                      <div class="number number-4">
+                        <span class="number-4-text">4</span>
+                      </div>
+                      <div class="number number-5">
+                        <span class="number-5-text">5</span>
+                      </div>
+                      <div class="number number-6">
+                        <span class="number-6-text">6</span>
+                      </div>
+                      <div class="number number-7">
+                        <span class="number-7-text">7</span>
+                      </div>
+                      <div class="number number-8">
+                        <span class="number-8-text">8</span>
+                      </div>
+                      <div class="number number-9">
+                        <span class="number-9-text">9</span>
+                      </div>
+                      <div class="number number-10">
+                        <span class="number-10-text">10</span>
+                      </div>
+                      <div class="number number-11">
+                        <span class="number-11-text">11</span>
+                      </div>
+                      <div class="number number-12">
+                        <span class="number-12-text">12</span>
+                      </div>
                       <div class="hand hour-hand" id="jamshedpur-hour"></div>
-                      <div class="hand minute-hand" id="jamshedpur-minute"></div>
-                      <div class="hand second-hand" id="jamshedpur-second"></div>
+                      <div
+                        class="hand minute-hand"
+                        id="jamshedpur-minute"
+                      ></div>
+                      <div
+                        class="hand second-hand"
+                        id="jamshedpur-second"
+                      ></div>
                       <div class="center-pin"></div>
                     </div>
                   </div>
@@ -4668,26 +5623,26 @@
             <h5>Quick Links</h5>
             <ul>
               <li><a href="#home">Home</a></li>
+                  <li><a href="#core-values">Core Values</a></li>
               <li><a href="#about">About Us</a></li>
               <li><a href="#services">Our Services</a></li>
               <li><a href="#whatwedo">What We Do</a></li>
               <li><a href="#achievements">Our Achievements</a></li>
-              <li><a href="#links">Important Links</a></li>
+              <li><a href="#links" data-open-links="true">Important Links</a></li>
+              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="terms.html">Terms &amp; Conditions</a></li>
               <!-- <li><a href="#contact">Contact Us</a></li> -->
             </ul>
           </div>
-          <div class="f-col">
-            <h5>Contact</h5>
-            <ul>
-              <!-- <li><a href="tel:+919334766898">+91-93347 66898</a></li>
-              <li><a href="tel:+916200058498">+91-62000 58498</a></li> -->
-              <li>
-                <a href="mailto:info@cskma.com"
-                  >info@cskma.com</a
-                >
-              </li>
-              <li><a href="#contact">Bistupur, Jamshedpur – 831001</a></li>
-            </ul>
+          <div class="f-col footer-clock-col">
+            <h5>Global Presence</h5>
+            <p class="footer-clock-tagline">Around the Clock. Across Every Location.</p>
+            <div id="footerClockHost"></div>
+            <div class="footer-clock-contact">
+              <a href="mailto:info@caskma.com"><i class="ri-mail-line"></i> info@caskma.com</a>
+              <span class="sep">|</span>
+              <a href="tel:7979732876"><i class="ri-phone-line"></i> 7979732876</a>
+            </div>
           </div>
         </div>
         <div class="footer-bot">
@@ -4706,6 +5661,15 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      (function () {
+        const clockHost = document.getElementById("footerClockHost");
+        const clocks = document.querySelector(".footer-brand-col .footer-clocks");
+        if (!clockHost || !clocks) return;
+        clockHost.appendChild(clocks);
+      })();
+    </script>
 
     <!-- back to top -->
     <button id="btt" aria-label="Back to top">
@@ -4729,7 +5693,11 @@
       <div class="announcements-slider">
         <div class="announcements-header">
           <h2><i class="ri-newspaper-line"></i>Announcements</h2>
-          <button class="announcements-close" id="announcementsClose" aria-label="Close announcements">
+          <button
+            class="announcements-close"
+            id="announcementsClose"
+            aria-label="Close announcements"
+          >
             <i class="ri-close-line"></i>
           </button>
         </div>
@@ -4743,9 +5711,8 @@
     </div>
 
     <script>
-
       // Smooth Scroll
-      // 
+      //
       /* ══════════════════════════════════════
    CUSTOM CURSOR
 ══════════════════════════════════════ */
@@ -4788,7 +5755,7 @@
       const btt = document.getElementById("btt");
       const homeSection = document.getElementById("home");
       const heroTitle = document.querySelector(".hero-title");
-      const navLinks = document.querySelectorAll(".nav-links a");
+      const navLinks = document.querySelectorAll(".nav-links a, .nav-links button");
       let lastScrollY = 0;
 
       window.addEventListener(
@@ -4800,7 +5767,10 @@
           if (homeSection && heroTitle) {
             const rect = homeSection.getBoundingClientRect();
             const fadeDistance = Math.max(rect.height * 0.6, 1);
-            const progress = Math.min(Math.max((0 - rect.top) / fadeDistance, 0), 1);
+            const progress = Math.min(
+              Math.max((0 - rect.top) / fadeDistance, 0),
+              1,
+            );
             const opacity = 1 - progress;
             const isScrollingDown = scrollY > lastScrollY;
             const translateX = isScrollingDown ? progress * -40 : progress * 40;
@@ -4844,6 +5814,49 @@
       document
         .querySelectorAll(".dl")
         .forEach((a) => a.addEventListener("click", closeNav));
+
+      document
+        .querySelectorAll("#services figure.effect-layla figcaption")
+        .forEach((caption) => {
+          if (caption.querySelector(".svc-mini-loader")) return;
+          const miniLoader = document.createElement("div");
+          miniLoader.className = "svc-mini-loader";
+          miniLoader.innerHTML =
+            '<span class="svc-line-top"></span><span class="svc-line-right"></span><span class="svc-line-bottom"></span><span class="svc-line-left"></span>';
+          caption.insertBefore(miniLoader, caption.firstChild);
+        });
+
+      const linksSection = document.getElementById("links");
+      const linksToggleBtn = document.getElementById("linksToggleBtn");
+      const linksPanel = document.getElementById("importantLinksPanel");
+      const setLinksPanelState = (open) => {
+        if (!linksToggleBtn || !linksPanel) return;
+        linksToggleBtn.setAttribute("aria-expanded", open ? "true" : "false");
+        linksPanel.classList.toggle("open", open);
+        if (open) {
+          linksPanel.hidden = false;
+        } else {
+          linksPanel.hidden = true;
+        }
+      };
+
+      if (linksToggleBtn) {
+        linksToggleBtn.addEventListener("click", () => {
+          const isOpen = linksToggleBtn.getAttribute("aria-expanded") === "true";
+          setLinksPanelState(!isOpen);
+        });
+      }
+
+      document.querySelectorAll("[data-open-links='true']").forEach((el) => {
+        el.addEventListener("click", (e) => {
+          if (el.tagName === "A") e.preventDefault();
+          setLinksPanelState(true);
+          if (linksSection) {
+            linksSection.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        });
+      });
+
       btt.addEventListener("click", () =>
         window.scrollTo({ top: 0, behavior: "smooth" }),
       );
@@ -5025,7 +6038,9 @@
       const announcementBtn = document.getElementById("announcementBtn");
       const announcementsModal = document.getElementById("announcementsModal");
       const announcementsClose = document.getElementById("announcementsClose");
-      const announcementsContent = document.getElementById("announcementsContent");
+      const announcementsContent = document.getElementById(
+        "announcementsContent",
+      );
       const announcementBadge = document.getElementById("announcementBadge");
 
       // Open announcements modal
@@ -5057,8 +6072,10 @@
           `;
 
           // Fetch from backend API
-          const response = await fetch('http://localhost:5000/api/announcements');
-          
+          const response = await fetch(
+            "http://localhost:5000/api/announcements",
+          );
+
           if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
           }
@@ -5068,36 +6085,49 @@
           if (data.success && data.data && data.data.length > 0) {
             // Filter active announcements and check expiration
             const now = new Date();
-            const activeAnnouncements = data.data.filter(announcement => {
+            const activeAnnouncements = data.data.filter((announcement) => {
               // Check if isActive is true
               if (!announcement.isActive) return false;
-              
+
               // Check if announcement has expired
-              if (announcement.expiresAt && new Date(announcement.expiresAt) < now) {
+              if (
+                announcement.expiresAt &&
+                new Date(announcement.expiresAt) < now
+              ) {
                 return false;
               }
-              
+
               return true;
             });
 
             if (activeAnnouncements.length > 0) {
               // Update badge with count of active announcements
-              announcementBadge.textContent = activeAnnouncements.length > 99 ? '99+' : activeAnnouncements.length;
+              announcementBadge.textContent =
+                activeAnnouncements.length > 99
+                  ? "99+"
+                  : activeAnnouncements.length;
 
               // Render announcements
-              const announcementsHTML = activeAnnouncements.map((announcement, index) => `
-                <div class="announcement-item ${index === 0 ? 'active' : ''}" style="animation-delay: ${index * 0.08}s">
+              const announcementsHTML = activeAnnouncements
+                .map(
+                  (announcement, index) => `
+                <div class="announcement-item ${index === 0 ? "active" : ""}" style="animation-delay: ${index * 0.08}s">
                   <div class="announcement-date">
-                    ${new Date(announcement.createdAt).toLocaleDateString('en-US', {
-                      year: 'numeric',
-                      month: 'short',
-                      day: 'numeric'
-                    })}
+                    ${new Date(announcement.createdAt).toLocaleDateString(
+                      "en-US",
+                      {
+                        year: "numeric",
+                        month: "short",
+                        day: "numeric",
+                      },
+                    )}
                   </div>
-                  <div class="announcement-title">${announcement.title || 'Untitled Announcement'}</div>
-                  <div class="announcement-text">${announcement.message || 'No content provided'}</div>
+                  <div class="announcement-title">${announcement.title || "Untitled Announcement"}</div>
+                  <div class="announcement-text">${announcement.message || "No content provided"}</div>
                 </div>
-              `).join('');
+              `,
+                )
+                .join("");
 
               announcementsContent.innerHTML = announcementsHTML;
             } else {
@@ -5107,7 +6137,7 @@
                   <p>No announcements at the moment</p>
                 </div>
               `;
-              announcementBadge.textContent = '0';
+              announcementBadge.textContent = "0";
             }
           } else {
             announcementsContent.innerHTML = `
@@ -5116,10 +6146,10 @@
                 <p>No announcements at the moment</p>
               </div>
             `;
-            announcementBadge.textContent = '0';
+            announcementBadge.textContent = "0";
           }
         } catch (error) {
-          console.error('Error fetching announcements:', error);
+          console.error("Error fetching announcements:", error);
           announcementsContent.innerHTML = `
             <div class="announcements-empty">
               <i class="ri-alert-line"></i>
@@ -5172,7 +6202,12 @@
         const now = new Date();
 
         worldClocks.forEach((clock) => {
-          if (!clock.hourEl || !clock.minuteEl || !clock.secondEl || !clock.digitalEl) {
+          if (
+            !clock.hourEl ||
+            !clock.minuteEl ||
+            !clock.secondEl ||
+            !clock.digitalEl
+          ) {
             return;
           }
 
@@ -5184,7 +6219,8 @@
             second: "2-digit",
           }).formatToParts(now);
 
-          const getVal = (type) => Number(parts.find((p) => p.type === type)?.value || 0);
+          const getVal = (type) =>
+            Number(parts.find((p) => p.type === type)?.value || 0);
           const hour = getVal("hour");
           const minute = getVal("minute");
           const second = getVal("second");
@@ -5212,29 +6248,31 @@
 
       updateWorldClocks();
       setInterval(updateWorldClocks, 1000);
-     
     </script>
     <script>
-      (function(){
-        // ensure loader shows at least 2s from DOM ready
-        const loader = document.getElementById('site-loader');
-        if(!loader) return;
-        document.body.classList.add('loading');
+      (function () {
+        // ensure loader shows at least 3s from DOM ready
+        const loader = document.getElementById("site-loader");
+        if (!loader) return;
+        document.body.classList.add("loading");
 
         const hideLoader = () => {
-          loader.classList.add('hide');
-          document.body.classList.remove('loading');
+          loader.classList.add("hide");
+          document.body.classList.remove("loading");
           // remove from DOM after fade
-          setTimeout(()=> loader.remove(), 700);
+          setTimeout(() => loader.remove(), 700);
         };
 
-        // If page already loaded, still wait 2s then hide
-        const run = () => setTimeout(hideLoader, 2000);
+        // If page already loaded, still wait 3s then hide
+        const run = () => setTimeout(hideLoader, 3000);
 
-        if (document.readyState === 'complete' || document.readyState === 'interactive') {
+        if (
+          document.readyState === "complete" ||
+          document.readyState === "interactive"
+        ) {
           run();
         } else {
-          window.addEventListener('DOMContentLoaded', run);
+          window.addEventListener("DOMContentLoaded", run);
         }
       })();
     </script>
