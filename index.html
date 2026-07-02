@@ -17,10 +17,10 @@
 
     <style>
       /* ═══════════════════════════════════════════════════════
-   DESIGN SYSTEM – CA INDIA LIGHT THEME
-   Palette: Crisp White · Deep Navy · Saffron Gold · Sky Teal
-   Fonts: Playfair Display (display) · Plus Jakarta Sans (body)
-═══════════════════════════════════════════════════════ */
+    DESIGN SYSTEM – CA INDIA LIGHT THEME
+    Palette: Crisp White · Deep Navy · Saffron Gold · Sky Teal
+    Fonts: Montserrat (display + body)
+  ═══════════════════════════════════════════════════════ */
       :root {
         --bg: #f4f7fb; /* subtle cool off-white for page background */
         --white: #ffffff;
@@ -41,7 +41,7 @@
         --shadow3: 0 32px 80px rgba(13, 27, 42, 0.18);
         --r: 10px;
         --r2: 18px;
-        --r3: 28px;
+        --r3: 2px;
         --fd: "Montserrat", sans-serif;
         /* --fb: "Roboto", sans-serif; */
         --fb: "Montserrat", sans-serif;
@@ -54,6 +54,7 @@
         padding: 0;
       }
       html {
+        font-family: var(--fb);
         scroll-behavior: smooth;
         overflow-x: hidden;
       }
@@ -72,6 +73,12 @@
       a {
         text-decoration: none;
         color: inherit;
+      }
+      button,
+      input,
+      textarea,
+      select {
+        font: inherit;
       }
       ul {
         list-style: none;
@@ -641,6 +648,11 @@
         padding: 120px 0 80px;
         background: url("assets/hero-image.png") no-repeat center/cover fixed;
         background-attachment: fixed;
+      }
+      @media (max-width: 768px) {
+        #home {
+          background-attachment: scroll;
+        }
       }
       #home::before {
         content: "";
@@ -1618,7 +1630,7 @@
         font-size: 48px;
         font-weight: 700;
         line-height: 1.2;
-        color: var(--navy);
+        color: white;
         margin: 0 0 16px 0;
       }
 
@@ -2127,6 +2139,32 @@
       #services .svc-card:hover .svc-card-body {
         opacity: 1;
         transform: translateY(0);
+      }
+      #services {
+        position: relative;
+        isolation: isolate;
+        background-color: #f5efe3;
+        background-image: url(https://uniqus.com/wp-content/uploads/2025/01/UNIQUS-BG_Alliances.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+      }
+      #services::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          135deg,
+          rgba(12, 12, 12, 0.34) 0%,
+          rgba(255, 255, 255, 0.08) 100%
+        );
+        z-index: 0;
+        pointer-events: none;
+      }
+      #services .container {
+        position: relative;
+        z-index: 1;
       }
 
       /* ═══════════════════════════════════════════════════════
