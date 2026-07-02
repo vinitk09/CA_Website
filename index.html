@@ -260,33 +260,65 @@
         box-shadow: 0 10px 32px rgba(212, 160, 23, 0.45);
       }
 
-      /* ── SCROLL REVEAL ── */
+      /* ── SCROLL REVEAL — smooth ease-in-out ── */
       .sr {
         opacity: 0;
         transform: translateY(40px);
         transition:
-          opacity 0.75s ease,
-          transform 0.75s ease;
+          opacity 0.7s cubic-bezier(0.65, 0, 0.35, 1),
+          transform 0.7s cubic-bezier(0.65, 0, 0.35, 1);
       }
       .sr-l {
         opacity: 0;
         transform: translateX(-44px);
         transition:
-          opacity 0.75s ease,
-          transform 0.75s ease;
+          opacity 0.7s cubic-bezier(0.65, 0, 0.35, 1),
+          transform 0.7s cubic-bezier(0.65, 0, 0.35, 1);
       }
       .sr-r {
         opacity: 0;
         transform: translateX(44px);
         transition:
-          opacity 0.75s ease,
-          transform 0.75s ease;
+          opacity 0.7s cubic-bezier(0.65, 0, 0.35, 1),
+          transform 0.7s cubic-bezier(0.65, 0, 0.35, 1);
+      }
+      .sr-fade {
+        opacity: 0;
+        transition: opacity 0.8s cubic-bezier(0.65, 0, 0.35, 1);
       }
       .sr.on,
       .sr-l.on,
-      .sr-r.on {
+      .sr-r.on,
+      .sr-fade.on {
         opacity: 1;
         transform: none;
+      }
+      .sr-scale {
+        opacity: 0;
+        transform: scale(0.92);
+        transition:
+          opacity 0.7s cubic-bezier(0.65, 0, 0.35, 1),
+          transform 0.7s cubic-bezier(0.65, 0, 0.35, 1);
+      }
+      .sr-scale.on {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      /* ── SECTION ENTRANCE ANIMATION (ease-in-out) ── */
+      .section {
+        padding: 96px 0;
+        animation: sectionFadeIn 0.6s cubic-bezier(0.65, 0, 0.35, 1) both;
+      }
+      @keyframes sectionFadeIn {
+        0% {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
       .d1 {
         transition-delay: 0.08s;
@@ -502,27 +534,52 @@
         flex-direction: column;
         gap: 5px;
         cursor: none;
-        padding: 6px;
+        padding: 8px;
         background: none;
         border: none;
+        position: relative;
+        z-index: 920;
       }
       .nav-hb span {
         display: block;
-        width: 22px;
-        height: 2px;
+        width: 24px;
+        height: 2.5px;
         background: var(--navy);
         border-radius: 2px;
-        transition: all 0.3s;
+        transition: all 0.35s cubic-bezier(0.65, 0, 0.35, 1);
       }
       .nav-hb.open span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
+        transform: rotate(45deg) translate(4.5px, 4.5px);
       }
       .nav-hb.open span:nth-child(2) {
         opacity: 0;
         transform: scaleX(0);
       }
       .nav-hb.open span:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px);
+        transform: rotate(-45deg) translate(4.5px, -4.5px);
+      }
+
+      /* mobile drawer close button */
+      .nav-drawer-close {
+        position: absolute;
+        top: 18px;
+        right: 18px;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: var(--light);
+        border: none;
+        color: var(--navy);
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: none;
+        transition: all 0.3s ease;
+      }
+      .nav-drawer-close:hover {
+        background: var(--light2);
+        transform: rotate(90deg);
       }
 
       /* mobile drawer */
@@ -1548,7 +1605,7 @@
         overflow: hidden;
         margin: 0;
         cursor: pointer;
-        border-radius: 12px;
+        /* border-radius: 12px; */
         height: 280px;
       }
       figure.effect-layla img {
@@ -2050,9 +2107,9 @@
       /* ═══════════════════════════════════════════════════════
     CORE VALUES
   ═══════════════════════════════════════════════════════ */
-      /* Core Values section background (distinct from other sections) */
+      /* Core Values section background — warm, traditional cream/gold for integrity & heritage */
       #core-values {
-        background: linear-gradient(135deg, #f0fbf9 0%, #eef3ff 100%);
+        background: linear-gradient(135deg, #fbf6ef 0%, #f5ede1 100%);
       }
       .core-grid {
         display: grid;
@@ -2064,7 +2121,7 @@
         height: 248px;
         padding: 28px 24px 22px;
         background: var(--white);
-        border-radius: var(--r2);
+        /* border-radius: var(--r2); */
         border: 1px solid var(--border2);
         box-shadow: var(--shadow);
         overflow: hidden;
@@ -3933,14 +3990,24 @@
         border-color: rgba(212, 160, 23, 0.14);
       }
 
+      #achievements {
+        background: linear-gradient(
+          180deg,
+          #f5f0eb 0%,
+          #efe8e0 100%
+        );
+        border-top: 1px solid rgba(212, 160, 23, 0.06);
+        border-bottom: 1px solid rgba(13, 27, 42, 0.03);
+      }
+
       #why-choose-us {
         background: linear-gradient(
           180deg,
-          #eef4fb 0%,
-          #e9f0f8 100%
+          #f0f4fa 0%,
+          #e6ecf5 100%
         ) !important;
-        border-top: 1px solid rgba(30, 77, 140, 0.05);
-        border-bottom: 1px solid rgba(13, 27, 42, 0.03);
+        border-top: 1px solid rgba(30, 77, 140, 0.08);
+        border-bottom: 1px solid rgba(13, 27, 42, 0.04);
       }
       #why-choose-us .why-card {
         background: rgba(255, 255, 255, 0.95);
@@ -4055,6 +4122,9 @@
 
     <div class="nav-ovl" id="navOvl"></div>
     <div class="nav-drawer" id="navDrw">
+      <button class="nav-drawer-close" id="navDrwClose" aria-label="Close menu">
+        <i class="ri-close-line"></i>
+      </button>
       <a href="#home" class="dl"><i class="ri-home-4-line"></i>Home</a>
       <a href="#about" class="dl"
         ><i class="ri-information-line"></i>About Us
@@ -4165,25 +4235,25 @@
             <div class="chip">
               <i class="ri-information-line"></i>Who We Are
             </div>
-            <h2 class="heading">
+            <h2 class="heading sr d1">
               27+ Years of <em>Proven</em> Chartered Accountancy
             </h2>
-            <div class="rule"></div>
-            <p class="body" style="margin-bottom: 16px">
-              S.K. Mishra &amp; Associates is a full-service Chartered
+            <div class="rule sr d2"></div>
+            <p class="body sr d3" style="margin-bottom: 16px">
+              S.K. Mishra & Associates is a full-service Chartered
               Accountancy firm founded in 1999, with PAN-India clientele and
               partner-led engagements. We combine deep domain knowledge with a
               business-centric approach across Chemical, Automobile,
               Hospitality, Education, Steel, Mining, and Heavy Machinery
               sectors.
             </p>
-            <p class="body" style="margin-bottom: 24px">
+            <p class="body sr d4" style="margin-bottom: 24px">
               Our expertise spans Assurance, Controls, Finance, Direct Tax, GST,
               EXIM, and Corporate Laws. A technology-driven approach ensures
               long-term value creation for every client.
             </p>
             <div class="about-feats">
-              <div class="about-feat glow-card d1 sr">
+              <div class="about-feat glow-card d5 sr">
                 <div class="glow"></div>
                 <div class="about-feat-icon">
                   <i class="ri-shield-check-line"></i>
@@ -4196,7 +4266,7 @@
                   </p>
                 </div>
               </div>
-              <div class="about-feat glow-card d2 sr">
+              <div class="about-feat glow-card d6 sr">
                 <div class="glow"></div>
                 <div class="about-feat-icon">
                   <i class="ri-computer-line"></i>
@@ -4209,7 +4279,7 @@
                   </p>
                 </div>
               </div>
-              <div class="about-feat glow-card d3 sr">
+              <div class="about-feat glow-card sr" style="transition-delay: 0.6s">
                 <div class="glow"></div>
                 <div class="about-feat-icon">
                   <i class="ri-user-star-line"></i>
@@ -4222,13 +4292,13 @@
                   </p>
                 </div>
               </div>
-              <div class="about-feat glow-card d4 sr">
+              <div class="about-feat glow-card sr" style="transition-delay: 0.7s">
                 <div class="glow"></div>
                 <div class="about-feat-icon">
                   <i class="ri-global-line"></i>
                 </div>
                 <div class="about-feat-text">
-                  <h4>GST, EXIM &amp; Corporate Laws</h4>
+                  <h4>GST, EXIM & Corporate Laws</h4>
                   <p>
                     Complete coverage from domestic compliance to international
                     tax structuring
@@ -4638,27 +4708,10 @@
     <!-- ══ OUR SERVICES ══ -->
     <section id="services" class="section section--light">
       <div class="container">
-        <div
-          class="text-center mx-auto wow fadeInUp"
-          data-wow-delay="0.1s"
-          style="
-            max-width: 600px;
-            visibility: visible;
-            animation-delay: 0.1s;
-            animation-name: fadeInUp;
-          "
-        >
-          <h1 class="display-5 mb-4">Services</h1>
+        <div class="text-center mx-auto" style="max-width: 600px">
+          <h1 class="display-5 mb-4 sr">Services</h1>
         </div>
-        <div
-          class="row row-cols-1 row-cols-md-2 row-cols-xl-3 justify-content-center wow fadeInUp"
-          data-wow-delay="0.1s"
-          style="
-            visibility: visible;
-            animation-delay: 0.1s;
-            animation-name: fadeInUp;
-          "
-        >
+        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 justify-content-center">
           <div class="col pb-4 sr">
             <figure class="effect-layla">
               <img src="https://www.ca-spark.com/public/caspark/images/services/assurance.png" alt="Assurance &amp; Audit" width="100%" height="auto" class="object-fit-cover" />
@@ -4874,7 +4927,7 @@
     </section>
 
     <!-- ══ ACHIEVEMENTS ══ -->
-    <section id="achievements" class="section section--light">
+    <section id="achievements" class="section">
       <div class="container">
         <div class="sec-hdr">
           <div class="chip" style="justify-content: center">
@@ -5811,6 +5864,7 @@
         drw.classList.contains("open") ? closeNav() : openNav(),
       );
       ovl.addEventListener("click", closeNav);
+      document.getElementById("navDrwClose").addEventListener("click", closeNav);
       document
         .querySelectorAll(".dl")
         .forEach((a) => a.addEventListener("click", closeNav));
@@ -5862,9 +5916,10 @@
       );
 
       /* ══════════════════════════════════════
-   SCROLL REVEAL
+   SCROLL REVEAL — supports all animation classes
 ══════════════════════════════════════ */
-      const srEls = document.querySelectorAll(".sr,.sr-l,.sr-r");
+      const srSelectors = ".sr,.sr-l,.sr-r,.sr-fade,.sr-scale";
+      const srEls = document.querySelectorAll(srSelectors);
       const srObs = new IntersectionObserver(
         (entries) => {
           entries.forEach((e) => {
@@ -5877,6 +5932,30 @@
         { threshold: 0.1, rootMargin: "0px 0px -40px 0px" },
       );
       srEls.forEach((el) => srObs.observe(el));
+      
+      // On page load, also trigger all currently visible sections
+      window.addEventListener('load', () => {
+        document.querySelectorAll(srSelectors).forEach((el) => {
+          const rect = el.getBoundingClientRect();
+          if (rect.top < window.innerHeight && rect.bottom > 0) {
+            el.classList.add('on');
+          }
+        });
+      });
+      
+      // Re-trigger animations on scroll as a fallback
+      let scrollTimeout;
+      window.addEventListener('scroll', () => {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+          document.querySelectorAll(srSelectors + ':not(.on)').forEach((el) => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 60 && rect.bottom > 0) {
+              el.classList.add('on');
+            }
+          });
+        }, 100);
+      }, { passive: true });
 
       /* ══════════════════════════════════════
    COUNTERS
