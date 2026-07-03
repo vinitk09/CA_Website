@@ -27,7 +27,7 @@
         --navy: #0d1b2a;
         --navy2: #1a2e45;
         --blue: #1e4d8c;
-        --teal: #482a7a;
+        --teal: #175889;
         --gold: #d4a017;
         --gold2: #f0c040;
         --saffron: #e8813a;
@@ -73,6 +73,10 @@
       a {
         text-decoration: none;
         color: inherit;
+      }
+      em {
+        font-style: italic;
+        color: #175889;
       }
       button,
       input,
@@ -164,7 +168,7 @@
         font-weight: 700;
         letter-spacing: 2.5px;
         text-transform: uppercase;
-        color: var(--teal);
+        color: #0c4b7b;
         background: rgba(14, 122, 110, 0.07);
         border: 1px solid rgba(14, 122, 110, 0.18);
         margin-bottom: 14px;
@@ -182,7 +186,7 @@
       }
       .heading em {
         font-style: italic;
-        color: var(--teal);
+        color: #175889;
       }
       .heading span {
         color: var(--blue);
@@ -224,7 +228,8 @@
         font-family: var(--fb);
       }
       .btn-teal {
-        background: linear-gradient(135deg, #48208a, #964bd5);
+        background: linear-gradient(135deg, #175889 0%, rgba(23, 88, 137, 0.92) 100%);
+ 
         color: #fff;
         box-shadow: 0 4px 20px rgba(14, 122, 110, 0.35);
       }
@@ -238,7 +243,8 @@
         color: white;
       }
       .btn-outline:hover {
-        background: linear-gradient(135deg, #48208a, #964bd5);
+        background: linear-gradient(135deg, #175889 0%, rgba(23, 88, 137, 0.92) 100%);
+
         color: #fff;
         transform: translateY(-2px);
         border: 2px solid purple;
@@ -409,7 +415,7 @@
         font-weight: 900;
         letter-spacing: 1px;
         text-transform: none;
-        color: var(--teal);
+        color:#175889;
         white-space: nowrap;
       }
 
@@ -464,7 +470,7 @@
       }
       .nav-links a.scrolled,
       .nav-links button.scrolled {
-        color: var(--teal);
+        color: #175889;
       }
 
       .nav-dropdown {
@@ -485,7 +491,7 @@
       .nav-dropdown-menu {
         position: absolute;
         /* lift menu slightly so cursor can move into it without gaps */
-        top: calc(100% - 8px);
+        top: calc(100% + 0px);
         left: 0;
         min-width: 220px;
         padding: 10px;
@@ -925,7 +931,7 @@
         box-shadow: 0 4px 16px rgba(13, 27, 42, 0.06);
       }
       .hero-pill i {
-        color: var(--teal);
+        color: #175889;
         font-size: 14px;
       }
 
@@ -1404,7 +1410,7 @@
       }
       .about-float-card i {
         font-size: 22px;
-        color: var(--teal);
+        color: #0C4B7B;
       }
       .fc1 {
         bottom: -20px;
@@ -1559,7 +1565,7 @@
         align-items: center;
         justify-content: center;
         font-size: 24px;
-        color: var(--teal);
+        color: #0C4B7B;
         transition: all 0.3s;
       }
       .why-card:hover .why-icon {
@@ -2229,7 +2235,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background: linear-gradient(135deg, var(--teal), var(--blue));
+        background: linear-gradient(135deg, #3B8FCE 0%, #1E4D8C 100%);
         color: #fff;
         font-size: 12px;
         font-weight: 800;
@@ -2364,7 +2370,7 @@
         align-items: center;
         justify-content: center;
         font-size: 26px;
-        color: var(--teal);
+        color: #0C4B7B;
         margin-bottom: 18px;
         position: relative;
         z-index: 1;
@@ -2372,7 +2378,7 @@
         transition: all 0.35s;
       }
       .wwd-step:hover .wwd-ico {
-        background: var(--teal);
+        background: #175889;
         color: #fff;
         transform: scale(1.1) translateY(-6px);
         box-shadow: 0 12px 32px rgba(14, 122, 110, 0.35);
@@ -2567,7 +2573,7 @@
         justify-content: center;
         margin: 0 auto 18px;
         font-size: 26px;
-        color: var(--teal);
+        color: #0C4B7B;
         transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
         position: relative;
         border: 1px solid rgba(72, 42, 122, 0.08);
@@ -2577,13 +2583,13 @@
         position: absolute;
         inset: -3px;
         border-radius: 21px;
-        background: linear-gradient(135deg, var(--teal), var(--gold));
+        background: linear-gradient(135deg, #3b8fce 0%, #1e4d8c 100%);
         opacity: 0;
         transition: opacity 0.5s ease;
         z-index: -1;
       }
       .ach-card:hover .ach-icon {
-        background: linear-gradient(135deg, var(--teal), var(--blue));
+        background: linear-gradient(135deg, #3b8fce 0%, #1e4d8c 100%);
         color: #fff;
         transform: scale(1.1) rotate(-5deg);
         border-color: transparent;
@@ -2613,8 +2619,8 @@
       }
       .ach-num span {
         font-size: 30px;
-        -webkit-text-fill-color: var(--teal);
-        color: var(--teal);
+        -webkit-text-fill-color: #0C4B7B;
+        color: #0C4B7B;
       }
       .ach-label {
         font-size: 12px;
@@ -2767,7 +2773,7 @@
         height: 44px;
         border-radius: 50%;
         flex-shrink: 0;
-        background: linear-gradient(135deg, var(--teal), var(--blue));
+        background: linear-gradient(135deg, #3b8fce 0%, #1e4d8c 100%);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -2781,8 +2787,8 @@
       .milestone:hover .milestone-num {
         transform: scale(1.12) rotate(360deg);
         box-shadow: 0 6px 20px rgba(72, 42, 122, 0.3);
-        background: linear-gradient(135deg, var(--gold), var(--gold2));
-        color: var(--navy);
+        background: linear-gradient(135deg, #3b8fce 0%, #1e4d8c 100%);
+        color: #fff;
       }
       .milestone h4 {
         font-size: 15px;
@@ -3146,7 +3152,7 @@
         font-weight: 700;
         letter-spacing: 2px;
         text-transform: uppercase;
-        color: var(--teal);
+        color: #0C4B7B;
         margin-bottom: 3px;
       }
       .c-val {
@@ -3249,7 +3255,7 @@
         font-weight: 700;
         letter-spacing: 2px;
         text-transform: uppercase;
-        color: var(--teal);
+        color: #0C4B7B;
         margin-bottom: 14px;
       }
       .f-brand-desc {
@@ -3263,7 +3269,7 @@
         font-weight: 700;
         letter-spacing: 2px;
         text-transform: uppercase;
-        color: var(--teal);
+        color: #0C4B7B;
         margin-bottom: 18px;
       }
       .f-col ul {
@@ -3321,7 +3327,7 @@
       }
       .footer-clock-contact a i {
         font-size: 15px;
-        color: var(--teal);
+        color: #0C4B7B;
       }
       .footer-clock-contact .sep {
         color: rgba(255, 255, 255, 0.45);
@@ -3967,8 +3973,11 @@
       }
       .location-item i {
         font-size: 20px;
-        color: var(--teal);
+        color: #175889;
         flex-shrink: 0;
+        background: linear-gradient(135deg, #3b8fce 0%, #1e4d8c 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
       }
       .location-item:hover {
         background: var(--light2);
@@ -4504,7 +4513,7 @@
               href="#contact"
               class="btn btn-teal"
               style="padding: 10px 22px; font-size: 12.5px; width: 152px"
-            >
+                  color: #175889;>
               <i class="ri-mail-send-line"></i> Get in Touch
             </a>
           </div>
@@ -4540,6 +4549,11 @@
       <a href="#links" class="dl" data-open-links="true"
         ><i class="ri-links-line"></i>Important Links</a
       >
+      <div class="nav-drawer-cta" >
+        <a href="index.html#contact" class="btn btn-teal dl"  style="display: flex; color:white; justify-content: center; margin-top: 16px ;width: 100%;">
+          <i class="ri-mail-send-line" style="color: white;"></i> Get in Touch
+        </a>
+      </div>
       <!-- <a href="#contact" class="dl"><i class="ri-phone-line"></i>Contact Us</a> -->
     </div>
     <!-- ══ ABOUT US & WHY US ══ -->
@@ -5102,123 +5116,148 @@
     </section>
 
     <!-- ══ OUR SERVICES ══ -->
-    <section id="services" class="section section--light">
-      <div class="container">
-        <div class="text-center mx-auto" style="max-width: 600px">
-          <h1 class="display-5 mb-4 sr">Services</h1>
-        </div>
-        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 justify-content-center">
-          <div class="col pb-4 sr">
-            <figure class="effect-layla">
-              <img src="https://www.ca-spark.com/public/caspark/images/services/assurance.png" alt="Assurance &amp; Audit" width="100%" height="auto" class="object-fit-cover" />
-              <figcaption>
-                <h2>Assurance &amp; Audit</h2>
-                <p>Independent assurance and audit support for reliable financial reporting.</p>
-              </figcaption>
-            </figure>
-          </div>
-          <div class="col pb-4 sr">
-            <figure class="effect-layla">
-              <img src="https://www.ca-spark.com/public/caspark/images/services/research.png" alt="Internal Audit &amp; Risk" width="100%" height="auto" class="object-fit-cover" />
-              <figcaption>
-                <h2>Internal Audit &amp; Risk</h2>
-                <p>Risk-based internal audit to improve controls and governance outcomes.</p>
-              </figcaption>
-            </figure>
-          </div>
-          <div class="col pb-4 sr">
-            <figure class="effect-layla">
-              <img src="https://www.ca-spark.com/public/caspark/images/services/compliance.jpg" alt="IFC / ICFR" width="100%" height="auto" class="object-fit-cover" />
-              <figcaption>
-                <h2>IFC / ICFR</h2>
-                <p>Design and testing of internal financial controls for compliance readiness.</p>
-              </figcaption>
-            </figure>
-          </div>
-          <div class="col pb-4 sr">
-            <figure class="effect-layla">
-              <img src="https://www.ca-spark.com/public/caspark/images/services/taxation.png" alt="Tax &amp; Litigation" width="100%" height="auto" class="object-fit-cover" />
-              <figcaption>
-                <h2>Tax &amp; Litigation</h2>
-                <p>Tax advisory, assessments, and litigation support across direct and indirect tax.</p>
-              </figcaption>
-            </figure>
-          </div>
-          <div class="col pb-4 sr">
-            <figure class="effect-layla">
-              <img src="https://www.ca-spark.com/public/caspark/images/services/compliance.jpg" alt="Company Law" width="100%" height="auto" class="object-fit-cover" />
-              <figcaption>
-                <h2>Company Law</h2>
-                <p>Company law compliance, secretarial support, and governance advisory.</p>
-              </figcaption>
-            </figure>
-          </div>
-          <div class="col pb-4 sr">
-            <figure class="effect-layla">
-              <img src="https://www.ca-spark.com/public/caspark/images/services/advisory.jpg" alt="Transfer Pricing" width="100%" height="auto" class="object-fit-cover" />
-              <figcaption>
-                <h2>Transfer Pricing</h2>
-                <p>Transfer pricing planning, documentation, and benchmarking support.</p>
-              </figcaption>
-            </figure>
-          </div>
-          <div class="col pb-4 sr">
-            <figure class="effect-layla">
-              <img src="https://www.ca-spark.com/public/caspark/images/services/services.jpg" alt="Virtual CFO" width="100%" height="auto" class="object-fit-cover" />
-              <figcaption>
-                <h2>Virtual CFO</h2>
-                <p>Strategic finance leadership for budgeting, MIS, and growth decisions.</p>
-              </figcaption>
-            </figure>
-          </div>
-          <div class="col pb-4 sr">
-            <figure class="effect-layla">
-              <img src="https://www.ca-spark.com/public/caspark/images/services/valuation.png" alt="Project Finance" width="100%" height="auto" class="object-fit-cover" />
-              <figcaption>
-                <h2>Project Finance</h2>
-                <p>Financial modeling and funding support for project execution.</p>
-              </figcaption>
-            </figure>
-          </div>
-          <div class="col pb-4 sr">
-            <figure class="effect-layla">
-              <img src="https://www.ca-spark.com/public/caspark/images/services/valuation.png" alt="Valuation &amp; M&amp;A" width="100%" height="auto" class="object-fit-cover" />
-              <figcaption>
-                <h2>Valuation &amp; M&amp;A</h2>
-                <p>Business valuation and transaction advisory for strategic deals.</p>
-              </figcaption>
-            </figure>
-          </div>
-          <div class="col pb-4 sr">
-            <figure class="effect-layla">
-              <img src="https://www.ca-spark.com/public/caspark/images/services/services.jpg" alt="RERA Compliance" width="100%" height="auto" class="object-fit-cover" />
-              <figcaption>
-                <h2>RERA Compliance</h2>
-                <p>RERA reporting and compliance support for real estate businesses.</p>
-              </figcaption>
-            </figure>
-          </div>
-          <div class="col pb-4 sr">
-            <figure class="effect-layla">
-              <img src="https://www.ca-spark.com/public/caspark/images/services/consulting.jpg" alt="Start-up Setup" width="100%" height="auto" class="object-fit-cover" />
-              <figcaption>
-                <h2>Start-up Setup</h2>
-                <p>Entity setup and early-stage compliance for startup growth.</p>
-              </figcaption>
-            </figure>
-          </div>
-          <div class="col pb-4 sr">
-            <figure class="effect-layla">
-              <img src="https://www.ca-spark.com/public/caspark/images/services/Insolvency.png" alt="Foreign Branch Setup" width="100%" height="auto" class="object-fit-cover" />
-              <figcaption>
-                <h2>Foreign Branch Setup</h2>
-                <p>Cross-border branch establishment and regulatory support.</p>
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-      </div>
-    </section>
+  <section id="services" class="section section--light">
+  <div class="container">
+    <div class="text-center mx-auto" style="max-width: 600px">
+      <h1 class="display-5 mb-4 sr">Services</h1>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 justify-content-center">
+      
+      <!-- 1. Assurance & Audit -->
+      <a href="services.html?service=audit-assurance" class="col pb-4 sr">
+        <figure class="effect-layla">
+          <img src="https://www.ca-spark.com/public/caspark/images/services/assurance.png" alt="Assurance &amp; Audit" width="100%" height="auto" class="object-fit-cover" />
+          <figcaption>
+            <h2>Assurance &amp; Audit</h2>
+            <p>Independent assurance and audit support for reliable financial reporting.</p>
+          </figcaption>
+        </figure>
+      </a>
+
+      <!-- 2. Internal Audit & Risk -->
+      <a href="services.html?service=internal-audit-risk" class="col pb-4 sr">
+        <figure class="effect-layla">
+          <img src="https://www.ca-spark.com/public/caspark/images/services/research.png" alt="Internal Audit &amp; Risk" width="100%" height="auto" class="object-fit-cover" />
+          <figcaption>
+            <h2>Internal Audit &amp; Risk</h2>
+            <p>Risk-based internal audit to improve controls and governance outcomes.</p>
+          </figcaption>
+        </figure>
+      </a>
+
+      <!-- 3. IFC / ICFR -->
+      <a href="services.html?service=ifc-icfr" class="col pb-4 sr">
+        <figure class="effect-layla">
+          <img src="https://www.ca-spark.com/public/caspark/images/services/compliance.jpg" alt="IFC / ICFR" width="100%" height="auto" class="object-fit-cover" />
+          <figcaption>
+            <h2>IFC / ICFR</h2>
+            <p>Design and testing of internal financial controls for compliance readiness.</p>
+          </figcaption>
+        </figure>
+      </a>
+
+      <!-- 4. Tax & Litigation -->
+      <a href="services.html?service=tax-litigation" class="col pb-4 sr">
+        <figure class="effect-layla">
+          <img src="https://www.ca-spark.com/public/caspark/images/services/taxation.png" alt="Tax &amp; Litigation" width="100%" height="auto" class="object-fit-cover" />
+          <figcaption>
+            <h2>Tax &amp; Litigation</h2>
+            <p>Tax advisory, assessments, and litigation support across direct and indirect tax.</p>
+          </figcaption>
+        </figure>
+      </a>
+
+      <!-- 5. Company Law -->
+      <a href="services.html?service=company-law" class="col pb-4 sr">
+        <figure class="effect-layla">
+          <img src="https://www.ca-spark.com/public/caspark/images/services/compliance.jpg" alt="Company Law" width="100%" height="auto" class="object-fit-cover" />
+          <figcaption>
+            <h2>Company Law</h2>
+            <p>Company law compliance, secretarial support, and governance advisory.</p>
+          </figcaption>
+        </figure>
+      </a>
+
+      <!-- 6. Transfer Pricing -->
+      <a href="services.html?service=transfer-pricing" class="col pb-4 sr">
+        <figure class="effect-layla">
+          <img src="https://www.ca-spark.com/public/caspark/images/services/advisory.jpg" alt="Transfer Pricing" width="100%" height="auto" class="object-fit-cover" />
+          <figcaption>
+            <h2>Transfer Pricing</h2>
+            <p>Transfer pricing planning, documentation, and benchmarking support.</p>
+          </figcaption>
+        </figure>
+      </a>
+
+      <!-- 7. Virtual CFO -->
+      <a href="services.html?service=virtual-cfo" class="col pb-4 sr">
+        <figure class="effect-layla">
+          <img src="https://www.ca-spark.com/public/caspark/images/services/services.jpg" alt="Virtual CFO" width="100%" height="auto" class="object-fit-cover" />
+          <figcaption>
+            <h2>Virtual CFO</h2>
+            <p>Strategic finance leadership for budgeting, MIS, and growth decisions.</p>
+          </figcaption>
+        </figure>
+      </a>
+
+      <!-- 8. Project Finance -->
+      <a href="services.html?service=project-finance" class="col pb-4 sr">
+        <figure class="effect-layla">
+          <img src="https://www.ca-spark.com/public/caspark/images/services/valuation.png" alt="Project Finance" width="100%" height="auto" class="object-fit-cover" />
+          <figcaption>
+            <h2>Project Finance</h2>
+            <p>Financial modeling and funding support for project execution.</p>
+          </figcaption>
+        </figure>
+      </a>
+
+      <!-- 9. Valuation & M&A -->
+      <a href="services.html?service=valuation-ma" class="col pb-4 sr">
+        <figure class="effect-layla">
+          <img src="https://www.ca-spark.com/public/caspark/images/services/valuation.png" alt="Valuation &amp; M&amp;A" width="100%" height="auto" class="object-fit-cover" />
+          <figcaption>
+            <h2>Valuation &amp; M&amp;A</h2>
+            <p>Business valuation and transaction advisory for strategic deals.</p>
+          </figcaption>
+        </figure>
+      </a>
+
+      <!-- 10. RERA Compliance -->
+      <a href="services.html?service=rera-compliance" class="col pb-4 sr">
+        <figure class="effect-layla">
+          <img src="https://www.ca-spark.com/public/caspark/images/services/services.jpg" alt="RERA Compliance" width="100%" height="auto" class="object-fit-cover" />
+          <figcaption>
+            <h2>RERA Compliance</h2>
+            <p>RERA reporting and compliance support for real estate businesses.</p>
+          </figcaption>
+        </figure>
+      </a>
+
+      <!-- 11. Start-up Setup -->
+      <a href="services.html?service=startup-setup" class="col pb-4 sr">
+        <figure class="effect-layla">
+          <img src="https://www.ca-spark.com/public/caspark/images/services/consulting.jpg" alt="Start-up Setup" width="100%" height="auto" class="object-fit-cover" />
+          <figcaption>
+            <h2>Start-up Setup</h2>
+            <p>Entity setup and early-stage compliance for startup growth.</p>
+          </figcaption>
+        </figure>
+      </a>
+
+      <!-- 12. Foreign Branch Setup -->
+      <a href="services.html?service=foreign-branch-setup" class="col pb-4 sr">
+        <figure class="effect-layla">
+          <img src="https://www.ca-spark.com/public/caspark/images/services/Insolvency.png" alt="Foreign Branch Setup" width="100%" height="auto" class="object-fit-cover" />
+          <figcaption>
+            <h2>Foreign Branch Setup</h2>
+            <p>Cross-border branch establishment and regulatory support.</p>
+          </figcaption>
+        </figure>
+      </a>
+
+    </div>
+  </div>
+</section>
 
     <!-- ══ WHAT WE DO ══ -->
     <section id="whatwedo" class="section section--white">
@@ -5352,7 +5391,7 @@
             <div class="ach-glow"></div>
             <div class="ach-card-inner">
               <div class="ach-icon"><i class="ri-global-line"></i></div>
-              <div class="ach-num" style="font-size: 32px; margin-bottom: 6px">
+              <div class="ach-num" style="color:#0C4B7B; font-size: 32px; margin-bottom: 6px">
                 PAN
               </div>
               <div class="ach-label">India Clientele</div>
@@ -6186,91 +6225,212 @@
       </div>
     </div>
 
-    <script>
-      // Smooth Scroll
-      //
-      /* ══════════════════════════════════════
-   CUSTOM CURSOR
+   <script>
+  /* ══════════════════════════════════════
+   OPTIMIZED ANIMATIONS - PERFORMANCE FIX
 ══════════════════════════════════════ */
-      const dot = document.getElementById("cursor-dot");
-      const ring = document.getElementById("cursor-ring");
-      let mx = 0,
-        my = 0,
-        rx = 0,
-        ry = 0;
-      document.addEventListener("mousemove", (e) => {
-        mx = e.clientX;
-        my = e.clientY;
-        dot.style.left = mx + "px";
-        dot.style.top = my + "px";
-      });
-      (function animRing() {
-        rx += (mx - rx) * 0.14;
-        ry += (my - ry) * 0.14;
-        ring.style.left = rx + "px";
-        ring.style.top = ry + "px";
-        requestAnimationFrame(animRing);
-      })();
-      document
-        .querySelectorAll(
-          "a,button,.svc-tab,.link-card,.why-card,.about-feat,.milestone,.ach-card,.wwd-step,.c-item,.ticker-item",
-        )
-        .forEach((el) => {
-          el.addEventListener("mouseenter", () =>
-            document.body.classList.add("cursor-hover"),
-          );
-          el.addEventListener("mouseleave", () =>
-            document.body.classList.remove("cursor-hover"),
-          );
-        });
 
-      /* ══════════════════════════════════════
-   NAV
+  // ── USE REQUESTANIMATIONFRAME FOR SMOOTH CURSOR ──
+  (function optimizedCursor() {
+    const dot = document.getElementById("cursor-dot");
+    const ring = document.getElementById("cursor-ring");
+    if (!dot || !ring) return;
+
+    let mx = 0,
+      my = 0,
+      rx = 0,
+      ry = 0;
+    let rafId = null;
+    let isAnimating = false;
+
+    document.addEventListener("mousemove", (e) => {
+      mx = e.clientX;
+      my = e.clientY;
+      dot.style.left = mx + "px";
+      dot.style.top = my + "px";
+      if (!isAnimating) {
+        isAnimating = true;
+        animateRing();
+      }
+    });
+
+    function animateRing() {
+      rx += (mx - rx) * 0.14;
+      ry += (my - ry) * 0.14;
+      ring.style.left = rx + "px";
+      ring.style.top = ry + "px";
+
+      if (Math.abs(mx - rx) > 0.1 || Math.abs(my - ry) > 0.1) {
+        rafId = requestAnimationFrame(animateRing);
+      } else {
+        isAnimating = false;
+        if (rafId) {
+          cancelAnimationFrame(rafId);
+          rafId = null;
+        }
+      }
+    }
+
+    // Hover effects - optimized with delegation
+    document.addEventListener("mouseenter", (e) => {
+      const target = e.target;
+      if (target.matches("a, button, .svc-tab, .link-card, .why-card, .about-feat, .milestone, .ach-card, .wwd-step, .c-item, .ticker-item")) {
+        document.body.classList.add("cursor-hover");
+      }
+    }, true);
+
+    document.addEventListener("mouseleave", (e) => {
+      const target = e.target;
+      if (target.matches("a, button, .svc-tab, .link-card, .why-card, .about-feat, .milestone, .ach-card, .wwd-step, .c-item, .ticker-item")) {
+        document.body.classList.remove("cursor-hover");
+      }
+    }, true);
+  })();
+
+  /* ══════════════════════════════════════
+   OPTIMIZED SCROLL REVEAL - USING INTERSECTION OBSERVER
 ══════════════════════════════════════ */
-      const nav = document.getElementById("nav");
-      const btt = document.getElementById("btt");
-      const homeSection = document.getElementById("home");
-      const heroTitle = document.querySelector(".hero-title");
-      const navLinks = document.querySelectorAll(".nav-links a, .nav-links button");
-      let lastScrollY = 0;
+  (function optimizedScrollReveal() {
+    const srSelectors = ".sr,.sr-l,.sr-r,.sr-fade,.sr-scale";
+    const srEls = document.querySelectorAll(srSelectors);
+    if (!srEls.length) return;
 
-      window.addEventListener(
-        "scroll",
-        () => {
-          nav.classList.toggle("solid", scrollY > 60);
-          btt.classList.toggle("show", scrollY > 400);
-
-          if (homeSection && heroTitle) {
-            const rect = homeSection.getBoundingClientRect();
-            const fadeDistance = Math.max(rect.height * 0.6, 1);
-            const progress = Math.min(
-              Math.max((0 - rect.top) / fadeDistance, 0),
-              1,
-            );
-            const opacity = 1 - progress;
-            const isScrollingDown = scrollY > lastScrollY;
-            const translateX = isScrollingDown ? progress * -40 : progress * 40;
-
-            heroTitle.style.opacity = opacity.toFixed(3);
-            heroTitle.style.transform = `translateX(${translateX}px)`;
-            lastScrollY = scrollY;
-          }
-
-          // Toggle nav links color based on navbar solid state
-          const navHasSolid = nav.classList.contains("solid");
-          navLinks.forEach((link) => {
-            if (navHasSolid) {
-              link.classList.add("scrolled");
-            } else {
-              link.classList.remove("scrolled");
+    // Use a single observer with better settings
+    const srObs = new IntersectionObserver(
+      (entries) => {
+        // Batch DOM updates using requestAnimationFrame
+        requestAnimationFrame(() => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("on");
+              srObs.unobserve(entry.target);
             }
           });
-        },
-        { passive: true },
-      );
-      const hb = document.getElementById("navHb");
-      const drw = document.getElementById("navDrw");
-      const ovl = document.getElementById("navOvl");
+        });
+      }, {
+        threshold: 0.15,
+        rootMargin: "0px 0px -30px 0px"
+      }
+    );
+
+    // Batch observe all elements
+    const batchSize = 20;
+    for (let i = 0; i < srEls.length; i += batchSize) {
+      const batch = Array.from(srEls).slice(i, i + batchSize);
+      batch.forEach(el => srObs.observe(el));
+    }
+
+    // Check visible elements on load - batched
+    window.addEventListener('load', () => {
+      const visible = [];
+      srEls.forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          visible.push(el);
+        }
+      });
+      // Batch add class
+      if (visible.length) {
+        requestAnimationFrame(() => {
+          visible.forEach(el => el.classList.add('on'));
+        });
+      }
+    });
+
+    // Debounced scroll handler
+    let scrollTimeout;
+    window.addEventListener('scroll', () => {
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        const notVisible = document.querySelectorAll(srSelectors + ':not(.on)');
+        if (notVisible.length) {
+          const toAdd = [];
+          notVisible.forEach((el) => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 60 && rect.bottom > 0) {
+              toAdd.push(el);
+            }
+          });
+          if (toAdd.length) {
+            requestAnimationFrame(() => {
+              toAdd.forEach(el => el.classList.add('on'));
+            });
+          }
+        }
+      }, 150);
+    }, { passive: true });
+  })();
+
+  /* ══════════════════════════════════════
+   OPTIMIZED NAVIGATION
+══════════════════════════════════════ */
+  (function optimizedNav() {
+    const nav = document.getElementById("nav");
+    const btt = document.getElementById("btt");
+    const homeSection = document.getElementById("home");
+    const heroTitle = document.querySelector(".hero-title");
+    const navLinks = document.querySelectorAll(".nav-links a, .nav-links button");
+    let lastScrollY = 0;
+    let ticking = false;
+
+    // Use requestAnimationFrame for smooth scrolling
+    function updateNav() {
+      const scrollY = window.scrollY;
+
+      if (scrollY > 60) {
+        nav.classList.add("solid");
+      } else {
+        nav.classList.remove("solid");
+      }
+
+      if (scrollY > 400) {
+        btt.classList.add("show");
+      } else {
+        btt.classList.remove("show");
+      }
+
+      // Update nav links color
+      const navHasSolid = nav.classList.contains("solid");
+      navLinks.forEach((link) => {
+        if (navHasSolid) {
+          link.classList.add("scrolled");
+        } else {
+          link.classList.remove("scrolled");
+        }
+      });
+
+      // Hero title animation - only if visible
+      if (homeSection && heroTitle) {
+        const rect = homeSection.getBoundingClientRect();
+        const fadeDistance = Math.max(rect.height * 0.6, 1);
+        const progress = Math.min(Math.max((0 - rect.top) / fadeDistance, 0), 1);
+        const opacity = 1 - progress;
+        const isScrollingDown = scrollY > lastScrollY;
+        const translateX = isScrollingDown ? progress * -30 : progress * 30;
+
+        heroTitle.style.opacity = opacity.toFixed(3);
+        heroTitle.style.transform = `translateX(${translateX}px)`;
+        lastScrollY = scrollY;
+      }
+    }
+
+    window.addEventListener("scroll", () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          updateNav();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+
+    // Mobile menu
+    const hb = document.getElementById("navHb");
+    const drw = document.getElementById("navDrw");
+    const ovl = document.getElementById("navOvl");
+    const drwClose = document.getElementById("navDrwClose");
+
+    if (hb && drw && ovl) {
       const openNav = () => {
         hb.classList.add("open");
         drw.classList.add("open");
@@ -6284,363 +6444,346 @@
         document.body.style.overflow = "";
       };
       hb.addEventListener("click", () =>
-        drw.classList.contains("open") ? closeNav() : openNav(),
+        drw.classList.contains("open") ? closeNav() : openNav()
       );
       ovl.addEventListener("click", closeNav);
-      document.getElementById("navDrwClose").addEventListener("click", closeNav);
-      document
-        .querySelectorAll(".dl")
-        .forEach((a) => a.addEventListener("click", closeNav));
-
-      document
-        .querySelectorAll("#services figure.effect-layla figcaption")
-        .forEach((caption) => {
-          if (caption.querySelector(".svc-mini-loader")) return;
-          const miniLoader = document.createElement("div");
-          miniLoader.className = "svc-mini-loader";
-          miniLoader.innerHTML =
-            '<span class="svc-line-top"></span><span class="svc-line-right"></span><span class="svc-line-bottom"></span><span class="svc-line-left"></span>';
-          caption.insertBefore(miniLoader, caption.firstChild);
-        });
-
-      const linksSection = document.getElementById("links");
-      const linksToggleBtn = document.getElementById("linksToggleBtn");
-      const linksPanel = document.getElementById("importantLinksPanel");
-      const setLinksPanelState = (open) => {
-        if (!linksToggleBtn || !linksPanel) return;
-        linksToggleBtn.setAttribute("aria-expanded", open ? "true" : "false");
-        linksPanel.classList.toggle("open", open);
-        if (open) {
-          linksPanel.hidden = false;
-        } else {
-          linksPanel.hidden = true;
-        }
-      };
-
-      if (linksToggleBtn) {
-        linksToggleBtn.addEventListener("click", () => {
-          const isOpen = linksToggleBtn.getAttribute("aria-expanded") === "true";
-          setLinksPanelState(!isOpen);
-        });
+      if (drwClose) {
+        drwClose.addEventListener("click", closeNav);
       }
+      document.querySelectorAll(".dl").forEach((a) => a.addEventListener("click", closeNav));
+    }
 
-      document.querySelectorAll("[data-open-links='true']").forEach((el) => {
-        el.addEventListener("click", (e) => {
-          if (el.tagName === "A") e.preventDefault();
-          setLinksPanelState(true);
-          if (linksSection) {
-            linksSection.scrollIntoView({ behavior: "smooth", block: "start" });
-          }
-        });
-      });
-
+    // Back to top
+    if (btt) {
       btt.addEventListener("click", () =>
-        window.scrollTo({ top: 0, behavior: "smooth" }),
+        window.scrollTo({ top: 0, behavior: "smooth" })
       );
+    }
+  })();
 
-      /* ══════════════════════════════════════
-   SCROLL REVEAL — supports all animation classes
+  /* ══════════════════════════════════════
+   OPTIMIZED COUNTERS - Batch processing
 ══════════════════════════════════════ */
-      const srSelectors = ".sr,.sr-l,.sr-r,.sr-fade,.sr-scale";
-      const srEls = document.querySelectorAll(srSelectors);
-      const srObs = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((e) => {
-            if (e.isIntersecting) {
-              e.target.classList.add("on");
-              srObs.unobserve(e.target);
+  (function optimizedCounters() {
+    const counters = document.querySelectorAll(".count");
+    if (!counters.length) return;
+
+    // Use IntersectionObserver for counters
+    const counterObs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const el = entry.target;
+          counterObs.unobserve(el);
+
+          const target = +el.dataset.target;
+          if (!target || isNaN(target)) return;
+
+          let n = 0;
+          const step = target / 40;
+          const interval = Math.min(40, 1000 / 60); // Max 60fps
+
+          const timer = setInterval(() => {
+            n += step;
+            if (n >= target) {
+              el.textContent = target;
+              clearInterval(timer);
+            } else {
+              el.textContent = Math.floor(n);
             }
-          });
-        },
-        { threshold: 0.1, rootMargin: "0px 0px -40px 0px" },
-      );
-      srEls.forEach((el) => srObs.observe(el));
-      
-      // On page load, also trigger all currently visible sections
-      window.addEventListener('load', () => {
-        document.querySelectorAll(srSelectors).forEach((el) => {
-          const rect = el.getBoundingClientRect();
-          if (rect.top < window.innerHeight && rect.bottom > 0) {
-            el.classList.add('on');
-          }
+          }, interval);
         });
-      });
-      
-      // Re-trigger animations on scroll as a fallback
-      let scrollTimeout;
-      window.addEventListener('scroll', () => {
-        clearTimeout(scrollTimeout);
-        scrollTimeout = setTimeout(() => {
-          document.querySelectorAll(srSelectors + ':not(.on)').forEach((el) => {
-            const rect = el.getBoundingClientRect();
-            if (rect.top < window.innerHeight - 60 && rect.bottom > 0) {
-              el.classList.add('on');
-            }
-          });
-        }, 100);
-      }, { passive: true });
+      }, { threshold: 0.3 }
+    );
 
-      /* ══════════════════════════════════════
-   COUNTERS
-══════════════════════════════════════ */
-      document.querySelectorAll(".count").forEach((el) => {
-        const cObs = new IntersectionObserver(
-          ([e]) => {
-            if (!e.isIntersecting) return;
-            cObs.disconnect();
-            const target = +el.dataset.target;
-            let n = 0;
-            const step = target / 40;
-            const t = setInterval(() => {
-              n += step;
-              el.textContent = n >= target ? target : Math.floor(n);
-              if (n >= target) clearInterval(t);
-            }, 40);
-          },
-          { threshold: 0.5 },
-        );
-        cObs.observe(el);
-      });
+    counters.forEach(el => counterObs.observe(el));
+  })();
 
-      /* ══════════════════════════════════════
-   SERVICES TABS
+  /* ══════════════════════════════════════
+   OPTIMIZED SERVICE TABS
 ══════════════════════════════════════ */
-      const tabMap = {
-        ass: "pnl-ass",
-        tax: "pnl-tax",
-        biz: "pnl-biz",
-        adv: "pnl-adv",
-        grc: "pnl-grc",
-      };
-      document.querySelectorAll(".svc-tab").forEach((tab) => {
-        tab.addEventListener("click", () => {
-          document
-            .querySelectorAll(".svc-tab")
-            .forEach((t) => t.classList.remove("active"));
-          document
-            .querySelectorAll(".svc-pnl")
-            .forEach((p) => p.classList.remove("active"));
+  (function optimizedTabs() {
+    const tabMap = {
+      ass: "pnl-ass",
+      tax: "pnl-tax",
+      biz: "pnl-biz",
+      adv: "pnl-adv",
+      grc: "pnl-grc",
+    };
+
+    document.querySelectorAll(".svc-tab").forEach((tab) => {
+      tab.addEventListener("click", () => {
+        // Batch DOM updates
+        requestAnimationFrame(() => {
+          document.querySelectorAll(".svc-tab").forEach((t) => t.classList.remove("active"));
+          document.querySelectorAll(".svc-pnl").forEach((p) => p.classList.remove("active"));
+
           tab.classList.add("active");
           const pnl = document.getElementById(tabMap[tab.dataset.t]);
           if (pnl) {
             pnl.classList.add("active");
-            pnl.querySelectorAll(".sr,.sr-l,.sr-r").forEach((el) => {
-              el.classList.remove("on");
-              requestAnimationFrame(() =>
-                requestAnimationFrame(() => srObs.observe(el)),
-              );
-            });
+            // Re-trigger scroll reveal with delay
+            setTimeout(() => {
+              pnl.querySelectorAll(".sr,.sr-l,.sr-r").forEach((el) => {
+                el.classList.remove("on");
+                setTimeout(() => {
+                  const rect = el.getBoundingClientRect();
+                  if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    el.classList.add("on");
+                  }
+                }, 50);
+              });
+            }, 100);
           }
         });
       });
+    });
+  })();
 
-      /* ══════════════════════════════════════
-   GLOW CARD MOUSE TRACKING
+  /* ══════════════════════════════════════
+   OPTIMIZED GLOW CARDS - Use CSS if possible
 ══════════════════════════════════════ */
-      document.querySelectorAll(".glow-card").forEach((card) => {
-        const glow = card.querySelector(".glow");
-        if (!glow) return;
-        card.addEventListener("mousemove", (e) => {
+  (function optimizedGlow() {
+    const cards = document.querySelectorAll(".glow-card");
+    if (!cards.length) return;
+
+    // Use passive event listeners and throttle
+    cards.forEach((card) => {
+      const glow = card.querySelector(".glow");
+      if (!glow) return;
+
+      let rafId = null;
+      card.addEventListener("mousemove", (e) => {
+        if (rafId) {
+          cancelAnimationFrame(rafId);
+        }
+        rafId = requestAnimationFrame(() => {
           const r = card.getBoundingClientRect();
-          glow.style.left = e.clientX - r.left + "px";
-          glow.style.top = e.clientY - r.top + "px";
+          glow.style.left = (e.clientX - r.left) + "px";
+          glow.style.top = (e.clientY - r.top) + "px";
+          rafId = null;
+        });
+      }, { passive: true });
+    });
+  })();
+
+  /* ══════════════════════════════════════
+   OPTIMIZED WORLD CLOCKS
+══════════════════════════════════════ */
+  (function optimizedClocks() {
+    const worldClocks = [
+      { zone: "Australia/Sydney", id: "sydney" },
+      { zone: "Europe/London", id: "london" },
+      { zone: "America/New_York", id: "newyork" },
+      { zone: "Asia/Kolkata", id: "jamshedpur" },
+    ];
+
+    // Get all clock elements once
+    const clocks = worldClocks.map(clock => ({
+      zone: clock.zone,
+      hourEl: document.getElementById(`${clock.id}-hour`),
+      minuteEl: document.getElementById(`${clock.id}-minute`),
+      secondEl: document.getElementById(`${clock.id}-second`),
+      digitalEl: document.getElementById(`${clock.id}-time`),
+    })).filter(c => c.hourEl && c.minuteEl && c.secondEl && c.digitalEl);
+
+    if (!clocks.length) return;
+
+    // Cache timezone formatter
+    const formatter = new Intl.DateTimeFormat("en-GB", {
+      hour12: false,
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+    });
+
+    const time12Formatter = new Intl.DateTimeFormat("en-IN", {
+      hour12: true,
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+    });
+
+    function updateClocks() {
+      const now = new Date();
+
+      clocks.forEach((clock) => {
+        const parts = formatter.formatToParts(now);
+        const getVal = (type) => Number(parts.find((p) => p.type === type)?.value || 0);
+
+        const hour = getVal("hour");
+        const minute = getVal("minute");
+        const second = getVal("second");
+
+        const hourDeg = (hour % 12) * 30 + minute * 0.5 + second * (0.5 / 60);
+        const minuteDeg = minute * 6 + second * 0.1;
+        const secondDeg = second * 6;
+
+        // Batch style updates
+        requestAnimationFrame(() => {
+          clock.hourEl.style.transform = `translateX(-50%) rotate(${hourDeg}deg)`;
+          clock.minuteEl.style.transform = `translateX(-50%) rotate(${minuteDeg}deg)`;
+          clock.secondEl.style.transform = `translateX(-50%) rotate(${secondDeg}deg)`;
+
+          const time12 = time12Formatter.format(now);
+          const zoneLabel = clock.zone === "Asia/Kolkata" ? " IST" : "";
+          clock.digitalEl.textContent = `${time12}${zoneLabel}`;
         });
       });
+    }
 
-      /* ══════════════════════════════════════
-   HERO TEXT STAGGER (load)
+    // Update immediately then every second
+    updateClocks();
+    setInterval(updateClocks, 1000);
+  })();
+
+  /* ══════════════════════════════════════
+   OPTIMIZED LOADER
 ══════════════════════════════════════ */
-      window.addEventListener("load", () => {
-        document.querySelectorAll("#home .sr").forEach((el, i) => {
-          setTimeout(() => el.classList.add("on"), i * 90 + 100);
-        });
+  (function optimizedLoader() {
+    const loader = document.getElementById("site-loader");
+    if (!loader) return;
+
+    // Use CSS transitions instead of JS animation
+    const hideLoader = () => {
+      loader.classList.add("hide");
+      setTimeout(() => {
+        if (loader.parentNode) {
+          loader.remove();
+        }
+      }, 700);
+    };
+
+    // Use requestIdleCallback for better performance
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(() => {
+        setTimeout(hideLoader, 2000);
+      }, { timeout: 3000 });
+    } else {
+      setTimeout(hideLoader, 2500);
+    }
+  })();
+
+  /* ══════════════════════════════════════
+   FORM HANDLER
+══════════════════════════════════════ */
+  function handleForm(e) {
+    e.preventDefault();
+    document.getElementById("contactForm").style.display = "none";
+    document.getElementById("formOk").style.display = "block";
+  }
+
+  /* ══════════════════════════════════════
+   HERO TEXT STAGGER - Optimized
+══════════════════════════════════════ */
+  (function optimizedHeroStagger() {
+    window.addEventListener("load", () => {
+      const heroEls = document.querySelectorAll("#home .sr");
+      if (!heroEls.length) return;
+
+      heroEls.forEach((el, i) => {
+        setTimeout(() => {
+          el.classList.add("on");
+        }, i * 80 + 150); // Slightly faster stagger
       });
+    }, { passive: true, once: true });
+  })();
 
-      /* ══════════════════════════════════════
-   FORM
+  /* ══════════════════════════════════════
+   ANNOUNCEMENTS - Optimized
 ══════════════════════════════════════ */
-      function handleForm(e) {
-        e.preventDefault();
-        document.getElementById("contactForm").style.display = "none";
-        document.getElementById("formOk").style.display = "block";
-      }
+  (function optimizedAnnouncements() {
+    const announcementBtn = document.getElementById("announcementBtn");
+    const announcementsModal = document.getElementById("announcementsModal");
+    const announcementsClose = document.getElementById("announcementsClose");
+    const announcementsContent = document.getElementById("announcementsContent");
+    const announcementBadge = document.getElementById("announcementBadge");
 
-      /* ══════════════════════════════════════
-   HERO CANVAS — animated lines (SVG)
-══════════════════════════════════════ */
-      (function () {
-        const canvas = document.getElementById("hero-canvas");
-        const svg = document.createElementNS(
-          "http://www.w3.org/2000/svg",
-          "svg",
-        );
-        svg.setAttribute(
-          "style",
-          "position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0",
-        );
-        svg.setAttribute("xmlns", "http://www.w3.org/2000/svg");
-        // draw a few animated accent lines
-        const lines = [
-          {
-            x1: "0%",
-            y1: "35%",
-            x2: "45%",
-            y2: "35%",
-            color: "rgba(14,122,110,0.08)",
-            dur: "4s",
-          },
-          {
-            x1: "55%",
-            y1: "55%",
-            x2: "100%",
-            y2: "55%",
-            color: "rgba(30,77,140,0.07)",
-            dur: "5s",
-          },
-          {
-            x1: "0%",
-            y1: "68%",
-            x2: "35%",
-            y2: "68%",
-            color: "rgba(212,160,23,0.07)",
-            dur: "6s",
-          },
-        ];
-        lines.forEach((l) => {
-          const line = document.createElementNS(
-            "http://www.w3.org/2000/svg",
-            "line",
-          );
-          line.setAttribute("x1", l.x1);
-          line.setAttribute("y1", l.y1);
-          line.setAttribute("x2", l.x2);
-          line.setAttribute("y2", l.y2);
-          line.setAttribute("stroke", l.color);
-          line.setAttribute("stroke-width", "1");
-          const anim = document.createElementNS(
-            "http://www.w3.org/2000/svg",
-            "animate",
-          );
-          anim.setAttribute("attributeName", "stroke-dashoffset");
-          anim.setAttribute("from", "1000");
-          anim.setAttribute("to", "0");
-          anim.setAttribute("dur", l.dur);
-          anim.setAttribute("fill", "freeze");
-          line.setAttribute("stroke-dasharray", "1000");
-          line.setAttribute("stroke-dashoffset", "1000");
-          line.appendChild(anim);
-          svg.appendChild(line);
-        });
-        canvas.appendChild(svg);
-      })();
+    if (!announcementBtn || !announcementsModal) return;
 
-      /* ══════════════════════════════════════
-   ANNOUNCEMENTS SLIDER
-══════════════════════════════════════ */
-      const announcementBtn = document.getElementById("announcementBtn");
-      const announcementsModal = document.getElementById("announcementsModal");
-      const announcementsClose = document.getElementById("announcementsClose");
-      const announcementsContent = document.getElementById(
-        "announcementsContent",
-      );
-      const announcementBadge = document.getElementById("announcementBadge");
+    // Use event delegation for better performance
+    announcementBtn.addEventListener("click", () => {
+      announcementsModal.classList.add("open");
+      fetchAnnouncements();
+    });
 
-      // Open announcements modal
-      announcementBtn.addEventListener("click", () => {
-        announcementsModal.classList.add("open");
-        fetchAnnouncements();
-      });
-
-      // Close announcements modal
+    if (announcementsClose) {
       announcementsClose.addEventListener("click", () => {
         announcementsModal.classList.remove("open");
       });
+    }
 
-      // Close modal when clicking outside
-      announcementsModal.addEventListener("click", (e) => {
-        if (e.target === announcementsModal) {
-          announcementsModal.classList.remove("open");
-        }
-      });
+    announcementsModal.addEventListener("click", (e) => {
+      if (e.target === announcementsModal) {
+        announcementsModal.classList.remove("open");
+      }
+    });
 
-      // Fetch announcements from backend
-      async function fetchAnnouncements() {
-        try {
-          announcementsContent.innerHTML = `
-            <div class="announcements-loading">
-              <i class="ri-loader-4-line"></i>
-              <span>Loading announcements...</span>
-            </div>
-          `;
+    // Cache fetch with AbortController
+    let fetchController = null;
 
-          // Fetch from backend API
-          const response = await fetch(
-            "http://localhost:5000/api/announcements",
-          );
+    async function fetchAnnouncements() {
+      if (!announcementsContent) return;
 
-          if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-          }
+      // Cancel previous fetch
+      if (fetchController) {
+        fetchController.abort();
+      }
 
-          const data = await response.json();
+      fetchController = new AbortController();
 
-          if (data.success && data.data && data.data.length > 0) {
-            // Filter active announcements and check expiration
-            const now = new Date();
-            const activeAnnouncements = data.data.filter((announcement) => {
-              // Check if isActive is true
-              if (!announcement.isActive) return false;
+      try {
+        announcementsContent.innerHTML = `
+          <div class="announcements-loading">
+            <i class="ri-loader-4-line"></i>
+            <span>Loading announcements...</span>
+          </div>
+        `;
 
-              // Check if announcement has expired
-              if (
-                announcement.expiresAt &&
-                new Date(announcement.expiresAt) < now
-              ) {
-                return false;
-              }
+        const response = await fetch("http://localhost:5000/api/announcements", {
+          signal: fetchController.signal,
+        });
 
-              return true;
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+
+        const data = await response.json();
+
+        if (data.success && data.data && data.data.length > 0) {
+          const now = new Date();
+          const activeAnnouncements = data.data.filter((a) => {
+            if (!a.isActive) return false;
+            if (a.expiresAt && new Date(a.expiresAt) < now) return false;
+            return true;
+          });
+
+          if (activeAnnouncements.length > 0) {
+            if (announcementBadge) {
+              announcementBadge.textContent =
+                activeAnnouncements.length > 99 ? "99+" : activeAnnouncements.length;
+            }
+
+            // Use DocumentFragment for batch DOM updates
+            const fragment = document.createDocumentFragment();
+            activeAnnouncements.forEach((announcement, index) => {
+              const div = document.createElement("div");
+              div.className = `announcement-item ${index === 0 ? "active" : ""}`;
+              div.style.animationDelay = `${index * 0.08}s`;
+              div.innerHTML = `
+                <div class="announcement-date">
+                  ${new Date(announcement.createdAt).toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "short",
+                    day: "numeric",
+                  })}
+                </div>
+                <div class="announcement-title">${announcement.title || "Untitled Announcement"}</div>
+                <div class="announcement-text">${announcement.message || "No content provided"}</div>
+              `;
+              fragment.appendChild(div);
             });
 
-            if (activeAnnouncements.length > 0) {
-              // Update badge with count of active announcements
-              announcementBadge.textContent =
-                activeAnnouncements.length > 99
-                  ? "99+"
-                  : activeAnnouncements.length;
-
-              // Render announcements
-              const announcementsHTML = activeAnnouncements
-                .map(
-                  (announcement, index) => `
-                <div class="announcement-item ${index === 0 ? "active" : ""}" style="animation-delay: ${index * 0.08}s">
-                  <div class="announcement-date">
-                    ${new Date(announcement.createdAt).toLocaleDateString(
-                      "en-US",
-                      {
-                        year: "numeric",
-                        month: "short",
-                        day: "numeric",
-                      },
-                    )}
-                  </div>
-                  <div class="announcement-title">${announcement.title || "Untitled Announcement"}</div>
-                  <div class="announcement-text">${announcement.message || "No content provided"}</div>
-                </div>
-              `,
-                )
-                .join("");
-
-              announcementsContent.innerHTML = announcementsHTML;
-            } else {
-              announcementsContent.innerHTML = `
-                <div class="announcements-empty">
-                  <i class="ri-newspaper-line"></i>
-                  <p>No announcements at the moment</p>
-                </div>
-              `;
-              announcementBadge.textContent = "0";
-            }
+            announcementsContent.innerHTML = "";
+            announcementsContent.appendChild(fragment);
           } else {
             announcementsContent.innerHTML = `
               <div class="announcements-empty">
@@ -6648,135 +6791,55 @@
                 <p>No announcements at the moment</p>
               </div>
             `;
-            announcementBadge.textContent = "0";
+            if (announcementBadge) announcementBadge.textContent = "0";
           }
-        } catch (error) {
-          console.error("Error fetching announcements:", error);
+        } else {
           announcementsContent.innerHTML = `
             <div class="announcements-empty">
-              <i class="ri-alert-line"></i>
-              <p>Failed to load announcements. Please try again.</p>
+              <i class="ri-newspaper-line"></i>
+              <p>No announcements at the moment</p>
             </div>
           `;
+          if (announcementBadge) announcementBadge.textContent = "0";
         }
+      } catch (error) {
+        if (error.name === "AbortError") return;
+        console.error("Error fetching announcements:", error);
+        announcementsContent.innerHTML = `
+          <div class="announcements-empty">
+            <i class="ri-alert-line"></i>
+            <p>Failed to load announcements. Please try again.</p>
+          </div>
+        `;
       }
+    }
 
-      // Load announcements count on page load
-      window.addEventListener("load", () => {
-        fetchAnnouncements();
+    // Load on page load
+    if (document.readyState === "complete") {
+      fetchAnnouncements();
+    } else {
+      window.addEventListener("load", fetchAnnouncements, { passive: true, once: true });
+    }
+  })();
+
+
+
+    function openService(slug) {
+    // Navigate to services page with the service parameter
+    window.location.href = 'services.html?service=' + slug;
+  }
+
+  // Alternatively, if you want to intercept clicks and handle them
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.service-card-link').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const slug = this.dataset.service;
+        window.location.href = 'services.html?service=' + slug;
       });
+    });
+  });
+</script>
 
-      /* ══════════════════════════════════════
-   WORLD CLOCKS
-══════════════════════════════════════ */
-      const worldClocks = [
-        {
-          zone: "Australia/Sydney",
-          hourEl: document.getElementById("sydney-hour"),
-          minuteEl: document.getElementById("sydney-minute"),
-          secondEl: document.getElementById("sydney-second"),
-          digitalEl: document.getElementById("sydney-time"),
-        },
-        {
-          zone: "Europe/London",
-          hourEl: document.getElementById("london-hour"),
-          minuteEl: document.getElementById("london-minute"),
-          secondEl: document.getElementById("london-second"),
-          digitalEl: document.getElementById("london-time"),
-        },
-        {
-          zone: "America/New_York",
-          hourEl: document.getElementById("newyork-hour"),
-          minuteEl: document.getElementById("newyork-minute"),
-          secondEl: document.getElementById("newyork-second"),
-          digitalEl: document.getElementById("newyork-time"),
-        },
-        {
-          zone: "Asia/Kolkata",
-          hourEl: document.getElementById("jamshedpur-hour"),
-          minuteEl: document.getElementById("jamshedpur-minute"),
-          secondEl: document.getElementById("jamshedpur-second"),
-          digitalEl: document.getElementById("jamshedpur-time"),
-        },
-      ];
-
-      function updateWorldClocks() {
-        const now = new Date();
-
-        worldClocks.forEach((clock) => {
-          if (
-            !clock.hourEl ||
-            !clock.minuteEl ||
-            !clock.secondEl ||
-            !clock.digitalEl
-          ) {
-            return;
-          }
-
-          const parts = new Intl.DateTimeFormat("en-GB", {
-            timeZone: clock.zone,
-            hour12: false,
-            hour: "2-digit",
-            minute: "2-digit",
-            second: "2-digit",
-          }).formatToParts(now);
-
-          const getVal = (type) =>
-            Number(parts.find((p) => p.type === type)?.value || 0);
-          const hour = getVal("hour");
-          const minute = getVal("minute");
-          const second = getVal("second");
-
-          const time12 = new Intl.DateTimeFormat("en-IN", {
-            timeZone: clock.zone,
-            hour12: true,
-            hour: "2-digit",
-            minute: "2-digit",
-            second: "2-digit",
-          }).format(now);
-
-          const hourDeg = (hour % 12) * 30 + minute * 0.5 + second * (0.5 / 60);
-          const minuteDeg = minute * 6 + second * 0.1;
-          const secondDeg = second * 6;
-
-          clock.hourEl.style.transform = `translateX(-50%) rotate(${hourDeg}deg)`;
-          clock.minuteEl.style.transform = `translateX(-50%) rotate(${minuteDeg}deg)`;
-          clock.secondEl.style.transform = `translateX(-50%) rotate(${secondDeg}deg)`;
-
-          const zoneLabel = clock.zone === "Asia/Kolkata" ? " IST" : "";
-          clock.digitalEl.textContent = `${time12}${zoneLabel}`;
-        });
-      }
-
-      updateWorldClocks();
-      setInterval(updateWorldClocks, 1000);
-    </script>
-    <script>
-      (function () {
-        // ensure loader shows at least 3s from DOM ready
-        const loader = document.getElementById("site-loader");
-        if (!loader) return;
-        document.body.classList.add("loading");
-
-        const hideLoader = () => {
-          loader.classList.add("hide");
-          document.body.classList.remove("loading");
-          // remove from DOM after fade
-          setTimeout(() => loader.remove(), 700);
-        };
-
-        // If page already loaded, still wait 3s then hide
-        const run = () => setTimeout(hideLoader, 3000);
-
-        if (
-          document.readyState === "complete" ||
-          document.readyState === "interactive"
-        ) {
-          run();
-        } else {
-          window.addEventListener("DOMContentLoaded", run);
-        }
-      })();
-    </script>
   </body>
 </html>

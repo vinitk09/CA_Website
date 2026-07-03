@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Services – S.K. Mishra & Associates | Chartered Accountants</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    /* ── custom overrides & CA theme ── */
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #fafbfe;
+      color: #0d1b2a;
+    }
+    .section-padding {
+      /* padding: 40px 0; */
+    }
+    .service-wrapper {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 30px;
+      /* box-shadow: 0 8px 30px rgba(13, 27, 42, 0.08); */
+    }
+    /* left sidebar nav pills – bordered, full width, with hamburger icon */
+    .nav-pills-custom .nav-link {
+      border: 1px solid rgba(23, 88, 137, 0.18);
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin-bottom: 8px;
+      background: #ffffff;
+      color: #1a2e45;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .nav-pills-custom .nav-link i {
+      color: #175889;
+      font-size: 1.1rem;
+      width: 1.6rem;
+      text-align: center;
+    }
+    .nav-pills-custom .nav-link h5 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin: 0;
+      color: #1a2e45;
+    }
+    .nav-pills-custom .nav-link:hover {
+      background: rgba(23, 88, 137, 0.04);
+      border-color: #175889;
+    }
+    .nav-pills-custom .nav-link.active {
+      background: rgba(23, 88, 137, 0.08);
+      border-color: #175889;
+      box-shadow: 0 2px 8px rgba(23, 88, 137, 0.08);
+    }
+    .nav-pills-custom .nav-link.active h5 {
+      color: #175889;
+    }
+    .nav-pills-custom .nav-link.active i {
+      color: #175889;
+    }
+    /* right side tab content */
+    .tab-content-custom {
+      background: #ffffff;
+      border-radius: 16px;
+    }
+    .tab-content-custom img {
+      width: 100%;
+      height: 300px; /* Increased height for a better banner look */
+      object-fit: cover;
+      border-radius: 14px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .tab-content-custom .service-desc {
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: #4a5568;
+      max-height: 160px; /* Adjusted for full-width text */
+      overflow: hidden;
+      padding-right: 6px;
+      transition: max-height 0.5s ease;
+    }
+    .tab-content-custom .service-desc.expanded {
+      max-height: 2000px;
+    }
+    .tab-content-custom .service-desc::-webkit-scrollbar {
+      width: 3px;
+    }
+    .tab-content-custom .service-desc::-webkit-scrollbar-thumb {
+      background: #175889;
+      border-radius: 6px;
+    }
+    .btn-outline-teal {
+      border: 2px solid #175889;
+      color: #175889;
+      background: transparent;
+      font-weight: 700;
+      border-radius: 40px;
+      padding: 10px 30px;
+      transition: all 0.25s;
+    }
+    .btn-outline-teal:hover {
+      background: #175889;
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(23, 88, 137, 0.2);
+    }
+    .btn-teal {
+      background: linear-gradient(135deg, #175889 0%, rgba(23, 88, 137, 0.92) 100%);
+      color: #fff;
+      box-shadow: 0 4px 20px rgba(14, 122, 110, 0.35);
+      border: none;
+      padding: 10px 30px;
+      border-radius: 40px;
+      font-weight: 700;
+      transition: all 0.3s ease;
+    }
+    .btn-teal:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 10px 32px rgba(14, 122, 110, 0.45);
+      color: #fff;
+    }
+    /* responsive tweaks */
+    @media (max-width: 768px) {
+      .service-wrapper {
+        padding: 20px;
+      }
+      .nav-pills-custom .nav-link {
+        padding: 12px 14px;
+      }
+      .nav-pills-custom .nav-link h5 {
+        font-size: 0.85rem;
+      }
+      .tab-content-custom img {
+        height: 200px;
+      }
+    }
+    @media (max-width: 576px) {
+      .section-padding {
+        padding: 50px 0;
+      }
+      .tab-content-custom .service-desc {
+        max-height: 140px;
+        font-size: 0.85rem;
+      }
+    }
+    /* small helper */
+    .lh-medium {
+      line-height: 1.7;
+    }
+    .text-justify {
+      text-align: justify;
+    }
+    .object-fit-cover {
+      object-fit: cover;
+    }
+
+    /* ── Navbar & Header (exactly as previous team page) ── */
+    :root {
+      --bg: #fafbfe;
+      --white: #ffffff;
+      --navy: #0d1b2a;
+      --navy2: #1a2e45;
+      --teal: #175889;
+      --gold: #d4a017;
+      --gold2: #f0c040;
+      --saffron: #e8813a;
+      --green: #482a7a;
+      --light: #f0f4ff;
+      --light2: #e8f5f3;
+      --border: rgba(23, 88, 137, 0.14);
+      --border2: rgba(106, 29, 194, 0.12);
+      --shadow: 0 4px 24px rgba(13, 27, 42, 0.08);
+      --shadow2: 0 16px 56px rgba(13, 27, 42, 0.14);
+      --shadow3: 0 32px 80px rgba(13, 27, 42, 0.18);
+      --r: 10px;
+      --r2: 18px;
+      --r3: 28px;
+      --fd: "Montserrat", sans-serif;
+      --fb: "Montserrat", sans-serif;
+    }
+
+    /* ── CUSTOM CURSOR (from team page) ── */
+    #cursor-dot {
+      position: fixed;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--teal);
+      pointer-events: none;
+      z-index: 99999;
+      transition: transform 0.15s ease, opacity 0.2s;
+      transform: translate(-50%, -50%);
+    }
+    #cursor-ring {
+      position: fixed;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 2px solid var(--teal);
+      pointer-events: none;
+      z-index: 99998;
+      transition: transform 0.12s ease, width 0.25s, height 0.25s, border-color 0.3s, background 0.3s;
+      transform: translate(-50%, -50%);
+    }
+    body.cursor-hover #cursor-ring {
+      width: 56px;
+      height: 56px;
+      background: rgba(14, 122, 110, 0.08);
+      border-color: var(--gold);
+    }
+    body.cursor-hover #cursor-dot {
+      transform: translate(-50%, -50%) scale(1.6);
+      background: var(--gold);
+    }
+    @media (hover: none) {
+      #cursor-dot, #cursor-ring { display: none; }
+      body { cursor: auto; }
+    }
+
+    /* ── UTILITIES ── */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+    .section {
+      padding: 96px 0;
+    }
+    .section--light { background: var(--light); }
+    .section--white { background: var(--white); }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 5px 14px;
+      border-radius: 50px;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--teal);
+      background: rgba(14, 122, 110, 0.07);
+      border: 1px solid rgba(14, 122, 110, 0.18);
+      margin-bottom: 14px;
+    }
+
+    .heading {
+      font-family: var(--fd);
+      font-size: clamp(26px, 4vw, 50px);
+      font-weight: 900;
+      line-height: 1.12;
+      color: var(--navy);
+    }
+    .heading em {
+      font-style: italic;
+      color: var(--teal);
+    }
+
+    .body {
+      font-size: 15px;
+      line-height: 1.8;
+      color: #4a5568;
+    }
+
+    .rule {
+      width: 48px;
+      height: 3px;
+      border-radius: 2px;
+      margin: 16px 0 28px;
+      background: linear-gradient(90deg, var(--teal), var(--gold));
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 30px;
+      border-radius: 50px;
+      font-size: 13.5px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      cursor: none;
+      transition: all 0.3s ease;
+      border: none;
+      font-family: var(--fb);
+    }
+    .btn-teal-nav {
+      background: linear-gradient(135deg, #175889 0%, rgba(23, 88, 137, 0.92) 100%);
+      color: #fff;
+      box-shadow: 0 4px 20px rgba(14, 122, 110, 0.35);
+    }
+    .btn-teal-nav:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 10px 32px rgba(14, 122, 110, 0.45);
+      color: #fff;
+    }
+
+    /* ═══════════════════════════════════════════════════════
+       NAV - UNDERLINE REMOVED COMPLETELY
+    ═══════════════════════════════════════════════════════ */
+    #nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 900;
+      padding: 18px 0;
+      transition: all 0.4s ease;
+      background: #ffffff;
+      box-shadow: 0 2px 12px rgba(13, 27, 42, 0.06);
+    }
+    #nav.solid {
+      background: rgba(250, 251, 254, 0.94);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      box-shadow: 0 2px 24px rgba(13, 27, 42, 0.08);
+      padding: 12px 0;
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: none;
+      text-decoration: none !important;
+    }
+    .nav-brand-icon {
+      width: 54px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+    }
+    .nav-brand-icon img {
+      width: 54px;
+      height: 38px;
+      display: block;
+    }
+    .nav-brand-caption {
+      font-size: 11px;
+      color: var(--navy2);
+      font-weight: 600;
+      text-transform: none;
+      line-height: 1;
+      text-align-last: end;
+      text-decoration: none !important;
+    }
+    .nav-brand-text { 
+      line-height: 1;
+      text-decoration: none !important;
+    }
+    .nav-brand-name {
+      font-family: var(--fd);
+      font-size: 19px;
+      font-weight: 900;
+      color: var(--navy);
+      letter-spacing: -0.3px;
+      text-decoration: none !important;
+    }
+    .nav-brand-sub {
+      font-size: 15px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      text-transform: none;
+      color: var(--teal);
+      white-space: nowrap;
+      text-decoration: none !important;
+    }
+    .nav-brand-caption {
+      text-decoration: none !important;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .nav-links a,
+    .nav-dropdown-toggle {
+      position: relative;
+      padding: 7px 13px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--teal);
+      border-radius: 8px;
+      transition: all 0.25s;
+      white-space: nowrap;
+      background: transparent;
+      border: none;
+      font-family: inherit;
+      cursor: none;
+      text-decoration: none !important;
+    }
+    /* REMOVED UNDERLINE */
+    .nav-links a::after,
+    .nav-dropdown-toggle::after {
+      display: none !important;
+    }
+    .nav-links a:hover,
+    .nav-dropdown:hover .nav-dropdown-toggle {
+      color: var(--teal);
+      background: rgba(14, 122, 110, 0.06);
+    }
+    .nav-links a.active {
+      background: rgba(23, 88, 137, 0.12);
+      font-weight: 700;
+    }
+
+    .nav-dropdown {
+      position: relative;
+    }
+    .nav-dropdown-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .nav-dropdown-toggle i {
+      font-size: 12px;
+      transition: transform 0.25s ease;
+    }
+    .nav-dropdown:hover .nav-dropdown-toggle i {
+      transform: rotate(180deg);
+    }
+    .nav-dropdown-menu {
+      position: absolute;
+      top: calc(100% + 0px);
+      left: 0;
+      min-width: 220px;
+      padding: 10px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.98);
+      box-shadow: var(--shadow2);
+      border: 1px solid var(--border);
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      z-index: 1000;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu,
+    .nav-dropdown:focus-within .nav-dropdown-menu {
+      display: flex;
+    }
+    .nav-dropdown-menu a {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 10px;
+      color: var(--navy2);
+      background: transparent;
+      text-decoration: none !important;
+    }
+    .nav-dropdown-menu a:hover {
+      background: rgba(14, 122, 110, 0.08);
+      color: var(--teal);
+    }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* ── HAMBURGER ── */
+    .nav-hb {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+      width: 36px;
+      height: 36px;
+      cursor: none;
+      padding: 6px;
+      background: none;
+      border: none;
+      position: relative;
+      z-index: 920;
+    }
+    .nav-hb span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--navy);
+      border-radius: 2px;
+      transition: all 0.3s ease;
+      transform-origin: center;
+    }
+    .nav-hb.open span:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+    .nav-hb.open span:nth-child(2) {
+      opacity: 0;
+      transform: scaleX(0);
+    }
+    .nav-hb.open span:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-drawer {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: min(310px, 88vw);
+      height: 100vh;
+      background: #fff;
+      z-index: 910;
+      transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      padding: 90px 32px 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      box-shadow: -4px 0 40px rgba(13, 27, 42, 0.14);
+    }
+    .nav-drawer.open { right: 0; }
+    .nav-drawer a {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--navy2);
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(13, 27, 42, 0.06);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: color 0.25s;
+      text-decoration: none !important;
+    }
+    .nav-drawer a i {
+      color: var(--teal);
+      font-size: 16px;
+    }
+    .nav-drawer a:hover {
+      color: var(--teal);
+      background: rgba(23, 88, 137, 0.06);
+      padding-left: 8px;
+    }
+    .nav-drawer a.active {
+      background: rgba(23, 88, 137, 0.1);
+      font-weight: 700;
+    }
+    .nav-drawer .dl-sub { padding-left: 20px; font-size: 14px; }
+
+    .nav-drawer-close {
+      position: absolute;
+      top: 22px;
+      right: 22px;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(13, 27, 42, 0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: none;
+      transition: background 0.25s, transform 0.25s;
+    }
+    .nav-drawer-close:hover {
+      background: rgba(14, 122, 110, 0.12);
+      transform: rotate(90deg);
+    }
+    .nav-drawer-close i {
+      font-size: 20px;
+      color: var(--navy);
+    }
+
+    .nav-drawer-cta {
+      margin-top: auto;
+      padding-top: 24px;
+    }
+    .nav-drawer-cta .btn-teal-nav {
+      width: 100%;
+      justify-content: center;
+      color: #fff;
+    }
+
+    .nav-ovl {
+      position: fixed;
+      inset: 0;
+      background: rgba(13, 27, 42, 0.38);
+      z-index: 905;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.35s;
+    }
+    .nav-ovl.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* ═══════════════════════════════════════════════════════
+       PAGE HEADER (same as team page)
+    ═══════════════════════════════════════════════════════ */
+    .page-header {
+      min-height: 380px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, rgba(14, 122, 110, 0.08), rgba(30, 77, 140, 0.08));
+      margin-top: 80px;
+    }
+    .page-header-content {
+      text-align: center;
+    }
+    .page-header-content .heading {
+      margin-bottom: 16px;
+    }
+    .page-header-content .body {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Back to top button */
+    #backToTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--teal), var(--blue));
+      color: #fff;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      cursor: none;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s, transform 0.3s;
+      z-index: 100;
+    }
+    #backToTop:hover { transform: translateY(-4px); }
+    #backToTop.show { opacity: 1; pointer-events: auto; }
+
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .nav-cta { display: none; }
+      .nav-hb { display: flex; }
+    }
+    @media (max-width: 768px) {
+      .container { padding: 0 20px; }
+      .section { padding: 60px 0; }
+      .page-header { min-height: 300px; margin-top: 70px; }
+    }
+  </style>
+</head>
+<body>
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <nav id="nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-brand" style="text-decoration:none !important;">
+          <div class="nav-brand-icon">
+            <img src="assets/logo.png" alt="CA India Logo" />
+          </div>
+          <div class="nav-brand-text" style="text-decoration:none !important;">
+            <div class="nav-brand-sub" style="text-decoration:none !important;">S.K. Mishra &amp; Associates</div>
+            <div class="nav-brand-caption" style="text-decoration:none !important;">Chartered Accountant</div>
+          </div>
+        </a>
+
+        <div class="nav-links">
+          <a href="index.html#home" style="text-decoration:none !important;">Home</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown-toggle" type="button" style="text-decoration:none !important;">
+              About <i class="ri-arrow-down-s-line"></i>
+            </button>
+            <div class="nav-dropdown-menu">
+              <a href="index.html#about" style="text-decoration:none !important;">About Us</a>
+              <a href="teams.html" style="text-decoration:none !important;">Our Team</a>
+            </div>
+          </div>
+          <a href="index.html#services" style="text-decoration:none !important;">Our Services</a>
+          <a href="index.html#whatwedo" style="text-decoration:none !important;">What We Do</a>
+          <a href="index.html#achievements" style="text-decoration:none !important;">Our Achievements</a>
+          <a href="index.html#links" style="text-decoration:none !important;">Important Links</a>
+        </div>
+
+        <div class="nav-cta">
+          <a href="index.html#contact" class="btn btn-teal-nav" style="padding: 10px 22px; font-size: 12.5px; width: 152px; text-decoration:none !important;">
+            <i class="ri-mail-send-line"></i> Get in Touch
+          </a>
+        </div>
+
+        <button class="nav-hb" id="navHb" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="nav-ovl" id="navOvl"></div>
+  <div class="nav-drawer" id="navDrw">
+    <button class="nav-drawer-close" id="navDrwClose" aria-label="Close menu">
+      <i class="ri-close-line"></i>
+    </button>
+    <a href="index.html#home" class="dl" style="text-decoration:none !important;"><i class="ri-home-4-line"></i>Home</a>
+    <a href="index.html#about" class="dl" style="text-decoration:none !important;"><i class="ri-information-line"></i>About Us</a>
+    <a href="teams.html" class="dl dl-sub" style="text-decoration:none !important;"><i class="ri-group-line"></i>Our Team</a>
+    <a href="index.html#services" class="dl" style="text-decoration:none !important;"><i class="ri-briefcase-line"></i>Our Services</a>
+    <a href="index.html#whatwedo" class="dl" style="text-decoration:none !important;"><i class="ri-settings-3-line"></i>What We Do</a>
+    <a href="index.html#achievements" class="dl" style="text-decoration:none !important;"><i class="ri-trophy-line"></i>Our Achievements</a>
+    <a href="index.html#links" class="dl" style="text-decoration:none !important;"><i class="ri-links-line"></i>Important Links</a>
+    <div class="nav-drawer-cta">
+      <a href="index.html#contact" class="btn btn-teal-nav dl" style="text-decoration:none !important;">
+        <i class="ri-mail-send-line" style="color: white;"></i> Get in Touch
+      </a>
+    </div>
+  </div>
+
+  <section class="page-header">
+    <div class="container">
+      <div class="page-header-content">
+        <div class="chip" style="justify-content: center; margin-bottom: 24px">
+          <i class="ri-briefcase-line"></i>Our Services
+        </div>
+        <h1 class="heading">Explore Our <em>Expert Services</em></h1>
+        <p class="body" style="margin-top: 16px">
+          Partner-led engagements and a pan-India team delivering client-first outcomes.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white" style="padding-top: 40px;">
+    <div class="container">
+      <div class="service-wrapper">
+
+        <div class="row g-4">
+
+          <div class="col-lg-4">
+            <div class="nav nav-pills nav-pills-custom d-flex flex-column w-100 me-4" id="serviceTab" role="tablist" aria-orientation="vertical">
+
+              <button class="nav-link w-100 d-flex align-items-center text-start border px-4 py-3 mb-2" data-bs-toggle="pill" data-bs-target="#tab-pane-1" type="button" role="tab">
+                <h5 class="m-0"><i class="fas fa-bars text-primary me-3"></i>Assurance</h5>
+              </button>
+
+              <button class="nav-link w-100 d-flex align-items-center text-start border px-4 py-3 mb-2 active" data-bs-toggle="pill" data-bs-target="#tab-pane-2" type="button" role="tab">
+                <h5 class="m-0"><i class="fas fa-bars text-primary me-3"></i>Taxation</h5>
+              </button>
+
+              <button class="nav-link w-100 d-flex align-items-center text-start border px-4 py-3 mb-2" data-bs-toggle="pill" data-bs-target="#tab-pane-3" type="button" role="tab">
+                <h5 class="m-0"><i class="fas fa-bars text-primary me-3"></i>Advisory</h5>
+              </button>
+
+              <button class="nav-link w-100 d-flex align-items-center text-start border px-4 py-3 mb-2" data-bs-toggle="pill" data-bs-target="#tab-pane-4" type="button" role="tab">
+                <h5 class="m-0"><i class="fas fa-bars text-primary me-3"></i>Startup Consulting</h5>
+              </button>
+
+              <button class="nav-link w-100 d-flex align-items-center text-start border px-4 py-3 mb-2" data-bs-toggle="pill" data-bs-target="#tab-pane-5" type="button" role="tab">
+                <h5 class="m-0"><i class="fas fa-bars text-primary me-3"></i>Outsourcing Services</h5>
+              </button>
+
+              <button class="nav-link w-100 d-flex align-items-center text-start border px-4 py-3 mb-2" data-bs-toggle="pill" data-bs-target="#tab-pane-6" type="button" role="tab">
+                <h5 class="m-0"><i class="fas fa-bars text-primary me-3"></i>Insolvency Professional</h5>
+              </button>
+
+              <button class="nav-link w-100 d-flex align-items-center text-start border px-4 py-3 mb-2" data-bs-toggle="pill" data-bs-target="#tab-pane-7" type="button" role="tab">
+                <h5 class="m-0"><i class="fas fa-bars text-primary me-3"></i>Research</h5>
+              </button>
+
+              <button class="nav-link w-100 d-flex align-items-center text-start border px-4 py-3 mb-2" data-bs-toggle="pill" data-bs-target="#tab-pane-8" type="button" role="tab">
+                <h5 class="m-0"><i class="fas fa-bars text-primary me-3"></i>Valuation</h5>
+              </button>
+
+              <button class="nav-link w-100 d-flex align-items-center text-start border px-4 py-3 mb-2" data-bs-toggle="pill" data-bs-target="#tab-pane-9" type="button" role="tab">
+                <h5 class="m-0"><i class="fas fa-bars text-primary me-3"></i>Corporate Compliance</h5>
+              </button>
+
+            </div>
+          </div>
+
+          <div class="col-lg-8">
+            <div class="tab-content tab-content-custom w-100">
+
+              <div class="tab-pane fade" id="tab-pane-1" role="tabpanel">
+                <div class="w-100">
+                  <div class="position-relative mb-4">
+                    <img class="rounded w-100 object-fit-cover" src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1000&h=400&fit=crop&crop=center" alt="Assurance" />
+                  </div>
+                  <div class="d-flex flex-column">
+                    <div class="mb-3 text-justify lh-medium service-desc" id="desc-1">
+                      <strong>Audit & Assurance Services</strong><br>
+                      At SPARK, we provide our clients with accurate and timely solutions tailored to their specific requirements. We address the challenges of an ever-evolving economic and regulatory environment, ensure transparency, and build trust among management and stakeholders to support informed decision-making.<br><br>
+                      Our focus is on delivering high-quality audit and assurance services by identifying, assessing, and disclosing both financial and non-financial insights to stakeholders. We value our clients' acknowledgment and recommendations because this trust is a crucial motivator and plays a significant role in SPARK's ongoing growth and success.<br><br>
+                      We carefully consider each client's unique business model, policies, and procedures to deliver the most appropriate and effective solutions.<br><br>
+                      <strong>SPARK's Audit and Assurance Teams:</strong><br>
+                      • Dedicated to fulfilling client requirements<br>
+                      • Adhere to all applicable rules and regulations<br>
+                      • Build trust among management and stakeholders<br>
+                      • Support informed decision-making processes
+                    </div>
+                    <div class="d-flex gap-2 flex-wrap mt-2">
+                      <button class="btn btn-outline-teal py-2 px-4 read-more-btn" data-target="desc-1">Read More <i class="fas fa-arrow-down ms-2"></i></button>
+                      <a href="index.html#contact" class="btn btn-teal py-2 px-4">Contact Us</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade active show" id="tab-pane-2" role="tabpanel">
+                <div class="w-100">
+                  <div class="position-relative mb-4">
+                    <img class="rounded w-100 object-fit-cover" src="https://images.unsplash.com/photo-1554224155-8f04b2812a4a?w=1000&h=400&fit=crop&crop=center" alt="Taxation" />
+                  </div>
+                  <div class="d-flex flex-column">
+                    <div class="mb-3 text-justify lh-medium service-desc" id="desc-2">
+                      <strong>Taxation and Advisory Services</strong><br>
+                      At SPARK, we provide Corporate and Personal Tax Advisory, Planning, and Compliance. Taxation is an integral part of individual and corporate financial planning. SPARK places significant emphasis on taxation advisory services. Our approach is focused on relieving clients of future tax-related obligations through proactive planning and compliance.<br><br>
+                      <strong>International Taxation</strong><br>
+                      Organizations operating on a multinational platform often face challenges arising from taxation norms across different jurisdictions. At SPARK, we understand our clients' cross-border business requirements and develop solutions that enable flexibility, reconciliation, and tax optimization across jurisdictions. Cross-border transactions require specialized attention and expertise in relation to the applicable taxation regimes. SPARK provides advisory services to facilitate the smooth execution of such transactions.<br><br>
+                      <strong>Transfer Pricing</strong><br>
+                      In today's globalized economy, transfer pricing has become a critical aspect of international business. SPARK assists clients in navigating complex transfer pricing regulations, ensuring compliance and optimizing tax positions across related entities.<br><br>
+                      <strong>Our Taxation Services Include:</strong><br>
+                      • Corporate Tax Advisory & Planning<br>
+                      • Personal Tax Advisory & Compliance<br>
+                      • International Taxation & Cross-border Advisory<br>
+                      • Transfer Pricing Documentation & Compliance<br>
+                      • Tax Litigation Support<br>
+                      • GST Advisory & Compliance
+                    </div>
+                    <div class="d-flex gap-2 flex-wrap mt-2">
+                      <button class="btn btn-outline-teal py-2 px-4 read-more-btn" data-target="desc-2">Read More <i class="fas fa-arrow-down ms-2"></i></button>
+                      <a href="index.html#contact" class="btn btn-teal py-2 px-4">Contact Us</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="tab-pane-3" role="tabpanel">
+                <div class="w-100">
+                  <div class="position-relative mb-4">
+                    <img class="rounded w-100 object-fit-cover" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1000&h=400&fit=crop&crop=center" alt="Advisory" />
+                  </div>
+                  <div class="d-flex flex-column">
+                    <div class="mb-3 text-justify lh-medium service-desc" id="desc-3">
+                      <strong>Corporate Finance and Advisory Services</strong><br>
+                      As a trusted advisor to our clients, we bring a unique and holistic perspective to every engagement. Our strength lies in our ability to view challenges from both sides — stepping into the client's shoes while also providing objective, strategic advisory insight.<br><br>
+                      This dual perspective stems from the distinctive experience of our team. Our professionals have worked with leading global investment banks as well as within in-house corporate finance teams of large corporations. Having operated on both sides of the table in senior positions, we understand the expectations, pressures, and decision-making processes of all stakeholders involved.<br><br>
+                      This combination of advisory expertise and real-world corporate experience enables us to deliver practical, commercially sound, and execution-focused solutions tailored to our clients' needs.<br><br>
+                      <strong>Our Advisory Services Include:</strong><br>
+                      • Strategic Financial Advisory<br>
+                      • Mergers & Acquisitions Support<br>
+                      • Capital Raising and Structuring<br>
+                      • Financial Due Diligence<br>
+                      • Business Restructuring<br>
+                      • Financial Modeling & Valuations
+                    </div>
+                    <div class="d-flex gap-2 flex-wrap mt-2">
+                      <button class="btn btn-outline-teal py-2 px-4 read-more-btn" data-target="desc-3">Read More <i class="fas fa-arrow-down ms-2"></i></button>
+                      <a href="index.html#contact" class="btn btn-teal py-2 px-4">Contact Us</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="tab-pane-4" role="tabpanel">
+                <div class="w-100">
+                  <div class="position-relative mb-4">
+                    <img class="rounded w-100 object-fit-cover" src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=1000&h=400&fit=crop&crop=center" alt="Startup" />
+                  </div>
+                  <div class="d-flex flex-column">
+                    <div class="mb-3 text-justify lh-medium service-desc" id="desc-4">
+                      <strong>Startup Advisory Services</strong><br>
+                      Startups have specific requirements and are not bound by generalized business solutions in the initial stages of their growth. At SPARK, we provide customized services tailored to the ever-changing needs of startups. We address the dynamic requirements of emerging businesses and assist them in realizing their full potential. We help startups transform their ideas into reality.<br><br>
+                      <strong>Our Services Include:</strong><br>
+                      <strong>1. Business Structure Advisory</strong><br>
+                      The structure of a business involves careful decision-making based on various factors such as scale, stage, and type of operations. It also relates to the complexity of the business model and the level of statutory compliance required. We assist clients in selecting the most appropriate business structure, taking into consideration the scale and nature of their operations.<br><br>
+                      <strong>2. Procurement of Funding</strong><br>
+                      We assist startups in identifying and securing funding from various sources including angel investors, venture capital firms, and financial institutions. Our team helps prepare business plans, financial projections, and investment presentations.<br><br>
+                      <strong>3. Compliance and Regulatory Guidance</strong><br>
+                      We help startups navigate the complex regulatory environment, ensuring compliance with applicable laws and regulations from inception through growth stages.<br><br>
+                      <strong>4. Operational Optimization</strong><br>
+                      We assist startups in optimizing their operations, implementing efficient processes, and establishing robust internal controls.<br><br>
+                      <strong>5. Growth Strategy Development</strong><br>
+                      We work with startups to develop comprehensive growth strategies, including market entry, expansion, and scaling plans.
+                    </div>
+                    <div class="d-flex gap-2 flex-wrap mt-2">
+                      <button class="btn btn-outline-teal py-2 px-4 read-more-btn" data-target="desc-4">Read More <i class="fas fa-arrow-down ms-2"></i></button>
+                      <a href="index.html#contact" class="btn btn-teal py-2 px-4">Contact Us</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="tab-pane-5" role="tabpanel">
+                <div class="w-100">
+                  <div class="position-relative mb-4">
+                    <img class="rounded w-100 object-fit-cover" src="https://images.unsplash.com/photo-1554224155-1696413565d3?w=1000&h=400&fit=crop&crop=center" alt="Outsourcing" />
+                  </div>
+                  <div class="d-flex flex-column">
+                    <div class="mb-3 text-justify lh-medium service-desc" id="desc-5">
+                      <strong>Accounting, Advisory, and Compliance Services</strong><br>
+                      SPARK provides a range of accounting, advisory, and compliance services to support clients and enable them to concentrate on their core business activities. Outsourcing processes also leads to cost optimization through operational efficiencies and expert resource pooling.<br><br>
+                      <strong>1. Accounting and Bookkeeping</strong><br>
+                      At SPARK, we design customized outsourcing solutions aligned with your business requirements and objectives. We function as a virtual back office for clients, handling bookkeeping and accounting activities—from setup and ongoing support to maintenance and reporting.<br><br>
+                      <strong>Our Services Include:</strong><br>
+                      • Accounting and bookkeeping<br>
+                      • Financial data processing<br>
+                      • Receivables management<br>
+                      • Payables management<br>
+                      • Fixed asset and inventory management<br>
+                      • Payroll processing and reconciliations<br>
+                      • Accounting review and MIS reporting<br>
+                      • Finalization of accounts<br><br>
+                      <strong>2. Transaction Process Optimization</strong><br>
+                      We assist clients in optimizing their transaction processing workflows, improving efficiency, and reducing operational costs.
+                    </div>
+                    <div class="d-flex gap-2 flex-wrap mt-2">
+                      <button class="btn btn-outline-teal py-2 px-4 read-more-btn" data-target="desc-5">Read More <i class="fas fa-arrow-down ms-2"></i></button>
+                      <a href="index.html#contact" class="btn btn-teal py-2 px-4">Contact Us</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="tab-pane-6" role="tabpanel">
+                <div class="w-100">
+                  <div class="position-relative mb-4">
+                    <img class="rounded w-100 object-fit-cover" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1000&h=400&fit=crop&crop=center" alt="Insolvency" />
+                  </div>
+                  <div class="d-flex flex-column">
+                    <div class="mb-3 text-justify lh-medium service-desc" id="desc-6">
+                      <strong>Insolvency & Resolution Services</strong><br>
+                      SPARK offers comprehensive insolvency and resolution services under the Insolvency and Bankruptcy Code (IBC).<br><br>
+                      <strong>Services to Financial and Operational Creditors:</strong><br>
+                      • Filing of claims on behalf of financial creditors<br>
+                      • Preparation of demand notices for operational creditors<br>
+                      • Filing of claims on behalf of operational creditors<br>
+                      • Acting as an Interim Resolution Professional (IRP)<br>
+                      • Acting as a Resolution Professional (RP) for CIRP<br>
+                      • Fast-Track Insolvency Resolution Process<br>
+                      • Acting as a Liquidator under IBC<br>
+                      • Drafting replies to various notices issued by the corporate debtor<br><br>
+                      <strong>Services Relating to the Corporate Insolvency Resolution Process:</strong><br>
+                      • Preparation of Information Memorandum<br>
+                      • Evaluation of Resolution Plans<br>
+                      • Assistance in preparation of Resolution Plans<br>
+                      • Liquidation proceedings and asset disposal
+                    </div>
+                    <div class="d-flex gap-2 flex-wrap mt-2">
+                      <button class="btn btn-outline-teal py-2 px-4 read-more-btn" data-target="desc-6">Read More <i class="fas fa-arrow-down ms-2"></i></button>
+                      <a href="index.html#contact" class="btn btn-teal py-2 px-4">Contact Us</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="tab-pane-7" role="tabpanel">
+                <div class="w-100">
+                  <div class="position-relative mb-4">
+                    <img class="rounded w-100 object-fit-cover" src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1000&h=400&fit=crop&crop=center" alt="Research" />
+                  </div>
+                  <div class="d-flex flex-column">
+                    <div class="mb-3 text-justify lh-medium service-desc" id="desc-7">
+                      <strong>Knowledge & Development</strong><br>
+                      Be a Lifelong Student: The More You Learn, the More You Earn — and the More People Trust You.<br><br>
+                      The sustained development of any organization depends upon continuous efforts toward knowledge enhancement. SPARK places special emphasis on keeping its team updated with the latest developments in their respective domains.<br><br>
+                      The partners at SPARK are committed to continuously expanding their expertise and professional competence. Regular research initiatives and training sessions are conducted to keep staff informed about recent developments in their areas of practice.<br><br>
+                      <strong>Our Knowledge Initiatives:</strong><br>
+                      • Continuous Professional Development programs<br>
+                      • Research and Training Initiatives<br>
+                      • Centralized knowledge repository for research projects<br>
+                      • Domain Expertise Enhancement<br>
+                      • Team Skill Development Programs<br><br>
+                      Additionally, a centralized knowledge repository has been established to document research projects and insights, ensuring that accumulated knowledge is effectively shared and utilized for the collective benefit of the organization.
+                    </div>
+                    <div class="d-flex gap-2 flex-wrap mt-2">
+                      <button class="btn btn-outline-teal py-2 px-4 read-more-btn" data-target="desc-7">Read More <i class="fas fa-arrow-down ms-2"></i></button>
+                      <a href="index.html#contact" class="btn btn-teal py-2 px-4">Contact Us</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="tab-pane-8" role="tabpanel">
+                <div class="w-100">
+                  <div class="position-relative mb-4">
+                    <img class="rounded w-100 object-fit-cover" src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1000&h=400&fit=crop&crop=center" alt="Valuation" />
+                  </div>
+                  <div class="d-flex flex-column">
+                    <div class="mb-3 text-justify lh-medium service-desc" id="desc-8">
+                      <strong>Valuation Services</strong><br>
+                      Valuation has become an integral component of the modern business environment. Numerous business transactions require valuation in accordance with applicable statutes and regulatory frameworks.<br><br>
+                      <strong>Regulatory Framework:</strong><br>
+                      Section 247 of the Companies Act, 2013 mandates that all valuations required under the Act must be conducted by Registered Valuers. Similarly, under the Insolvency and Bankruptcy Code, 2016 (IBC), only Registered Valuers are eligible to undertake valuation assignments. The Insolvency and Bankruptcy Board of India (IBBI) is the authority empowered to grant registration to valuers.<br><br>
+                      SPARK is committed to delivering high-quality valuation services in compliance with applicable laws and professional standards.<br><br>
+                      <strong>Our Valuation Services:</strong><br>
+                      • Valuation under the Companies Act, 2013<br>
+                      • Valuation under the Insolvency and Bankruptcy Code<br>
+                      • Valuation for mergers and acquisitions<br>
+                      • Valuation for financial reporting<br>
+                      • Business valuation for strategic planning<br>
+                      • Valuation of intangible assets
+                    </div>
+                    <div class="d-flex gap-2 flex-wrap mt-2">
+                      <button class="btn btn-outline-teal py-2 px-4 read-more-btn" data-target="desc-8">Read More <i class="fas fa-arrow-down ms-2"></i></button>
+                      <a href="index.html#contact" class="btn btn-teal py-2 px-4">Contact Us</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="tab-pane-9" role="tabpanel">
+                <div class="w-100">
+                  <div class="position-relative mb-4">
+                    <img class="rounded w-100 object-fit-cover" src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1000&h=400&fit=crop&crop=center" alt="Compliance" />
+                  </div>
+                  <div class="d-flex flex-column">
+                    <div class="mb-3 text-justify lh-medium service-desc" id="desc-9">
+                      <strong>Corporate Compliance Services</strong><br>
+                      SPARK provides comprehensive compliance solutions under various corporate laws, including Companies Act, FEMA, and regulatory filings. Our team ensures timely and accurate compliance, reducing risk and enhancing governance.<br><br>
+                      <strong>Our Compliance Services Include:</strong><br>
+                      • Company Formation and Registration<br>
+                      • Annual Compliance under Companies Act<br>
+                      • Board and Shareholder Meeting Management<br>
+                      • Statutory Filing and Secretarial Services<br>
+                      • FEMA Compliance and Advisory<br>
+                      • Regulatory Filings and Approvals<br>
+                      • Corporate Governance Advisory<br>
+                      • Due Diligence Services<br><br>
+                      <strong>Corporate Governance:</strong><br>
+                      We assist organizations in establishing robust corporate governance frameworks, ensuring transparency, accountability, and stakeholder confidence. Our team provides advisory on board composition, committee formation, and governance best practices.
+                    </div>
+                    <div class="d-flex gap-2 flex-wrap mt-2">
+                      <button class="btn btn-outline-teal py-2 px-4 read-more-btn" data-target="desc-9">Read More <i class="fas fa-arrow-down ms-2"></i></button>
+                      <a href="index.html#contact" class="btn btn-teal py-2 px-4">Contact Us</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div></div></div></section>
+
+  <button id="backToTop" aria-label="Back to top"><i class="ri-arrow-up-s-line"></i></button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // ══════════════════════════════════════
+    // CUSTOM CURSOR (from team page)
+    // ══════════════════════════════════════
+    const dot = document.getElementById('cursor-dot');
+    const ring = document.getElementById('cursor-ring');
+    let mouseX = 0, mouseY = 0;
+    document.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      dot.style.left = mouseX + 'px';
+      dot.style.top = mouseY + 'px';
+      ring.style.left = mouseX + 'px';
+      ring.style.top = mouseY + 'px';
+    });
+    document.addEventListener('mouseover', (e) => {
+      if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON' || e.target.classList.contains('cursor-hover')) {
+        document.body.classList.add('cursor-hover');
+      }
+    });
+    document.addEventListener('mouseout', (e) => {
+      if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON' || e.target.classList.contains('cursor-hover')) {
+        document.body.classList.remove('cursor-hover');
+      }
+    });
+
+    // ══════════════════════════════════════
+    // NAV (from team page)
+    // ══════════════════════════════════════
+    const nav = document.getElementById('nav');
+    const hb = document.getElementById('navHb');
+    const drw = document.getElementById('navDrw');
+    const ovl = document.getElementById('navOvl');
+    const drwClose = document.getElementById('navDrwClose');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) nav.classList.add('solid');
+      else nav.classList.remove('solid');
+    }, { passive: true });
+
+    const openNav = () => {
+      hb.classList.add('open');
+      drw.classList.add('open');
+      ovl.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    };
+    const closeNav = () => {
+      hb.classList.remove('open');
+      drw.classList.remove('open');
+      ovl.classList.remove('open');
+      document.body.style.overflow = '';
+    };
+    hb.addEventListener('click', () => drw.classList.contains('open') ? closeNav() : openNav());
+    ovl.addEventListener('click', closeNav);
+    drwClose.addEventListener('click', closeNav);
+    document.querySelectorAll('.dl').forEach(a => a.addEventListener('click', closeNav));
+
+    // ══════════════════════════════════════
+    // BACK TO TOP (from team page)
+    // ══════════════════════════════════════
+    const btt = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) btt.classList.add('show');
+      else btt.classList.remove('show');
+    }, { passive: true });
+    btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // ══════════════════════════════════════
+    // READ MORE - Expand/Collapse
+    // ══════════════════════════════════════
+    document.querySelectorAll('.read-more-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const targetId = this.getAttribute('data-target');
+        const desc = document.getElementById(targetId);
+        if (desc) {
+          desc.classList.toggle('expanded');
+          if (desc.classList.contains('expanded')) {
+            this.innerHTML = 'Read Less <i class="fas fa-arrow-up ms-2"></i>';
+          } else {
+            this.innerHTML = 'Read More <i class="fas fa-arrow-down ms-2"></i>';
+          }
+        }
+      });
+    });
+
+    // ══════════════════════════════════════
+    // Bootstrap pills (ensure active state)
+    // ══════════════════════════════════════
+    (function() {
+      const triggerTabList = [].slice.call(document.querySelectorAll('#serviceTab button'))
+      triggerTabList.forEach(function(triggerEl) {
+        const tabTrigger = new bootstrap.Tab(triggerEl)
+        triggerEl.addEventListener('click', function(event) {
+          event.preventDefault()
+          tabTrigger.show()
+        })
+      })
+    })();
+
+    // Reset expanded state when switching tabs
+    document.querySelectorAll('#serviceTab button').forEach(btn => {
+      btn.addEventListener('shown.bs.tab', function() {
+        // Find all desc elements in the active tab and collapse them
+        const activeTab = document.querySelector('.tab-pane.active.show');
+        if (activeTab) {
+          const descs = activeTab.querySelectorAll('.service-desc');
+          descs.forEach(d => {
+            d.classList.remove('expanded');
+          });
+          const btns = activeTab.querySelectorAll('.read-more-btn');
+          btns.forEach(b => {
+            b.innerHTML = 'Read More <i class="fas fa-arrow-down ms-2"></i>';
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
