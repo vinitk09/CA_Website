@@ -1,739 +1,935 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <title>Terms &amp; Conditions – S.K. Mishra & Associates | Chartered Accountants</title>
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
 
-    <style>
-      /* ═══════════════════════════════════════════════════════
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Terms &amp; Conditions – S.K. Mishra & Associates | Chartered Accountants</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    /* ═══════════════════════════════════════════════════════
    DESIGN SYSTEM – CA INDIA LIGHT THEME
 ═══════════════════════════════════════════════════════ */
-      :root {
-        --bg: #f4f7fb;
-        --white: #ffffff;
-        --navy: #0d1b2a;
-        --navy2: #1a2e45;
-        --blue: #1e4d8c;
-        --teal: #175889;
-        --gold: #d4a017;
-        --gold2: #f0c040;
-        --saffron: #e8813a;
-        --green: #482a7a;
-        --light: #f7fbff;
-        --light2: #eef6fa;
-        --border: rgba(82, 16, 139, 0.14);
-        --border2: rgba(106, 29, 194, 0.12);
-        --shadow: 0 4px 24px rgba(13, 27, 42, 0.08);
-        --shadow2: 0 16px 56px rgba(13, 27, 42, 0.14);
-        --shadow3: 0 32px 80px rgba(13, 27, 42, 0.18);
-        --r: 10px;
-        --r2: 18px;
-        --r3: 28px;
-        --fd: "Montserrat", sans-serif;
-        --fb: "Montserrat", sans-serif;
-      }
-      *,
-      *::before,
-      *::after {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-      html {
-        scroll-behavior: smooth;
-        overflow-x: hidden;
-      }
-      body {
-        font-family: var(--fb);
-        background: var(--bg);
-        color: var(--navy);
-        overflow-x: hidden;
-        cursor: none;
-      }
-      img {
-        max-width: 100%;
-        display: block;
-      }
-      a {
-        text-decoration: none;
-        color: inherit;
-      }
-      ul {
-        list-style: none;
-      }
+    :root {
+      --bg: #f4f7fb;
+      --white: #ffffff;
+      --navy: #0d1b2a;
+      --navy2: #1a2e45;
+      --blue: #1e4d8c;
+      --teal: #175889;
+      --gold: #d4a017;
+      --gold2: #f0c040;
+      --saffron: #e8813a;
+      --green: #482a7a;
+      --light: #f7fbff;
+      --light2: #eef6fa;
+      --border: rgba(82, 16, 139, 0.14);
+      --border2: rgba(106, 29, 194, 0.12);
+      --shadow: 0 4px 24px rgba(13, 27, 42, 0.08);
+      --shadow2: 0 16px 56px rgba(13, 27, 42, 0.14);
+      --shadow3: 0 32px 80px rgba(13, 27, 42, 0.18);
+      --r: 10px;
+      --r2: 18px;
+      --r3: 28px;
+      --fd: "Montserrat", sans-serif;
+      --fb: "Montserrat", sans-serif;
+    }
 
-      /* ── CUSTOM CURSOR ── */
-      #cursor-dot {
-        position: fixed;
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background: var(--teal);
-        pointer-events: none;
-        z-index: 99999;
-        transition:
-          transform 0.15s ease,
-          opacity 0.2s;
-        transform: translate(-50%, -50%);
-      }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    body {
+      font-family: var(--fb);
+      background: var(--bg);
+      color: var(--navy);
+      overflow-x: hidden;
+      cursor: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    /* ── CUSTOM CURSOR ── */
+    #cursor-dot {
+      position: fixed;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--teal);
+      pointer-events: none;
+      z-index: 99999;
+      transition:
+        transform 0.15s ease,
+        opacity 0.2s;
+      transform: translate(-50%, -50%);
+    }
+
+    #cursor-ring {
+      position: fixed;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 2px solid var(--teal);
+      pointer-events: none;
+      z-index: 99998;
+      transition:
+        transform 0.12s ease,
+        width 0.25s,
+        height 0.25s,
+        border-color 0.3s,
+        background 0.3s;
+      transform: translate(-50%, -50%);
+    }
+
+    body.cursor-hover #cursor-ring {
+      width: 56px;
+      height: 56px;
+      background: rgba(14, 122, 110, 0.08);
+      border-color: var(--gold);
+    }
+
+    body.cursor-hover #cursor-dot {
+      transform: translate(-50%, -50%) scale(1.6);
+      background: var(--gold);
+    }
+
+    @media (hover: none) {
+
+      #cursor-dot,
       #cursor-ring {
-        position: fixed;
-        width: 38px;
-        height: 38px;
-        border-radius: 50%;
-        border: 2px solid var(--teal);
-        pointer-events: none;
-        z-index: 99998;
-        transition:
-          transform 0.12s ease,
-          width 0.25s,
-          height 0.25s,
-          border-color 0.3s,
-          background 0.3s;
-        transform: translate(-50%, -50%);
-      }
-      body.cursor-hover #cursor-ring {
-        width: 56px;
-        height: 56px;
-        background: rgba(14, 122, 110, 0.08);
-        border-color: var(--gold);
-      }
-      body.cursor-hover #cursor-dot {
-        transform: translate(-50%, -50%) scale(1.6);
-        background: var(--gold);
-      }
-      @media (hover: none) {
-        #cursor-dot,
-        #cursor-ring {
-          display: none;
-        }
-        body {
-          cursor: auto;
-        }
+        display: none;
       }
 
-      /* ── UTILITIES ── */
-      .container {
-        width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 28px;
+      body {
+        cursor: auto;
       }
-      .section {
-        padding: 96px 0;
-      }
-      .section--light {
-        background: var(--light);
-      }
-      .section--light2 {
-        background: var(--light2);
-      }
-      .section--white {
-        background: var(--white);
-      }
+    }
 
-      .chip {
-        display: inline-flex;
-        align-items: center;
-        gap: 7px;
-        padding: 5px 14px;
-        border-radius: 50px;
-        font-size: 10.5px;
-        font-weight: 700;
-        letter-spacing: 2.5px;
-        text-transform: uppercase;
-        color: var(--teal);
-        background: rgba(14, 122, 110, 0.07);
-        border: 1px solid rgba(14, 122, 110, 0.18);
-        margin-bottom: 14px;
-      }
-      .chip i {
-        font-size: 13px;
-      }
+    /* ── UTILITIES ── */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
 
-      .heading {
-        font-family: var(--fd);
-        font-size: clamp(26px, 4vw, 50px);
-        font-weight: 900;
-        line-height: 1.12;
-        color: var(--navy);
-      }
-      .heading em {
-        font-style: italic;
-        color: var(--teal);
-      }
-      .heading span {
-        color: var(--blue);
-      }
+    .section {
+      padding: 96px 0;
+    }
 
-      .subhead {
-        font-family: var(--fd);
-        font-size: clamp(18px, 2.5vw, 26px);
-        font-weight: 700;
-        color: var(--navy);
-      }
+    .section--light {
+      background: var(--light);
+    }
 
-      .body {
-        font-size: 15px;
-        line-height: 1.8;
-        color: #4a5568;
-      }
+    .section--light2 {
+      background: var(--light2);
+    }
 
-      .rule {
-        width: 48px;
-        height: 3px;
-        border-radius: 2px;
-        margin: 16px 0 28px;
-        background: linear-gradient(90deg, var(--teal), var(--gold));
-      }
+    .section--white {
+      background: var(--white);
+    }
 
-      .btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 13px 30px;
-        border-radius: 50px;
-        font-size: 13.5px;
-        font-weight: 700;
-        letter-spacing: 0.3px;
-        cursor: none;
-        transition: all 0.3s ease;
-        border: none;
-        font-family: var(--fb);
-      }
-      .btn-teal {
-        background: linear-gradient(135deg, #48208a, #964bd5);
-        color: #fff;
-        box-shadow: 0 4px 20px rgba(14, 122, 110, 0.35);
-      }
-      .btn-teal:hover {
-        transform: translateY(-3px) scale(1.02);
-        box-shadow: 0 10px 32px rgba(14, 122, 110, 0.45);
-      }
-      .btn-outline {
-        background: transparent;
-        border: 2px solid white;
-        color: white;
-      }
-      .btn-outline:hover {
-        background: linear-gradient(135deg, #48208a, #964bd5);
-        color: #fff;
-        transform: translateY(-2px);
-        border: 2px solid purple;
-      }
-      .btn-gold {
-        background: linear-gradient(135deg, var(--gold), var(--gold2));
-        color: var(--navy);
-        box-shadow: 0 4px 20px rgba(212, 160, 23, 0.35);
-      }
-      .btn-gold:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 10px 32px rgba(212, 160, 23, 0.45);
-      }
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 5px 14px;
+      border-radius: 50px;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--teal);
+      background: rgba(14, 122, 110, 0.07);
+      border: 1px solid rgba(14, 122, 110, 0.18);
+      margin-bottom: 14px;
+    }
 
-      /* ── SCROLL REVEAL ── */
-      .sr {
-        opacity: 0;
-        transform: translateY(40px);
-        transition:
-          opacity 0.75s ease,
-          transform 0.75s ease;
-      }
-      .sr-l {
-        opacity: 0;
-        transform: translateX(-44px);
-        transition:
-          opacity 0.75s ease,
-          transform 0.75s ease;
-      }
-      .sr-r {
-        opacity: 0;
-        transform: translateX(44px);
-        transition:
-          opacity 0.75s ease,
-          transform 0.75s ease;
-      }
-      .sr.on,
-      .sr-l.on,
-      .sr-r.on {
-        opacity: 1;
-        transform: none;
-      }
-      .d1 {
-        transition-delay: 0.08s;
-      }
-      .d2 {
-        transition-delay: 0.16s;
-      }
-      .d3 {
-        transition-delay: 0.25s;
-      }
-      .d4 {
-        transition-delay: 0.34s;
-      }
-      .d5 {
-        transition-delay: 0.43s;
-      }
-      .d6 {
-        transition-delay: 0.52s;
-      }
+    .chip i {
+      font-size: 13px;
+    }
 
-      /* ═══════════════════════════════════════════════════════
+    .heading {
+      font-family: var(--fd);
+      font-size: clamp(26px, 4vw, 50px);
+      font-weight: 900;
+      line-height: 1.12;
+      color: var(--navy);
+    }
+
+    .heading em {
+      font-style: italic;
+      color: var(--teal);
+    }
+
+    .heading span {
+      color: var(--blue);
+    }
+
+    .subhead {
+      font-family: var(--fd);
+      font-size: clamp(18px, 2.5vw, 26px);
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .body {
+      font-size: 15px;
+      line-height: 1.8;
+      color: #4a5568;
+    }
+
+    .rule {
+      width: 48px;
+      height: 3px;
+      border-radius: 2px;
+      margin: 16px 0 28px;
+      background: linear-gradient(90deg, var(--teal), var(--gold));
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 30px;
+      border-radius: 50px;
+      font-size: 13.5px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      cursor: none;
+      transition: all 0.3s ease;
+      border: none;
+      font-family: var(--fb);
+    }
+
+    .btn-teal {
+      background: linear-gradient(135deg, #175889 0%, rgba(23, 88, 137, 0.92) 100%);
+      color: #fff;
+      box-shadow: 0 4px 20px rgba(14, 122, 110, 0.35);
+    }
+
+    .btn-teal:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 10px 32px rgba(14, 122, 110, 0.45);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+    }
+
+    .btn-outline:hover {
+      background: linear-gradient(135deg, #48208a, #964bd5);
+      color: #fff;
+      transform: translateY(-2px);
+      border: 2px solid purple;
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold), var(--gold2));
+      color: var(--navy);
+      box-shadow: 0 4px 20px rgba(212, 160, 23, 0.35);
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 32px rgba(212, 160, 23, 0.45);
+    }
+
+    /* ── SCROLL REVEAL ── */
+    .sr {
+      opacity: 0;
+      transform: translateY(40px);
+      transition:
+        opacity 0.75s ease,
+        transform 0.75s ease;
+    }
+
+    .sr-l {
+      opacity: 0;
+      transform: translateX(-44px);
+      transition:
+        opacity 0.75s ease,
+        transform 0.75s ease;
+    }
+
+    .sr-r {
+      opacity: 0;
+      transform: translateX(44px);
+      transition:
+        opacity 0.75s ease,
+        transform 0.75s ease;
+    }
+
+    .sr.on,
+    .sr-l.on,
+    .sr-r.on {
+      opacity: 1;
+      transform: none;
+    }
+
+    .d1 {
+      transition-delay: 0.08s;
+    }
+
+    .d2 {
+      transition-delay: 0.16s;
+    }
+
+    .d3 {
+      transition-delay: 0.25s;
+    }
+
+    .d4 {
+      transition-delay: 0.34s;
+    }
+
+    .d5 {
+      transition-delay: 0.43s;
+    }
+
+    .d6 {
+      transition-delay: 0.52s;
+    }
+
+    /* ═══════════════════════════════════════════════════════
    NAV
 ═══════════════════════════════════════════════════════ */
-      #nav {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 900;
-        padding: 18px 0;
-        transition: all 0.4s ease;
-        background: #ffffff;
-        box-shadow: 0 2px 12px rgba(13, 27, 42, 0.06);
-      }
-      #nav.solid {
-        background: rgba(250, 251, 254, 0.94);
-        backdrop-filter: blur(18px);
-        -webkit-backdrop-filter: blur(18px);
-        box-shadow: 0 2px 24px rgba(13, 27, 42, 0.08);
-        padding: 12px 0;
-      }
-      .nav-inner {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 20px;
-      }
+    #nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 900;
+      padding: 18px 0;
+      transition: all 0.4s ease;
+      background: #ffffff;
+      box-shadow: 0 2px 12px rgba(13, 27, 42, 0.06);
+    }
 
-      /* brand */
-      .nav-brand {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        cursor: none;
-        flex-shrink: 0;
-      }
-      .nav-brand-icon {
-        width: 54px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 4px;
-      }
-      .nav-brand-icon img {
-        width: 54px;
-        height: 38px;
-        display: block;
-      }
-      .nav-brand-caption {
-        font-size: 11px;
-        color: var(--navy2);
-        font-weight: 600;
-        text-transform: none;
-        line-height: 1;
-        text-align-last: end;
-      }
-      .nav-brand-text {
-        line-height: 1;
-      }
-      .nav-brand-name {
-        font-family: var(--fd);
-        font-size: 19px;
-        font-weight: 900;
-        color: var(--navy);
-        letter-spacing: -0.3px;
-      }
-      .nav-brand-sub {
-        font-size: 15px;
-        font-weight: 900;
-        letter-spacing: 1px;
-        text-transform: none;
-        color: var(--teal);
-        white-space: nowrap;
-      }
+    #nav.solid {
+      background: rgba(250, 251, 254, 0.94);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      box-shadow: 0 2px 24px rgba(13, 27, 42, 0.08);
+      padding: 12px 0;
+    }
 
-      /* links */
-      .nav-links {
-        display: flex;
-        align-items: center;
-        gap: 4px;
-      }
-      .nav-links a {
-        position: relative;
-        padding: 7px 13px;
-        font-size: 13px;
-        font-weight: 600;
-        color: var(--teal);
-        border-radius: 8px;
-        transition: all 0.25s;
-        white-space: nowrap;
-        background: transparent;
-        border: none;
-        font-family: inherit;
-        cursor: none;
-      }
-      .nav-links a::after {
-        content: "";
-        position: absolute;
-        bottom: 4px;
-        left: 50%;
-        width: 0;
-        height: 2px;
-        background: var(--teal);
-        border-radius: 2px;
-        transition:
-          width 0.3s,
-          left 0.3s;
-      }
-      .nav-links a:hover {
-        color: var(--teal);
-        background: rgba(23, 88, 137, 0.08);
-      }
-      .nav-links a:hover::after {
-        width: 60%;
-        left: 20%;
-      }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
 
-      /* hamburger */
-      .nav-hb {
+    /* brand */
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: none;
+    }
+
+    .nav-brand-icon {
+      width: 54px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+    }
+
+    .nav-brand-icon img {
+      width: 54px;
+      height: 38px;
+      display: block;
+    }
+
+    .nav-brand-caption {
+      font-size: 11px;
+      color: var(--navy2);
+      font-weight: 600;
+      text-transform: none;
+      line-height: 1;
+      text-align-last: end;
+    }
+
+    .nav-brand-text {
+      line-height: 1;
+    }
+
+    .nav-brand-name {
+      font-family: var(--fd);
+      font-size: 19px;
+      font-weight: 900;
+      color: var(--navy);
+      letter-spacing: -0.3px;
+    }
+
+    .nav-brand-sub {
+      font-size: 15px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      text-transform: none;
+      color: #175889;
+      white-space: nowrap;
+    }
+
+    /* links */
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .nav-links a,
+    .nav-links button,
+    .nav-dropdown-toggle {
+      position: relative;
+      padding: 7px 13px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--teal);
+      border-radius: 8px;
+      transition: all 0.25s;
+      white-space: nowrap;
+      background: transparent;
+      border: none;
+      font-family: inherit;
+      cursor: none;
+    }
+
+    .nav-links a::after,
+    .nav-links button::after,
+    .nav-dropdown-toggle::after {
+      content: "";
+      position: absolute;
+      bottom: 4px;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: var(--teal);
+      border-radius: 2px;
+      transition:
+        width 0.3s,
+        left 0.3s;
+    }
+
+    .nav-links a:hover,
+    .nav-links button:hover,
+    .nav-dropdown:hover .nav-dropdown-toggle {
+      color: var(--teal);
+      background: rgba(14, 122, 110, 0.06);
+    }
+
+    .nav-links a:hover::after,
+    .nav-links button:hover::after,
+    .nav-dropdown:hover .nav-dropdown-toggle::after {
+      width: 60%;
+      left: 20%;
+    }
+
+    .nav-links a.scrolled,
+    .nav-links button.scrolled {
+      color: #175889;
+    }
+
+    .nav-dropdown {
+      position: relative;
+    }
+
+    .nav-dropdown-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-dropdown-toggle i {
+      font-size: 12px;
+      transition: transform 0.25s ease;
+    }
+
+    .nav-dropdown:hover .nav-dropdown-toggle i {
+      transform: rotate(180deg);
+    }
+
+    .nav-dropdown-menu {
+      position: absolute;
+      /* lift menu slightly so cursor can move into it without gaps */
+      top: calc(100% + 0px);
+      left: 0;
+      min-width: 220px;
+      padding: 10px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.98);
+      box-shadow: var(--shadow2);
+      border: 1px solid var(--border);
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      z-index: 2000;
+      transition:
+        opacity 0.18s ease,
+        transform 0.18s ease;
+      transform: translateY(2px);
+      opacity: 0;
+    }
+
+    .nav-dropdown:hover .nav-dropdown-menu,
+    .nav-dropdown:focus-within .nav-dropdown-menu {
+      display: flex;
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .nav-dropdown-menu a {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 10px;
+      color: var(--navy2);
+      background: transparent;
+    }
+
+    .nav-dropdown-menu a:hover {
+      background: rgba(14, 122, 110, 0.08);
+      color: var(--teal);
+    }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* hamburger */
+    .nav-hb {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: none;
+      padding: 8px;
+      background: none;
+      border: none;
+      position: relative;
+      z-index: 920;
+    }
+
+    .nav-hb span {
+      display: block;
+      width: 24px;
+      height: 2.5px;
+      background: var(--navy);
+      border-radius: 2px;
+      transition: all 0.35s cubic-bezier(0.65, 0, 0.35, 1);
+    }
+
+    .nav-hb.open span:nth-child(1) {
+      transform: rotate(45deg) translate(4.5px, 4.5px);
+    }
+
+    .nav-hb.open span:nth-child(2) {
+      opacity: 0;
+      transform: scaleX(0);
+    }
+
+    .nav-hb.open span:nth-child(3) {
+      transform: rotate(-45deg) translate(4.5px, -4.5px);
+    }
+
+    /* mobile drawer close button */
+    .nav-drawer-close {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--light);
+      border: none;
+      color: var(--navy);
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: none;
+      transition: all 0.3s ease;
+    }
+
+    .nav-drawer-close:hover {
+      background: var(--light2);
+      transform: rotate(90deg);
+    }
+
+    /* mobile drawer */
+    .nav-drawer {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: min(310px, 88vw);
+      height: 100vh;
+      background: #fff;
+      z-index: 910;
+      transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      padding: 90px 32px 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      box-shadow: -4px 0 40px rgba(13, 27, 42, 0.14);
+    }
+
+    .nav-drawer.open {
+      right: 0;
+    }
+
+    .nav-drawer a {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--navy2);
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(13, 27, 42, 0.06);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: color 0.25s;
+    }
+
+    .nav-drawer a i {
+      color: var(--teal);
+      font-size: 16px;
+    }
+
+    .nav-drawer a:hover {
+      color: var(--teal);
+    }
+
+    .nav-drawer .dl-sub {
+      padding-left: 20px;
+      font-size: 14px;
+    }
+
+    .nav-ovl {
+      position: fixed;
+      inset: 0;
+      background: rgba(13, 27, 42, 0.38);
+      z-index: 905;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.35s;
+    }
+
+    .nav-ovl.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* ── RESPONSIVE BREAKPOINT ── */
+    @media (max-width: 900px) {
+
+      .nav-links,
+      .nav-cta {
         display: none;
-        flex-direction: column;
-        gap: 5px;
-        cursor: none;
-        padding: 6px;
-        background: none;
-        border: none;
-        z-index: 920;
-        position: relative;
-      }
-      .nav-hb span {
-        display: block;
-        width: 22px;
-        height: 2px;
-        background: var(--navy);
-        border-radius: 2px;
-        transition: all 0.3s ease;
-        transform-origin: center;
-      }
-      .nav-hb.open span:nth-child(1) {
-        transform: translateY(7px) rotate(45deg);
-      }
-      .nav-hb.open span:nth-child(2) {
-        opacity: 0;
-        transform: scaleX(0);
-      }
-      .nav-hb.open span:nth-child(3) {
-        transform: translateY(-7px) rotate(-45deg);
       }
 
-      /* mobile drawer */
-      .nav-drawer {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: min(310px, 88vw);
-        height: 100vh;
-        background: #fff;
-        z-index: 910;
-        transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        padding: 90px 32px 40px;
+      .nav-hb {
         display: flex;
-        flex-direction: column;
-        gap: 2px;
-        box-shadow: -4px 0 40px rgba(13, 27, 42, 0.14);
       }
-      .nav-drawer.open {
-        right: 0;
+    }
+
+
+
+    /* ── RESPONSIVE BREAKPOINT ── */
+    @media (max-width: 900px) {
+
+      .nav-links,
+      .nav-cta {
+        display: none;
       }
-      .nav-drawer a {
-        font-size: 15px;
-        font-weight: 600;
-        color: var(--teal);
-        padding: 12px 0;
-        border-bottom: 1px solid rgba(13, 27, 42, 0.06);
+
+      .nav-hb {
         display: flex;
-        align-items: center;
-        gap: 10px;
-        transition: color 0.25s;
       }
-      .nav-drawer a i {
-        color: var(--teal);
-        font-size: 16px;
-      }
-      .nav-drawer a:hover {
-        color: var(--teal);
-        background: rgba(23, 88, 137, 0.06);
-        padding-left: 8px;
-      }
-      .nav-drawer .dl-sub {
-        padding-left: 20px;
-        font-size: 14px;
-      }
+    }
 
-      /* Close button inside drawer */
-      .nav-drawer-close {
-        position: absolute;
-        top: 22px;
-        right: 22px;
-        width: 38px;
-        height: 38px;
-        border-radius: 50%;
-        border: none;
-        background: rgba(13, 27, 42, 0.06);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: none;
-        transition: background 0.25s, transform 0.25s;
-      }
-      .nav-drawer-close:hover {
-        background: rgba(23, 88, 137, 0.12);
-        transform: rotate(90deg);
-      }
-      .nav-drawer-close i {
-        font-size: 20px;
-        color: var(--navy);
-      }
+    /* ── POLICY CARD ── */
+    .policy-card {
+      max-width: 920px;
+      margin: 48px auto;
+      padding: 32px;
+      border-radius: 12px;
+      background: var(--white);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
 
-      .nav-ovl {
-        position: fixed;
-        inset: 0;
-        background: rgba(13, 27, 42, 0.38);
-        z-index: 905;
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.35s;
-      }
-      .nav-ovl.open {
-        opacity: 1;
-        pointer-events: auto;
-      }
-
-      /* ── RESPONSIVE BREAKPOINT ── */
-      @media (max-width: 900px) {
-        .nav-links {
-          display: none;
-        }
-        .nav-hb {
-          display: flex;
-        }
-      }
-
-      /* ── POLICY CARD ── */
+    @media (max-width: 768px) {
       .policy-card {
-        max-width: 920px;
-        margin: 48px auto;
-        padding: 32px;
-        border-radius: 12px;
-        background: var(--white);
-        box-shadow: var(--shadow);
-        border: 1px solid var(--border);
+        margin: 24px auto;
+        padding: 20px;
       }
 
-      @media (max-width: 768px) {
-        .policy-card {
-          margin: 24px auto;
-          padding: 20px;
-        }
-        .container {
-          padding: 0 16px;
-        }
+      .container {
+        padding: 0 16px;
+      }
+    }
+
+    @media (hover: none) {
+
+      #cursor-dot,
+      #cursor-ring {
+        display: none;
       }
 
-      @media (hover: none) {
-        #cursor-dot,
-        #cursor-ring {
-          display: none;
-        }
-        body { cursor: auto; }
+      body {
+        cursor: auto;
       }
-    </style>
-  </head>
-  <body>
-    <!-- Custom cursor elements -->
-    <div id="cursor-dot"></div>
-    <div id="cursor-ring"></div>
+    }
+  </style>
+</head>
 
-    <!-- ══ NAVIGATION ══ -->
-    <nav id="nav">
-      <div class="container">
-        <div class="nav-inner">
-          <a href="index.html" class="nav-brand">
-            <div class="nav-brand-icon">
-              <img src="assets/logo.png" alt="CA India Logo" />
-            </div>
-            <div class="nav-brand-text">
-              <div class="nav-brand-sub">S.K. Mishra &amp; Associates</div>
-              <div class="nav-brand-caption">Chartered Accountant</div>
-            </div>
-          </a>
+<body>
+  <!-- Custom cursor elements -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
 
-          <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="index.html#core-values">Core Values</a>
-            <a href="index.html#services">Our Services</a>
-            <a href="teams.html">Our Team</a>
-            <a href="privacy.html">Privacy Policy</a>
+  <!-- ══ NAVIGATION ══ -->
+  <nav id="nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html#home" class="nav-brand">
+          <div class="nav-brand-icon">
+            <img src="assets/logo.png" alt="CA India Logo" />
           </div>
 
-          <!-- Hamburger -->
-          <button class="nav-hb" id="navHb" aria-label="Menu">
-            <span></span><span></span><span></span>
-          </button>
+          <div class="nav-brand-text">
+            <div class="nav-brand-sub">S.K. Mishra &amp; Associates</div>
+            <div class="nav-brand-caption">Chartered Accountant</div>
+          </div>
+        </a>
+
+        <div class="nav-links">
+          <a href="index.html#about">Home</a>
+          <a href="index.html#core-values">Core Values</a>
+          <a href="index.html#services">Our Services</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown-toggle" type="button">
+              About <i class="ri-arrow-down-s-line"></i>
+            </button>
+            <div class="nav-dropdown-menu">
+              <a href="index.html#about">About Us</a>
+              <a href="teams.html">Our Team</a>
+            </div>
+          </div>
+
+          <a href="index.html#whatwedo">What We Do</a>
+          <!-- <a href="index.html#achievements">Our Achievements</a> -->
+          <button type="button" data-open-links="true">Important Links</button>
+          <!-- <a href="index.html#contact">Contact Us</a> -->
         </div>
+
+        <div class="nav-cta">
+          <a href="index.html#contact" class="btn btn-teal" style="padding: 10px 22px; font-size: 12.5px; width: 152px"
+            color: #175889;>
+            <i class="ri-mail-send-line"></i> Get in Touch
+          </a>
+        </div>
+
+        <button class="nav-hb" id="navHb" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-    <!-- Overlay -->
-    <div class="nav-ovl" id="navOvl"></div>
-
-    <!-- Drawer -->
-    <div class="nav-drawer" id="navDrw">
-      <button class="nav-drawer-close" id="navDrwClose" aria-label="Close menu">
-        <i class="ri-close-line"></i>
-      </button>
-      <a href="index.html"><i class="ri-home-4-line"></i>Home</a>
-      <a href="index.html#core-values"><i class="ri-star-line"></i>Core Values</a>
-      <a href="index.html#services"><i class="ri-briefcase-line"></i>Our Services</a>
-      <a href="teams.html"><i class="ri-group-line"></i>Our Team</a>
-      <a href="privacy.html"><i class="ri-file-text-line"></i>Privacy Policy</a>
+  <div class="nav-ovl" id="navOvl"></div>
+  <div class="nav-drawer" id="navDrw">
+    <button class="nav-drawer-close" id="navDrwClose" aria-label="Close menu">
+      <i class="ri-close-line"></i>
+    </button>
+    <a href="index.html#home" class="dl"><i class="ri-home-4-line"></i>Home</a>
+    <a href="index.html#about" class="dl"><i class="ri-information-line"></i>About Us
+    </a>
+    <a href="teams.html" class="dl dl-sub"><i class="ri-group-line"></i>Our Team</a>
+    <a href="index.html#services" class="dl"><i class="ri-briefcase-line"></i>Our Services</a>
+    <a href="index.html#whatwedo" class="dl"><i class="ri-settings-3-line"></i>What We Do</a>
+    <a href="index.html#achievements" class="dl"><i class="ri-trophy-line"></i>Our Achievements</a>
+    <a href="index.html#links" class="dl" data-open-links="true"><i class="ri-links-line"></i>Important Links</a>
+    <div class="nav-drawer-cta">
+      <a href="index.html#contact" class="btn btn-teal dl"
+        style="display: flex; color:white; justify-content: center; margin-top: 16px ;width: 100%;">
+        <i class="ri-mail-send-line" style="color: white;"></i> Get in Touch
+      </a>
     </div>
 
-    <!-- ══ MAIN CONTENT ══ -->
-    <main style="padding-top: 120px; padding-bottom: 72px; min-height: calc(100vh - 120px);">
-      <div class="container">
-        <div class="policy-card">
-          <div style="text-align: center; margin-bottom: 8px; font-weight: 800; font-size: 15px; color: var(--navy); letter-spacing: 1px;">
-            Terms &amp; Conditions
-          </div>
-          <h2 style="text-align: center; margin-top: 6px; margin-bottom: 12px; font-family: var(--fd); font-size: 20px; font-weight: 900; color: var(--teal);">
-            SKMA Website Terms
-          </h2>
-          <div class="rule" style="margin-left: auto; margin-right: auto; margin-top: 6px; margin-bottom: 18px;"></div>
+  </div>
 
-          <p class="body" style="margin-bottom: 14px">
-            This is the official website of S K Mishra &amp; Associates (SKMA). The material displayed on this website is for reference purposes only and does not purport to be a legal document or give rise to any legal obligation on the part of S K Mishra &amp; Associates. Though every effort is made to ensure the accuracy and currency of the contents featured on this website, the same should not be construed as a statement of law or used for any legal purpose. SKMA accepts no responsibility for the accuracy, completeness, usefulness or otherwise of the contents of the website. Users are advised to obtain professional advice before acting on the information provided on the website. As a result of updates and corrections, web contents are subject to change without notice.
-          </p>
-
-          <p class="body" style="margin-bottom: 14px">
-            Certain links to other websites included on this website are provided for public convenience only. These links are external to the SKMA website and when you select any of these external links, you will be leaving the SKMA website. SKMA is not responsible for the contents or reliability of linked websites and does not necessarily endorse the views expressed therein. SKMA cannot guarantee the availability of such linked pages at all times.
-          </p>
-
-          <p class="body" style="margin-bottom: 14px">
-            In no event shall SKMA be liable for any expense, loss or damage including, without limitation, indirect or consequential loss or damage, or any expense, loss or damage whatsoever arising from use, or loss of use of data, arising out of or in connection with the use of this website.
-          </p>
-
-          <p class="body" style="margin-bottom: 8px">
-            These terms and conditions shall be governed by and construed in accordance with Indian laws. Any dispute arising under these terms and conditions shall be subject to the exclusive jurisdiction of the courts of India.
-          </p>
-
-          <p class="body" style="margin-top: 12px; font-size: 14px; color: #55606a;">
-            For questions please contact us at <a href="mailto:info@caskma.com" style="color: var(--teal); font-weight: 600;">info@caskma.com</a>.
-          </p>
+  <!-- ══ MAIN CONTENT ══ -->
+  <main style="padding-top: 120px; padding-bottom: 72px; min-height: calc(100vh - 120px);">
+    <div class="container">
+      <div class="policy-card">
+        <div
+          style="text-align: center; margin-bottom: 8px; font-weight: 800; font-size: 15px; color: var(--navy); letter-spacing: 1px;">
+          Terms &amp; Conditions
         </div>
+        <h2
+          style="text-align: center; margin-top: 6px; margin-bottom: 12px; font-family: var(--fd); font-size: 20px; font-weight: 900; color: var(--teal);">
+          SKMA Website Terms
+        </h2>
+        <div class="rule" style="margin-left: auto; margin-right: auto; margin-top: 6px; margin-bottom: 18px;"></div>
+
+        <p class="body" style="margin-bottom: 14px">
+          This is the official website of S K Mishra &amp; Associates (SKMA). The material displayed on this website is
+          for reference purposes only and does not purport to be a legal document or give rise to any legal obligation
+          on the part of S K Mishra &amp; Associates. Though every effort is made to ensure the accuracy and currency of
+          the contents featured on this website, the same should not be construed as a statement of law or used for any
+          legal purpose. SKMA accepts no responsibility for the accuracy, completeness, usefulness or otherwise of the
+          contents of the website. Users are advised to obtain professional advice before acting on the information
+          provided on the website. As a result of updates and corrections, web contents are subject to change without
+          notice.
+        </p>
+
+        <p class="body" style="margin-bottom: 14px">
+          Certain links to other websites included on this website are provided for public convenience only. These links
+          are external to the SKMA website and when you select any of these external links, you will be leaving the SKMA
+          website. SKMA is not responsible for the contents or reliability of linked websites and does not necessarily
+          endorse the views expressed therein. SKMA cannot guarantee the availability of such linked pages at all times.
+        </p>
+
+        <p class="body" style="margin-bottom: 14px">
+          In no event shall SKMA be liable for any expense, loss or damage including, without limitation, indirect or
+          consequential loss or damage, or any expense, loss or damage whatsoever arising from use, or loss of use of
+          data, arising out of or in connection with the use of this website.
+        </p>
+
+        <p class="body" style="margin-bottom: 8px">
+          These terms and conditions shall be governed by and construed in accordance with Indian laws. Any dispute
+          arising under these terms and conditions shall be subject to the exclusive jurisdiction of the courts of
+          India.
+        </p>
+
+        <p class="body" style="margin-top: 12px; font-size: 14px; color: #55606a;">
+          For questions please contact us at <a href="mailto:info@caskma.com"
+            style="color: var(--teal); font-weight: 600;">info@caskma.com</a>.
+        </p>
       </div>
-    </main>
+    </div>
+  </main>
 
-    <footer style="padding: 24px 0; text-align: center; font-size: 13px; color: #6b7a8a; border-top: 1px solid rgba(13, 27, 42, 0.06);">
-      <div class="container">
-        &copy; 2025 CA India · S.K. Mishra &amp; Associates. All rights reserved.
-      </div>
-    </footer>
+  <footer
+    style="padding: 24px 0; text-align: center; font-size: 13px; color: #6b7a8a; border-top: 1px solid rgba(13, 27, 42, 0.06);">
+    <div class="container">
+      &copy; 2025 CA India · S.K. Mishra &amp; Associates. All rights reserved.
+    </div>
+  </footer>
 
-    <script>
-      /* ══════════════════════════════════════
-   CUSTOM CURSOR
+  <script>
+    /* ══════════════════════════════════════
+ CUSTOM CURSOR
 ══════════════════════════════════════ */
-      const dot = document.getElementById("cursor-dot");
-      const ring = document.getElementById("cursor-ring");
-      let mx = 0,
-        my = 0,
-        rx = 0,
-        ry = 0;
+    const dot = document.getElementById("cursor-dot");
+    const ring = document.getElementById("cursor-ring");
+    let mx = 0,
+      my = 0,
+      rx = 0,
+      ry = 0;
 
-      document.addEventListener("mousemove", (e) => {
-        mx = e.clientX;
-        my = e.clientY;
-        if (dot) {
-          dot.style.left = mx + "px";
-          dot.style.top = my + "px";
-        }
-      });
+    document.addEventListener("mousemove", (e) => {
+      mx = e.clientX;
+      my = e.clientY;
+      if (dot) {
+        dot.style.left = mx + "px";
+        dot.style.top = my + "px";
+      }
+    });
 
-      (function animRing() {
-        rx += (mx - rx) * 0.14;
-        ry += (my - ry) * 0.14;
-        if (ring) {
-          ring.style.left = rx + "px";
-          ring.style.top = ry + "px";
-        }
-        requestAnimationFrame(animRing);
-      })();
+    (function animRing() {
+      rx += (mx - rx) * 0.14;
+      ry += (my - ry) * 0.14;
+      if (ring) {
+        ring.style.left = rx + "px";
+        ring.style.top = ry + "px";
+      }
+      requestAnimationFrame(animRing);
+    })();
 
-      document.querySelectorAll("a, button").forEach((el) => {
-        el.addEventListener("mouseenter", () =>
-          document.body.classList.add("cursor-hover")
-        );
-        el.addEventListener("mouseleave", () =>
-          document.body.classList.remove("cursor-hover")
-        );
-      });
-
-      /* ══════════════════════════════════════
-   NAVIGATION - SCROLL EFFECT
-══════════════════════════════════════ */
-      const nav = document.getElementById("nav");
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > 50) {
-          nav.classList.add("solid");
-        } else {
-          nav.classList.remove("solid");
-        }
-      }, { passive: true });
-
-      /* ══════════════════════════════════════
-   MOBILE MENU
-══════════════════════════════════════ */
-      const hb = document.getElementById("navHb");
-      const drw = document.getElementById("navDrw");
-      const ovl = document.getElementById("navOvl");
-      const drwClose = document.getElementById("navDrwClose");
-
-      const openNav = () => {
-        hb.classList.add("open");
-        drw.classList.add("open");
-        ovl.classList.add("open");
-        document.body.style.overflow = "hidden";
-      };
-
-      const closeNav = () => {
-        hb.classList.remove("open");
-        drw.classList.remove("open");
-        ovl.classList.remove("open");
-        document.body.style.overflow = "";
-      };
-
-      hb.addEventListener("click", () =>
-        drw.classList.contains("open") ? closeNav() : openNav()
+    document.querySelectorAll("a, button").forEach((el) => {
+      el.addEventListener("mouseenter", () =>
+        document.body.classList.add("cursor-hover")
       );
-      ovl.addEventListener("click", closeNav);
-      drwClose.addEventListener("click", closeNav);
-      document.querySelectorAll(".nav-drawer a").forEach((a) =>
-        a.addEventListener("click", closeNav)
+      el.addEventListener("mouseleave", () =>
+        document.body.classList.remove("cursor-hover")
       );
-    </script>
-  </body>
+    });
+
+    /* ══════════════════════════════════════
+ NAVIGATION - SCROLL EFFECT
+══════════════════════════════════════ */
+    const nav = document.getElementById("nav");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        nav.classList.add("solid");
+      } else {
+        nav.classList.remove("solid");
+      }
+    }, { passive: true });
+
+    /* ══════════════════════════════════════
+ MOBILE MENU
+══════════════════════════════════════ */
+    const hb = document.getElementById("navHb");
+    const drw = document.getElementById("navDrw");
+    const ovl = document.getElementById("navOvl");
+    const drwClose = document.getElementById("navDrwClose");
+
+    const openNav = () => {
+      hb.classList.add("open");
+      drw.classList.add("open");
+      ovl.classList.add("open");
+      document.body.style.overflow = "hidden";
+    };
+
+    const closeNav = () => {
+      hb.classList.remove("open");
+      drw.classList.remove("open");
+      ovl.classList.remove("open");
+      document.body.style.overflow = "";
+    };
+
+    hb.addEventListener("click", () =>
+      drw.classList.contains("open") ? closeNav() : openNav()
+    );
+    ovl.addEventListener("click", closeNav);
+    drwClose.addEventListener("click", closeNav);
+    document.querySelectorAll(".nav-drawer a").forEach((a) =>
+      a.addEventListener("click", closeNav)
+    );
+  </script>
+</body>
+
 </html>
