@@ -203,13 +203,22 @@
           if (!e.isIntersecting) return;
           cObs.disconnect();
           const target = +el.dataset.target;
-          let n = 0;
-          const step = target / 40;
-          const t = setInterval(() => {
-            n += step;
-            el.textContent = n >= target ? target : Math.floor(n);
-            if (n >= target) clearInterval(t);
-          }, 40);
+          const duration = 900;
+          const start = performance.now();
+
+          const tick = (now) => {
+            const progress = Math.min((now - start) / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            el.textContent = Math.floor(eased * target);
+
+            if (progress < 1) {
+              requestAnimationFrame(tick);
+            } else {
+              el.textContent = target;
+            }
+          };
+
+          requestAnimationFrame(tick);
         },
         { threshold: 0.5 },
       );
