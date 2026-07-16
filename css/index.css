@@ -2,7 +2,7 @@
 /* ═══════════════════════════════════════════════════════
     DESIGN SYSTEM – CA INDIA LIGHT THEME
     Palette: Crisp White · Deep Navy · Saffron Gold · Sky Teal
-    Fonts: Montserrat (display + body)
+    Fonts: Playfair Display (headings) + Inter Tight (content)
   ═══════════════════════════════════════════════════════ */
     :root {
       --bg: #f4f7fb;
@@ -28,9 +28,9 @@
       --r: 10px;
       --r2: 18px;
       --r3: 2px;
-      --fd: "Montserrat", sans-serif;
+      --fd: "Playfair Display", serif;
       /* --fb: "Roboto", sans-serif; */
-      --fb: "Montserrat", sans-serif;
+      --fb: "Inter Tight", sans-serif;
     }
 
     *,
@@ -145,6 +145,16 @@
       padding: 96px 0;
     }
 
+    section :is(h1, h2, h3, h4, h5, h6, .heading, .subhead) {
+      font-family: "Playfair Display", serif;
+      font-optical-sizing: auto;
+    }
+
+    section :is(p, li, .body) {
+      font-family: "Inter Tight", sans-serif;
+      font-optical-sizing: auto;
+    }
+
     .section--light {
       background: var(--light);
     }
@@ -188,6 +198,12 @@
     .heading em {
       font-style: italic;
       color: var(--teal);
+    }
+
+    #about .heading {
+      font-family: "Playfair Display", serif;
+      font-optical-sizing: auto;
+      font-style: normal;
     }
 
     .heading span {
@@ -440,7 +456,7 @@
     }
 
     .nav-brand-sub {
-      font-size: 15px;
+      font-size: 22px;
       font-weight: 900;
       letter-spacing: 1px;
       text-transform: none;
@@ -1530,6 +1546,13 @@
       flex-direction: column;
       gap: 12px;
       margin: 24px 0;
+    }
+
+    #about .body,
+    #about .about-feat-text {
+      font-family: "Inter Tight", sans-serif;
+      font-optical-sizing: auto;
+      font-style: normal;
     }
 
     .about-feat {
