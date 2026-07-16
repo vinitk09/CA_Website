@@ -117,6 +117,9 @@
     document
       .querySelectorAll(".dl")
       .forEach((a) => a.addEventListener("click", closeNav));
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 1024) closeNav();
+    });
 
     document
       .querySelectorAll("#services figure.effect-layla figcaption")
@@ -136,6 +139,7 @@
       if (!linksToggleBtn || !linksPanel) return;
       linksToggleBtn.setAttribute("aria-expanded", open ? "true" : "false");
       linksPanel.classList.toggle("open", open);
+      linksSection?.classList.toggle("is-collapsed", !open);
       if (open) {
         linksPanel.hidden = false;
       } else {
@@ -159,6 +163,35 @@
         }
       });
     });
+
+    const factsheetModal = document.getElementById("factsheetModal");
+    const factsheetOpenBtns = document.querySelectorAll("[data-factsheet-open]");
+    const factsheetCloseBtns = document.querySelectorAll("[data-factsheet-close]");
+    const setFactsheetModalState = (open) => {
+      if (!factsheetModal) return;
+      factsheetModal.classList.toggle("open", open);
+      factsheetModal.setAttribute("aria-hidden", open ? "false" : "true");
+    };
+
+    factsheetOpenBtns.forEach((btn) => {
+      btn.addEventListener("click", () => setFactsheetModalState(true));
+    });
+
+    factsheetCloseBtns.forEach((btn) => {
+      btn.addEventListener("click", () => setFactsheetModalState(false));
+    });
+
+    if (factsheetModal) {
+      factsheetModal.addEventListener("click", (e) => {
+        if (e.target === factsheetModal) setFactsheetModalState(false);
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && factsheetModal.classList.contains("open")) {
+          setFactsheetModalState(false);
+        }
+      });
+    }
 
     btt.addEventListener("click", () =>
       window.scrollTo({ top: 0, behavior: "smooth" }),
@@ -284,6 +317,10 @@
 ══════════════════════════════════════ */
     function handleForm(e) {
       e.preventDefault();
+      if (!e.currentTarget.checkValidity()) {
+        e.currentTarget.reportValidity();
+        return;
+      }
       document.getElementById("contactForm").style.display = "none";
       document.getElementById("formOk").style.display = "block";
     }

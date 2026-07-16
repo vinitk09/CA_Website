@@ -4,18 +4,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Our Services – S.K. Mishra & Associates | Chartered Accountants</title>
+  <title>Our Services – S.K Mishra & Associates | Chartered Accountants</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
     rel="stylesheet" />
   <style>
     /* ── custom overrides & CA theme ── */
     body {
-      font-family: 'Montserrat', sans-serif;
+      font-family: "Inter Tight", sans-serif;
       background: #fafbfe;
       color: #0d1b2a;
     }
@@ -216,8 +216,8 @@
       --r: 10px;
       --r2: 18px;
       --r3: 28px;
-      --fd: "Montserrat", sans-serif;
-      --fb: "Montserrat", sans-serif;
+      --fd: "Playfair Display", serif;
+      --fb: "Inter Tight", sans-serif;
     }
 
     /* ── CUSTOM CURSOR (from team page) ── */
@@ -437,7 +437,7 @@
     }
 
     .nav-brand-sub {
-      font-size: 15px;
+      font-size: 22px;
       font-weight: 900;
       letter-spacing: 1px;
       text-transform: none;
@@ -679,6 +679,13 @@
       width: 100%;
       justify-content: center;
       color: #fff;
+      border-bottom: 0;
+      border-radius: 50px;
+      background: linear-gradient(135deg, #175889 0%, rgba(23, 88, 137, 0.92) 100%);
+    }
+
+    .nav-drawer-cta .btn-teal-nav i {
+      color: #fff;
     }
 
     .nav-ovl {
@@ -795,13 +802,15 @@
             <img src="assets/logo.png" alt="CA India Logo" />
           </div>
           <div class="nav-brand-text" style="text-decoration:none !important;">
-            <div class="nav-brand-sub" style="text-decoration:none !important;">S.K. Mishra &amp; Associates</div>
-            <div class="nav-brand-caption" style="text-decoration:none !important;">Chartered Accountant</div>
+            <div class="nav-brand-sub" style="text-decoration:none !important;">S.K Mishra &amp; Associates</div>
+            <div class="nav-brand-caption" style="text-decoration:none !important;">Chartered Accountants</div>
           </div>
         </a>
 
         <div class="nav-links">
-          <a href="index.html#home" style="text-decoration:none !important;">Home</a>
+          <a href="index.html#about" style="text-decoration:none !important;">Home</a>
+          <a href="index.html#core-values" style="text-decoration:none !important;">Core Values</a>
+          <a href="index.html#services" style="text-decoration:none !important;">Our Services</a>
           <div class="nav-dropdown">
             <button class="nav-dropdown-toggle" type="button" style="text-decoration:none !important;">
               About <i class="ri-arrow-down-s-line"></i>
@@ -811,9 +820,7 @@
               <a href="teams.html" style="text-decoration:none !important;">Our Team</a>
             </div>
           </div>
-          <a href="index.html#services" style="text-decoration:none !important;">Our Services</a>
           <a href="index.html#whatwedo" style="text-decoration:none !important;">What We Do</a>
-          <a href="index.html#achievements" style="text-decoration:none !important;">Our Achievements</a>
           <a href="index.html#links" style="text-decoration:none !important;">Important Links</a>
         </div>
 
@@ -837,6 +844,8 @@
       <i class="ri-close-line"></i>
     </button>
     <a href="index.html#home" class="dl" style="text-decoration:none !important;"><i class="ri-home-4-line"></i>Home</a>
+    <a href="index.html#core-values" class="dl" style="text-decoration:none !important;"><i
+        class="ri-shield-star-line"></i>Core Values</a>
     <a href="index.html#about" class="dl" style="text-decoration:none !important;"><i
         class="ri-information-line"></i>About Us</a>
     <a href="teams.html" class="dl dl-sub" style="text-decoration:none !important;"><i class="ri-group-line"></i>Our
@@ -880,49 +889,64 @@
             <div class="nav nav-pills nav-pills-custom d-flex flex-column w-100 me-4" id="serviceTab" role="tablist"
               aria-orientation="vertical">
 
-              <button class="nav-link w-100 d-flex align-items-center text-start border px-4 py-3 mb-2"
-                data-bs-toggle="pill" data-bs-target="#tab-pane-1" type="button" role="tab">
-                <h5 class="m-0"><i class="fas fa-bars text-primary me-3"></i>Assurance</h5>
-              </button>
-
               <button class="nav-link w-100 d-flex align-items-center text-start border px-4 py-3 mb-2 active"
-                data-bs-toggle="pill" data-bs-target="#tab-pane-2" type="button" role="tab">
-                <h5 class="m-0"><i class="fas fa-bars text-primary me-3"></i>Taxation</h5>
+                data-bs-toggle="pill" data-bs-target="#tab-pane-1" data-service="audit-assurance" type="button" role="tab">
+                <h5 class="m-0"><i class="fas fa-bars text-primary me-3"></i>Assurance &amp; Audit</h5>
               </button>
 
               <button class="nav-link w-100 d-flex align-items-center text-start border px-4 py-3 mb-2"
-                data-bs-toggle="pill" data-bs-target="#tab-pane-3" type="button" role="tab">
-                <h5 class="m-0"><i class="fas fa-bars text-primary me-3"></i>Advisory</h5>
+                data-bs-toggle="pill" data-bs-target="#tab-pane-2" data-service="internal-audit-risk" type="button" role="tab">
+                <h5 class="m-0"><i class="fas fa-bars text-primary me-3"></i>Internal Audit &amp; Risk</h5>
               </button>
 
               <button class="nav-link w-100 d-flex align-items-center text-start border px-4 py-3 mb-2"
-                data-bs-toggle="pill" data-bs-target="#tab-pane-4" type="button" role="tab">
-                <h5 class="m-0"><i class="fas fa-bars text-primary me-3"></i>Startup Consulting</h5>
+                data-bs-toggle="pill" data-bs-target="#tab-pane-3" data-service="ifc-icfr" type="button" role="tab">
+                <h5 class="m-0"><i class="fas fa-bars text-primary me-3"></i>IFC / ICFR</h5>
               </button>
 
               <button class="nav-link w-100 d-flex align-items-center text-start border px-4 py-3 mb-2"
-                data-bs-toggle="pill" data-bs-target="#tab-pane-5" type="button" role="tab">
-                <h5 class="m-0"><i class="fas fa-bars text-primary me-3"></i>Outsourcing Services</h5>
+                data-bs-toggle="pill" data-bs-target="#tab-pane-4" data-service="tax-litigation" type="button" role="tab">
+                <h5 class="m-0"><i class="fas fa-bars text-primary me-3"></i>Tax &amp; Litigation</h5>
               </button>
 
               <button class="nav-link w-100 d-flex align-items-center text-start border px-4 py-3 mb-2"
-                data-bs-toggle="pill" data-bs-target="#tab-pane-6" type="button" role="tab">
-                <h5 class="m-0"><i class="fas fa-bars text-primary me-3"></i>Insolvency Professional</h5>
+                data-bs-toggle="pill" data-bs-target="#tab-pane-5" data-service="company-law" type="button" role="tab">
+                <h5 class="m-0"><i class="fas fa-bars text-primary me-3"></i>Company Law</h5>
               </button>
 
               <button class="nav-link w-100 d-flex align-items-center text-start border px-4 py-3 mb-2"
-                data-bs-toggle="pill" data-bs-target="#tab-pane-7" type="button" role="tab">
-                <h5 class="m-0"><i class="fas fa-bars text-primary me-3"></i>Research</h5>
+                data-bs-toggle="pill" data-bs-target="#tab-pane-6" data-service="transfer-pricing" type="button" role="tab">
+                <h5 class="m-0"><i class="fas fa-bars text-primary me-3"></i>Transfer Pricing</h5>
               </button>
 
               <button class="nav-link w-100 d-flex align-items-center text-start border px-4 py-3 mb-2"
-                data-bs-toggle="pill" data-bs-target="#tab-pane-8" type="button" role="tab">
-                <h5 class="m-0"><i class="fas fa-bars text-primary me-3"></i>Valuation</h5>
+                data-bs-toggle="pill" data-bs-target="#tab-pane-7" data-service="virtual-cfo" type="button" role="tab">
+                <h5 class="m-0"><i class="fas fa-bars text-primary me-3"></i>Virtual CFO</h5>
               </button>
 
               <button class="nav-link w-100 d-flex align-items-center text-start border px-4 py-3 mb-2"
-                data-bs-toggle="pill" data-bs-target="#tab-pane-9" type="button" role="tab">
-                <h5 class="m-0"><i class="fas fa-bars text-primary me-3"></i>Corporate Compliance</h5>
+                data-bs-toggle="pill" data-bs-target="#tab-pane-8" data-service="project-finance" type="button" role="tab">
+                <h5 class="m-0"><i class="fas fa-bars text-primary me-3"></i>Project Finance</h5>
+              </button>
+
+              <button class="nav-link w-100 d-flex align-items-center text-start border px-4 py-3 mb-2"
+                data-bs-toggle="pill" data-bs-target="#tab-pane-9" data-service="valuation-ma" type="button" role="tab">
+                <h5 class="m-0"><i class="fas fa-bars text-primary me-3"></i>Valuation &amp; M&amp;A</h5>
+              </button>
+
+              <button class="nav-link w-100 d-flex align-items-center text-start border px-4 py-3 mb-2"
+                data-bs-toggle="pill" data-bs-target="#tab-pane-10" data-service="rera-compliance" type="button" role="tab">
+                <h5 class="m-0"><i class="fas fa-bars text-primary me-3"></i>RERA Compliance</h5>
+              </button>
+
+              <button class="nav-link w-100 d-flex align-items-center text-start border px-4 py-3 mb-2"
+                data-bs-toggle="pill" data-bs-target="#tab-pane-11" data-service="startup-setup" type="button" role="tab">
+                <h5 class="m-0"><i class="fas fa-bars text-primary me-3"></i>Start-up Setup</h5>
+              </button>
+
+              <button class="nav-link w-100 d-flex align-items-center text-start border px-4 py-3 mb-2"
+                data-bs-toggle="pill" data-bs-target="#tab-pane-12" data-service="foreign-branch-setup" type="button" role="tab">
+                <h5 class="m-0"><i class="fas fa-bars text-primary me-3"></i>Foreign Branch Setup</h5>
               </button>
 
             </div>
@@ -931,7 +955,7 @@
           <div class="col-lg-8">
             <div class="tab-content tab-content-custom w-100">
 
-              <div class="tab-pane fade" id="tab-pane-1" role="tabpanel">
+              <div class="tab-pane fade active show" id="tab-pane-1" role="tabpanel">
                 <div class="w-100">
                   <div class="position-relative mb-4">
                     <img class="rounded w-100 object-fit-cover"
@@ -940,22 +964,31 @@
                   </div>
                   <div class="d-flex flex-column">
                     <div class="mb-3 text-justify lh-medium service-desc" id="desc-1">
-                      <strong>Audit & Assurance Services</strong><br>
-                      At SPARK, we provide our clients with accurate and timely solutions tailored to their specific
-                      requirements. We address the challenges of an ever-evolving economic and regulatory environment,
-                      ensure transparency, and build trust among management and stakeholders to support informed
-                      decision-making.<br><br>
-                      Our focus is on delivering high-quality audit and assurance services by identifying, assessing,
-                      and disclosing both financial and non-financial insights to stakeholders. We value our clients'
-                      acknowledgment and recommendations because this trust is a crucial motivator and plays a
-                      significant role in SPARK's ongoing growth and success.<br><br>
-                      We carefully consider each client's unique business model, policies, and procedures to deliver the
-                      most appropriate and effective solutions.<br><br>
-                      <strong>SPARK's Audit and Assurance Teams:</strong><br>
-                      • Dedicated to fulfilling client requirements<br>
-                      • Adhere to all applicable rules and regulations<br>
-                      • Build trust among management and stakeholders<br>
-                      • Support informed decision-making processes
+                      <strong>Audit &amp; Assurance Services</strong><br><br>
+                      At <strong>S.K Mishra &amp; Associates (SKMA)</strong>, we provide independent audit and assurance
+                      services that enhance the reliability of financial information and strengthen stakeholder
+                      confidence. Our approach combines technical expertise, industry knowledge, and a thorough
+                      understanding of each client's business to deliver meaningful insights beyond statutory
+                      compliance.<br><br>
+                      We recognize that every organization operates within a unique business and regulatory environment.
+                      Accordingly, our audit methodology is tailored to evaluate financial reporting, internal controls,
+                      governance processes, and compliance requirements. Through a risk-based approach and partner-led
+                      engagements, we assist management in identifying key risks, improving operational efficiencies,
+                      and supporting informed decision-making.<br><br>
+                      <strong>Our Audit &amp; Assurance Services Includes</strong><br>
+                      • Statutory Audit under the Companies Act<br>
+                      • Tax Audit under the Income-tax Act<br>
+                      • Stock &amp; Concurrent Audit<br>
+                      • GST Audit &amp; Compliance Review<br>
+                      • Due Diligence &amp; Transaction Support<br>
+                      • Risk Assessment &amp; Process Review<br>
+                      • Management &amp; Assurance Reporting<br><br>
+                      <strong>Our Approach</strong><br>
+                      • Partner-led engagements with experienced professionals<br>
+                      • Risk-based audit methodology aligned with professional standards<br>
+                      • Focus on transparency, accuracy, and regulatory compliance<br>
+                      • Practical recommendations to strengthen governance and internal controls<br>
+                      • Timely execution with a commitment to quality and confidentiality
                     </div>
                     <div class="d-flex gap-2 flex-wrap mt-2">
                       <button class="btn btn-outline-teal py-2 px-4 read-more-btn" data-target="desc-1">Read More <i
@@ -966,7 +999,7 @@
                 </div>
               </div>
 
-              <div class="tab-pane fade active show" id="tab-pane-2" role="tabpanel">
+              <div class="tab-pane fade" id="tab-pane-2" role="tabpanel">
                 <div class="w-100">
                   <div class="position-relative mb-4">
                     <img class="rounded w-100 object-fit-cover"
@@ -975,29 +1008,34 @@
                   </div>
                   <div class="d-flex flex-column">
                     <div class="mb-3 text-justify lh-medium service-desc" id="desc-2">
-                      <strong>Taxation and Advisory Services</strong><br>
-                      At SPARK, we provide Corporate and Personal Tax Advisory, Planning, and Compliance. Taxation is an
-                      integral part of individual and corporate financial planning. SPARK places significant emphasis on
-                      taxation advisory services. Our approach is focused on relieving clients of future tax-related
-                      obligations through proactive planning and compliance.<br><br>
-                      <strong>International Taxation</strong><br>
-                      Organizations operating on a multinational platform often face challenges arising from taxation
-                      norms across different jurisdictions. At SPARK, we understand our clients' cross-border business
-                      requirements and develop solutions that enable flexibility, reconciliation, and tax optimization
-                      across jurisdictions. Cross-border transactions require specialized attention and expertise in
-                      relation to the applicable taxation regimes. SPARK provides advisory services to facilitate the
-                      smooth execution of such transactions.<br><br>
-                      <strong>Transfer Pricing</strong><br>
-                      In today's globalized economy, transfer pricing has become a critical aspect of international
-                      business. SPARK assists clients in navigating complex transfer pricing regulations, ensuring
-                      compliance and optimizing tax positions across related entities.<br><br>
-                      <strong>Our Taxation Services Include:</strong><br>
-                      • Corporate Tax Advisory & Planning<br>
-                      • Personal Tax Advisory & Compliance<br>
-                      • International Taxation & Cross-border Advisory<br>
-                      • Transfer Pricing Documentation & Compliance<br>
-                      • Tax Litigation Support<br>
-                      • GST Advisory & Compliance
+                      <strong>Internal Audit &amp; Risk Advisory</strong><br><br>
+                      At <strong>S.K Mishra &amp; Associates (SKMA)</strong>, we help organizations strengthen
+                      governance, enhance operational efficiency, and manage business risks through independent and
+                      risk-based internal audit services. Our objective is to provide management with meaningful
+                      insights into the effectiveness of internal controls, compliance processes, and risk management
+                      frameworks.<br><br>
+                      Our internal audit approach extends beyond compliance. We evaluate business processes, identify
+                      control gaps, assess operational and financial risks, and recommend practical measures to improve
+                      efficiency and safeguard organizational assets. By working closely with management, we support
+                      informed decision-making and contribute to building a robust control environment that aligns with
+                      the organization's strategic objectives.<br><br>
+                      <strong>Our Internal Audit &amp; Risk Advisory Services Includes</strong><br>
+                      &bull; Risk-Based Internal Audit<br>
+                      &bull; Enterprise Risk Management (ERM) Advisory<br>
+                      &bull; Internal Financial Controls (IFC) Review<br>
+                      &bull; Process Review &amp; Business Process Re-engineering<br>
+                      &bull; Operational &amp; Compliance Audits<br>
+                      &bull; SOP Development &amp; Process Documentation<br>
+                      &bull; Fraud Risk Assessment &amp; Control Evaluation<br>
+                      &bull; Governance, Risk &amp; Compliance (GRC) Advisory<br>
+                      &bull; Internal Control Framework Design &amp; Implementation<br>
+                      &bull; Follow-up Review of Audit Observations<br><br>
+                      <strong>SKMA's Internal Audit &amp; Risk Advisory Team</strong><br>
+                      &bull; Conducts independent, risk-based internal audits<br>
+                      &bull; Evaluates business processes and internal control frameworks<br>
+                      &bull; Identifies operational, financial, and compliance risks<br>
+                      &bull; Recommends practical measures to improve efficiency and governance<br>
+                      &bull; Delivers actionable insights to support management decisions
                     </div>
                     <div class="d-flex gap-2 flex-wrap mt-2">
                       <button class="btn btn-outline-teal py-2 px-4 read-more-btn" data-target="desc-2">Read More <i
@@ -1017,24 +1055,33 @@
                   </div>
                   <div class="d-flex flex-column">
                     <div class="mb-3 text-justify lh-medium service-desc" id="desc-3">
-                      <strong>Corporate Finance and Advisory Services</strong><br>
-                      As a trusted advisor to our clients, we bring a unique and holistic perspective to every
-                      engagement. Our strength lies in our ability to view challenges from both sides — stepping into
-                      the client's shoes while also providing objective, strategic advisory insight.<br><br>
-                      This dual perspective stems from the distinctive experience of our team. Our professionals have
-                      worked with leading global investment banks as well as within in-house corporate finance teams of
-                      large corporations. Having operated on both sides of the table in senior positions, we understand
-                      the expectations, pressures, and decision-making processes of all stakeholders involved.<br><br>
-                      This combination of advisory expertise and real-world corporate experience enables us to deliver
-                      practical, commercially sound, and execution-focused solutions tailored to our clients'
-                      needs.<br><br>
-                      <strong>Our Advisory Services Include:</strong><br>
-                      • Strategic Financial Advisory<br>
-                      • Mergers & Acquisitions Support<br>
-                      • Capital Raising and Structuring<br>
-                      • Financial Due Diligence<br>
-                      • Business Restructuring<br>
-                      • Financial Modeling & Valuations
+                      <strong>IFC / ICFR Advisory</strong><br><br>
+                      At <strong>S.K Mishra &amp; Associates (SKMA)</strong>, we assist organizations in designing,
+                      evaluating, and strengthening their Internal Financial Controls (IFC) and Internal Control over
+                      Financial Reporting (ICFR) frameworks. Effective internal controls are essential for ensuring the
+                      accuracy of financial reporting, safeguarding assets, mitigating risks, and maintaining compliance
+                      with the Companies Act, 2013 and other applicable regulatory requirements.<br><br>
+                      Our approach involves understanding your business processes, identifying control gaps, assessing
+                      key financial and operational risks, and recommending practical control measures. We work closely
+                      with management to establish a robust control environment that enhances governance, improves
+                      operational efficiency, and supports reliable financial reporting.<br><br>
+                      <strong>Our IFC / ICFR Services Includes</strong><br>
+                      &bull; IFC &amp; ICFR Framework Design and Implementation<br>
+                      &bull; Internal Financial Controls Documentation<br>
+                      &bull; Risk and Control Matrix (RCM) Preparation<br>
+                      &bull; Control Design &amp; Operating Effectiveness Testing<br>
+                      &bull; Gap Assessment &amp; Remediation Support<br>
+                      &bull; Process Walkthroughs &amp; Control Evaluation<br>
+                      &bull; Financial Reporting Control Assessment<br>
+                      &bull; Management Action Plan &amp; Implementation Assistance<br>
+                      &bull; Regulatory Compliance Review<br>
+                      &bull; Periodic Control Monitoring &amp; Reporting<br><br>
+                      <strong>SKMA's IFC / ICFR Team</strong><br>
+                      &bull; Assesses the design and operating effectiveness of internal financial controls<br>
+                      &bull; Assists in developing robust control frameworks and documentation<br>
+                      &bull; Supports compliance with the Companies Act, 2013 and applicable standards<br>
+                      &bull; Identifies control gaps and recommends practical remediation measures<br>
+                      &bull; Enhances the reliability of financial reporting and corporate governance
                     </div>
                     <div class="d-flex gap-2 flex-wrap mt-2">
                       <button class="btn btn-outline-teal py-2 px-4 read-more-btn" data-target="desc-3">Read More <i
@@ -1054,31 +1101,37 @@
                   </div>
                   <div class="d-flex flex-column">
                     <div class="mb-3 text-justify lh-medium service-desc" id="desc-4">
-                      <strong>Startup Advisory Services</strong><br>
-                      Startups have specific requirements and are not bound by generalized business solutions in the
-                      initial stages of their growth. At SPARK, we provide customized services tailored to the
-                      ever-changing needs of startups. We address the dynamic requirements of emerging businesses and
-                      assist them in realizing their full potential. We help startups transform their ideas into
-                      reality.<br><br>
-                      <strong>Our Services Include:</strong><br>
-                      <strong>1. Business Structure Advisory</strong><br>
-                      The structure of a business involves careful decision-making based on various factors such as
-                      scale, stage, and type of operations. It also relates to the complexity of the business model and
-                      the level of statutory compliance required. We assist clients in selecting the most appropriate
-                      business structure, taking into consideration the scale and nature of their operations.<br><br>
-                      <strong>2. Procurement of Funding</strong><br>
-                      We assist startups in identifying and securing funding from various sources including angel
-                      investors, venture capital firms, and financial institutions. Our team helps prepare business
-                      plans, financial projections, and investment presentations.<br><br>
-                      <strong>3. Compliance and Regulatory Guidance</strong><br>
-                      We help startups navigate the complex regulatory environment, ensuring compliance with applicable
-                      laws and regulations from inception through growth stages.<br><br>
-                      <strong>4. Operational Optimization</strong><br>
-                      We assist startups in optimizing their operations, implementing efficient processes, and
-                      establishing robust internal controls.<br><br>
-                      <strong>5. Growth Strategy Development</strong><br>
-                      We work with startups to develop comprehensive growth strategies, including market entry,
-                      expansion, and scaling plans.
+                      <strong>Tax Advisory &amp; Litigation</strong><br><br>
+                      At <strong>S.K Mishra &amp; Associates (SKMA)</strong>, we provide comprehensive tax advisory and
+                      litigation services to businesses, professionals, and individuals. Our objective is to help clients
+                      manage tax obligations efficiently, minimize compliance risks, and address complex tax issues
+                      through practical, business-oriented advice. We assist clients in navigating the evolving landscape
+                      of direct and indirect taxation while ensuring compliance with applicable laws and regulatory
+                      requirements.<br><br>
+                      Our services extend beyond advisory and compliance to representing clients at various stages of
+                      tax proceedings. From responding to notices and departmental inquiries to handling assessments,
+                      appeals, and litigation, we provide strategic support backed by technical expertise and thorough
+                      case preparation. Our focus is on delivering practical solutions that protect our clients'
+                      interests while facilitating informed business decisions.<br><br>
+                      <strong>Our Tax Advisory &amp; Litigation Services Includes</strong><br>
+                      &bull; Corporate &amp; Personal Tax Advisory<br>
+                      &bull; Income Tax Planning &amp; Compliance<br>
+                      &bull; GST Advisory &amp; Compliance<br>
+                      &bull; International Tax Advisory<br>
+                      &bull; Transfer Pricing Advisory &amp; Documentation<br>
+                      &bull; Tax Assessments &amp; Scrutiny Support<br>
+                      &bull; Representation before Income Tax &amp; GST Authorities<br>
+                      &bull; Appeals before Appellate Authorities &amp; Tribunals<br>
+                      &bull; Reply to Notices, Show Cause Notices &amp; Demand Orders<br>
+                      &bull; Tax Due Diligence &amp; Transaction Advisory<br>
+                      &bull; Refund Claims &amp; Tax Dispute Resolution<br>
+                      &bull; Withholding Tax (TDS/TCS) Advisory &amp; Compliance<br><br>
+                      <strong>Our Service Commitment</strong><br>
+                      &bull; Provides practical, business-oriented tax advice tailored to client requirements<br>
+                      &bull; Supports timely compliance with direct and indirect tax laws<br>
+                      &bull; Assists clients throughout assessments, appeals, and litigation proceedings<br>
+                      &bull; Delivers technically sound documentation and strategic representation<br>
+                      &bull; Focuses on proactive tax risk management and sustainable compliance
                     </div>
                     <div class="d-flex gap-2 flex-wrap mt-2">
                       <button class="btn btn-outline-teal py-2 px-4 read-more-btn" data-target="desc-4">Read More <i
@@ -1098,26 +1151,36 @@
                   </div>
                   <div class="d-flex flex-column">
                     <div class="mb-3 text-justify lh-medium service-desc" id="desc-5">
-                      <strong>Accounting, Advisory, and Compliance Services</strong><br>
-                      SPARK provides a range of accounting, advisory, and compliance services to support clients and
-                      enable them to concentrate on their core business activities. Outsourcing processes also leads to
-                      cost optimization through operational efficiencies and expert resource pooling.<br><br>
-                      <strong>1. Accounting and Bookkeeping</strong><br>
-                      At SPARK, we design customized outsourcing solutions aligned with your business requirements and
-                      objectives. We function as a virtual back office for clients, handling bookkeeping and accounting
-                      activities—from setup and ongoing support to maintenance and reporting.<br><br>
-                      <strong>Our Services Include:</strong><br>
-                      • Accounting and bookkeeping<br>
-                      • Financial data processing<br>
-                      • Receivables management<br>
-                      • Payables management<br>
-                      • Fixed asset and inventory management<br>
-                      • Payroll processing and reconciliations<br>
-                      • Accounting review and MIS reporting<br>
-                      • Finalization of accounts<br><br>
-                      <strong>2. Transaction Process Optimization</strong><br>
-                      We assist clients in optimizing their transaction processing workflows, improving efficiency, and
-                      reducing operational costs.
+                      <strong>Company Law Compliance &amp; Governance Advisory</strong><br><br>
+                      At <strong>S.K Mishra &amp; Associates (SKMA)</strong>, we assist companies, LLPs, startups, and
+                      business promoters in meeting their statutory obligations under the Companies Act, 2013, the
+                      Limited Liability Partnership Act, and other applicable corporate laws. Our focus is on helping
+                      organizations establish sound compliance practices, strengthen corporate governance, and manage
+                      regulatory responsibilities efficiently throughout the business lifecycle.<br><br>
+                      Our services extend beyond routine compliance. We advise management on corporate governance,
+                      regulatory requirements, board procedures, and corporate restructuring matters, enabling
+                      organizations to maintain legal compliance while supporting effective decision-making. Through a
+                      proactive and practical approach, we help clients build a robust governance framework that enhances
+                      transparency, accountability, and regulatory confidence.<br><br>
+                      <strong>Our Company Law &amp; Governance Services Includes</strong><br>
+                      &bull; Company &amp; LLP Compliance Advisory<br>
+                      &bull; Annual ROC Filings and MCA Compliance<br>
+                      &bull; Corporate Governance Advisory<br>
+                      &bull; Board &amp; Shareholders' Meeting Compliance<br>
+                      &bull; Drafting of Board Resolutions and Corporate Documents<br>
+                      &bull; Maintenance of Statutory Registers &amp; Corporate Records<br>
+                      &bull; Director Appointment, Resignation &amp; KYC Compliance<br>
+                      &bull; Share Capital Restructuring &amp; Corporate Actions<br>
+                      &bull; Alteration of Memorandum &amp; Articles of Association<br>
+                      &bull; Charge Creation, Modification &amp; Satisfaction<br>
+                      &bull; Corporate Restructuring &amp; Regulatory Advisory<br>
+                      &bull; Secretarial Due Diligence &amp; Compliance Reviews<br><br>
+                      <strong>How We Deliver Value</strong><br>
+                      &bull; Strengthen corporate governance through structured compliance frameworks.<br>
+                      &bull; Enable timely compliance with the Companies Act, MCA regulations, and allied corporate laws.<br>
+                      &bull; Support boards and management with practical, risk-based regulatory advice.<br>
+                      &bull; Enhance transparency, accountability, and statutory compliance across the organization.<br>
+                      &bull; Deliver partner-led advisory backed by technical expertise and practical business insights.
                     </div>
                     <div class="d-flex gap-2 flex-wrap mt-2">
                       <button class="btn btn-outline-teal py-2 px-4 read-more-btn" data-target="desc-5">Read More <i
@@ -1137,23 +1200,35 @@
                   </div>
                   <div class="d-flex flex-column">
                     <div class="mb-3 text-justify lh-medium service-desc" id="desc-6">
-                      <strong>Insolvency & Resolution Services</strong><br>
-                      SPARK offers comprehensive insolvency and resolution services under the Insolvency and Bankruptcy
-                      Code (IBC).<br><br>
-                      <strong>Services to Financial and Operational Creditors:</strong><br>
-                      • Filing of claims on behalf of financial creditors<br>
-                      • Preparation of demand notices for operational creditors<br>
-                      • Filing of claims on behalf of operational creditors<br>
-                      • Acting as an Interim Resolution Professional (IRP)<br>
-                      • Acting as a Resolution Professional (RP) for CIRP<br>
-                      • Fast-Track Insolvency Resolution Process<br>
-                      • Acting as a Liquidator under IBC<br>
-                      • Drafting replies to various notices issued by the corporate debtor<br><br>
-                      <strong>Services Relating to the Corporate Insolvency Resolution Process:</strong><br>
-                      • Preparation of Information Memorandum<br>
-                      • Evaluation of Resolution Plans<br>
-                      • Assistance in preparation of Resolution Plans<br>
-                      • Liquidation proceedings and asset disposal
+                      <strong>Transfer Pricing</strong><br><br>
+                      Transfer pricing has become a key area of tax compliance for businesses engaged in domestic and
+                      international related-party transactions. At <strong>S.K Mishra &amp; Associates (SKMA)</strong>, we
+                      assist organizations in meeting transfer pricing obligations through strategic advisory, robust
+                      documentation, and compliance with applicable regulatory requirements. Our objective is to help
+                      businesses manage transfer pricing risks while aligning their intercompany transactions with the
+                      arm's length principle.<br><br>
+                      Our team provides end-to-end support across transfer pricing planning, benchmarking,
+                      documentation, compliance, and dispute management. We work closely with clients to understand
+                      their business models, value chains, and cross-border transactions, enabling them to address
+                      evolving transfer pricing regulations with confidence and transparency.<br><br>
+                      <strong>Our Transfer Pricing Services Includes</strong><br>
+                      &bull; Transfer Pricing Advisory<br>
+                      &bull; Transfer Pricing Documentation<br>
+                      &bull; Benchmarking &amp; Economic Analysis<br>
+                      &bull; Arm's Length Price (ALP) Determination<br>
+                      &bull; Transfer Pricing Policy Design &amp; Review<br>
+                      &bull; Compliance under Indian Transfer Pricing Regulations<br>
+                      &bull; International Transaction Review<br>
+                      &bull; Specified Domestic Transaction Compliance<br>
+                      &bull; Representation during Transfer Pricing Assessments<br>
+                      &bull; Advance Pricing Agreement (APA) &amp; Mutual Agreement Procedure (MAP) Support<br>
+                      &bull; Transfer Pricing Risk Assessment &amp; Health Check<br><br>
+                      <strong>How We Deliver Value</strong><br>
+                      &bull; Develop transfer pricing solutions aligned with business operations and regulatory requirements.<br>
+                      &bull; Prepare robust documentation supported by benchmarking and economic analysis.<br>
+                      &bull; Assist businesses in managing compliance and mitigating transfer pricing risks.<br>
+                      &bull; Support clients during assessments, audits, and dispute resolution proceedings.<br>
+                      &bull; Deliver partner-led advisory tailored to domestic and cross-border business transactions.
                     </div>
                     <div class="d-flex gap-2 flex-wrap mt-2">
                       <button class="btn btn-outline-teal py-2 px-4 read-more-btn" data-target="desc-6">Read More <i
@@ -1173,24 +1248,32 @@
                   </div>
                   <div class="d-flex flex-column">
                     <div class="mb-3 text-justify lh-medium service-desc" id="desc-7">
-                      <strong>Knowledge & Development</strong><br>
-                      Be a Lifelong Student: The More You Learn, the More You Earn — and the More People Trust
-                      You.<br><br>
-                      The sustained development of any organization depends upon continuous efforts toward knowledge
-                      enhancement. SPARK places special emphasis on keeping its team updated with the latest
-                      developments in their respective domains.<br><br>
-                      The partners at SPARK are committed to continuously expanding their expertise and professional
-                      competence. Regular research initiatives and training sessions are conducted to keep staff
-                      informed about recent developments in their areas of practice.<br><br>
-                      <strong>Our Knowledge Initiatives:</strong><br>
-                      • Continuous Professional Development programs<br>
-                      • Research and Training Initiatives<br>
-                      • Centralized knowledge repository for research projects<br>
-                      • Domain Expertise Enhancement<br>
-                      • Team Skill Development Programs<br><br>
-                      Additionally, a centralized knowledge repository has been established to document research
-                      projects and insights, ensuring that accumulated knowledge is effectively shared and utilized for
-                      the collective benefit of the organization.
+                      <strong>Virtual CFO Services</strong><br><br>
+                      Growing businesses require strategic financial leadership without the need for a full-time Chief
+                      Financial Officer. At <strong>S.K Mishra &amp; Associates (SKMA)</strong>, our Virtual CFO services
+                      provide businesses with strategic financial guidance, performance monitoring, cash flow
+                      management, and decision support to improve financial discipline and achieve sustainable
+                      growth.<br><br>
+                      We work closely with business owners and management to strengthen financial reporting, optimize
+                      working capital, improve profitability, and support strategic planning. Our services are tailored
+                      to meet the evolving needs of startups, SMEs, and growing enterprises.<br><br>
+                      <strong>Our Virtual CFO Services Includes</strong><br>
+                      &bull; Strategic Financial Planning<br>
+                      &bull; Budgeting &amp; Forecasting<br>
+                      &bull; MIS &amp; Management Reporting<br>
+                      &bull; Cash Flow &amp; Working Capital Management<br>
+                      &bull; Business Performance Analysis<br>
+                      &bull; Cost Optimization &amp; Profitability Review<br>
+                      &bull; CFO Advisory for Startups &amp; SMEs<br>
+                      &bull; Investor &amp; Board Reporting<br>
+                      &bull; Financial Due Diligence Support<br>
+                      &bull; Business Process &amp; Financial Controls<br><br>
+                      <strong>How We Deliver Value</strong><br>
+                      &bull; Provide strategic financial insights for informed decision-making.<br>
+                      &bull; Strengthen financial planning, reporting, and performance monitoring.<br>
+                      &bull; Improve cash flow management and operational efficiency.<br>
+                      &bull; Support business growth with partner-led financial advisory.<br>
+                      &bull; Deliver scalable CFO solutions tailored to business requirements.
                     </div>
                     <div class="d-flex gap-2 flex-wrap mt-2">
                       <button class="btn btn-outline-teal py-2 px-4 read-more-btn" data-target="desc-7">Read More <i
@@ -1210,25 +1293,31 @@
                   </div>
                   <div class="d-flex flex-column">
                     <div class="mb-3 text-justify lh-medium service-desc" id="desc-8">
-                      <strong>Valuation Services</strong><br>
-                      Valuation has become an integral component of the modern business environment. Numerous business
-                      transactions require valuation in accordance with applicable statutes and regulatory
-                      frameworks.<br><br>
-                      <strong>Regulatory Framework:</strong><br>
-                      Section 247 of the Companies Act, 2013 mandates that all valuations required under the Act must be
-                      conducted by Registered Valuers. Similarly, under the Insolvency and Bankruptcy Code, 2016 (IBC),
-                      only Registered Valuers are eligible to undertake valuation assignments. The Insolvency and
-                      Bankruptcy Board of India (IBBI) is the authority empowered to grant registration to
-                      valuers.<br><br>
-                      SPARK is committed to delivering high-quality valuation services in compliance with applicable
-                      laws and professional standards.<br><br>
-                      <strong>Our Valuation Services:</strong><br>
-                      • Valuation under the Companies Act, 2013<br>
-                      • Valuation under the Insolvency and Bankruptcy Code<br>
-                      • Valuation for mergers and acquisitions<br>
-                      • Valuation for financial reporting<br>
-                      • Business valuation for strategic planning<br>
-                      • Valuation of intangible assets
+                      <strong>Project Finance</strong><br><br>
+                      Access to the right financing is essential for business growth and expansion. At
+                      <strong>S.K Mishra &amp; Associates (SKMA)</strong>, we assist businesses in structuring and arranging
+                      project finance by providing end-to-end advisory, financial analysis, and lender support. Our
+                      services help clients prepare bankable financial proposals and facilitate informed financing
+                      decisions.<br><br>
+                      From project conceptualization to financial closure, we support clients through every stage of the
+                      financing process while ensuring regulatory compliance and financial viability.<br><br>
+                      <strong>Our Project Finance Services Includes</strong><br>
+                      &bull; Project Report Preparation<br>
+                      &bull; CMA Data &amp; Financial Projections<br>
+                      &bull; Debt Syndication &amp; Bank Finance Assistance<br>
+                      &bull; Financial Feasibility Studies<br>
+                      &bull; Working Capital Assessment<br>
+                      &bull; Term Loan Advisory<br>
+                      &bull; Project Appraisal Support<br>
+                      &bull; Funding Strategy &amp; Capital Structuring<br>
+                      &bull; Liaison with Banks &amp; Financial Institutions<br>
+                      &bull; Financial Due Diligence<br><br>
+                      <strong>How We Deliver Value</strong><br>
+                      &bull; Prepare comprehensive financial reports for funding requirements.<br>
+                      &bull; Support clients throughout the project financing lifecycle.<br>
+                      &bull; Develop realistic financial projections and funding strategies.<br>
+                      &bull; Assist in interactions with banks and financial institutions.<br>
+                      &bull; Deliver practical advisory aligned with business objectives.
                     </div>
                     <div class="d-flex gap-2 flex-wrap mt-2">
                       <button class="btn btn-outline-teal py-2 px-4 read-more-btn" data-target="desc-8">Read More <i
@@ -1248,26 +1337,118 @@
                   </div>
                   <div class="d-flex flex-column">
                     <div class="mb-3 text-justify lh-medium service-desc" id="desc-9">
-                      <strong>Corporate Compliance Services</strong><br>
-                      SPARK provides comprehensive compliance solutions under various corporate laws, including
-                      Companies Act, FEMA, and regulatory filings. Our team ensures timely and accurate compliance,
-                      reducing risk and enhancing governance.<br><br>
-                      <strong>Our Compliance Services Include:</strong><br>
-                      • Company Formation and Registration<br>
-                      • Annual Compliance under Companies Act<br>
-                      • Board and Shareholder Meeting Management<br>
-                      • Statutory Filing and Secretarial Services<br>
-                      • FEMA Compliance and Advisory<br>
-                      • Regulatory Filings and Approvals<br>
-                      • Corporate Governance Advisory<br>
-                      • Due Diligence Services<br><br>
-                      <strong>Corporate Governance:</strong><br>
-                      We assist organizations in establishing robust corporate governance frameworks, ensuring
-                      transparency, accountability, and stakeholder confidence. Our team provides advisory on board
-                      composition, committee formation, and governance best practices.
+                      <strong>Business Valuation &amp; Mergers &amp; Acquisitions</strong><br><br>
+                      Business valuation plays a critical role in investment decisions, restructuring, mergers,
+                      acquisitions, and regulatory compliance. At <strong>S.K Mishra &amp; Associates (SKMA)</strong>, we
+                      provide independent valuation and transaction advisory services supported by robust financial
+                      analysis and industry insights.<br><br>
+                      Our team assists businesses, investors, and promoters in evaluating business value, assessing
+                      transaction risks, and facilitating strategic corporate transactions.<br><br>
+                      <strong>Our Business Valuation &amp; M&amp;A Services Includes</strong><br>
+                      &bull; Business &amp; Equity Valuation<br>
+                      &bull; Share Valuation<br>
+                      &bull; Startup Valuation<br>
+                      &bull; Purchase Price Allocation (PPA)<br>
+                      &bull; Merger &amp; Acquisition Advisory<br>
+                      &bull; Financial Due Diligence<br>
+                      &bull; Transaction Structuring Support<br>
+                      &bull; Investment Evaluation<br>
+                      &bull; Valuation for Regulatory &amp; Tax Purposes<br>
+                      &bull; Fairness Opinions<br><br>
+                      <strong>How We Deliver Value</strong><br>
+                      &bull; Deliver independent and well-supported valuation analyses.<br>
+                      &bull; Assist in strategic transactions with practical financial insights.<br>
+                      &bull; Support investment decisions through comprehensive due diligence.<br>
+                      &bull; Apply recognized valuation methodologies tailored to business needs.<br>
+                      &bull; Provide partner-led advisory throughout the transaction process.
                     </div>
                     <div class="d-flex gap-2 flex-wrap mt-2">
                       <button class="btn btn-outline-teal py-2 px-4 read-more-btn" data-target="desc-9">Read More <i
+                          class="fas fa-arrow-down ms-2"></i></button>
+                      <a href="index.html#contact" class="btn btn-teal py-2 px-4">Contact Us</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="tab-pane-10" role="tabpanel">
+                <div class="w-100">
+                  <div class="position-relative mb-4">
+                    <img class="rounded w-100 object-fit-cover"
+                      src="https://www.ca-spark.com/public/caspark/images/services/services.jpg" alt="RERA Compliance" />
+                  </div>
+                  <div class="d-flex flex-column">
+                    <div class="mb-3 text-justify lh-medium service-desc" id="desc-10">
+                      <strong>RERA Compliance</strong><br><br>
+                      We assist real estate businesses and project stakeholders with RERA registration, reporting, and
+                      compliance support. Our approach helps clients maintain accurate records, meet filing timelines,
+                      and reduce regulatory risk.<br><br>
+                      <strong>Our Services Include:</strong><br>
+                      &bull; RERA registration assistance<br>
+                      &bull; Periodic compliance and reporting support<br>
+                      &bull; Project account review and certification support<br>
+                      &bull; Documentation and regulatory filing assistance<br>
+                      &bull; Advisory on RERA compliance requirements
+                    </div>
+                    <div class="d-flex gap-2 flex-wrap mt-2">
+                      <button class="btn btn-outline-teal py-2 px-4 read-more-btn" data-target="desc-10">Read More <i
+                          class="fas fa-arrow-down ms-2"></i></button>
+                      <a href="index.html#contact" class="btn btn-teal py-2 px-4">Contact Us</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="tab-pane-11" role="tabpanel">
+                <div class="w-100">
+                  <div class="position-relative mb-4">
+                    <img class="rounded w-100 object-fit-cover"
+                      src="https://www.ca-spark.com/public/caspark/images/services/consulting.jpg" alt="Start-up Setup" />
+                  </div>
+                  <div class="d-flex flex-column">
+                    <div class="mb-3 text-justify lh-medium service-desc" id="desc-11">
+                      <strong>Start-up Setup</strong><br><br>
+                      We help founders set up the right business structure and early-stage compliance framework. Our
+                      startup support is designed to give new ventures a clean legal, accounting, and tax foundation
+                      from day one.<br><br>
+                      <strong>Our Services Include:</strong><br>
+                      &bull; Entity selection and incorporation support<br>
+                      &bull; PAN, TAN, GST, and statutory registrations<br>
+                      &bull; Startup India and MSME registration guidance<br>
+                      &bull; Accounting and compliance setup<br>
+                      &bull; Early-stage tax and regulatory advisory
+                    </div>
+                    <div class="d-flex gap-2 flex-wrap mt-2">
+                      <button class="btn btn-outline-teal py-2 px-4 read-more-btn" data-target="desc-11">Read More <i
+                          class="fas fa-arrow-down ms-2"></i></button>
+                      <a href="index.html#contact" class="btn btn-teal py-2 px-4">Contact Us</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="tab-pane-12" role="tabpanel">
+                <div class="w-100">
+                  <div class="position-relative mb-4">
+                    <img class="rounded w-100 object-fit-cover"
+                      src="https://www.ca-spark.com/public/caspark/images/services/Insolvency.png"
+                      alt="Foreign Branch Setup" />
+                  </div>
+                  <div class="d-flex flex-column">
+                    <div class="mb-3 text-justify lh-medium service-desc" id="desc-12">
+                      <strong>Foreign Branch Setup</strong><br><br>
+                      We support businesses with cross-border branch establishment, regulatory registrations, and
+                      compliance planning. Our team assists with structuring, documentation, and coordination for smooth
+                      overseas expansion support.<br><br>
+                      <strong>Our Services Include:</strong><br>
+                      &bull; Advisory on branch, liaison, and project office setup<br>
+                      &bull; Regulatory documentation and filing support<br>
+                      &bull; FEMA and cross-border compliance guidance<br>
+                      &bull; Tax and accounting setup for foreign operations<br>
+                      &bull; Ongoing compliance and reporting assistance
+                    </div>
+                    <div class="d-flex gap-2 flex-wrap mt-2">
+                      <button class="btn btn-outline-teal py-2 px-4 read-more-btn" data-target="desc-12">Read More <i
                           class="fas fa-arrow-down ms-2"></i></button>
                       <a href="index.html#contact" class="btn btn-teal py-2 px-4">Contact Us</a>
                     </div>
@@ -1343,6 +1524,9 @@
     ovl.addEventListener('click', closeNav);
     drwClose.addEventListener('click', closeNav);
     document.querySelectorAll('.dl').forEach(a => a.addEventListener('click', closeNav));
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 900) closeNav();
+    });
 
     // ══════════════════════════════════════
     // BACK TO TOP (from team page)
@@ -1386,6 +1570,35 @@
       })
     })();
 
+    const serviceButtons = Array.from(document.querySelectorAll('#serviceTab button[data-service]'));
+    const getServiceButton = (slug) => serviceButtons.find((btn) => btn.dataset.service === slug);
+    const serviceWrapper = document.querySelector('.service-wrapper');
+
+    function showServiceFromUrl() {
+      const params = new URLSearchParams(window.location.search);
+      const serviceSlug = params.get('service');
+      const targetButton = serviceSlug ? getServiceButton(serviceSlug) : null;
+
+      if (targetButton) {
+        bootstrap.Tab.getOrCreateInstance(targetButton).show();
+        setTimeout(() => {
+          serviceWrapper?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 80);
+      }
+    }
+
+    serviceButtons.forEach((btn) => {
+      btn.addEventListener('shown.bs.tab', () => {
+        const slug = btn.dataset.service;
+        if (!slug) return;
+        const url = new URL(window.location.href);
+        url.searchParams.set('service', slug);
+        history.replaceState(null, '', url);
+      });
+    });
+
+    showServiceFromUrl();
+
     // Reset expanded state when switching tabs
     document.querySelectorAll('#serviceTab button').forEach(btn => {
       btn.addEventListener('shown.bs.tab', function () {
@@ -1407,3 +1620,6 @@
 </body>
 
 </html>
+
+
+

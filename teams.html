@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <title>Our Team – S.K. Mishra & Associates | Chartered Accountants</title>
+    <title>Our Team – S.K Mishra & Associates | Chartered Accountants</title>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
       rel="stylesheet"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 
     <style>
       /* ═══════════════════════════════════════════════════════
@@ -37,8 +37,8 @@
         --r: 10px;
         --r2: 18px;
         --r3: 28px;
-        --fd: "Montserrat", sans-serif;
-        --fb: "Montserrat", sans-serif;
+        --fd: "Playfair Display", serif;
+        --fb: "Inter Tight", sans-serif;
       }
       *,
       *::before,
@@ -52,7 +52,7 @@
         overflow-x: hidden;
       }
       body {
-        font-family: "Montserrat", sans-serif;
+        font-family: var(--fb);
         font-optical-sizing: auto;
         font-weight: 400;
         font-style: normal;
@@ -293,7 +293,7 @@
         letter-spacing: -0.3px;
       }
       .nav-brand-sub {
-        font-size: 15px;
+        font-size: 22px;
         font-weight: 900;
         letter-spacing: 1px;
         text-transform: none;
@@ -517,7 +517,13 @@
       .nav-drawer-cta .btn-teal {
         width: 100%;
         justify-content: center;
-        color:white
+        color: #fff;
+        border-bottom: 0;
+        border-radius: 50px;
+        background: linear-gradient(135deg, #175889 0%, rgba(23, 88, 137, 0.92) 100%);
+      }
+      .nav-drawer-cta .btn-teal i {
+        color: #fff;
       }
 
       .nav-ovl {
@@ -728,13 +734,15 @@
             </div>
 
             <div class="nav-brand-text">
-              <div class="nav-brand-sub">S.K. Mishra &amp; Associates</div>
-              <div class="nav-brand-caption">Chartered Accountant</div>
+              <div class="nav-brand-sub">S.K Mishra &amp; Associates</div>
+              <div class="nav-brand-caption">Chartered Accountants</div>
             </div>
           </a>
 
           <div class="nav-links">
-            <a href="index.html#home">Home</a>
+            <a href="index.html#about">Home</a>
+            <a href="index.html#core-values">Core Values</a>
+            <a href="index.html#services">Our Services</a>
             <div class="nav-dropdown">
               <button class="nav-dropdown-toggle" type="button">
                 About <i class="ri-arrow-down-s-line"></i>
@@ -744,9 +752,7 @@
                 <a href="teams.html">Our Team</a>
               </div>
             </div>
-            <a href="index.html#services">Our Services</a>
             <a href="index.html#whatwedo">What We Do</a>
-            <a href="index.html#achievements">Our Achievements</a>
             <a href="index.html#links">Important Links</a>
           </div>
 
@@ -773,6 +779,7 @@
         <i class="ri-close-line"></i>
       </button>
       <a href="index.html#home" class="dl"><i class="ri-home-4-line"></i>Home</a>
+      <a href="index.html#core-values" class="dl"><i class="ri-shield-star-line"></i>Core Values</a>
       <a href="index.html#about" class="dl"><i class="ri-information-line"></i>About Us</a>
       <a href="teams.html" class="dl dl-sub"><i class="ri-group-line"></i>Our Team</a>
       <a href="index.html#services" class="dl"><i class="ri-briefcase-line"></i>Our Services</a>
@@ -969,6 +976,9 @@
       ovl.addEventListener('click', closeNav);
       drwClose.addEventListener('click', closeNav);
       document.querySelectorAll('.dl').forEach((a) => a.addEventListener('click', closeNav));
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 900) closeNav();
+      });
 
       /* ══════════════════════════════════════
    SCROLL REVEAL

@@ -4,11 +4,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <title>Terms &amp; Conditions – S.K. Mishra & Associates | Chartered Accountants</title>
+  <title>Terms &amp; Conditions – S.K Mishra & Associates | Chartered Accountants</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
     rel="stylesheet" />
 
   <style>
@@ -36,8 +36,8 @@
       --r: 10px;
       --r2: 18px;
       --r3: 28px;
-      --fd: "Montserrat", sans-serif;
-      --fb: "Montserrat", sans-serif;
+      --fd: "Playfair Display", serif;
+      --fb: "Inter Tight", sans-serif;
     }
 
     *,
@@ -394,7 +394,7 @@
     }
 
     .nav-brand-sub {
-      font-size: 15px;
+      font-size: 22px;
       font-weight: 900;
       letter-spacing: 1px;
       text-transform: none;
@@ -634,6 +634,24 @@
       font-size: 14px;
     }
 
+    .nav-drawer-cta {
+      margin-top: auto;
+      padding-top: 24px;
+    }
+
+    .nav-drawer-cta .btn-teal {
+      width: 100%;
+      justify-content: center;
+      color: #fff;
+      border-bottom: 0;
+      border-radius: 50px;
+      background: linear-gradient(135deg, #175889 0%, rgba(23, 88, 137, 0.92) 100%);
+    }
+
+    .nav-drawer-cta .btn-teal i {
+      color: #fff;
+    }
+
     .nav-ovl {
       position: fixed;
       inset: 0;
@@ -728,8 +746,8 @@
           </div>
 
           <div class="nav-brand-text">
-            <div class="nav-brand-sub">S.K. Mishra &amp; Associates</div>
-            <div class="nav-brand-caption">Chartered Accountant</div>
+            <div class="nav-brand-sub">S.K Mishra &amp; Associates</div>
+            <div class="nav-brand-caption">Chartered Accountants</div>
           </div>
         </a>
 
@@ -804,9 +822,9 @@
         <div class="rule" style="margin-left: auto; margin-right: auto; margin-top: 6px; margin-bottom: 18px;"></div>
 
         <p class="body" style="margin-bottom: 14px">
-          This is the official website of S K Mishra &amp; Associates (SKMA). The material displayed on this website is
+          This is the official website of S.K Mishra &amp; Associates (SKMA). The material displayed on this website is
           for reference purposes only and does not purport to be a legal document or give rise to any legal obligation
-          on the part of S K Mishra &amp; Associates. Though every effort is made to ensure the accuracy and currency of
+          on the part of S.K Mishra &amp; Associates. Though every effort is made to ensure the accuracy and currency of
           the contents featured on this website, the same should not be construed as a statement of law or used for any
           legal purpose. SKMA accepts no responsibility for the accuracy, completeness, usefulness or otherwise of the
           contents of the website. Users are advised to obtain professional advice before acting on the information
@@ -844,7 +862,7 @@
   <footer
     style="padding: 24px 0; text-align: center; font-size: 13px; color: #6b7a8a; border-top: 1px solid rgba(13, 27, 42, 0.06);">
     <div class="container">
-      &copy; 2025 CA India · S.K. Mishra &amp; Associates. All rights reserved.
+      &copy; 2025 CA India · S.K Mishra &amp; Associates. All rights reserved.
     </div>
   </footer>
 
@@ -929,6 +947,9 @@
     document.querySelectorAll(".nav-drawer a").forEach((a) =>
       a.addEventListener("click", closeNav)
     );
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 900) closeNav();
+    });
   </script>
 </body>
 
