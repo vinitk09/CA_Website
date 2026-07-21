@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <title>Our Team – S.K Mishra & Associates | Chartered Accountants</title>
+    <title>Our Team – S K Mishra & Associates | Chartered Accountants</title>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
       rel="stylesheet"
@@ -718,82 +718,427 @@
         }
       }
 
-    </style>
+    
+    /* Shared navbar styling synced with index.html */
+    #nav {
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      z-index: 900 !important;
+      padding: 0 !important;
+      background: #fff !important;
+      box-shadow: 0 2px 12px rgba(13, 27, 42, 0.08) !important;
+    }
+
+    #nav.solid {
+      padding: 0 !important;
+      background: #fff !important;
+      box-shadow: 0 2px 18px rgba(13, 27, 42, 0.1) !important;
+    }
+
+    #nav > .container {
+      max-width: 1320px !important;
+      padding: 0 24px !important;
+    }
+
+    #nav .nav-inner {
+      min-height: 82px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      gap: 14px !important;
+      flex-wrap: nowrap !important;
+    }
+
+    #nav .nav-brand {
+      flex: 0 1 390px !important;
+      min-width: 0 !important;
+      display: flex !important;
+      align-items: center !important;
+      gap: 12px !important;
+      margin-right: 18px !important;
+      color: inherit !important;
+      text-decoration: none !important;
+    }
+
+    #nav .nav-brand-icon,
+    #nav .nav-brand-icon img {
+      width: 62px !important;
+      height: auto !important;
+    }
+
+    #nav .nav-brand-text {
+      min-width: 0 !important;
+      padding-left: 12px !important;
+      border-left: 1px solid rgba(13, 27, 42, 0.16) !important;
+      line-height: 1 !important;
+    }
+
+    #nav .nav-brand-sub {
+      color: #08284d !important;
+      font-family: var(--fd) !important;
+      font-size: clamp(18px, 1.35vw, 22px) !important;
+      font-weight: 900 !important;
+      letter-spacing: 1px !important;
+      line-height: 1.04 !important;
+      text-transform: uppercase !important;
+      white-space: nowrap !important;
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+    }
+
+    #nav .nav-brand-caption {
+      color: #08284d !important;
+      font-size: clamp(10px, 0.85vw, 13px) !important;
+      font-weight: 850 !important;
+      letter-spacing: 3px !important;
+      line-height: 1.2 !important;
+      text-transform: uppercase !important;
+      white-space: nowrap !important;
+      text-align-last: auto !important;
+    }
+
+    #nav .nav-brand-tagline {
+      display: block !important;
+      margin-top: 3px !important;
+      color: #b58418 !important;
+      font-family: var(--fd) !important;
+      font-size: 12px !important;
+      font-style: italic !important;
+      font-weight: 750 !important;
+      line-height: 1.1 !important;
+    }
+
+    #nav .nav-links {
+      flex: 1 1 auto !important;
+      min-width: 0 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: flex-end !important;
+      gap: 3px !important;
+      margin-left: auto !important;
+    }
+
+    #nav .nav-links a,
+    #nav .nav-links button,
+    #nav .nav-dropdown-toggle {
+      position: relative !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      padding: 10px 4px !important;
+      color: #08284d !important;
+      border: 0 !important;
+      border-radius: 0 !important;
+      background: transparent !important;
+      font-family: inherit !important;
+      font-size: 12px !important;
+      font-weight: 900 !important;
+      letter-spacing: 0 !important;
+      line-height: 1.2 !important;
+      text-transform: uppercase !important;
+      white-space: nowrap !important;
+      text-decoration: none !important;
+    }
+
+    #nav .nav-links a::after,
+    #nav .nav-links button::after,
+    #nav .nav-dropdown-toggle::after {
+      content: "" !important;
+      position: absolute !important;
+      bottom: 5px !important;
+      left: 50% !important;
+      width: 0 !important;
+      height: 2px !important;
+      background: var(--gold) !important;
+      border-radius: 2px !important;
+      transition: width 0.3s, left 0.3s !important;
+    }
+
+    #nav .nav-links a:first-child::after,
+    #nav .nav-links a:hover::after,
+    #nav .nav-links button:hover::after,
+    #nav .nav-dropdown:hover .nav-dropdown-toggle::after {
+      width: 58% !important;
+      left: 21% !important;
+    }
+
+    #nav .nav-dropdown {
+      position: relative !important;
+    }
+
+    #nav .nav-dropdown-menu {
+      position: absolute !important;
+      top: 100% !important;
+      left: 0 !important;
+      min-width: 220px !important;
+      padding: 10px !important;
+      display: none !important;
+      flex-direction: column !important;
+      gap: 4px !important;
+      background: rgba(255, 255, 255, 0.98) !important;
+      border: 1px solid rgba(82, 16, 139, 0.14) !important;
+      border-radius: 0 !important;
+      box-shadow: 0 16px 56px rgba(13, 27, 42, 0.14) !important;
+      z-index: 2000 !important;
+    }
+
+    #nav .nav-dropdown:hover .nav-dropdown-menu,
+    #nav .nav-dropdown:focus-within .nav-dropdown-menu {
+      display: flex !important;
+    }
+
+    #nav .nav-dropdown-menu a {
+      width: 100% !important;
+      justify-content: flex-start !important;
+      padding: 10px 12px !important;
+      color: #1a2e45 !important;
+    }
+
+    #nav .nav-cta {
+      flex: 0 0 auto !important;
+      display: flex !important;
+      align-items: center !important;
+    }
+
+    #nav .nav-consult-btn {
+      min-height: 44px !important;
+      width: auto !important;
+      padding: 12px 16px !important;
+      border-radius: 2px !important;
+      background: #08284d !important;
+      color: #fff !important;
+      font-size: 11.5px !important;
+      font-weight: 900 !important;
+      letter-spacing: 0 !important;
+      text-transform: uppercase !important;
+      white-space: nowrap !important;
+      text-decoration: none !important;
+    }
+
+    #nav .nav-hb {
+      display: none !important;
+      flex-direction: column !important;
+      gap: 5px !important;
+      padding: 8px !important;
+      background: none !important;
+      border: 0 !important;
+    }
+
+    #nav .nav-hb span {
+      display: block !important;
+      width: 24px !important;
+      height: 2.5px !important;
+      background: #0d1b2a !important;
+      border-radius: 2px !important;
+    }
+
+    @media (max-width: 1240px) {
+      #nav .nav-links,
+      #nav .nav-cta {
+        display: none !important;
+      }
+
+      #nav .nav-hb {
+        display: flex !important;
+      }
+
+      #nav .nav-inner {
+        min-height: 76px !important;
+      }
+
+      #nav .nav-brand-icon,
+      #nav .nav-brand-icon img {
+        width: 58px !important;
+      }
+
+      #nav .nav-brand-sub {
+        font-size: 19px !important;
+      }
+
+      #nav .nav-brand-caption {
+        font-size: 11px !important;
+        letter-spacing: 3px !important;
+      }
+    }
+
+    @media (max-width: 768px) {
+      #nav .nav-inner {
+        min-height: 74px !important;
+      }
+
+      #nav .nav-brand-icon,
+      #nav .nav-brand-icon img {
+        width: 54px !important;
+      }
+
+      #nav .nav-brand-sub {
+        font-size: 16px !important;
+      }
+
+      #nav .nav-brand-caption {
+        font-size: 9px !important;
+        letter-spacing: 2px !important;
+      }
+
+      #nav .nav-brand-tagline {
+        display: none !important;
+      }
+    }
+  
+    /* Shared mobile drawer styling synced with index.html */
+    .nav-drawer-close {
+      position: absolute !important;
+      top: 18px !important;
+      right: 18px !important;
+      width: 36px !important;
+      height: 36px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      border: 0 !important;
+      border-radius: 50% !important;
+      background: var(--light) !important;
+      color: var(--navy) !important;
+      font-size: 18px !important;
+    }
+
+    .nav-drawer {
+      position: fixed !important;
+      top: 0 !important;
+      right: -100% !important;
+      width: min(310px, 88vw) !important;
+      height: 100vh !important;
+      z-index: 910 !important;
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 2px !important;
+      padding: 90px 32px 40px !important;
+      background: #fff !important;
+      box-shadow: -4px 0 40px rgba(13, 27, 42, 0.14) !important;
+      transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    }
+
+    .nav-drawer.open {
+      right: 0 !important;
+    }
+
+    .nav-drawer a {
+      display: flex !important;
+      align-items: center !important;
+      gap: 10px !important;
+      padding: 12px 0 !important;
+      border-bottom: 1px solid rgba(13, 27, 42, 0.06) !important;
+      color: var(--navy2) !important;
+      font-size: 15px !important;
+      font-weight: 600 !important;
+      text-decoration: none !important;
+    }
+
+    .nav-drawer a i {
+      color: var(--teal) !important;
+      font-size: 16px !important;
+    }
+
+    .nav-drawer .dl-sub {
+      padding-left: 20px !important;
+      font-size: 14px !important;
+    }
+
+    .nav-drawer-cta {
+      margin-top: 14px !important;
+    }
+
+    .nav-drawer-cta .btn-teal,
+    .nav-drawer-cta .btn-teal-nav {
+      width: 100% !important;
+      display: flex !important;
+      justify-content: center !important;
+      padding: 13px 24px !important;
+      border: 0 !important;
+      border-radius: 50px !important;
+      background: linear-gradient(135deg, #175889 0%, rgba(23, 88, 137, 0.92) 100%) !important;
+      color: #fff !important;
+    }
+
+    .nav-drawer-cta .btn-teal i,
+    .nav-drawer-cta .btn-teal-nav i {
+      color: #fff !important;
+    }
+  </style>
   </head>
   <body>
     <div id="cursor-dot"></div>
     <div id="cursor-ring"></div>
 
     <!-- ══ NAVIGATION ══ -->
-    <nav id="nav">
-      <div class="container">
-        <div class="nav-inner">
-             <a href="index.html" class="nav-brand">
-            <div class="nav-brand-icon">
-              <img src="assets/logo.png" alt="CA India Logo" />
-            </div>
-
-            <div class="nav-brand-text">
-              <div class="nav-brand-sub">S.K Mishra &amp; Associates</div>
-              <div class="nav-brand-caption">Chartered Accountants</div>
-            </div>
-          </a>
-
-          <div class="nav-links">
-            <a href="index.html#about">Home</a>
-            <a href="index.html#core-values">Core Values</a>
-            <a href="index.html#services">Our Services</a>
-            <div class="nav-dropdown">
-              <button class="nav-dropdown-toggle" type="button">
-                About <i class="ri-arrow-down-s-line"></i>
-              </button>
-              <div class="nav-dropdown-menu">
-                <a href="index.html#about">About Us</a>
-                <a href="teams.html">Our Team</a>
-              </div>
-            </div>
-            <a href="index.html#whatwedo">What We Do</a>
-            <a href="index.html#links">Important Links</a>
-          </div>
-
-          <div class="nav-cta">
-            <a
-              href="index.html#contact"
-              class="btn btn-teal"
-              style="padding: 10px 22px; font-size: 12.5px; width: 152px;"
-            >
-              <i class="ri-mail-send-line"></i> Get in Touch
-            </a>
-          </div>
-
-          <button class="nav-hb" id="navHb" aria-label="Menu">
-            <span></span><span></span><span></span>
-          </button>
+  <nav id="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html#home" class="nav-brand">
+        <div class="nav-brand-icon">
+          <img src="assets/logo.png" alt="CA India Logo" />
         </div>
-      </div>
-    </nav>
+        <div class="nav-brand-text">
+          <div class="nav-brand-sub">S K Mishra &amp; Associates</div>
+          <div class="nav-brand-caption">Chartered Accountants</div>
+          <div class="nav-brand-tagline">Building Trust. Enabling Growth.</div>
+        </div>
+      </a>
 
-    <div class="nav-ovl" id="navOvl"></div>
-    <div class="nav-drawer" id="navDrw">
-      <button class="nav-drawer-close" id="navDrwClose" aria-label="Close menu">
-        <i class="ri-close-line"></i>
-      </button>
-      <a href="index.html#home" class="dl"><i class="ri-home-4-line"></i>Home</a>
-      <a href="index.html#core-values" class="dl"><i class="ri-shield-star-line"></i>Core Values</a>
-      <a href="index.html#about" class="dl"><i class="ri-information-line"></i>About Us</a>
-      <a href="teams.html" class="dl dl-sub"><i class="ri-group-line"></i>Our Team</a>
-      <a href="index.html#services" class="dl"><i class="ri-briefcase-line"></i>Our Services</a>
-      <a href="index.html#whatwedo" class="dl"><i class="ri-settings-3-line"></i>What We Do</a>
-      <a href="index.html#achievements" class="dl"><i class="ri-trophy-line"></i>Our Achievements</a>
-      <a href="index.html#links" class="dl"><i class="ri-links-line"></i>Important Links</a>
-      <div class="nav-drawer-cta">
-        <a href="index.html#contact" class="btn btn-teal dl">
-          <i class="ri-mail-send-line" style="color: white;"></i> Get in Touch
+      <div class="nav-links">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#core-values">Core Values</a>
+        <a href="index.html#services">Our Services</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-toggle" type="button">
+            About <i class="ri-arrow-down-s-line"></i>
+          </button>
+          <div class="nav-dropdown-menu">
+            <a href="index.html#about">About Us</a>
+            <a href="teams.html">Our Team</a>
+          </div>
+        </div>
+        <a href="index.html#whatwedo">What We Do</a>
+        <a href="knowledge-centre.html">Knowledge Centre</a>
+        <a href="index.html#links">Important Links</a>
+      </div>
+
+      <div class="nav-cta">
+        <a href="index.html#contact" class="btn btn-teal u-style-1 nav-consult-btn">
+          <i class="ri-mail-send-line"></i> Get in Touch
         </a>
       </div>
-    </div>
 
-    <!-- ══ PAGE HEADER ══ -->
+      <button class="nav-hb" id="navHb" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="nav-ovl" id="navOvl"></div>
+<div class="nav-drawer" id="navDrw">
+  <button class="nav-drawer-close" id="navDrwClose" aria-label="Close menu">
+    <i class="ri-close-line"></i>
+  </button>
+  <a href="index.html#home" class="dl"><i class="ri-home-4-line"></i>Home</a>
+  <a href="index.html#about" class="dl"><i class="ri-information-line"></i>About Us</a>
+  <a href="teams.html" class="dl dl-sub"><i class="ri-group-line"></i>Our Team</a>
+  <a href="index.html#core-values" class="dl"><i class="ri-shield-star-line"></i>Core Values</a>
+  <a href="index.html#services" class="dl"><i class="ri-briefcase-line"></i>Our Services</a>
+  <a href="index.html#whatwedo" class="dl"><i class="ri-settings-3-line"></i>What We Do</a>
+  <a href="knowledge-centre.html" class="dl"><i class="ri-book-open-line"></i>Knowledge Centre</a>
+  <a href="index.html#links" class="dl" data-open-links="true"><i class="ri-links-line"></i>Important Links</a>
+  <div class="nav-drawer-cta">
+    <a href="index.html#contact" class="btn btn-teal dl u-style-2">
+      <i class="ri-mail-send-line u-style-3"></i> Get in Touch
+    </a>
+  </div>
+</div>
+
+  <!-- ══ PAGE HEADER ══ -->
     <section class="page-header">
       <div class="container">
         <div class="page-header-content">
@@ -1014,3 +1359,10 @@
     </script>
   </body>
 </html>
+
+
+
+
+
+
+

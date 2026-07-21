@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <title>S.K Mishra & Associates | Chartered Accountants</title>
+  <title>S K Mishra & Associates | Chartered Accountants</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -46,13 +46,14 @@
           </div>
 
           <div class="nav-brand-text">
-            <div class="nav-brand-sub">S.K Mishra &amp; Associates</div>
+            <div class="nav-brand-sub">S K Mishra &amp; Associates</div>
             <div class="nav-brand-caption">Chartered Accountants</div>
+            <div class="nav-brand-tagline">Building Trust. Enabling Growth.</div>
           </div>
         </a>
 
         <div class="nav-links">
-          <a href="#about">Home</a>
+          <a href="#home">Home</a>
           <a href="#core-values">Core Values</a>
           <a href="#services">Our Services</a>
           <div class="nav-dropdown">
@@ -64,15 +65,13 @@
               <a href="teams.html">Our Team</a>
             </div>
           </div>
-
           <a href="#whatwedo">What We Do</a>
-          <!-- <a href="#achievements">Our Achievements</a> -->
+          <a href="knowledge-centre.html">Knowledge Centre</a>
           <button type="button" data-open-links="true">Important Links</button>
-          <!-- <a href="#contact">Contact Us</a> -->
         </div>
 
         <div class="nav-cta">
-          <a href="#contact" class="btn btn-teal u-style-1">
+          <a href="#contact" class="btn btn-teal u-style-1 nav-consult-btn">
             <i class="ri-mail-send-line"></i> Get in Touch
           </a>
         </div>
@@ -93,11 +92,11 @@
     <a href="#about" class="dl"><i class="ri-information-line"></i>About Us
     </a>
     <a href="teams.html" class="dl dl-sub"><i class="ri-group-line"></i>Our Team</a>
+    <a href="#core-values" class="dl"><i class="ri-shield-star-line"></i>Core Values</a>
     <a href="#services" class="dl"><i class="ri-briefcase-line"></i>Our Services</a>
     <a href="#whatwedo" class="dl"><i class="ri-settings-3-line"></i>What We Do</a>
-    <a href="#achievements" class="dl"><i class="ri-trophy-line"></i>Our Achievements</a>
+    <a href="knowledge-centre.html" class="dl"><i class="ri-book-open-line"></i>Knowledge Centre</a>
     <a href="#links" class="dl" data-open-links="true"><i class="ri-links-line"></i>Important Links</a>
-    <!-- <a href="#contact" class="dl"><i class="ri-phone-line"></i>Contact Us</a> -->
     <div class="nav-drawer-cta">
       <a href="index.html#contact" class="btn btn-teal dl u-style-2"
        >
@@ -106,145 +105,120 @@
     </div>
   </div>
   <!-- ══ ABOUT US & WHY US ══ -->
-  <section id="about" class="section">
+  <!-- Hero / Home -->
+  <section id="home" class="home-hero">
+    <button id="announcementBtn" class="announcement-icon" aria-label="View announcements" title="View announcements">
+      <i class="ri-newspaper-line"></i>
+      <span class="announcement-badge" id="announcementBadge">0</span>
+    </button>
+
     <div class="container">
-      <div class="about-grid" data-aos="fade-left" data-aos-offset="500" data-aos-duration="500">
-        <!-- image block -->
-        <div class="sr-l">
-          <div class="about-img-block">
-            <div class="about-img-frame">
-              <div class="about-img-inner">
-                <div class="about-big-letter">CA</div>
-                <div class="u-style-4">
-                  <div class="u-style-5">
-                    <!-- Est. 1999 -->
-                  </div>
-                  <div class="u-style-6">
-                    <!-- S.K Mishra &amp; Associates -->
-                  </div>
-                </div>
-              </div>
-              <!-- floating decorative cards -->
-              <div class="about-float-card fc1">
-                <i class="ri-trophy-fill"></i>
-                <div>
-                  <div class="u-style-7">
-                    Experience
-                  </div>
-                  <div>27+ Years</div>
-                </div>
-              </div>
-              <div class="about-float-card fc2">
-                <i class="ri-global-fill"></i>
-                <div>
-                  <div class="u-style-7">
-                    Reach
-                  </div>
-                  <div>PAN India</div>
-                </div>
-              </div>
-              <div class="about-float-card fc3">
-                <i class="ri-team-fill"></i>
-                <div>
-                  <div class="u-style-7">
-                    Partners
-                  </div>
-                  <div>9 Experts</div>
-                </div>
-              </div>
+      <div class="hero-content">
+        <h1>
+          <span class="hero-title">
+            Building Trust.<br />
+            <span>Enabling Growth.</span>
+          </span>
+        </h1>
+        <div class="hero-rule"></div>
+        <p class="hero-quote sr d3">
+          Integrated audit, tax, advisory and compliance services for
+          businesses, entrepreneurs and institutions.
+        </p>
+
+        <div class="hero-stats sr d4" aria-label="Firm highlights">
+          <div class="hstat">
+            <i class="ri-user-star-line" aria-hidden="true"></i>
+            <div>
+              <div class="hstat-num"><span class="count" data-target="27">0</span>+</div>
+              <div class="hstat-lbl">Years of Experience</div>
+            </div>
+          </div>
+          <div class="hstat">
+            <i class="ri-handshake-line" aria-hidden="true"></i>
+            <div>
+              <div class="hstat-num"><span class="count" data-target="1000">0</span>+</div>
+              <div class="hstat-lbl">Satisfied Clients</div>
+            </div>
+          </div>
+          <div class="hstat">
+            <i class="ri-shield-check-line" aria-hidden="true"></i>
+            <div>
+              <div class="hstat-num">Integrated</div>
+              <div class="hstat-lbl">Professional Solutions</div>
+            </div>
+          </div>
+          <div class="hstat">
+            <i class="ri-team-line" aria-hidden="true"></i>
+            <div>
+              <div class="hstat-num">Partner-led</div>
+              <div class="hstat-lbl">Client Centric Approach</div>
             </div>
           </div>
         </div>
 
-        <!-- text -->
-        <div class="sr-r">
-          <div class="chip">
-            <i class="ri-information-line"></i>Who We Are
-          </div>
-          <h2 class="heading sr d1">
-            27+ Years of <em>Proven</em> Chartered Accountancy
-          </h2>
-          <div class="rule sr d2"></div>
-          <p class="body sr d3 u-style-8">
-            S.K Mishra & Associates is a full-service Chartered
-            Accountancy firm founded in 1999, with PAN-India clientele and
-            partner-led engagements. We combine deep domain knowledge with a
-            business-centric approach across Chemical, Automobile,
-            Hospitality, Education, Steel, Mining, and Heavy Machinery
-            sectors.
-          </p>
-          <p class="body sr d4 u-style-9">
-            Our expertise spans Assurance, Controls, Finance, Direct Tax, GST,
-            EXIM, and Corporate Laws. A technology-driven approach ensures
-            long-term value creation for every client.
-          </p>
-          <p class="body about-factsheet-copy sr d4">
-            For more details on the organization, you may
-            <button type="button" class="factsheet-link" data-factsheet-open>
-              request a Fact Sheet.
-            </button>
-          </p>
-          <div class="about-feats">
-            <div class="about-feat glow-card d5 sr">
-              <div class="glow"></div>
-              <div class="about-feat-icon">
-                <i class="ri-shield-check-line"></i>
-              </div>
-              <div class="about-feat-text">
-                <h4>Deep Domain Expertise</h4>
-                <p>
-                  Business-centric approach across diverse sectors with
-                  partner-level attention
-                </p>
-              </div>
-            </div>
-            <div class="about-feat glow-card d6 sr">
-              <div class="glow"></div>
-              <div class="about-feat-icon">
-                <i class="ri-computer-line"></i>
-              </div>
-              <div class="about-feat-text">
-                <h4>Technology-Driven Approach</h4>
-                <p>
-                  ERP, MIS, and digital tools ensuring long-term value
-                  creation
-                </p>
-              </div>
-            </div>
-            <div class="about-feat glow-card sr u-style-10">
-              <div class="glow"></div>
-              <div class="about-feat-icon">
-                <i class="ri-user-star-line"></i>
-              </div>
-              <div class="about-feat-text">
-                <h4>Partner-Led Engagements</h4>
-                <p>
-                  Every client gets direct partner attention — not delegated
-                  to juniors
-                </p>
-              </div>
-            </div>
-            <div class="about-feat glow-card sr u-style-11">
-              <div class="glow"></div>
-              <div class="about-feat-icon">
-                <i class="ri-global-line"></i>
-              </div>
-              <div class="about-feat-text">
-                <h4>GST, EXIM & Corporate Laws</h4>
-                <p>
-                  Complete coverage from domestic compliance to international
-                  tax structuring
-                </p>
-              </div>
-            </div>
-          </div>
+        <div class="hero-btns sr d5">
+          <a href="#contact" class="btn btn-gold">
+            Schedule a Consultation <i class="ri-arrow-right-line"></i>
+          </a>
+          <a href="#services" class="btn btn-outline">
+            Explore Our Services <i class="ri-arrow-right-line"></i>
+          </a>
         </div>
+      </div>
+
+      <div class="hero-service-grid sr d5" aria-label="Key services">
+        <a class="hero-service-card" href="services.html?service=audit-assurance">
+          <div class="hero-service-media">
+            <img src="assets/services-image.jpg" alt="Audit and assurance documents" />
+            <span><i class="ri-file-search-line" aria-hidden="true"></i></span>
+          </div>
+          <div class="hero-service-body">
+            <h3>Audit &amp; Assurance</h3>
+            <p>Independent assurance services that strengthen governance, transparency and stakeholder confidence.</p>
+            <strong>Know More <i class="ri-arrow-right-line" aria-hidden="true"></i></strong>
+          </div>
+        </a>
+        <a class="hero-service-card" href="services.html?service=tax-litigation">
+          <div class="hero-service-media">
+            <img src="assets/hero.png" alt="Tax advisory and financial planning" />
+            <span><i class="ri-calculator-line" aria-hidden="true"></i></span>
+          </div>
+          <div class="hero-service-body">
+            <h3>Tax Advisory</h3>
+            <p>Practical tax solutions across Income Tax, GST, International Tax, Transfer Pricing and litigation.</p>
+            <strong>Know More <i class="ri-arrow-right-line" aria-hidden="true"></i></strong>
+          </div>
+        </a>
+        <a class="hero-service-card" href="services.html?service=virtual-cfo">
+          <div class="hero-service-media">
+            <img src="assets/ca.png" alt="Advisory services chart" />
+            <span><i class="ri-line-chart-line" aria-hidden="true"></i></span>
+          </div>
+          <div class="hero-service-body">
+            <h3>Advisory Services</h3>
+            <p>Strategic financial and business advisory including Virtual CFO, project finance and valuation.</p>
+            <strong>Know More <i class="ri-arrow-right-line" aria-hidden="true"></i></strong>
+          </div>
+        </a>
+        <a class="hero-service-card" href="services.html?service=ifc-icfr">
+          <div class="hero-service-media">
+            <img src="assets/hero-image.png" alt="Compliance and governance discussion" />
+            <span><i class="ri-group-line" aria-hidden="true"></i></span>
+          </div>
+          <div class="hero-service-body">
+            <h3>Compliance &amp; Governance</h3>
+            <p>Company law, RERA, IFC/ICFR and regulatory compliance support for future-ready businesses.</p>
+            <strong>Know More <i class="ri-arrow-right-line" aria-hidden="true"></i></strong>
+          </div>
+        </a>
       </div>
     </div>
   </section>
+<!--  -->
 
   <!-- ══ HERO / HOME ══ -->
-  <section id="home">
+  <section id="homeLegacy" class="legacy-home" hidden>
     <div id="hero-canvas">
       <div class="hero-grid-overlay"></div>
       <div class="hero-ring"></div>
@@ -318,9 +292,9 @@
     </div>
 
     <!-- Announcement Icon (Top-Right) -->
-    <button id="announcementBtn" class="announcement-icon" aria-label="View announcements" title="View announcements">
+    <button id="announcementBtnLegacy" class="announcement-icon" aria-label="View announcements" title="View announcements">
       <i class="ri-newspaper-line"></i>
-      <span class="announcement-badge" id="announcementBadge">0</span>
+      <span class="announcement-badge" id="announcementBadgeLegacy">0</span>
     </button>
 
     <div class="container">
@@ -334,7 +308,7 @@
           <!-- <span class="gold"></span> -->
         </h1>
         <!-- <p class="hero-brand sr d2">
-            S.K Mishra &amp; Associates · Chartered Accountants · Jamshedpur
+            S K Mishra &amp; Associates · Chartered Accountants · Jamshedpur
           </p> -->
         <p class="hero-quote sr d3">"Building Trust Through Excellence"</p>
         <!-- <div class="hero-tags sr d3">
@@ -1107,18 +1081,14 @@
           <i class="ri-map-pin-line"></i>
           <span>Mumbai</span>
         </a>
-        <div class="location-item">
-          <i class="ri-map-pin-line"></i>
-          <span>Kolkata</span>
-        </div>
         <!-- <div class="location-item">
             <i class="ri-map-pin-line"></i>
             <span>Patna</span>
           </div> -->
-        <div class="location-item">
+        <a class="location-item" href="https://www.google.com/maps/place/Classic+Residency+Block-F,+Classic+Residency,+Raj+Nagar+Extension,+Ghaziabad,+Uttar+Pradesh+201003/data=!4m2!3m1!1s0x390cf11c5569fd2f:0x95de358e326174be!18m1!1e1?utm_source=mstt_1&entry=gps&coh=192189&g_ep=CAESBzI2LjI3LjUYACCenQoqqQEsOTQyNjc3MjcsOTQyOTIxOTUsOTQyOTk1MzIsMTAwNzk2NDk4LDEwMDc5Nzc2MSwxMDA4MjY0NzksMTAwNzk2NTM1LDk0MjgwNTc2LDk0MjA3Mzk0LDk0MjA3NTA2LDk0MjA4NTA2LDk0MjE4NjUzLDk0MjI5ODM5LDk0Mjc1MTY4LDk0Mjc5NjE5LDEwMDgxNTYzNSwxMDA4MjUwMjUsMTAwODIwMjM3QgJJTg%3D%3D&skid=af8e3987-139b-4f1c-8f37-29a4fcd88994&g_st=aw" target="_blank" rel="noopener" aria-label="Open NCR-Ghaziabad office location in Google Maps">
           <i class="ri-map-pin-line"></i>
           <span>NCR-Ghaziabad</span>
-        </div>
+        </a>
         <a class="location-item" href="https://www.google.com/maps?ftid=0x3bae73606e185667:0xad8d2e79b6c9a471&entry=gps&shh=CAE&lucs=,94297699,94231188,94280568,47071704,94218641,94282134,100813464,94286869,100820247&g_ep=CAISEjI2LjI4LjAuOTQyOTUxNTM4MBgAIP___________wEqUyw5NDI5NzY5OSw5NDIzMTE4OCw5NDI4MDU2OCw0NzA3MTcwNCw5NDIxODY0MSw5NDI4MjEzNCwxMDA4MTM0NjQsOTQyODY4NjksMTAwODIwMjQ3QgJJTg%3D%3D&skid=d5ee8c91-6719-409c-8d75-a719c4ec32e5&g_st=iw" target="_blank" rel="noopener" aria-label="Open Bengaluru office location in Google Maps">
           <i class="ri-map-pin-line"></i>
           <span>Bangaluru</span>
@@ -1143,7 +1113,7 @@
           <i class="ri-phone-line"></i>Contact Us
         </div>
         <h2 class="heading sr">
-          Partner with <em>S.K Mishra & Associates</em>
+          Partner with <em>S K Mishra & Associates</em>
         </h2>
         <div class="rule"></div>
         <p class="body sr">
@@ -1159,41 +1129,32 @@
           <div class="map-block">
             <div class="map-placeholder">
               <i class="ri-map-pin-2-fill"></i>
-              <p>Bistupur, Jamshedpur – 831001</p>
-              <a href="https://maps.app.goo.gl/6iZ5M8xvbzRVKm8RA" target="_blank" rel="noopener" class="btn btn-teal u-style-22"
+              <p>Raj Nagar Extension, Ghaziabad - 201003</p>
+              <a href="https://www.google.com/maps/place/Classic+Residency+Block-F,+Classic+Residency,+Raj+Nagar+Extension,+Ghaziabad,+Uttar+Pradesh+201003/data=!4m2!3m1!1s0x390cf11c5569fd2f:0x95de358e326174be!18m1!1e1?utm_source=mstt_1&entry=gps&coh=192189&g_ep=CAESBzI2LjI3LjUYACCenQoqqQEsOTQyNjc3MjcsOTQyOTIxOTUsOTQyOTk1MzIsMTAwNzk2NDk4LDEwMDc5Nzc2MSwxMDA4MjY0NzksMTAwNzk2NTM1LDk0MjgwNTc2LDk0MjA3Mzk0LDk0MjA3NTA2LDk0MjA4NTA2LDk0MjE4NjUzLDk0MjI5ODM5LDk0Mjc1MTY4LDk0Mjc5NjE5LDEwMDgxNTYzNSwxMDA4MjUwMjUsMTAwODIwMjM3QgJJTg%3D%3D&skid=af8e3987-139b-4f1c-8f37-29a4fcd88994&g_st=aw" target="_blank" rel="noopener" class="btn btn-teal u-style-22"
                >
                 <i class="ri-map-2-line"></i> Open in Maps
               </a>
             </div>
             <div class="map-address">
               <i class="ri-map-pin-line"></i>
-              28, Rd Number 4, Contractors Area, Bistupur, Jamshedpur-831001,
-              Jharkhand.
+              Classic Residency Block-F, Classic Residency, Raj Nagar Extension,
+              Ghaziabad, Uttar Pradesh 201003.
             </div>
           </div>
 
           <div class="c-items u-style-23">
-            <!-- <div class="c-item">
-                <div class="c-icon"><i class="ri-phone-line"></i></div>
-                <div>
-                  <div class="c-lbl">Phone</div>
-                  <div class="c-val">+91-93347 66898<br />+91-62000 58498</div>
-                </div>
-              </div> -->
             <div class="c-item">
               <div class="c-icon"><i class="ri-mail-line"></i></div>
               <div>
                 <div class="c-lbl">Email</div>
-                <div class="c-val">info@caskma.com</div>
+                <div class="c-val"><a href="mailto:info@caskma.com">info@caskma.com</a></div>
               </div>
             </div>
             <div class="c-item">
-              <div class="c-icon"><i class="ri-time-line"></i></div>
+              <div class="c-icon"><i class="ri-whatsapp-line"></i></div>
               <div>
-                <div class="c-lbl">Working Hours</div>
-                <div class="c-val">
-                  Mon – Sat &nbsp;·&nbsp; 9:00 AM – 6:00 PM IST
-                </div>
+                <div class="c-lbl">Phone Number</div>
+                <div class="c-val"><a href="https://wa.me/917979732876" target="_blank" rel="noopener">+91 79797 32876</a></div>
               </div>
             </div>
           </div>
@@ -1207,7 +1168,7 @@
             <form id="contactForm" novalidate>
               <div class="f-grid">
                 <div class="f-group u-style-24">
-                  <label class="f-label">First Name</label>
+                  <label class="f-label">First Name <span class="required-star" aria-hidden="true">*</span></label>
                   <input type="text" class="f-ctrl" placeholder="" required />
                 </div>
                 <div class="f-group u-style-24">
@@ -1216,16 +1177,16 @@
                 </div>
               </div>
               <div class="f-group">
-                <label class="f-label">Email Address</label>
+                <label class="f-label">Email Address <span class="required-star" aria-hidden="true">*</span></label>
                 <input type="email" class="f-ctrl" placeholder="" required />
               </div>
               <div class="f-group">
-                <label class="f-label">Phone Number</label>
-                <input type="tel" class="f-ctrl" placeholder="  " />
+                <label class="f-label">Phone Number <span class="required-star" aria-hidden="true">*</span></label>
+                <input type="tel" class="f-ctrl" placeholder="  " required />
               </div>
               <div class="f-group">
-                <label class="f-label">Service Interest</label>
-                <select class="f-ctrl">
+                <label class="f-label">Service Interest <span class="required-star" aria-hidden="true">*</span></label>
+                <select class="f-ctrl" required>
                   <option value="">Select a Service...</option>
                   <option>Assurance &amp; Audit</option>
                   <option>Taxation &amp; Compliance</option>
@@ -1237,13 +1198,13 @@
                 </select>
               </div>
               <div class="f-group">
-                <label class="f-label">Message</label>
-                <textarea class="f-ctrl" placeholder="Briefly describe your requirement..."></textarea>
+                <label class="f-label">Message <span class="required-star" aria-hidden="true">*</span></label>
+                <textarea class="f-ctrl" placeholder="Briefly describe your requirement..." required></textarea>
               </div>
               <label class="captcha-box">
                 <input type="checkbox" id="captchaCheck" required />
                 <span class="captcha-check" aria-hidden="true"></span>
-                <span class="captcha-text">I'm not a robot</span>
+                <span class="captcha-text">I'm not a robot <span class="required-star" aria-hidden="true">*</span></span>
                 <span class="captcha-brand" aria-hidden="true">
                   <i class="ri-refresh-line"></i>
                   <small>reCAPTCHA</small>
@@ -1275,9 +1236,9 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand-col">
-          <div class="f-brand-name">CA India</div>
+          <!-- <div class="f-brand-name">CA India</div> -->
           <div class="f-brand-sub">
-            S.K Mishra &amp; Associates · Chartered Accountants
+            S K Mishra &amp; Associates · Chartered Accountants
           </div>
           <p class="f-brand-desc">
             Building trust through excellence since 1999. A full-service CA
@@ -1637,6 +1598,7 @@
             <li><a href="#about">About Us</a></li>
             <li><a href="#services">Our Services</a></li>
             <li><a href="#whatwedo">What We Do</a></li>
+            <li><a href="knowledge-centre.html">Knowledge Centre</a></li>
             <li><a href="#achievements">Our Achievements</a></li>
             <li><a href="#links" data-open-links="true">Important Links</a></li>
             <li><a href="privacy.html">Privacy Policy</a></li>
@@ -1656,8 +1618,7 @@
         </div>
       </div>
       <div class="footer-bot">
-        <span>&copy; 2025 CA India · S.K Mishra &amp; Associates. All rights
-          reserved.</span>
+        <span>&copy; CA. S K Mishra &amp; Associates</span>
         <span class="u-style-31">Designed and Developed by Venturing Digitally Pvt. Ltd.</span>
       </div>
     </div>
@@ -1671,6 +1632,26 @@
   </button>
 
   
+
+  <!-- Welcome Modal -->
+  <div id="welcomeModal" class="welcome-modal" aria-hidden="true">
+    <div class="welcome-dialog" role="dialog" aria-modal="true" aria-labelledby="welcomeTitle">
+      <button class="welcome-close" type="button" aria-label="Close welcome notice" data-welcome-close>
+        <i class="ri-close-line" aria-hidden="true"></i>
+      </button>
+      <h2 id="welcomeTitle">Welcome to S K Mishra &amp; Associates</h2>
+      <p>
+        The user wishes to gain more information on firm's practice areas and its
+        professionals, for his/her own information and use. Information is made
+        available to you only on your specific request ('pull basis') and any
+        information obtained or material downloaded from this website is
+        completely at your volition. None of the information contained on the
+        website is in the nature of a professional opinion or advice. You must
+        seek independent professional advice.
+      </p>
+      <button class="welcome-ok" type="button" data-welcome-close>Ok</button>
+    </div>
+  </div>
 
   <!-- Factsheet Modal -->
   <div id="factsheetModal" class="factsheet-modal" aria-hidden="true">
@@ -1709,4 +1690,5 @@
 </body>
 
 </html>
+
 

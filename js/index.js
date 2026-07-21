@@ -164,6 +164,32 @@
       });
     });
 
+    const welcomeModal = document.getElementById("welcomeModal");
+    const welcomeCloseBtns = document.querySelectorAll("[data-welcome-close]");
+    const setWelcomeModalState = (open) => {
+      if (!welcomeModal) return;
+      welcomeModal.classList.toggle("open", open);
+      welcomeModal.setAttribute("aria-hidden", open ? "false" : "true");
+    };
+
+    if (welcomeModal) {
+      requestAnimationFrame(() => setWelcomeModalState(true));
+
+      welcomeCloseBtns.forEach((btn) => {
+        btn.addEventListener("click", () => setWelcomeModalState(false));
+      });
+
+      welcomeModal.addEventListener("click", (e) => {
+        if (e.target === welcomeModal) setWelcomeModalState(false);
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && welcomeModal.classList.contains("open")) {
+          setWelcomeModalState(false);
+        }
+      });
+    }
+
     const factsheetModal = document.getElementById("factsheetModal");
     const factsheetOpenBtns = document.querySelectorAll("[data-factsheet-open]");
     const factsheetCloseBtns = document.querySelectorAll("[data-factsheet-close]");
