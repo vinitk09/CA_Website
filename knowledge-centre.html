@@ -46,6 +46,7 @@
             </div>
           </div>
           <a href="index.html#whatwedo">What We Do</a>
+          <a href="careers.html">Careers</a>
           <a href="knowledge-centre.html" class="active">Knowledge Centre</a>
           <a href="index.html#links">Important Links</a>
         </div>
@@ -74,6 +75,7 @@
     <a href="index.html#core-values" class="dl"><i class="ri-shield-star-line"></i>Core Values</a>
     <a href="index.html#services" class="dl"><i class="ri-briefcase-line"></i>Our Services</a>
     <a href="index.html#whatwedo" class="dl"><i class="ri-settings-3-line"></i>What We Do</a>
+    <a href="careers.html" class="dl"><i class="ri-user-star-line"></i>Careers</a>
     <a href="knowledge-centre.html" class="dl active"><i class="ri-book-open-line"></i>Knowledge Centre</a>
     <a href="index.html#links" class="dl"><i class="ri-links-line"></i>Important Links</a>
     <div class="nav-drawer-cta">
@@ -84,179 +86,265 @@
   </div>
 
   <main>
-    <section class="knowledge-hero">
+    <section class="page-header knowledge-page-header">
       <div class="container">
-        <div class="knowledge-hero-content">
-          <span class="knowledge-kicker">Home <i class="ri-arrow-right-s-line"></i> Knowledge Centre</span>
-          <h1>Knowledge Centre</h1>
-          <p>Stay updated with the latest insights on tax, GST, corporate laws, audit, finance and regulatory developments.</p>
+        <div class="page-header-content">
+          <div class="chip" style="justify-content: center; margin-bottom: 24px">
+            <i class="ri-newspaper-line"></i>Insights
+          </div>
+          <h1 class="heading">Knowledge <em>Centre</em></h1>
+          <p class="body" style="margin-top: 16px">
+            Tax, GST, corporate law, audit and advisory updates curated for business teams.
+          </p>
         </div>
       </div>
     </section>
 
     <section class="knowledge-main">
-      <div class="container knowledge-layout">
-        <aside class="knowledge-sidebar" aria-label="Knowledge categories">
-          <h2>Categories</h2>
-          <nav class="knowledge-categories">
-            <a href="#all" class="active">All</a>
-            <a href="#taxation">Taxation</a>
-            <a href="#gst">GST</a>
-            <a href="#corporate-laws">Corporate Laws</a>
-            <a href="#mca-updates">MCA Updates</a>
-            <a href="#audit-assurance">Audit &amp; Assurance</a>
-            <a href="#rera">RERA</a>
-            <a href="#business-advisory">Business Advisory</a>
-            <a href="#international-tax">International Tax</a>
-            <a href="#judicial-updates">Judicial Updates</a>
-            <a href="#budget-economy">Budget &amp; Economy</a>
-          </nav>
-        </aside>
+      <div class="container">
+        <div class="knowledge-service-shell">
+          <div class="knowledge-service-layout">
+            <aside class="knowledge-topic-list" aria-label="Knowledge topics">
+              <button class="knowledge-topic active" type="button" data-topic="gst">
+                <h5><i class="ri-menu-line"></i>GST</h5>
+              </button>
+              <button class="knowledge-topic" type="button" data-topic="taxation">
+                <h5><i class="ri-menu-line"></i>Taxation</h5>
+              </button>
+              <button class="knowledge-topic" type="button" data-topic="corporate-laws">
+                <h5><i class="ri-menu-line"></i>Corporate Laws</h5>
+              </button>
+              <button class="knowledge-topic" type="button" data-topic="mca-updates">
+                <h5><i class="ri-menu-line"></i>MCA Updates</h5>
+              </button>
+              <button class="knowledge-topic" type="button" data-topic="audit-assurance">
+                <h5><i class="ri-menu-line"></i>Audit &amp; Assurance</h5>
+              </button>
+              <button class="knowledge-topic" type="button" data-topic="business-advisory">
+                <h5><i class="ri-menu-line"></i>Business Advisory</h5>
+              </button>
+              <button class="knowledge-topic" type="button" data-topic="rera">
+                <h5><i class="ri-menu-line"></i>RERA</h5>
+              </button>
+              <button class="knowledge-topic" type="button" data-topic="international-tax">
+                <h5><i class="ri-menu-line"></i>International Tax</h5>
+              </button>
+              <button class="knowledge-topic" type="button" data-topic="judicial-updates">
+                <h5><i class="ri-menu-line"></i>Judicial Updates</h5>
+              </button>
+              <button class="knowledge-topic" type="button" data-topic="budget-economy">
+                <h5><i class="ri-menu-line"></i>Budget &amp; Economy</h5>
+              </button>
+            </aside>
 
-        <section class="knowledge-content" id="all" aria-labelledby="latest-insights-title">
-          <div class="knowledge-section-head">
-            <div>
-              <span class="chip"><i class="ri-newspaper-line"></i> Insights</span>
-              <h2 id="latest-insights-title">Latest Insights</h2>
-            </div>
-            <a href="#all" class="view-all-link">View All Articles <i class="ri-arrow-right-line"></i></a>
-          </div>
-
-          <div class="knowledge-grid">
-            <article class="insight-card" id="gst">
-              <div class="insight-media">
+            <section class="knowledge-article-stage" aria-live="polite">
+              <article class="knowledge-panel active" data-topic-panel="gst">
                 <img src="assets/services-image.jpg" alt="GST papers and financial documents" />
-                <span>GST</span>
-              </div>
-              <div class="insight-body">
-                <time datetime="2026-05-15">15 May 2026</time>
-                <h3>Important Updates on GST Returns &amp; Compliance</h3>
+                <div class="knowledge-panel-meta"><span>GST</span><time datetime="2026-05-15">15 May 2026</time></div>
+                <h2>Important Updates on GST Returns &amp; Compliance</h2>
                 <p>Key filing checkpoints, reconciliation priorities and practical controls for businesses managing periodic GST compliance.</p>
-                <a href="#gst">Know More <i class="ri-arrow-right-line"></i></a>
-              </div>
-            </article>
+                <p>Businesses should review outward supply reporting, input tax credit matching, reverse charge items and e-way bill records before finalizing periodic returns.</p>
+                <div class="knowledge-full-content" hidden>
+                  <p>GST compliance works best when return filing is treated as a monthly control process rather than a last-day activity. The finance team should reconcile books, e-invoices, e-way bills, GSTR-1 and GSTR-2B before filing.</p>
+                  <p>Important areas include invoice classification, HSN reporting, credit eligibility, vendor follow-up, reverse charge liability, blocked credits and amendments from earlier periods. A documented checklist helps reduce avoidable notices and mismatches.</p>
+                  <ul>
+                    <li>Reconcile sales register with e-invoice and GSTR-1 data.</li>
+                    <li>Match input tax credit with GSTR-2B and vendor filings.</li>
+                    <li>Review reverse charge, exempt turnover and credit reversals.</li>
+                    <li>Keep working papers for amendments, credit notes and adjustments.</li>
+                  </ul>
+                </div>
+                <button class="knowledge-more-btn" type="button">Know More <i class="ri-arrow-right-line"></i></button>
+              </article>
 
-            <article class="insight-card" id="taxation">
-              <div class="insight-media">
+              <article class="knowledge-panel" data-topic-panel="taxation">
                 <img src="assets/hero.png" alt="Business tax consultation meeting" />
-                <span>Taxation</span>
-              </div>
-              <div class="insight-body">
-                <time datetime="2026-05-10">10 May 2026</time>
-                <h3>CBDT Issues Guidelines on Income Tax Returns</h3>
+                <div class="knowledge-panel-meta"><span>Taxation</span><time datetime="2026-05-10">10 May 2026</time></div>
+                <h2>CBDT Issues Guidelines on Income Tax Returns</h2>
                 <p>A concise view of documentation, due dates and review areas to keep tax return preparation more predictable.</p>
-                <a href="#taxation">Know More <i class="ri-arrow-right-line"></i></a>
-              </div>
-            </article>
+                <p>Tax teams should align return preparation with Form 26AS, AIS/TIS, books of account and supporting schedules before filing.</p>
+                <div class="knowledge-full-content" hidden>
+                  <p>Income tax return preparation requires careful review of accounting records, tax deduction statements, financial statements and statutory disclosures. Early reconciliation reduces the risk of defective returns and post-filing queries.</p>
+                  <p>Businesses should verify depreciation, disallowances, TDS/TCS credits, related-party transactions, brought-forward losses and reporting under applicable audit clauses. Proper documentation also supports future assessments and internal review.</p>
+                  <ul>
+                    <li>Compare Form 26AS, AIS and TIS with books of account.</li>
+                    <li>Validate deductions, exemptions and tax audit adjustments.</li>
+                    <li>Review capital gains, foreign assets and high-value transactions where applicable.</li>
+                    <li>Maintain computation notes and supporting evidence.</li>
+                  </ul>
+                </div>
+                <button class="knowledge-more-btn" type="button">Know More <i class="ri-arrow-right-line"></i></button>
+              </article>
 
-            <article class="insight-card" id="corporate-laws">
-              <div class="insight-media">
+              <article class="knowledge-panel" data-topic-panel="corporate-laws">
                 <img src="assets/ca.png" alt="Corporate law documents and signing" />
-                <span>Corporate Law</span>
-              </div>
-              <div class="insight-body">
-                <time datetime="2026-05-09">09 May 2026</time>
-                <h3>MCA Notifies Changes in Companies Rules</h3>
+                <div class="knowledge-panel-meta"><span>Corporate Law</span><time datetime="2026-05-09">09 May 2026</time></div>
+                <h2>MCA Notifies Changes in Companies Rules</h2>
                 <p>Recent compliance themes for companies, directors and finance teams tracking MCA reporting obligations.</p>
-                <a href="#corporate-laws">Know More <i class="ri-arrow-right-line"></i></a>
-              </div>
-            </article>
+                <p>Companies should periodically review board records, statutory registers, beneficial ownership information and event-based filings.</p>
+                <div class="knowledge-full-content" hidden>
+                  <p>Corporate law compliance is a continuous responsibility. Changes in company particulars, director details, capital structure, deposits, loans, related-party transactions and significant beneficial ownership may trigger filing requirements.</p>
+                  <p>A structured compliance calendar helps management avoid late fees and governance gaps. Board minutes, registers, disclosures and resolutions should be maintained in a manner that supports both statutory filings and stakeholder review.</p>
+                  <ul>
+                    <li>Track annual and event-based MCA filings.</li>
+                    <li>Update statutory registers and director disclosures.</li>
+                    <li>Review related-party transactions and approval thresholds.</li>
+                    <li>Maintain board and shareholder records with supporting documents.</li>
+                  </ul>
+                </div>
+                <button class="knowledge-more-btn" type="button">Know More <i class="ri-arrow-right-line"></i></button>
+              </article>
 
-            <article class="insight-card" id="mca-updates">
-              <div class="insight-media">
+              <article class="knowledge-panel" data-topic-panel="mca-updates">
                 <img src="assets/hero-image.png" alt="Office building representing corporate filings" />
-                <span>MCA Updates</span>
-              </div>
-              <div class="insight-body">
-                <time datetime="2026-04-28">28 Apr 2026</time>
-                <h3>Annual Filing Readiness for Private Companies</h3>
+                <div class="knowledge-panel-meta"><span>MCA Updates</span><time datetime="2026-04-28">28 Apr 2026</time></div>
+                <h2>Annual Filing Readiness for Private Companies</h2>
                 <p>Board records, registers and filing data points that should be reviewed before annual compliance work begins.</p>
-                <a href="#mca-updates">Know More <i class="ri-arrow-right-line"></i></a>
-              </div>
-            </article>
+                <p>Early readiness reduces pressure during annual filing season and improves the quality of financial and governance disclosures.</p>
+                <div class="knowledge-full-content" hidden>
+                  <p>Annual filing readiness starts before the financial statements are finalized. Companies should review director KYC, shareholding, registers, financial statement attachments, auditor details and board approvals.</p>
+                  <p>Private companies should also check whether any events during the year require additional filings. A pre-filing review helps identify missing resolutions, old registers, unrecorded transfers and gaps in disclosure.</p>
+                  <ul>
+                    <li>Review AOC-4 and MGT-7 data points in advance.</li>
+                    <li>Confirm board meeting and AGM documentation.</li>
+                    <li>Check director, auditor and shareholding details.</li>
+                    <li>Prepare attachments in prescribed formats.</li>
+                  </ul>
+                </div>
+                <button class="knowledge-more-btn" type="button">Know More <i class="ri-arrow-right-line"></i></button>
+              </article>
 
-            <article class="insight-card" id="audit-assurance">
-              <div class="insight-media">
+              <article class="knowledge-panel" data-topic-panel="audit-assurance">
                 <img src="assets/hero-white.png" alt="Audit dashboard and review notes" />
-                <span>Audit</span>
-              </div>
-              <div class="insight-body">
-                <time datetime="2026-04-21">21 Apr 2026</time>
-                <h3>Internal Controls That Strengthen Audit Outcomes</h3>
+                <div class="knowledge-panel-meta"><span>Audit</span><time datetime="2026-04-21">21 Apr 2026</time></div>
+                <h2>Internal Controls That Strengthen Audit Outcomes</h2>
                 <p>How clear control ownership, evidence trails and periodic reviews improve audit readiness through the year.</p>
-                <a href="#audit-assurance">Know More <i class="ri-arrow-right-line"></i></a>
-              </div>
-            </article>
+                <p>Strong controls make audits faster, cleaner and more useful for management decision-making.</p>
+                <div class="knowledge-full-content" hidden>
+                  <p>Audit quality improves when controls are designed, owned and evidenced throughout the year. Businesses should identify critical processes, define approvals, retain documentation and review exceptions periodically.</p>
+                  <p>Controls around revenue, purchases, inventory, payroll, statutory dues and bank reconciliations deserve special attention. Management review controls should be documented with clear evidence of review and resolution.</p>
+                  <ul>
+                    <li>Assign control owners for key business processes.</li>
+                    <li>Retain evidence for approvals, reconciliations and reviews.</li>
+                    <li>Track exceptions and corrective action timelines.</li>
+                    <li>Use periodic internal reviews to stay audit-ready.</li>
+                  </ul>
+                </div>
+                <button class="knowledge-more-btn" type="button">Know More <i class="ri-arrow-right-line"></i></button>
+              </article>
 
-            <article class="insight-card" id="business-advisory">
-              <div class="insight-media">
+              <article class="knowledge-panel" data-topic-panel="business-advisory">
                 <img src="assets/person6.webp" alt="Professional advisory discussion" />
-                <span>Advisory</span>
-              </div>
-              <div class="insight-body">
-                <time datetime="2026-04-12">12 Apr 2026</time>
-                <h3>Finance Dashboards for Founder-Led Businesses</h3>
+                <div class="knowledge-panel-meta"><span>Advisory</span><time datetime="2026-04-12">12 Apr 2026</time></div>
+                <h2>Finance Dashboards for Founder-Led Businesses</h2>
                 <p>Metrics and reporting routines that help owners understand cash flow, profitability and operational risk.</p>
-                <a href="#business-advisory">Know More <i class="ri-arrow-right-line"></i></a>
-              </div>
-            </article>
+                <p>A concise dashboard can help leadership act earlier on margin movement, receivables pressure and cash runway.</p>
+                <div class="knowledge-full-content" hidden>
+                  <p>Founder-led businesses need dashboards that are simple enough to review regularly and deep enough to support decisions. The best dashboards connect financial performance with operational drivers.</p>
+                  <p>Key metrics may include cash balance, receivable ageing, payables, gross margin, operating expenses, statutory dues, order pipeline and working capital cycle. The goal is not more data, but clearer decisions.</p>
+                  <ul>
+                    <li>Track cash runway, collections and payment priorities.</li>
+                    <li>Review margins by product, service line or location.</li>
+                    <li>Use ageing reports to manage receivable risk.</li>
+                    <li>Compare monthly performance against budget and forecast.</li>
+                  </ul>
+                </div>
+                <button class="knowledge-more-btn" type="button">Know More <i class="ri-arrow-right-line"></i></button>
+              </article>
 
-            <article class="insight-card" id="rera">
-              <div class="insight-media">
+              <article class="knowledge-panel" data-topic-panel="rera">
                 <img src="assets/services-image.jpg" alt="Real estate compliance review files" />
-                <span>RERA</span>
-              </div>
-              <div class="insight-body">
-                <time datetime="2026-04-04">04 Apr 2026</time>
-                <h3>RERA Compliance Checks for Developers</h3>
+                <div class="knowledge-panel-meta"><span>RERA</span><time datetime="2026-04-04">04 Apr 2026</time></div>
+                <h2>RERA Compliance Checks for Developers</h2>
                 <p>Practical filing, escrow and reporting considerations for real estate projects and promoter teams.</p>
-                <a href="#rera">Know More <i class="ri-arrow-right-line"></i></a>
-              </div>
-            </article>
+                <p>Developers should connect project accounting, customer collections and statutory reporting in one review cycle.</p>
+                <div class="knowledge-full-content" hidden>
+                  <p>RERA compliance requires accurate project-level tracking. Promoters should ensure that collections, withdrawals, project costs, completion status and customer communications are supported by proper records.</p>
+                  <p>Regular compliance review helps avoid mismatches between project accounts and regulatory disclosures. Escrow utilization, certificates and periodic updates should be reviewed before submission.</p>
+                  <ul>
+                    <li>Maintain project-wise books and cost records.</li>
+                    <li>Review escrow withdrawals and certificate support.</li>
+                    <li>Track customer advances, agreements and allotments.</li>
+                    <li>Align website and portal disclosures with actual status.</li>
+                  </ul>
+                </div>
+                <button class="knowledge-more-btn" type="button">Know More <i class="ri-arrow-right-line"></i></button>
+              </article>
 
-            <article class="insight-card" id="international-tax">
-              <div class="insight-media">
+              <article class="knowledge-panel" data-topic-panel="international-tax">
                 <img src="assets/hero-image.png" alt="International business and finance planning" />
-                <span>International Tax</span>
-              </div>
-              <div class="insight-body">
-                <time datetime="2026-03-28">28 Mar 2026</time>
-                <h3>Cross-Border Tax Points for Indian Businesses</h3>
+                <div class="knowledge-panel-meta"><span>International Tax</span><time datetime="2026-03-28">28 Mar 2026</time></div>
+                <h2>Cross-Border Tax Points for Indian Businesses</h2>
                 <p>Areas to review when overseas transactions, withholding, transfer pricing and documentation overlap.</p>
-                <a href="#international-tax">Know More <i class="ri-arrow-right-line"></i></a>
-              </div>
-            </article>
+                <p>International transactions need coordinated review of contracts, tax withholding, pricing and reporting obligations.</p>
+                <div class="knowledge-full-content" hidden>
+                  <p>Cross-border transactions can create income tax, withholding, GST, FEMA and transfer pricing implications. Businesses should review the nature of services, place of supply, treaty position, documentation and payment terms.</p>
+                  <p>Early review helps avoid gross-up disputes, delayed remittances and audit questions. Related-party transactions should be supported by agreements, benchmarking and contemporaneous documentation where applicable.</p>
+                  <ul>
+                    <li>Review withholding tax and treaty eligibility.</li>
+                    <li>Assess transfer pricing documentation requirements.</li>
+                    <li>Check FEMA and remittance documentation.</li>
+                    <li>Align accounting entries with contract terms.</li>
+                  </ul>
+                </div>
+                <button class="knowledge-more-btn" type="button">Know More <i class="ri-arrow-right-line"></i></button>
+              </article>
 
-            <article class="insight-card" id="judicial-updates">
-              <div class="insight-media">
+              <article class="knowledge-panel" data-topic-panel="judicial-updates">
                 <img src="assets/ca.png" alt="Legal and tax case update documents" />
-                <span>Judicial Updates</span>
-              </div>
-              <div class="insight-body">
-                <time datetime="2026-03-20">20 Mar 2026</time>
-                <h3>Recent Tax Rulings and Business Impact</h3>
+                <div class="knowledge-panel-meta"><span>Judicial Updates</span><time datetime="2026-03-20">20 Mar 2026</time></div>
+                <h2>Recent Tax Rulings and Business Impact</h2>
                 <p>Selected judicial developments that may influence assessment strategy, documentation and risk review.</p>
-                <a href="#judicial-updates">Know More <i class="ri-arrow-right-line"></i></a>
-              </div>
-            </article>
+                <p>Judicial updates should be translated into practical action points for documentation and future positions.</p>
+                <div class="knowledge-full-content" hidden>
+                  <p>Tax rulings often clarify interpretation, evidence expectations and procedural safeguards. Businesses should evaluate whether recent decisions affect existing positions, assessments, appeals or future transactions.</p>
+                  <p>A ruling may not apply mechanically to every case, but it can guide risk assessment and documentation strategy. Management should consult advisors before changing positions based on judicial developments.</p>
+                  <ul>
+                    <li>Identify rulings relevant to current tax positions.</li>
+                    <li>Review evidence gaps in ongoing assessments or appeals.</li>
+                    <li>Update internal tax notes where interpretation changes.</li>
+                    <li>Document management rationale for positions taken.</li>
+                  </ul>
+                </div>
+                <button class="knowledge-more-btn" type="button">Know More <i class="ri-arrow-right-line"></i></button>
+              </article>
 
-            <article class="insight-card" id="budget-economy">
-              <div class="insight-media">
+              <article class="knowledge-panel" data-topic-panel="budget-economy">
                 <img src="assets/hero-white.png" alt="Budget and economy planning notes" />
-                <span>Budget</span>
-              </div>
-              <div class="insight-body">
-                <time datetime="2026-03-12">12 Mar 2026</time>
-                <h3>Budget Highlights for Finance Teams</h3>
+                <div class="knowledge-panel-meta"><span>Budget</span><time datetime="2026-03-12">12 Mar 2026</time></div>
+                <h2>Budget Highlights for Finance Teams</h2>
                 <p>Key policy signals and action points for businesses reviewing budgets, forecasts and compliance calendars.</p>
-                <a href="#budget-economy">Know More <i class="ri-arrow-right-line"></i></a>
-              </div>
-            </article>
+                <p>Finance teams should convert budget announcements into a structured review of tax, cash flow and compliance impact.</p>
+                <div class="knowledge-full-content" hidden>
+                  <p>Budget announcements can affect tax rates, deduction rules, compliance timelines, incentives and sector-specific policy. Businesses should identify applicable changes and evaluate their financial and operational impact.</p>
+                  <p>A practical review should cover cash flow, pricing, contracts, payroll, investments, statutory calendars and system changes. Early planning helps teams avoid last-minute implementation pressure.</p>
+                  <ul>
+                    <li>Map announcements to business-specific action items.</li>
+                    <li>Update tax computations, budgets and forecasts.</li>
+                    <li>Review contract, payroll and invoicing impact.</li>
+                    <li>Track effective dates and transition provisions.</li>
+                  </ul>
+                </div>
+                <button class="knowledge-more-btn" type="button">Know More <i class="ri-arrow-right-line"></i></button>
+              </article>
+            </section>
           </div>
-        </section>
+        </div>
       </div>
     </section>
   </main>
+
+  <div class="knowledge-modal" id="knowledgeModal" aria-hidden="true">
+    <div class="knowledge-modal-backdrop" data-close-knowledge-modal></div>
+    <article class="knowledge-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="knowledgeModalTitle">
+      <button class="knowledge-modal-close" type="button" aria-label="Close article" data-close-knowledge-modal>
+        <i class="ri-close-line"></i>
+      </button>
+      <div class="knowledge-modal-meta" id="knowledgeModalMeta"></div>
+      <h2 id="knowledgeModalTitle"></h2>
+      <div class="knowledge-modal-body" id="knowledgeModalBody"></div>
+    </article>
+  </div>
 
   <footer>
     <div class="container">
@@ -275,6 +363,7 @@
             <li><a href="index.html#core-values">Core Values</a></li>
             <li><a href="index.html#about">About Us</a></li>
             <li><a href="index.html#services">Our Services</a></li>
+            <li><a href="careers.html">Careers</a></li>
             <li><a href="knowledge-centre.html">Knowledge Centre</a></li>
             <li><a href="privacy.html">Privacy Policy</a></li>
             <li><a href="terms.html">Terms &amp; Conditions</a></li>
@@ -312,12 +401,12 @@
     });
 
     document.addEventListener("mouseover", (e) => {
-      if (e.target.closest("a, button, .insight-card, .knowledge-categories a")) {
+      if (e.target.closest("a, button, .knowledge-panel, .knowledge-topic")) {
         document.body.classList.add("cursor-hover");
       }
     });
     document.addEventListener("mouseout", (e) => {
-      if (e.target.closest("a, button, .insight-card, .knowledge-categories a")) {
+      if (e.target.closest("a, button, .knowledge-panel, .knowledge-topic")) {
         document.body.classList.remove("cursor-hover");
       }
     });
@@ -356,6 +445,73 @@
     window.addEventListener("resize", () => {
       if (window.innerWidth > 1240) closeNav();
     });
+
+    const topicButtons = Array.from(document.querySelectorAll(".knowledge-topic"));
+    const topicPanels = Array.from(document.querySelectorAll(".knowledge-panel"));
+    const modal = document.getElementById("knowledgeModal");
+    const modalTitle = document.getElementById("knowledgeModalTitle");
+    const modalMeta = document.getElementById("knowledgeModalMeta");
+    const modalBody = document.getElementById("knowledgeModalBody");
+
+    function showTopic(topic, updateHash = true) {
+      const targetPanel = topicPanels.find((panel) => panel.dataset.topicPanel === topic) || topicPanels[0];
+      const targetTopic = targetPanel?.dataset.topicPanel;
+      if (!targetPanel || !targetTopic) return;
+
+      topicButtons.forEach((button) => {
+        button.classList.toggle("active", button.dataset.topic === targetTopic);
+      });
+      topicPanels.forEach((panel) => {
+        panel.classList.toggle("active", panel === targetPanel);
+      });
+
+      if (updateHash) {
+        history.replaceState(null, "", "#" + targetTopic);
+      }
+    }
+
+    topicButtons.forEach((button) => {
+      button.addEventListener("click", () => showTopic(button.dataset.topic));
+    });
+
+    document.querySelectorAll(".knowledge-more-btn").forEach((button) => {
+      button.addEventListener("click", () => {
+        const panel = button.closest(".knowledge-panel");
+        if (!panel || !modal) return;
+        const title = panel.querySelector("h2")?.textContent || "Knowledge Centre";
+        const category = panel.querySelector(".knowledge-panel-meta span")?.textContent || "";
+        const date = panel.querySelector(".knowledge-panel-meta time")?.textContent || "";
+        const content = panel.querySelector(".knowledge-full-content")?.innerHTML || "";
+
+        modalTitle.textContent = title;
+        modalMeta.textContent = [category, date].filter(Boolean).join(" · ");
+        modalBody.innerHTML = content;
+        modal.classList.add("open");
+        modal.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+      });
+    });
+
+    function closeKnowledgeModal() {
+      if (!modal) return;
+      modal.classList.remove("open");
+      modal.setAttribute("aria-hidden", "true");
+      modalBody.innerHTML = "";
+      document.body.style.overflow = "";
+    }
+
+    document.querySelectorAll("[data-close-knowledge-modal]").forEach((control) => {
+      control.addEventListener("click", closeKnowledgeModal);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && modal?.classList.contains("open")) {
+        closeKnowledgeModal();
+      }
+    });
+
+    const initialTopic = window.location.hash.replace("#", "");
+    if (initialTopic) showTopic(initialTopic, false);
   </script>
 </body>
 
