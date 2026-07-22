@@ -468,7 +468,7 @@
 
         // Fetch from backend API
         const response = await fetch(
-          "http://localhost:5000/api/announcements",
+          `${window.CA_FRONTEND_CONFIG?.API_BASE_URL || "http://localhost:5000"}/api/announcements`,
         );
 
         if (!response.ok) {
@@ -676,7 +676,7 @@
   const locationsGrid = document.getElementById("locationsGrid");
   if (!locationsGrid) return;
 
-  const API_BASE_URL = "http://localhost:5000";
+  const API_BASE_URL = window.CA_FRONTEND_CONFIG?.API_BASE_URL || "http://localhost:5000";
 
   const escapeHtml = (value) =>
     String(value || "")
@@ -758,6 +758,7 @@
 
   loadLocations();
 })();
+
 
 
 

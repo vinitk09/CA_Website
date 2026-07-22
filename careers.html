@@ -142,7 +142,8 @@
                 Apply for CA Articleship
               </button>
               <button class="careers-btn" type="button" data-direct-career-apply="cs-internship">
-                Apply for CS Internship
+               APPLY FOR PROFESSIONAL INTERNSHIP
+(For B.Com, M.Com, MBA, CMA, CS and Other Graduates)
               </button>
             </div>
             <button class="careers-btn careers-btn--orange" type="button" data-open-career-jobs>
@@ -251,6 +252,7 @@
     <i class="ri-whatsapp-line"></i>
   </a>
 
+  <script src="js/config.js"></script>
   <script>
     const dot = document.getElementById("cursor-dot");
     const ring = document.getElementById("cursor-ring");
@@ -308,7 +310,7 @@
       if (window.innerWidth > 1500) closeNav();
     });
 
-    const CAREER_API_BASE = window.CAREER_API_BASE || "http://localhost:5000/api";
+    const CAREER_API_BASE = window.CA_FRONTEND_CONFIG?.CAREER_API_BASE_URL || window.CAREER_API_BASE || "http://localhost:5000/api";
     const careerJobsModal = document.getElementById("careerJobsModal");
     const careerApplyModal = document.getElementById("careerApplyModal");
     const careerSuccessModal = document.getElementById("careerSuccessModal");
@@ -736,6 +738,9 @@
 </body>
 
 </html>
+
+
+
 
 
 
