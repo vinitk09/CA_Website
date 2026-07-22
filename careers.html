@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 
 <head>
@@ -112,37 +112,99 @@
           </p>
           <p>
             Note: We get many phone calls and walk-in applications but kindly note that all applications have to be made
-            online through the links below.
+            online through the links below. It is to be noted that we do not solicit any money whatsoever from any
+            candidate at any stage of the recruitment process. Candidates are advised to be cautious of any individual or
+            organization demanding payment in the name of recruitment. If anyone approaches you seeking money, please
+            disregard such communication and report the matter to us immediately.
           </p>
           <div class="careers-actions">
-            <a class="careers-btn" href="mailto:info@caskma.com?subject=Job%20Application%20-%20SKMA">Apply for Job</a>
+            <button class="careers-btn" type="button" data-open-career-jobs>View Job Openings</button>
+          </div>
+        </section>
+
+        <section class="careers-block career-openings-block">
+          <h2 class="careers-title">Current Openings</h2>
+          <div class="career-jobs-list career-jobs-list--inline" id="careerInlineJobs">
+            <div class="career-empty-state">Loading job openings...</div>
           </div>
         </section>
 
         <section class="careers-block">
           <h2 class="careers-title">Apply for Articleship</h2>
           <p>
-            100% credit, in terms of study leaves, is given to articled assistants who are contributing additional
-            hours. This is to ensure that for each additional hour given by the intern, he/she is entitled to
-            extra/compensatory leave for his personal use.
+            Build a strong professional foundation through hands-on training, real client engagements and continuous
+            mentorship. We are committed to helping aspiring Chartered Accountants develop the technical expertise,
+            ethics and confidence required for a successful career.
           </p>
           <div class="careers-actions careers-actions--spread">
             <div class="careers-actions-left">
-              <a class="careers-btn" href="mailto:info@caskma.com?subject=CA%20Articleship%20Application%20-%20SKMA">
+              <button class="careers-btn" type="button" data-open-career-jobs>
                 Apply for CA Articleship
-              </a>
-              <a class="careers-btn" href="mailto:info@caskma.com?subject=CS%20Internship%20Application%20-%20SKMA">
+              </button>
+              <button class="careers-btn" type="button" data-open-career-jobs>
                 Apply for CS Internship
-              </a>
+              </button>
             </div>
-            <a class="careers-btn careers-btn--orange" href="mailto:info@caskma.com?subject=Articleship%20Experiences%20-%20SKMA">
+            <button class="careers-btn careers-btn--orange" type="button" data-open-career-jobs>
               ArticleShip Experiences
-            </a>
+            </button>
           </div>
         </section>
       </div>
     </div>
   </main>
+
+  <div class="career-modal" id="careerJobsModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="careerJobsTitle">
+    <div class="career-modal-panel career-modal-panel--jobs" role="document">
+      <button class="career-modal-close" type="button" data-close-career-modal aria-label="Close openings">
+        <i class="ri-close-line"></i>
+      </button>
+      <div class="career-modal-head">
+        <span class="career-modal-kicker">Open Positions</span>
+        <h2 id="careerJobsTitle">Current Job Openings</h2>
+      </div>
+      <div class="career-jobs-list" id="careerJobsList">
+        <div class="career-empty-state">Loading job openings...</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="career-modal" id="careerApplyModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="careerApplyTitle">
+    <div class="career-modal-panel career-modal-panel--form" role="document">
+      <button class="career-modal-close" type="button" data-close-career-modal aria-label="Close application form">
+        <i class="ri-close-line"></i>
+      </button>
+      <div class="career-modal-head">
+        <span class="career-modal-kicker" id="careerApplyType">Application Form</span>
+        <h2 id="careerApplyTitle">Apply for this role</h2>
+        <p id="careerApplyDescription"></p>
+      </div>
+      <form class="career-application-form" id="careerApplicationForm">
+        <div class="career-form-grid" id="careerFormFields"></div>
+        <div class="career-form-actions">
+          <button class="careers-btn careers-btn--ghost" type="button" id="careerBackToJobs">Back to Openings</button>
+          <button class="careers-btn" type="submit">Submit Application</button>
+        </div>
+        <div class="career-form-status" id="careerFormStatus" role="status"></div>
+      </form>
+    </div>
+  </div>
+  <div class="career-modal" id="careerSuccessModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="careerSuccessTitle">
+    <div class="career-modal-panel career-modal-panel--success" role="document">
+      <button class="career-modal-close" type="button" data-close-career-modal aria-label="Close success message">
+        <i class="ri-close-line"></i>
+      </button>
+      <div class="career-success-icon">
+        <i class="ri-check-line"></i>
+      </div>
+      <div class="career-modal-head career-modal-head--center">
+        <span class="career-modal-kicker">Submitted</span>
+        <h2 id="careerSuccessTitle">Submission Successful</h2>
+        <p>Your application has been submitted successfully. Our team will review your details and contact you if your profile matches the requirement.</p>
+      </div>
+      <button class="careers-btn career-success-btn" type="button" data-close-career-modal>Done</button>
+    </div>
+  </div>
 
   <footer>
     <div class="container">
@@ -184,13 +246,9 @@
     </div>
   </footer>
 
-  <a class="careers-whatsapp" href="https://wa.me/917979732876" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <a class="site-whatsapp" href="https://wa.me/917979732876" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
     <i class="ri-whatsapp-line"></i>
   </a>
-
-  <button id="btt" aria-label="Back to top">
-    <i class="ri-arrow-up-line"></i>
-  </button>
 
   <script>
     const dot = document.getElementById("cursor-dot");
@@ -241,14 +299,422 @@
 
     window.addEventListener("scroll", () => {
       nav.classList.toggle("solid", window.scrollY > 60);
-      btt.classList.toggle("show", window.scrollY > 360);
+      if (btt) btt.classList.toggle("show", window.scrollY > 360);
     }, { passive: true });
 
-    btt.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+    if (btt) btt.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
     window.addEventListener("resize", () => {
       if (window.innerWidth > 1500) closeNav();
+    });
+
+    const CAREER_API_BASE = window.CAREER_API_BASE || "http://localhost:5000/api";
+    const careerJobsModal = document.getElementById("careerJobsModal");
+    const careerApplyModal = document.getElementById("careerApplyModal");
+    const careerSuccessModal = document.getElementById("careerSuccessModal");
+    const careerJobsList = document.getElementById("careerJobsList");
+    const careerInlineJobs = document.getElementById("careerInlineJobs");
+    const careerApplicationForm = document.getElementById("careerApplicationForm");
+    const careerFormFields = document.getElementById("careerFormFields");
+    const careerFormStatus = document.getElementById("careerFormStatus");
+    const careerApplyTitle = document.getElementById("careerApplyTitle");
+    const careerApplyType = document.getElementById("careerApplyType");
+    const careerApplyDescription = document.getElementById("careerApplyDescription");
+    const careerBackToJobs = document.getElementById("careerBackToJobs");
+    let careerJobs = [];
+    let activeCareerJob = null;
+    let activeCareerFields = [];
+    let careerJobsLoaded = false;
+
+    const careerOptions = {
+      gender: ["Male", "Female", "Others"],
+      qualification: ["B. Com", "CA", "CA Inter", "BBA", "Others"],
+      accountingSoftware: ["Tally", "SAP", "Navision", "Marg", "Other", "None"],
+      itTools: ["Word", "Excel", "Powerpoint", "AI Tools", "Google Sheets", "Others"],
+      educationStatus: ["Inter both Group Completed", "Direct Entry after Graduation"],
+      interestAreas: [
+        "Appeals & Tribunal",
+        "Income Tax Returns",
+        "International Taxation",
+        "Statutory Audit or Internal Audit",
+        "Forensic Audit and Investigations",
+        "ROC & CS Work",
+        "RBI & FEMA",
+        "Bank Audit",
+        "Technology",
+        "Accounting",
+        "GST",
+        "Others"
+      ]
+    };
+
+    const commonCareerFields = [
+      { key: "username", label: "Username", type: "text" },
+      { key: "name", label: "Name", type: "text", required: true },
+      { key: "whatsappMobile", label: "WhatsApp Mobile No.", type: "tel", required: true },
+      { key: "email", label: "Email id for mail communication", type: "email", required: true },
+      { key: "dateOfBirth", label: "Date of Birth", type: "date", required: true },
+      { key: "gender", label: "Gender", type: "select", options: careerOptions.gender, required: true },
+      { key: "hscScore", label: "Specify your score in +2/HSC", type: "text", required: true },
+      { key: "hscSchool", label: "Name of School of +2/HSC", type: "text", required: true },
+      { key: "graduationScore", label: "Specify your score in Graduation if completed", type: "text" },
+      { key: "collegeName", label: "Name of College", type: "text" }
+    ];
+
+    const finalCareerFields = [
+      { key: "accountingSoftware", label: "Knowledge of Accounting Software", type: "checkbox-group", options: careerOptions.accountingSoftware },
+      { key: "itTools", label: "Knowledge of Other IT Tools", type: "checkbox-group", options: careerOptions.itTools },
+      { key: "currentEducationStatus", label: "The current educational status in CA course", type: "select", options: careerOptions.educationStatus },
+      { key: "interestAreas", label: "Select your areas of interest where you wish to develop yourself over the next 5 to 10 years.", type: "checkbox-group", options: careerOptions.interestAreas, maxChoices: 3 },
+      { key: "aboutYourself", label: "Tell us about yourself in 5 lines", type: "textarea", required: true },
+      { key: "weakness", label: "Specify your weakness in 2 lines", type: "textarea", required: true },
+      { key: "achievements", label: "Tell us briefly about your achievements in co-curricular activities (optional)", type: "textarea" },
+      { key: "onboardingReasons", label: "Give 2 reasons why we should onboard you", type: "textarea", required: true },
+      { key: "systemsWillingness", label: "Confirm your willingness to follow standard systems & best practises of Firm", type: "text", required: true },
+      { key: "linkedinProfile", label: "Linkedin profile (if available)", type: "url" },
+      { key: "resume", label: "Upload a copy of your resume", type: "file", accept: ".pdf,.doc,.docx", required: true },
+      { key: "photo", label: "Passport Size Professional Photo", type: "file", accept: ".jpg,.jpeg,.png", required: true },
+      {
+        key: "consent",
+        label: "I hereby voluntarily submit my resume, LinkedIn profile, and related information and provide my consent for collection, processing, verification, storage, and use of my personal data for recruitment and related purposes in compliance with the Digital Personal Data Protection Act, 2023. I confirm that the information shared by me is true and voluntarily provided.",
+        type: "acceptance",
+        required: true
+      }
+    ];
+
+    const careerFormSets = {
+      articleship: {
+        title: "Apply for CA Articleship",
+        type: "CA Articleship",
+        fields: [
+          ...commonCareerFields,
+          { key: "transferDetails", label: "If you are a transfer student, then give previous articleship details here, else write NA", type: "textarea", required: true },
+          ...finalCareerFields.map((field) => field.key === "onboardingReasons" ? { ...field, label: "Give 2 reasons why we should onboard you for your articleship/internship" } : field)
+        ]
+      },
+      trainee: {
+        title: "Apply for Trainee",
+        type: "Trainee",
+        fields: finalCareerFields.reduce((fields, field) => {
+          if (field.key === "onboardingReasons") {
+            fields.push({ ...field, label: "Give 2 reasons why we should onboard you as Trainee" });
+          } else {
+            fields.push(field);
+          }
+          return fields;
+        }, [...commonCareerFields])
+      },
+      job: {
+        title: "Apply for Job",
+        type: "Job",
+        fields: [
+          ...commonCareerFields,
+          { key: "qualification", label: "Qualification", type: "select", options: careerOptions.qualification, required: true },
+          { key: "yearsOfExperience", label: "Year of Experience (Excluding Articleship/internship)", type: "text", required: true },
+          { key: "articleshipFirm", label: "Articleship/Internship Firm", type: "text" },
+          { key: "currentCompany", label: "Current Company you are working in", type: "text" },
+          { key: "currentMonthlyCtc", label: "Current Monthly CTC (If Fresher write NIL)", type: "text", required: true },
+          { key: "currentMonthlyTakeHome", label: "Current Monthly Take home Salary (If Fresher write NIL)", type: "text", required: true },
+          { key: "currentLocation", label: "Your Current Location", type: "text", required: true },
+          { key: "homeTown", label: "Your Home Town", type: "text", required: true },
+          { key: "accountingSoftware", label: "Accounting Software (Check only if you have minimum 1 year Hands-on-experience)", type: "checkbox-group", options: careerOptions.accountingSoftware },
+          ...finalCareerFields.filter((field) => field.key !== "accountingSoftware").map((field) => {
+            if (field.key === "onboardingReasons") {
+              return { ...field, label: "Give 2 reasons why we should onboard you as Trainee" };
+            }
+            return field;
+          })
+        ]
+      }
+    };
+
+    const escapeHtml = (value = "") => String(value).replace(/[&<>"']/g, (char) => ({
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&#039;"
+    }[char]));
+
+    const openCareerModal = (modal) => {
+      modal.classList.add("open");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.classList.add("career-modal-open");
+    };
+
+    const closeCareerModal = (modal) => {
+      modal.classList.remove("open");
+      modal.setAttribute("aria-hidden", "true");
+      if (!document.querySelector(".career-modal.open")) {
+        document.body.classList.remove("career-modal-open");
+      }
+    };
+
+    const getCareerApplicationType = (job) => {
+      const content = [job?.title, job?.category, job?.jobType, job?.shortDescription].join(" ").toLowerCase();
+      if (content.includes("article")) return "articleship";
+      if (content.includes("trainee") || content.includes("intern")) return "trainee";
+      return "job";
+    };
+
+    const getCareerJobsMarkup = () => careerJobs.map((job, index) => `
+      <article class="career-job-card">
+        <div>
+          <span class="career-job-status">${escapeHtml(job.status || "Open")}</span>
+          <h3>${escapeHtml(job.title || "Untitled Opening")}</h3>
+          <p>${escapeHtml(job.shortDescription || job.description || "Apply for this opportunity at S K Mishra & Associates.")}</p>
+          <div class="career-job-meta">
+            <span><i class="ri-map-pin-line"></i>${escapeHtml(job.location || "Location not specified")}</span>
+            <span><i class="ri-briefcase-4-line"></i>${escapeHtml(job.jobType || job.category || "Role")}</span>
+            <span><i class="ri-time-line"></i>${escapeHtml(job.experience || "Experience not specified")}</span>
+          </div>
+        </div>
+        <button class="careers-btn career-job-apply" type="button" data-career-job-index="${index}">Apply</button>
+      </article>
+    `).join("");
+
+    const renderCareerJobs = () => {
+      const emptyMarkup = `
+        <div class="career-empty-state">
+          No job openings are available right now. Please check this page again later.
+        </div>
+      `;
+      const markup = careerJobs.length ? getCareerJobsMarkup() : emptyMarkup;
+      careerJobsList.innerHTML = markup;
+      if (careerInlineJobs) careerInlineJobs.innerHTML = markup;
+    };
+
+    const renderCareerJobsError = () => {
+      const errorMarkup = `
+        <div class="career-empty-state career-empty-state--error">
+          <strong>Unable to load current openings.</strong>
+          <span>Please make sure the backend server is running and try again.</span>
+          <button class="careers-btn career-retry-btn" type="button" data-retry-career-jobs>Retry</button>
+        </div>
+      `;
+      careerJobsList.innerHTML = errorMarkup;
+      if (careerInlineJobs) careerInlineJobs.innerHTML = errorMarkup;
+    };
+
+    const loadCareerJobs = async (forceRefresh = false) => {
+      if (careerJobsLoaded && !forceRefresh) return;
+      careerJobsLoaded = false;
+      careerJobsList.innerHTML = '<div class="career-empty-state">Loading job openings...</div>';
+      if (careerInlineJobs) careerInlineJobs.innerHTML = '<div class="career-empty-state">Loading job openings...</div>';
+
+      try {
+        const response = await fetch(`${CAREER_API_BASE}/careers/jobs`);
+        if (!response.ok) throw new Error("Unable to load job openings.");
+        const payload = await response.json();
+        if (!Array.isArray(payload.data)) throw new Error("Invalid job openings response.");
+        careerJobs = payload.data;
+        careerJobsLoaded = true;
+        renderCareerJobs();
+      } catch (error) {
+        careerJobs = [];
+        renderCareerJobsError();
+      }
+    };
+
+    const renderCareerField = (field) => {
+      const required = field.required ? " required" : "";
+      const help = field.maxChoices ? `<small>Select maximum ${field.maxChoices} options.</small>` : "";
+
+      if (field.type === "textarea") {
+        return `<label class="career-field career-field--wide" for="${field.key}"><span>${escapeHtml(field.label)}</span><textarea id="${field.key}" name="${field.key}" rows="4"${required}></textarea></label>`;
+      }
+
+      if (field.type === "select") {
+        const options = (field.options || []).map((option) => `<option value="${escapeHtml(option)}">${escapeHtml(option)}</option>`).join("");
+        return `<label class="career-field" for="${field.key}"><span>${escapeHtml(field.label)}</span><select id="${field.key}" name="${field.key}"${required}><option value="">Select</option>${options}</select></label>`;
+      }
+
+      if (field.type === "checkbox-group") {
+        const options = (field.options || []).map((option) => `
+          <label class="career-check-option">
+            <input type="checkbox" name="${field.key}" value="${escapeHtml(option)}" />
+            <span>${escapeHtml(option)}</span>
+          </label>
+        `).join("");
+        return `<fieldset class="career-field career-field--wide career-fieldset"><legend>${escapeHtml(field.label)}</legend>${help}<div class="career-options">${options}</div></fieldset>`;
+      }
+
+      if (field.type === "file") {
+        return `<label class="career-field" for="${field.key}"><span>${escapeHtml(field.label)}</span><input id="${field.key}" name="${field.key}" type="file" accept="${escapeHtml(field.accept || "")}"${required} /></label>`;
+      }
+
+      if (field.type === "acceptance") {
+        return `<label class="career-field career-field--wide career-consent"><input id="${field.key}" name="${field.key}" type="checkbox"${required} /><span>${escapeHtml(field.label)}</span></label>`;
+      }
+
+      return `<label class="career-field" for="${field.key}"><span>${escapeHtml(field.label)}</span><input id="${field.key}" name="${field.key}" type="${field.type || "text"}"${required} /></label>`;
+    };
+
+    const openCareerApplication = (job) => {
+      activeCareerJob = job;
+      const formKey = getCareerApplicationType(job);
+      const formSet = careerFormSets[formKey] || careerFormSets.job;
+      activeCareerFields = formSet.fields;
+      careerApplicationForm.reset();
+      careerFormStatus.textContent = "";
+      careerFormStatus.className = "career-form-status";
+      careerApplyType.textContent = formSet.type;
+      careerApplyTitle.textContent = job?.title || formSet.title;
+      careerApplyDescription.textContent = job?.shortDescription || job?.description || "Please complete the application details below.";
+      careerFormFields.innerHTML = activeCareerFields.map(renderCareerField).join("");
+      closeCareerModal(careerJobsModal);
+      openCareerModal(careerApplyModal);
+    };
+
+    const readCareerFile = (input) => new Promise((resolve, reject) => {
+      const file = input?.files?.[0];
+      if (!file) {
+        resolve({ data: "", name: "" });
+        return;
+      }
+      const reader = new FileReader();
+      reader.onload = () => resolve({ data: reader.result, name: file.name });
+      reader.onerror = () => reject(new Error("Could not read selected file."));
+      reader.readAsDataURL(file);
+    });
+
+    const collectCareerFormFields = () => {
+      const formFields = {};
+
+      for (const field of activeCareerFields) {
+        if (field.type === "file") continue;
+
+        if (field.type === "checkbox-group") {
+          const checked = [...careerApplicationForm.querySelectorAll(`input[name="${field.key}"]:checked`)].map((input) => input.value);
+          if (field.maxChoices && checked.length > field.maxChoices) {
+            throw new Error(`${field.label} allows maximum ${field.maxChoices} options.`);
+          }
+          formFields[field.key] = checked.join(", ");
+          continue;
+        }
+
+        if (field.type === "acceptance") {
+          formFields[field.key] = Boolean(careerApplicationForm.elements[field.key]?.checked);
+          continue;
+        }
+
+        formFields[field.key] = careerApplicationForm.elements[field.key]?.value?.trim() || "";
+      }
+
+      return formFields;
+    };
+
+    document.querySelectorAll("[data-open-career-jobs]").forEach((button) => {
+      button.addEventListener("click", async () => {
+        openCareerModal(careerJobsModal);
+        await loadCareerJobs();
+      });
+    });
+
+    const handleCareerJobApplyClick = (event) => {
+      const retryButton = event.target.closest("[data-retry-career-jobs]");
+      if (retryButton) {
+        loadCareerJobs(true);
+        return;
+      }
+
+      const button = event.target.closest("[data-career-job-index]");
+      if (!button) return;
+      const job = careerJobs[Number(button.dataset.careerJobIndex)];
+      if (job) openCareerApplication(job);
+    };
+
+    careerJobsList.addEventListener("click", handleCareerJobApplyClick);
+    if (careerInlineJobs) careerInlineJobs.addEventListener("click", handleCareerJobApplyClick);
+
+    document.querySelectorAll("[data-close-career-modal]").forEach((button) => {
+      button.addEventListener("click", () => closeCareerModal(button.closest(".career-modal")));
+    });
+
+    document.querySelectorAll(".career-modal").forEach((modal) => {
+      modal.addEventListener("click", (event) => {
+        if (event.target === modal) closeCareerModal(modal);
+      });
+    });
+
+    careerBackToJobs.addEventListener("click", () => {
+      closeCareerModal(careerApplyModal);
+      openCareerModal(careerJobsModal);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key !== "Escape") return;
+      document.querySelectorAll(".career-modal.open").forEach(closeCareerModal);
+    });
+
+    loadCareerJobs();
+
+    careerApplicationForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      careerFormStatus.textContent = "Submitting application...";
+      careerFormStatus.className = "career-form-status";
+      const submitButton = careerApplicationForm.querySelector('button[type="submit"]');
+      submitButton.disabled = true;
+
+      try {
+        const formFields = collectCareerFormFields();
+        const resume = await readCareerFile(careerApplicationForm.elements.resume);
+        const photo = await readCareerFile(careerApplicationForm.elements.photo);
+        const applicationType = careerApplyType.textContent || "Job";
+
+        const response = await fetch(`${CAREER_API_BASE}/careers/applications`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            jobTitle: activeCareerJob?.title || "Career Application",
+            applicationType,
+            name: formFields.name,
+            email: formFields.email,
+            phone: formFields.whatsappMobile,
+            qualification: formFields.qualification || formFields.currentEducationStatus || "",
+            experience: formFields.yearsOfExperience || activeCareerJob?.experience || "",
+            message: formFields.aboutYourself || formFields.onboardingReasons || "",
+            linkedinProfile: formFields.linkedinProfile || "",
+            resume: resume.data,
+            resumeName: resume.name,
+            photo: photo.data,
+            photoName: photo.name,
+            consent: Boolean(formFields.consent),
+            formFields: {
+              ...formFields,
+              jobId: activeCareerJob?._id || "",
+              jobTitle: activeCareerJob?.title || "",
+              applicationType
+            }
+          })
+        });
+
+        const result = await response.json().catch(() => ({}));
+        if (!response.ok || result.success === false) {
+          throw new Error(result.message || "Application could not be submitted.");
+        }
+
+        careerApplicationForm.reset();
+        careerFormStatus.textContent = "";
+        careerFormStatus.className = "career-form-status";
+        closeCareerModal(careerApplyModal);
+        openCareerModal(careerSuccessModal);
+      } catch (error) {
+        careerFormStatus.textContent = error.message || "Something went wrong. Please try again.";
+        careerFormStatus.className = "career-form-status career-form-status--error";
+      } finally {
+        submitButton.disabled = false;
+      }
     });
   </script>
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+

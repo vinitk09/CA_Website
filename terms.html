@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 
 <head>
@@ -1076,6 +1076,43 @@
     .nav-drawer-cta .btn-teal-nav i {
       color: #fff !important;
     }
+  
+.site-whatsapp {
+  position: fixed;
+  right: 24px;
+  bottom: 22px;
+  width: 52px;
+  height: 52px;
+  z-index: 1200;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  background: #25d366;
+  color: #fff;
+  font-size: 30px;
+  box-shadow: 0 8px 24px rgba(17, 24, 39, 0.22);
+  text-decoration: none;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
+}
+
+.site-whatsapp:hover {
+  transform: translateY(-3px);
+  background: #1ebe5d;
+  color: #fff;
+  box-shadow: 0 12px 30px rgba(17, 24, 39, 0.26);
+}
+
+@media (max-width: 640px) {
+  .site-whatsapp {
+    right: 18px;
+    bottom: 18px;
+    width: 48px;
+    height: 48px;
+    font-size: 28px;
+  }
+}
   </style>
 </head>
 
@@ -1296,9 +1333,14 @@
       if (window.innerWidth > 900) closeNav();
     });
   </script>
+  <a class="site-whatsapp" href="https://wa.me/917979732876" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <i class="ri-whatsapp-line"></i>
+  </a>
 </body>
 
 </html>
+
+
 
 
 

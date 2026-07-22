@@ -1,4 +1,4 @@
-/* Inline script block 1, moved from index.html */
+﻿/* Inline script block 1, moved from index.html */
 (function () {
       const clockHost = document.getElementById("footerClockHost");
       const clocks = document.querySelector(".footer-brand-col .footer-clocks");
@@ -9,9 +9,9 @@
 /* Inline script block 2, moved from index.html */
 // Smooth Scroll
     //
-    /* ══════════════════════════════════════
+    /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
  CUSTOM CURSOR
-══════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
     const dot = document.getElementById("cursor-dot");
     const ring = document.getElementById("cursor-ring");
     let mx = 0,
@@ -44,9 +44,9 @@
         );
       });
 
-    /* ══════════════════════════════════════
+    /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
  NAV
-══════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
     const nav = document.getElementById("nav");
     const btt = document.getElementById("btt");
     const homeSection = document.getElementById("home");
@@ -66,7 +66,7 @@
         navLinks.forEach((link) => link.classList.toggle("scrolled", shouldBeSolid));
       }
 
-      btt.classList.toggle("show", currentScrollY > 400);
+      if (btt) btt.classList.toggle("show", currentScrollY > 400);
 
       if (homeSection && heroTitle) {
         const homeHeight = homeSection.offsetHeight || 1;
@@ -219,13 +219,15 @@
       });
     }
 
-    btt.addEventListener("click", () =>
-      window.scrollTo({ top: 0, behavior: "smooth" }),
-    );
+    if (btt) {
+      btt.addEventListener("click", () =>
+        window.scrollTo({ top: 0, behavior: "smooth" }),
+      );
+    }
 
-    /* ══════════════════════════════════════
- SCROLL REVEAL — supports all animation classes
-══════════════════════════════════════ */
+    /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+ SCROLL REVEAL â€” supports all animation classes
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
     const srSelectors = ".sr,.sr-l,.sr-r,.sr-fade,.sr-scale";
     const srEls = document.querySelectorAll(srSelectors);
     const srObs = new IntersectionObserver(
@@ -253,9 +255,9 @@
 
     window.addEventListener("load", revealVisibleItems, { once: true });
 
-    /* ══════════════════════════════════════
+    /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
  COUNTERS
-══════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
     document.querySelectorAll(".count").forEach((el) => {
       const cObs = new IntersectionObserver(
         ([e]) => {
@@ -284,9 +286,9 @@
       cObs.observe(el);
     });
 
-    /* ══════════════════════════════════════
+    /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
  SERVICES TABS
-══════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
     const tabMap = {
       ass: "pnl-ass",
       tax: "pnl-tax",
@@ -316,9 +318,9 @@
       });
     });
 
-    /* ══════════════════════════════════════
+    /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
  GLOW CARD MOUSE TRACKING
-══════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
     document.querySelectorAll(".glow-card").forEach((card) => {
       const glow = card.querySelector(".glow");
       if (!glow) return;
@@ -329,18 +331,18 @@
       });
     });
 
-    /* ══════════════════════════════════════
+    /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
  HERO TEXT STAGGER (load)
-══════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
     window.addEventListener("load", () => {
       document.querySelectorAll("#home .sr").forEach((el, i) => {
         setTimeout(() => el.classList.add("on"), i * 90 + 100);
       });
     });
 
-    /* ══════════════════════════════════════
+    /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
  FORM
-══════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
     function handleForm(e) {
       e.preventDefault();
       if (!e.currentTarget.checkValidity()) {
@@ -356,9 +358,9 @@
       contactForm.addEventListener("submit", handleForm);
     }
 
-    /* ══════════════════════════════════════
- HERO CANVAS — animated lines (SVG)
-══════════════════════════════════════ */
+    /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+ HERO CANVAS â€” animated lines (SVG)
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
     (function () {
       const canvas = document.getElementById("hero-canvas");
       const svg = document.createElementNS(
@@ -425,9 +427,9 @@
       canvas.appendChild(svg);
     })();
 
-    /* ══════════════════════════════════════
+    /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
  ANNOUNCEMENTS SLIDER
-══════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
     const announcementBtn = document.getElementById("announcementBtn");
     const announcementsModal = document.getElementById("announcementsModal");
     const announcementsClose = document.getElementById("announcementsClose");
@@ -557,9 +559,9 @@
       fetchAnnouncements();
     });
 
-    /* ══════════════════════════════════════
+    /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
  WORLD CLOCKS
-══════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
     const worldClocks = [
       {
         zone: "Australia/Sydney",
@@ -668,3 +670,94 @@
         window.addEventListener("DOMContentLoaded", run);
       }
     })();
+
+/* Dynamic locations from admin backend */
+(function () {
+  const locationsGrid = document.getElementById("locationsGrid");
+  if (!locationsGrid) return;
+
+  const API_BASE_URL = "http://localhost:5000";
+
+  const escapeHtml = (value) =>
+    String(value || "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+
+  const getLocationName = (location) =>
+    location.location || location.name || location.title || "Location";
+
+  const getLocationLink = (location) =>
+    location.addressLink || location.link || location.url || "#";
+
+  const renderLocations = (locations) => {
+    if (!Array.isArray(locations) || locations.length === 0) {
+      locationsGrid.innerHTML = `
+        <div class="location-item location-item--empty">
+          <i class="ri-map-pin-line"></i>
+          <span>No locations available</span>
+        </div>
+      `;
+      return;
+    }
+
+    const orderedLocations = [...locations].sort((a, b) => {
+      const aName = getLocationName(a).toLowerCase();
+      const bName = getLocationName(b).toLowerCase();
+
+      if (aName === "jamshedpur") return -1;
+      if (bName === "jamshedpur") return 1;
+      return 0;
+    });
+
+    locationsGrid.innerHTML = orderedLocations
+      .map((location) => {
+        const name = escapeHtml(getLocationName(location));
+        const link = escapeHtml(getLocationLink(location));
+        const isLink = link && link !== "#";
+
+        if (!isLink) {
+          return `
+            <div class="location-item" aria-label="${name}">
+              <i class="ri-map-pin-line"></i>
+              <span>${name}</span>
+            </div>
+          `;
+        }
+
+        return `
+          <a class="location-item" href="${link}" target="_blank" rel="noopener" aria-label="Open ${name} office location in Google Maps">
+            <i class="ri-map-pin-line"></i>
+            <span>${name}</span>
+          </a>
+        `;
+      })
+      .join("");
+  };
+
+  const loadLocations = async () => {
+    try {
+      const response = await fetch(`${API_BASE_URL}/api/locations`);
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
+      const payload = await response.json();
+      const locations = Array.isArray(payload) ? payload : payload.data || payload.locations || [];
+      renderLocations(locations);
+    } catch (error) {
+      console.error("Error fetching locations:", error);
+      locationsGrid.innerHTML = `
+        <div class="location-item location-item--empty">
+          <i class="ri-map-pin-line"></i>
+          <span>Locations will be updated shortly</span>
+        </div>
+      `;
+    }
+  };
+
+  loadLocations();
+})();
+
+
+

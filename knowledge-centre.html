@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 
 <head>
@@ -384,10 +384,9 @@
       </div>
     </div>
   </footer>
-
-  <button id="btt" aria-label="Back to top">
-    <i class="ri-arrow-up-line"></i>
-  </button>
+  <a class="site-whatsapp" href="https://wa.me/917979732876" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <i class="ri-whatsapp-line"></i>
+  </a>
 
   <script>
     const dot = document.getElementById("cursor-dot");
@@ -438,10 +437,10 @@
 
     window.addEventListener("scroll", () => {
       nav.classList.toggle("solid", window.scrollY > 60);
-      btt.classList.toggle("show", window.scrollY > 360);
+      if (btt) btt.classList.toggle("show", window.scrollY > 360);
     }, { passive: true });
 
-    btt.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+    if (btt) btt.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
     window.addEventListener("resize", () => {
       if (window.innerWidth > 1240) closeNav();
     });
@@ -484,7 +483,7 @@
         const content = panel.querySelector(".knowledge-full-content")?.innerHTML || "";
 
         modalTitle.textContent = title;
-        modalMeta.textContent = [category, date].filter(Boolean).join(" · ");
+        modalMeta.textContent = [category, date].filter(Boolean).join(" Â· ");
         modalBody.innerHTML = content;
         modal.classList.add("open");
         modal.setAttribute("aria-hidden", "false");
@@ -516,3 +515,5 @@
 </body>
 
 </html>
+
+
