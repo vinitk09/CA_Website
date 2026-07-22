@@ -8374,3 +8374,16 @@ body.career-modal-open {
     font-size: 28px;
   }
 }
+
+.career-required-note {
+  margin: -6px 0 4px;
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.career-required-note span,
+.career-required-mark {
+  color: #dc2626;
+  font-weight: 900;
+}

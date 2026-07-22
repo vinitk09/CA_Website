@@ -138,10 +138,10 @@
           </p>
           <div class="careers-actions careers-actions--spread">
             <div class="careers-actions-left">
-              <button class="careers-btn" type="button" data-open-career-jobs>
+              <button class="careers-btn" type="button" data-direct-career-apply="articleship">
                 Apply for CA Articleship
               </button>
-              <button class="careers-btn" type="button" data-open-career-jobs>
+              <button class="careers-btn" type="button" data-direct-career-apply="cs-internship">
                 Apply for CS Internship
               </button>
             </div>
@@ -180,6 +180,7 @@
         <p id="careerApplyDescription"></p>
       </div>
       <form class="career-application-form" id="careerApplicationForm">
+        <p class="career-required-note"><span>*</span> Required fields</p>
         <div class="career-form-grid" id="careerFormFields"></div>
         <div class="career-form-actions">
           <button class="careers-btn careers-btn--ghost" type="button" id="careerBackToJobs">Back to Openings</button>
@@ -517,15 +518,16 @@
 
     const renderCareerField = (field) => {
       const required = field.required ? " required" : "";
+      const requiredMark = field.required ? ' <span class="career-required-mark">*</span>' : "";
       const help = field.maxChoices ? `<small>Select maximum ${field.maxChoices} options.</small>` : "";
 
       if (field.type === "textarea") {
-        return `<label class="career-field career-field--wide" for="${field.key}"><span>${escapeHtml(field.label)}</span><textarea id="${field.key}" name="${field.key}" rows="4"${required}></textarea></label>`;
+        return `<label class="career-field career-field--wide" for="${field.key}"><span>${escapeHtml(field.label)}${requiredMark}</span><textarea id="${field.key}" name="${field.key}" rows="4"${required}></textarea></label>`;
       }
 
       if (field.type === "select") {
         const options = (field.options || []).map((option) => `<option value="${escapeHtml(option)}">${escapeHtml(option)}</option>`).join("");
-        return `<label class="career-field" for="${field.key}"><span>${escapeHtml(field.label)}</span><select id="${field.key}" name="${field.key}"${required}><option value="">Select</option>${options}</select></label>`;
+        return `<label class="career-field" for="${field.key}"><span>${escapeHtml(field.label)}${requiredMark}</span><select id="${field.key}" name="${field.key}"${required}><option value="">Select</option>${options}</select></label>`;
       }
 
       if (field.type === "checkbox-group") {
@@ -535,18 +537,18 @@
             <span>${escapeHtml(option)}</span>
           </label>
         `).join("");
-        return `<fieldset class="career-field career-field--wide career-fieldset"><legend>${escapeHtml(field.label)}</legend>${help}<div class="career-options">${options}</div></fieldset>`;
+        return `<fieldset class="career-field career-field--wide career-fieldset"><legend>${escapeHtml(field.label)}${requiredMark}</legend>${help}<div class="career-options">${options}</div></fieldset>`;
       }
 
       if (field.type === "file") {
-        return `<label class="career-field" for="${field.key}"><span>${escapeHtml(field.label)}</span><input id="${field.key}" name="${field.key}" type="file" accept="${escapeHtml(field.accept || "")}"${required} /></label>`;
+        return `<label class="career-field" for="${field.key}"><span>${escapeHtml(field.label)}${requiredMark}</span><input id="${field.key}" name="${field.key}" type="file" accept="${escapeHtml(field.accept || "")}"${required} /></label>`;
       }
 
       if (field.type === "acceptance") {
-        return `<label class="career-field career-field--wide career-consent"><input id="${field.key}" name="${field.key}" type="checkbox"${required} /><span>${escapeHtml(field.label)}</span></label>`;
+        return `<label class="career-field career-field--wide career-consent"><input id="${field.key}" name="${field.key}" type="checkbox"${required} /><span>${escapeHtml(field.label)}${requiredMark}</span></label>`;
       }
 
-      return `<label class="career-field" for="${field.key}"><span>${escapeHtml(field.label)}</span><input id="${field.key}" name="${field.key}" type="${field.type || "text"}"${required} /></label>`;
+      return `<label class="career-field" for="${field.key}"><span>${escapeHtml(field.label)}${requiredMark}</span><input id="${field.key}" name="${field.key}" type="${field.type || "text"}"${required} /></label>`;
     };
 
     const openCareerApplication = (job) => {
@@ -607,6 +609,31 @@
       button.addEventListener("click", async () => {
         openCareerModal(careerJobsModal);
         await loadCareerJobs();
+      });
+    });
+
+    document.querySelectorAll("[data-direct-career-apply]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const application = button.dataset.directCareerApply;
+        const directJob = application === "articleship"
+          ? {
+              _id: "direct-ca-articleship",
+              title: "CA Articleship",
+              category: "Articleship",
+              jobType: "Articleship",
+              experience: "CA course pursuing",
+              shortDescription: "Apply directly for CA Articleship at S K Mishra & Associates."
+            }
+          : {
+              _id: "direct-cs-internship",
+              title: "CS Internship",
+              category: "Internship",
+              jobType: "Internship",
+              experience: "CS course pursuing",
+              shortDescription: "Apply directly for CS Internship at S K Mishra & Associates."
+            };
+
+        openCareerApplication(directJob);
       });
     });
 
@@ -709,6 +736,9 @@
 </body>
 
 </html>
+
+
+
 
 
 
