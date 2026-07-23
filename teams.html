@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -1103,7 +1103,79 @@
     font-size: 28px;
   }
 }
-  </style>
+  
+    @media (max-width: 600px) {
+      #nav > .container {
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+      }
+
+      #nav .nav-inner {
+        gap: 8px !important;
+      }
+
+      #nav .nav-brand {
+        flex: 1 1 auto !important;
+        max-width: calc(100% - 52px) !important;
+        margin-right: 0 !important;
+        min-width: 0 !important;
+      }
+
+      #nav .nav-brand-icon,
+      #nav .nav-brand-icon img {
+        flex: 0 0 auto !important;
+        width: 48px !important;
+      }
+
+      #nav .nav-brand-text {
+        min-width: 0 !important;
+        overflow: hidden !important;
+      }
+
+      #nav .nav-brand-sub,
+      #nav .nav-brand-caption {
+        display: block !important;
+        max-width: 100% !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        white-space: nowrap !important;
+      }
+
+      #nav .nav-brand-caption {
+        letter-spacing: 1.2px !important;
+      }
+    }
+
+    @media (max-width: 420px) {
+      #nav > .container {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+      }
+
+      #nav .nav-brand {
+        gap: 8px !important;
+        max-width: calc(100% - 48px) !important;
+      }
+
+      #nav .nav-brand-icon,
+      #nav .nav-brand-icon img {
+        width: 44px !important;
+      }
+
+      #nav .nav-brand-sub {
+        font-size: 14px !important;
+      }
+
+      #nav .nav-brand-caption {
+        font-size: 8px !important;
+        letter-spacing: 0.7px !important;
+      }
+
+      #nav .nav-hb {
+        width: 40px !important;
+        height: 40px !important;
+      }
+    }</style>
   </head>
   <body>
     <div id="cursor-dot"></div>
@@ -1140,7 +1212,6 @@
         <a href="index.html#whatwedo">What We Do</a>
         <a href="careers.html">Careers</a>
         <a href="knowledge-centre.html">Knowledge Centre</a>
-        <a href="index.html#links">Important Links</a>
       </div>
 
       <div class="nav-cta">
@@ -1169,7 +1240,6 @@
   <a href="index.html#whatwedo" class="dl"><i class="ri-settings-3-line"></i>What We Do</a>
   <a href="careers.html" class="dl"><i class="ri-user-star-line"></i>Careers</a>
   <a href="knowledge-centre.html" class="dl"><i class="ri-book-open-line"></i>Knowledge Centre</a>
-  <a href="index.html#links" class="dl" data-open-links="true"><i class="ri-links-line"></i>Important Links</a>
   <div class="nav-drawer-cta">
     <a href="index.html#contact" class="btn btn-teal dl u-style-2">
       <i class="ri-mail-send-line u-style-3"></i> Get in Touch
@@ -1377,6 +1447,7 @@
     </script>
   </body>
 </html>
+
 
 
 

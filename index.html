@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 
 <head>
@@ -68,7 +68,6 @@
           <a href="#whatwedo">What We Do</a>
           <a href="careers.html">Careers</a>
           <a href="knowledge-centre.html">Knowledge Centre</a>
-          <button type="button" data-open-links="true">Important Links</button>
         </div>
 
         <div class="nav-cta">
@@ -98,7 +97,6 @@
     <a href="#whatwedo" class="dl"><i class="ri-settings-3-line"></i>What We Do</a>
     <a href="careers.html" class="dl"><i class="ri-user-star-line"></i>Careers</a>
     <a href="knowledge-centre.html" class="dl"><i class="ri-book-open-line"></i>Knowledge Centre</a>
-    <a href="#links" class="dl" data-open-links="true"><i class="ri-links-line"></i>Important Links</a>
     <div class="nav-drawer-cta">
       <a href="index.html#contact" class="btn btn-teal dl u-style-2"
        >
@@ -339,7 +337,7 @@
               <div class="hstat-lbl">India Clients</div>
             </div>
             <div class="hstat">
-              <div class="hstat-num count" data-target="9">0</div>
+              <div class="hstat-num count" data-target="8">0</div>
               <div class="hstat-lbl">Expert Partners</div>
             </div>
             <div class="hstat">
@@ -540,7 +538,7 @@
             Why <em>S K Mishra &amp; Associates</em>
           </h2>
           <div class="rule"></div>
-          <p class="body">
+          <p class="body why-intro-copy">
             For over 27 years, we have been committed to delivering professional services with integrity, technical
             excellence, and a client-focused approach. Every engagement benefits from direct partner involvement,
             experienced professionals, and technology-enabled processes designed to provide practical, timely, and
@@ -556,7 +554,7 @@
               <span>India client reach</span>
             </div>
             <div class="why-proof">
-              <strong>9</strong>
+              <strong>8</strong>
               <span>expert partners</span>
             </div>
             <div class="why-proof">
@@ -595,7 +593,7 @@
             </div>
             <h4>Technology-First</h4>
             <p>
-              ERP implementation, MIS design, and digital accounting â€” we
+              ERP implementation, MIS design, and digital accounting - we
               integrate technology into every engagement.
             </p>
           </div>
@@ -618,7 +616,7 @@
             <h4>Dedicated Success</h4>
             <p>
               Dedicated partner-led teams for every client. No junior-only
-              engagement â€” your goals drive our focus.
+              engagement - your goals drive our focus.
             </p>
           </div>
           <div class="why-card sr d6" data-step="06">
@@ -628,7 +626,7 @@
             </div>
             <h4>Repeat Engagements</h4>
             <p>
-              Special audits for large conglomerates with repeat engagements â€”
+              Special audits for large conglomerates with repeat engagements -
               showcasing trust and client satisfaction.
             </p>
           </div>
@@ -809,7 +807,7 @@
       <p class="wwd-intro sr">
         Our integrated approach combines Process Reviews, SOP Development,
         IFC, Statutory Audit, and Tax Advisory to deliver comprehensive
-        end-to-end assurance and risk management solutions â€” creating
+        end-to-end assurance and risk management solutions - creating
         long-term value for clients.
       </p>
 
@@ -962,7 +960,7 @@
             <div>
               <h4>Risk-based Statutory Audits</h4>
               <p>
-                Proven expertise in risk-based audits for large corporates â€”
+                Proven expertise in risk-based audits for large corporates -
                 repeat engagements validating client trust.
               </p>
             </div>
@@ -996,7 +994,7 @@
               <h4>Partner-Led Excellence</h4>
               <p>
                 Every client receives direct partner attention from start to
-                finish â€” a hallmark of our firm.
+                finish - a hallmark of our firm.
               </p>
             </div>
           </div>
@@ -1017,7 +1015,7 @@
             <div>
               <h4>27 Years Â· PAN India Presence</h4>
               <p>
-                From Jamshedpur to PAN-India â€” a legacy of trust built one
+                From Jamshedpur to PAN-India - a legacy of trust built one
                 client relationship at a time.
               </p>
             </div>
@@ -1589,7 +1587,7 @@
         </div>
       </div>
       <div class="footer-bot">
-        <span>&copy; CA. S K Mishra &amp; Associates</span>
+        <span>(C) <span class="footer-year">2026</span> S K Mishra &amp; Associates</span>
         <span class="u-style-31">Designed and Developed by Venturing Digitally Pvt. Ltd.</span>
       </div>
     </div>
@@ -1656,7 +1654,11 @@
   </div>
   <script src="js/config.js"></script>
   <script src="js/index.js"></script>
-</body>
+  <script>
+    document.querySelectorAll(".footer-year").forEach((el) => {
+      el.textContent = new Date().getFullYear();
+    });
+  </script></body>
 
 </html>
 

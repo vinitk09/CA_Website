@@ -1,4 +1,4 @@
-﻿/* Style block 1, moved from index.html */
+/* Style block 1, moved from index.html */
 /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
     DESIGN SYSTEM â€“ CA INDIA LIGHT THEME
     Palette: Crisp White Â· Deep Navy Â· Saffron Gold Â· Sky Teal
@@ -8414,5 +8414,118 @@ body.career-modal-open {
 
   #achievements .milestone p {
     font-size: 16px;
+  }
+}
+
+#why-choose-us .why-intro-copy {
+  text-align: justify;
+  text-align-last: left;
+}
+
+@media (max-width: 1500px) {
+  #nav .nav-hb {
+    display: inline-flex !important;
+    flex: 0 0 auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    margin-left: auto;
+    padding: 8px;
+    border: 1px solid rgba(8, 40, 77, 0.18);
+    border-radius: 6px;
+    background: #fff;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    position: relative;
+    z-index: 1200;
+  }
+
+  #nav .nav-hb span {
+    display: block !important;
+    width: 24px !important;
+    height: 2.5px !important;
+    background: #08284d !important;
+  }
+}
+
+@media (max-width: 768px) {
+  #nav .nav-hb {
+    width: 42px;
+    height: 42px;
+  }
+}
+@media (max-width: 600px) {
+  #nav > .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  #nav .nav-inner {
+    gap: 8px;
+  }
+
+  #nav .nav-brand {
+    flex: 1 1 auto;
+    max-width: calc(100% - 52px);
+    margin-right: 0;
+    min-width: 0;
+  }
+
+  #nav .nav-brand-icon,
+  #nav .nav-brand-icon img {
+    flex: 0 0 auto;
+    width: 48px;
+  }
+
+  #nav .nav-brand-text {
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  #nav .nav-brand-sub,
+  #nav .nav-brand-caption {
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  #nav .nav-brand-caption {
+    letter-spacing: 1.2px;
+  }
+}
+
+@media (max-width: 420px) {
+  #nav > .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  #nav .nav-brand {
+    gap: 8px;
+    max-width: calc(100% - 48px);
+  }
+
+  #nav .nav-brand-icon,
+  #nav .nav-brand-icon img {
+    width: 44px;
+  }
+
+  #nav .nav-brand-sub {
+    font-size: 14px;
+  }
+
+  #nav .nav-brand-caption {
+    font-size: 8px;
+    letter-spacing: 0.7px;
+  }
+
+  #nav .nav-hb {
+    width: 40px;
+    height: 40px;
   }
 }

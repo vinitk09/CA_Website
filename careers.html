@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 
 <head>
@@ -48,7 +48,6 @@
           <a href="index.html#whatwedo">What We Do</a>
           <a href="careers.html" class="active">Careers</a>
           <a href="knowledge-centre.html">Knowledge Centre</a>
-          <a href="index.html#links">Important Links</a>
         </div>
 
         <div class="nav-cta">
@@ -77,7 +76,6 @@
     <a href="index.html#whatwedo" class="dl"><i class="ri-settings-3-line"></i>What We Do</a>
     <a href="careers.html" class="dl active"><i class="ri-user-star-line"></i>Careers</a>
     <a href="knowledge-centre.html" class="dl"><i class="ri-book-open-line"></i>Knowledge Centre</a>
-    <a href="index.html#links" class="dl"><i class="ri-links-line"></i>Important Links</a>
     <div class="nav-drawer-cta">
       <a href="index.html#contact" class="btn btn-teal dl u-style-2">
         <i class="ri-mail-send-line u-style-3"></i> Get in Touch
@@ -242,7 +240,7 @@
         </div>
       </div>
       <div class="footer-bot">
-        <span>&copy; CA. S K Mishra &amp; Associates</span>
+        <span>(C) <span class="footer-year">2026</span> S K Mishra &amp; Associates</span>
         <span>Designed and Developed by Venturing Digitally Pvt. Ltd.</span>
       </div>
     </div>
@@ -735,7 +733,11 @@
       }
     });
   </script>
-</body>
+  <script>
+    document.querySelectorAll(".footer-year").forEach((el) => {
+      el.textContent = new Date().getFullYear();
+    });
+  </script></body>
 
 </html>
 
