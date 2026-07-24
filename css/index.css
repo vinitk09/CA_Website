@@ -2265,6 +2265,13 @@
       margin-bottom: 6px;
     }
 
+    .why-proof strong.why-proof-plain {
+      background: transparent;
+      color: var(--gold2);
+      box-shadow: none;
+      -webkit-text-fill-color: currentColor;
+    }
+
     .why-proof span {
       display: block;
       font-size: 11px;
@@ -2489,9 +2496,9 @@
     .why-card p {
       position: relative;
       z-index: 1;
-      font-size: 12.7px;
+      font-size: 15px;
       color: #516173;
-      line-height: 1.65;
+      line-height: 1.55;
       margin: 0;
     }
 
@@ -3428,9 +3435,9 @@
     }
 
     .core-card-teaser {
-      font-size: 14px;
+      font-size: 15px;
       color: #516173;
-      line-height: 1.45;
+      line-height: 1.55;
       max-width: 100%;
       min-height: 36px;
     }
@@ -3448,9 +3455,9 @@
     }
 
     .core-card-body p {
-      font-size: 15.4px;
+      font-size: 15px;
       color: var(--navy);
-      line-height: 1.56;
+      line-height: 1.55;
       background: rgba(255, 255, 255, 0.72);
       border-radius: 8px;
       padding: 16px 16px 18px 18px;
@@ -3675,8 +3682,8 @@
 
     .wwd-step p {
       font-size: 15px;
-      color: #718096;
-      line-height: 1.65;
+      color: #516173;
+      line-height: 1.55;
     }
 
     /* CTA banner */
@@ -6479,25 +6486,26 @@
   align-items: center;
   justify-content: center;
   width: fit-content;
-  min-width: 88px;
-  padding: 10px 16px;
-  border: 1px solid rgba(14, 122, 110, 0.16);
-  border-radius: 8px;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
   background: linear-gradient(135deg, var(--navy), var(--teal));
-  -webkit-background-clip: border-box;
-  background-clip: border-box;
-  color: #fff;
-  -webkit-text-fill-color: #fff;
-  font-size: 30px;
-  line-height: 1;
-  letter-spacing: 0.04em;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  font-size: clamp(24px, 2.7vw, 34px);
+  line-height: 0.92;
+  letter-spacing: 0;
 }
 
 .ach-card:hover .ach-num.ach-word {
-  border-color: rgba(212, 160, 23, 0.36);
   background: linear-gradient(135deg, var(--teal), var(--gold2));
-  color: #fff;
-  -webkit-text-fill-color: #fff;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 
 .ach-label {
