@@ -1,34 +1,34 @@
 // js/services-page.js
-// ══════════════════════════════════════
+//
 // SERVICES PAGE CONTROLLER
-// ══════════════════════════════════════
+//
 
 (function() {
     'use strict';
 
     let currentServiceId = null;
 
-    // ── DOM References ──
+    //  DOM References
     const serviceListEl = document.getElementById('serviceList');
     const serviceContentEl = document.getElementById('serviceContent');
     const sidebarEl = document.getElementById('serviceSidebar');
 
-    // ── Render Service List ──
+    //  Render Service List
     function renderServiceList() {
         if (!serviceListEl) return;
-        
+
         serviceListEl.innerHTML = servicesData.map(service => `
-            <div class="service-list-item ${service.id === currentServiceId ? 'active' : ''}" 
+            <div class="service-list-item ${service.id === currentServiceId ? 'active' : ''}"
                  data-id="${service.id}"
                  onclick="window.selectService('${service.id}')">
                 <i class="${service.icon}"></i>
                 <span>${service.name}</span>
-                <span class="badge">→</span>
+                <span class="badge"></span>
             </div>
         `).join('');
     }
 
-    // ── Select Service ──
+    //  Select Service
     window.selectService = function(id) {
         currentServiceId = id;
         renderServiceList();
@@ -49,9 +49,9 @@
                     <h1>${service.name}</h1>
                 </div>
                 <p class="service-description">${service.description}</p>
-                
+
                 <div class="rule"></div>
-                
+
                 <div class="features-grid">
                     ${service.features.map(feature => `
                         <div class="feature-item">
@@ -59,9 +59,9 @@
                         </div>
                     `).join('')}
                 </div>
-                
+
                 ${service.fullContent}
-                
+
                 <div class="cta-section">
                     <h3>Ready to Get Started?</h3>
                     <p style="margin-bottom:16px;">Contact us today to learn more about how SPARK can help your business.</p>
@@ -83,7 +83,7 @@
         }
     };
 
-    // ── Navigation ──
+    //  Navigation
     function initNav() {
         const nav = document.getElementById('nav');
         if (!nav) return;
@@ -93,7 +93,7 @@
         }, { passive: true });
     }
 
-    // ── Mobile Menu ──
+    //  Mobile Menu
     function initMobileMenu() {
         const hb = document.getElementById('navHb');
         const drw = document.getElementById('navDrw');
@@ -121,7 +121,7 @@
         });
 
         ovl.addEventListener('click', closeNav);
-        
+
         if (drwClose) {
             drwClose.addEventListener('click', closeNav);
         }
@@ -131,7 +131,7 @@
         });
     }
 
-    // ── Init ──
+    //  Init
     function init() {
         // Check URL for service param
         const urlParams = new URLSearchParams(window.location.search);
@@ -171,7 +171,7 @@
         console.log(`Loaded ${servicesData.length} services.`);
     }
 
-    // ── Run on DOM ready ──
+    //  Run on DOM ready
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', init);
     } else {

@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <title>Terms &amp; Conditions ? S K Mishra & Associates | Chartered Accountants</title>
+  <title>Terms &amp; Conditions - S K Mishra & Associates | Chartered Accountants</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -728,7 +728,7 @@
         cursor: auto;
       }
     }
-  
+
     /* Shared navbar styling synced with index.html */
     #nav {
       position: fixed !important;
@@ -996,7 +996,7 @@
         display: none !important;
       }
     }
-  
+
     /* Shared mobile drawer styling synced with index.html */
     .nav-drawer-close {
       position: absolute !important;
@@ -1076,7 +1076,7 @@
     .nav-drawer-cta .btn-teal-nav i {
       color: #fff !important;
     }
-  
+
 .site-whatsapp {
   position: fixed;
   right: 24px;
@@ -1113,7 +1113,7 @@
     font-size: 28px;
   }
 }
-  
+
     @media (max-width: 600px) {
       #nav > .container {
         padding-left: 12px !important;
@@ -1186,6 +1186,7 @@
         height: 40px !important;
       }
     }</style>
+  <link href="css/shared-footer.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -1310,13 +1311,7 @@
       </div>
     </div>
   </main>
-
-  <footer
-    style="padding: 24px 0; text-align: center; font-size: 13px; color: #6b7a8a; border-top: 1px solid rgba(13, 27, 42, 0.06);">
-    <div class="container">
-      (C) <span class="footer-year">2026</span> S K Mishra &amp; Associates
-    </div>
-  </footer>
+  <footer data-shared-footer></footer>
 
   <script>
     /* --------------------------------------
@@ -1410,7 +1405,9 @@
     document.querySelectorAll(".footer-year").forEach((el) => {
       el.textContent = new Date().getFullYear();
     });
-  </script></body>
+  </script>
+  <script src="js/shared-footer.js"></script>
+</body>
 
 </html>
 
